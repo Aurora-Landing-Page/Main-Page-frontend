@@ -1,0 +1,33 @@
+/* src/Loader.css */
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 65vh;
+  }
+  
+  .loader-text {
+    font-size: 20px;
+    margin-top: 16px;
+    color: #2b38e7; /* Turquoise color for text */
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px #2b38e7, 0 0 20px #2b38e7, 0 0 30px #2b38e7; /* Add a glowing effect */
+  }
+  
+  /* Additional styling for a futuristic, sci-fi vibe */
+  .lottie-container {
+    filter: drop-shadow(0 0 10px #2b38e7); /* Turquoise drop shadow */
+  }
+  
+  body {
+    background-color: #000000; /* Black background color */
+  }
+
+  /* Media query for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 600px) {
+    .text {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+  
