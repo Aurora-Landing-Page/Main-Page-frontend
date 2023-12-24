@@ -1,12 +1,13 @@
 import React from 'react';
-import './EventDetails.css'
+import './EventDetails.css';
+import { Link } from 'react-router-dom';
 
 const EventDetails = () => {
   return (
     <div>
         <div className="events_bigBox">
         <h2 className="events_heading">Parivesh</h2>
-        <img className="events_pic6" src={require('./images/pic6.png')} alt=""/>
+        // <img className="events_pic6" src={require('./images/pic6.png')} alt=""/>
         <div className="events_smallBox">
             <div className="events_box1">
                 <div className="events_pic1">
@@ -126,7 +127,9 @@ const EventDetails = () => {
             <div className="events_registerHeading">Register</div>
             <div className="events_txt1">
                 <div className="events_txtRegisterHeading">Please login to continue with the registration process !</div>
-                <button className="events_button" ><a href="#">Login</a></button>
+                <button className="events_button" >
+                  <Link className='text-5xl overflow-hidden text-black'>Login</Link>
+                </button>
             </div>
         </div>
         </div>
