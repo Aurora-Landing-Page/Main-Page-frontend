@@ -19,21 +19,22 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
+        <Toast>Login Successful</Toast>
+        // try {
             
-        const response = await axios.post("https://aurora-nokc.onrender.com/loginUser",formData,{
-            headers: {
-                "Content-Type" : "application/json",
-            }
-        });
-        console.log(response.data);
-        <Toast>Login Successful</Toast>;
-        } catch (e) {
-            console.log(e);
-            <Toast>
-              An Error occured
-            </Toast>
-        }
+        // const response = await axios.post("https://aurora-nokc.onrender.com/loginUser",formData,{
+        //     headers: {
+        //         "Content-Type" : "application/json",
+        //     }
+        // });
+        // console.log(response.data);
+        // <Toast>Login Successful</Toast>;
+        // } catch (e) {
+        //     console.log(e);
+        //     <Toast>
+        //       An Error occured
+        //     </Toast>
+        // }
         setFormData(initialFormData)
     }
 

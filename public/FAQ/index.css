@@ -63,10 +63,6 @@ body {
   background-color: rgb(16, 16, 16);
 }
 
-.fa-angle-up {
-  transform: rotate(180deg);
-}
-
 .faq-answer {
   display: none;
   line-height: 1.5;
@@ -120,7 +116,6 @@ body {
   font-size: 23px;
   font-weight: 200px;
   text-transform: uppercase;
-  margin-bottom: 2rem;
 }
 
 .faq-topicsList {
