@@ -26,7 +26,7 @@ function App() {
         <Route path='/pronites' element={<Pronites2/>}/>
         <Route path='/about' element={<AboutPage/>}/>
         <Route path='/events' element={<EventPage/>}/>
-        <Route path='/events/eventDetails' element={<EventDetails/>}/>
+        {/* <Route path='/events/eventDetails' element={<EventDetails/>}/> */}
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/faq" element={<Faq />} />
         <Route path="/login" element={<Login />} />

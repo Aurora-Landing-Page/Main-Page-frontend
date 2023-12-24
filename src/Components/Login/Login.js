@@ -4,66 +4,93 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import Toast from "../AlertAndLoader/Toast"
 import Loader from '../AlertAndLoader/Loader';
+import Alert from '../AlertAndLoader/Alert';
+import { FaArrowTrendUp } from 'react-icons/fa6';
+
 const Login = () => {
-    const initialFormData = {
-        email: '',
-        password: ''
-    }
+  const initialFormData = {
+    email: '',
+    password: ''
+  }
 
-    const [formData,setFormData] = useState(initialFormData);
+  const [formData, setFormData] = useState(initialFormData);
+  const [showToast, setShowToast] = useState(false);
+  const [showAlert, setShowAlert] = useState(FaArrowTrendUp);
 
-    const handleChange = (e) => {
-        const {name,value} = e.target;
-        setFormData({...formData, [name]: value})
-    }
+  const [messege, setMessege] = useState("");
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        <Toast>Login Successful</Toast>
-        // try {
-            
-        // const response = await axios.post("https://aurora-nokc.onrender.com/loginUser",formData,{
-        //     headers: {
-        //         "Content-Type" : "application/json",
-        //     }
-        // });
-        // console.log(response.data);
-        // <Toast>Login Successful</Toast>;
-        // } catch (e) {
-        //     console.log(e);
-        //     <Toast>
-        //       An Error occured
-        //     </Toast>
-        // }
-        setFormData(initialFormData)
-    }
 
-    const handleForgetPassword = async () => {
-        try {
-            const res = await axios.post(
-          "https://aurora-nokc.onrender.com/forgetPass",{"email": formData.email,"type": "user"}, {
-            "headers": {
-                "Content-Type" : "application/json"
-            }
-          }
-          );
-          console.log(res.data);
-        } catch (e) {
-            console.log(e);
+
+  const handleToastClose = () => {
+    setMessege("");
+    setShowToast(false);
+  };
+
+  const handleAlertClose = () => {
+    setMessege("");
+    setShowAlert(false);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+
+    try {
+
+      const response = await axios.post("https://aurora-nokc.onrender.com/loginUser", formData, {
+        headers: {
+          "Content-Type": "application/json",
         }
-        
-        setFormData(initialFormData);
+      });
+      console.log(response.data);
+      setMessege("Logged in successfully");
+      setShowToast(true);
+    } catch (e) {
+      setMessege("Invalid Credentials");
+      setShowAlert(true);
+      console.log(e);
+
     }
-    const [loading, setLoading] = useState(true);
-    useEffect(() => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
-    }, []);
+    setFormData(initialFormData)
+  }
+
+  const handleForgetPassword = async () => {
+    try {
+      const res = await axios.post(
+        "https://aurora-nokc.onrender.com/forgetPass", { "email": formData.email, "type": "user" }, {
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+      );
+      console.log(res.data);
+    } catch (e) {
+      console.log(e);
+    }
+
+    setFormData(initialFormData);
+  }
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
 
 
   return (
     <div className="login">
+      {showToast && (
+        <Toast message={messege} duration={3000} onClose={handleToastClose} />
+      )}
+      {showAlert && (
+        <Alert message={messege} duration={3000} onClose={handleAlertClose} />
+      )}
       {loading ? (
         <Loader />
       ) : (
@@ -131,4 +158,4 @@ const Login = () => {
   );
 }
 
-export default Login
+export default Login;

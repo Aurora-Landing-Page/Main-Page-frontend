@@ -1,59 +1,60 @@
-import { useEffect } from "react";
-import './Alert.css'
- const Alert = ({children}) => {
+import React, { useEffect, useState } from 'react';
+import './Alert.css';
 
+const Alert = ({ message, duration = 3000, onClose }) => {
 
-    function showAlert(message) {
-      const alertBox = document.getElementById("cyber-alert-box");
-      const alertMessage = document.getElementById("cyber-alert-message");
-      alertMessage.textContent = message;
-      alertBox.style.display = "block";
-    }
+  const [isVisible, setIsVisible] = useState(true);
 
-    function showToast(message, duration = 3000) {
-      const toast = document.getElementById("cyber-toast");
-      const toastMessage = document.getElementById("cyber-toast-message");
-      toastMessage.textContent = message;
-      toast.style.opacity = 1;
-      toast.style.transform = "translateX(0)";
+  useEffect(() => {
+    const showToast = () => {
+      console.log("showAlert called");
+      setIsVisible(true);
 
       // Hide the toast after 'duration' milliseconds
       setTimeout(() => {
-        toast.style.opacity = 0;
-        toast.style.transform = "translateX(100%)";
+        setIsVisible(false);
+        onClose(); // Close the toast after animation
       }, duration);
+    };
+
+    const closeToast = () => {
+      setIsVisible(false);
+      onClose(); // Close the toast on button click
+    };
+
+    // Ensure that showToast is called
+    showToast();
+
+    // Cleanup event listeners on component unmount
+    const closeButton = document.getElementById("cyber-alert-close");
+    if (closeButton) {
+      closeButton.addEventListener("click", closeToast);
     }
 
-    useEffect(()=> {
-            
-
-            document
-              .getElementById("cyber-toast-close")
-              .addEventListener("click", () => {
-                const toast = document.getElementById("cyber-toast");
-                toast.style.opacity = 0;
-                toast.style.transform = "translateX(100%)";
-              });
-
-            document
-              .getElementById("cyber-alert-close")
-              .addEventListener("click", () => {
-                const alertBox = document.getElementById("cyber-alert-box");
-                alertBox.style.display = "none";
-              });
-    },[])
+    return () => {
+      if (closeButton) {
+        closeButton.removeEventListener("click", closeToast);
+      }
+    };
+  }, [duration, onClose]);
 
 
 
 
   return (
-    <div>
-        
-    <div id="cyber-alert-box">
-        <span id="cyber-alert-message">{children}</span>
-        <button id="cyber-alert-close">×</button>
-    </div>
-    </div>
+    <>
+      {isVisible && (
+        <div>
+          <div id="cyber-toast-container">
+            <div id="cyber-alert-box">
+              <span id="cyber-alert-message">{message}</span>
+              <button id="cyber-alert-close">×</button>
+            </div>
+          </div>
+
+        </div>
+      )}
+    </>
   )
 }
 
