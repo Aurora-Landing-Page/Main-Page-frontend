@@ -1,4 +1,4 @@
-
+import Navbar from "../Navbar/Navbar";
 
 const Home = () => {
   const myStyle = {
@@ -6,6 +6,7 @@ const Home = () => {
   };
     return (
       <div style={myStyle}>
+        <Navbar /> 
         <iframe
           title="ExternalHTML"
           src="./HomePage/index5.html"

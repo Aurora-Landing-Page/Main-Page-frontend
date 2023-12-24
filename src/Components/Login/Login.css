@@ -170,6 +170,7 @@ a:active {
 .login_box .login_link hr {
     width: 200px;
     margin-top: 20px;
+    left: 2px;
 }
 .login_box .login_link p {
     font-weight: 500;

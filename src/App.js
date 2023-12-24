@@ -12,7 +12,7 @@ import Faq from './Components/Faq/Faq';
 import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
 import Pronites2 from './Components/Pronites2/Pronites2';
-
+import Navbar from './Components/Navbar/Navbar';
 
 function App() {
 
