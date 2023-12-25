@@ -95,12 +95,13 @@ const Login = () => {
         <Loader />
       ) : (
         <div className="login_big-box">
+          <h1 class="login_welcome">Welcome Back</h1>
           <div className="login_box">
             <form action="submit">
               <h2 className="login_h2">
                 L
-                <span >
-                  <img src={require('./images/o.png')} alt="" />
+                <span>
+                  <img src={require("./images/o.png")} alt="" />
                 </span>
                 gin
               </h2>

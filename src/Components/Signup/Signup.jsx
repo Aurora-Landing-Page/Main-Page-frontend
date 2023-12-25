@@ -76,7 +76,9 @@ const Signup = () => {
               <div className="signup1_box">
                 <h2 className="signup1_h2">Register</h2>
                 <div className="signup1_cnt">
-                  <div className="signup1_cnt1">1</div>
+                  {/* <div className="signup1_cnt1">1</div> */}
+                  
+                    <div id="signup1_active" class="signup1_cnt1"><img src="images/o.png" alt=""/></div>
                   <div className="signup1_line"></div>
                   <div className="signup1_cnt2">2</div>
                 </div>
@@ -123,7 +125,7 @@ const Signup = () => {
                 </div>
                 <div className="signup1_button">
                   <button onClick={nextStep} className="signup1_btn">
-                    <a>Submit</a>
+                    <a>Next</a>
                   </button>
                 </div>
                 <hr />
@@ -155,7 +157,8 @@ const Signup = () => {
                 <div className="signup2_cnt">
                   <div className="signup2_cnt1">1</div>
                   <div className="signup2_line"></div>
-                  <div className="signup2_cnt2">2</div>
+                  {/* <div className="signup2_cnt2">2</div> */}
+                    <div id="signup2_active" class="signup2_cnt2"><img src="images/o.png" alt=""/></div>
                 </div>
                 <div className="signup2_user-box">
                   <input
