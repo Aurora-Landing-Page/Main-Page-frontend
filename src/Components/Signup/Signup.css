@@ -43,7 +43,8 @@
 .signup1_cnt {
     display: flex;
     position: absolute;
-    top: 141px;
+    /* top: 141px; */
+    top: 100px;
     left: 6%;
 }
 .signup1_cnt1 {
@@ -104,7 +105,7 @@
     padding: 7px 15px;
     margin-bottom: 5px;
     margin-top: 5px;
-    top: 10px;
+    /* top: 10px; */
 }
 input {
     color: white;
@@ -210,14 +211,62 @@ hr {
     transform: scaleX(-1);
 }
 
+#signup1_active img {
+    position: relative;
+    height: 46px;
+    left: -20px;
+    top: -12px;
+}
 .signup2 {
     display: flex;
     justify-content: end;
     align-items: center;  
     height: 100vh;
     color: white;
-    background-image: url(images/bg1.jpg);
+    background-image: url(./images/bg1.jpg);
 }
+@media (max-width: 780px) {
+    .signup1_box {
+        right: 40px;
+    }
+}
+@media (max-width: 500px) {
+    .signup1_box {
+        right: 10vw;
+        max-width: 80vw;
+    }
+    .signup1_h2 {
+        left: -35px;
+        font-size: 13vmin;
+    }
+    .signup1_cnt {
+        left: 2vw;
+        margin-top: 10px;
+    }
+    .signup1_user-box #signup1_up {
+        width: 68vw;
+        right: 10vw;
+        margin-top: 20px;
+    }
+    .signup1_user-box input {
+        width: 68vw;
+        right: 10vw;
+    }
+    .signup1 {
+        background-size: 230vh;
+    }
+    .signup1_cnt {
+        left: -43px;
+        margin-top: 0;
+    }
+    .signup1_user-box #signup1_up {
+        margin-top: 30px;
+    }
+    .signup1_user-box input {
+        left: -13vw;
+    }
+}
+
 .signup2_h2 {
     font-family: myfont;
     font-weight: 900;
@@ -292,7 +341,8 @@ hr {
     position: relative;
     border: 1px solid white;
     padding-bottom: 40px;
-    right: 40%;
+    /* right: 40%; */
+    right: 30%;
 }
 @media (max-width: 650px) {
     .signup2_box {
@@ -420,4 +470,23 @@ a:active {
     left: -100px;
     top: -10px;
     transform: scaleX(-1);
+}
+
+#signup2_active img {
+    position: relative;
+    height: 46px;
+    left: -20px;
+    top: -12px;
+}
+@media (max-width:450px) {
+    .signup2_h2 {
+        font-size: 56px;
+    }
+    .signup2_cnt {
+        left: -10vw;
+        margin-bottom: 10vw;
+    }
+    .signup2_gender .signup2_input {
+        right: 6px;
+    }
 }

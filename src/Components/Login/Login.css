@@ -11,8 +11,9 @@
 }
 .login_big-box {
     display: flex;
-    justify-content: end;
-    align-items: center;  
+    justify-content: center;
+    align-items: end; 
+    flex-direction: column; 
     color: white;
     overflow: hidden;
     user-select: none;
@@ -20,6 +21,7 @@
     height: 100vh;
     width: 100vw;
     background-image: url(./images/bg2.jpg);
+    background-size: 210vh;
 }
 .login_box {
     border: 0.1px solid rgba(32, 206, 206, 0.058);
@@ -32,23 +34,25 @@
     box-shadow: 0px 40px 40px 10px rgba(237, 237, 237, 0.663);
     position: relative;
     border: 1px solid white;
-    min-width: 30%;
+    /* min-width: 30%; */
     padding-bottom: 30px;
     margin-right: 10%;
 }
 .login_h2 {
     width: 150%;
     font-family: myfont;
-    display: flex
-    ;
+    /* display: flex; */
+
     font-weight: 900;
     cursor: none;
     font-size: 4em;
     position: relative;
     top: -50px;
     text-align: center;
-    color: rgb(32, 195, 195);
-    text-shadow: 10px 10px 20px rgb(53, 1, 63);
+    /* color: rgb(32, 195, 195); */
+     color: rgb(0, 0, 0);
+    /* text-shadow: 10px 10px 20px rgb(53, 1, 63); */
+        text-shadow: 10px 10px 20px rgb(209, 203, 203);
     letter-spacing: 5px;
 }
 .login_box h2 span img {
@@ -140,21 +144,30 @@ a:active {
     border: none;
     letter-spacing: 2px;
 }
-.login_btn:hover {
+/* .login_btn:hover {
     background-color: rgb(209, 149, 224);
+    transition: 0.3s;
+    cursor: pointer;
+} */
+.login_btn:hover {
+    background-color: rgb(146, 166, 223);
+    border: 1px solid rgb(15, 15, 129);
     transition: 0.3s;
     cursor: pointer;
 }
 .login_btn:active {
     transition: 0.2s;
     transform: scale(0.9);
-    background: rgb(185, 136, 197);
-    border: 2px solid purple;
+    /* background: rgb(185, 136, 197);
+    border: 2px solid purple; */
+    background: rgb(40, 82, 146);
+    color: white;
+    border: 1px solid rgb(6, 27, 83);
 }
 .login_box .login_link hr {
     width: 200px;
     margin-top: 20px;
-    left: 2px;
+    /* left: 2px; */
 }
 .login_box .login_link p {
     font-weight: 500;
