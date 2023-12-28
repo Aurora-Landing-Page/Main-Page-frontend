@@ -863,7 +863,7 @@
               if (cell.cache.state != "&nbsp;") ++iteration;
               if (iteration < MAX_CELL_ITERATIONS) setTimeout(()=>loop(line, cell, iteration), 10);
           };
-          for (const line of this.lines)for (const cell of line.cells)setTimeout(()=>loop(line, cell), (line.position + 1) * 200);
+          for (const line of this.lines)for (const cell of line.cells)setTimeout(()=>loop(line, cell), (line.position + 1) * 1000);
       }
       /**
        * call the right effect method (defined in this.effects)

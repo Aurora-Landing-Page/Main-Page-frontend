@@ -1,62 +1,62 @@
-import { useEffect,useState } from "react"
+import { useEffect, useState } from "react"
 import './Signup.css'
 import axios from "axios";
 import Loader from "../AlertAndLoader/Loader";
 import Toast from "../AlertAndLoader/Toast";
 const Signup = () => {
-      const initialFormData = {
-        name: "",
-        email: "",
-        phone: "",
-        gender: "",
-        college: "",
-        city: "",
-        dob: "2023-12-12T15:30:00Z",
-        password: "",
-      };
+  const initialFormData = {
+    name: "",
+    email: "",
+    phone: "",
+    gender: "",
+    college: "",
+    city: "",
+    dob: "2023-12-12T15:30:00Z",
+    password: "",
+  };
 
-      const [FormData,setFormData] = useState(initialFormData);
+  const [FormData, setFormData] = useState(initialFormData);
 
-      const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...FormData, [name]: value });
-      }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...FormData, [name]: value });
+  }
 
-      const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-          const response = await axios.post('https://aurora-nokc.onrender.com/register',FormData,{
-            "headers": {
-              "Content-Type": "application/json"
-            }
-          })
-          console.log(response.data);
-          <Toast>Regestraion Successful</Toast>;
-        } catch (e) {
-          console.log(e);
-          <Toast>An Error occured</Toast>;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('https://aurora-nokc.onrender.com/register', FormData, {
+        "headers": {
+          "Content-Type": "application/json"
         }
-      };
-      const [showStep1, setShowStep1] = useState(true);
-      const [showStep2, setShowStep2] = useState(false);
-      useEffect(() => {
-        setShowStep1(true);
-        setShowStep2(false);
-      },[]); 
-          const nextStep = (e) => {
-            e.preventDefault()
-            setShowStep1(false);
-            setShowStep2(true);
-          };
+      })
+      console.log(response.data);
+      <Toast>Regestraion Successful</Toast>;
+    } catch (e) {
+      console.log(e);
+      <Toast>An Error occured</Toast>;
+    }
+  };
+  const [showStep1, setShowStep1] = useState(true);
+  const [showStep2, setShowStep2] = useState(false);
+  useEffect(() => {
+    setShowStep1(true);
+    setShowStep2(false);
+  }, []);
+  const nextStep = (e) => {
+    e.preventDefault()
+    setShowStep1(false);
+    setShowStep2(true);
+  };
 
-          const [loading, setLoading] = useState(true);
-          useEffect(() => {
-            setTimeout(() => {
-              setLoading(false);
-            }, 2000);
-          }, []);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
 
-          
+
   return (
     <div>
       {loading ? (

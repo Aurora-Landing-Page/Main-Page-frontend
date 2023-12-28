@@ -15,7 +15,7 @@ const Login = () => {
 
   const [formData, setFormData] = useState(initialFormData);
   const [showToast, setShowToast] = useState(false);
-  const [showAlert, setShowAlert] = useState(FaArrowTrendUp);
+  const [showAlert, setShowAlert] = useState(false);
 
   const [messege, setMessege] = useState("");
 
