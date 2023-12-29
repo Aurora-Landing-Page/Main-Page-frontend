@@ -16,26 +16,26 @@ const Navbar = () => {
       title: 'Events',
       path: '/events',
     },
-    {
-      title: 'Accomodation',
-      path: '/accomodation',
-    },
+    // {
+    //   title: 'Accomodation',
+    //   path: '/accomodation',
+    // },
     {
       title: 'Pronites',
       path: '/pronites',
     },
     {
-      title: 'Login/Register',
-      path: '/login',
+      title: 'Register',
+      path: '/signin',
     },
-    {
-      title: 'Dashboard',
-      path: '/dashboard',
-    },
-    {
-      title: 'LogOut',
-      path: '/logout',
-    },
+    // {
+    //   title: 'Dashboard',
+    //   path: '/dashboard',
+    // },
+    // {
+    //   title: 'LogOut',
+    //   path: '/logout',
+    // },
     {
       title: 'Sponsors',
       path: '/sponsors',
