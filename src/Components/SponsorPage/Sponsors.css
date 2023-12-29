@@ -27,10 +27,12 @@ html {
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-size: 16px;
     line-height: 1.5;
+    
   }
   .body1::after {
     content: "  ";
     background-image: url("../../assets/bg2.jpeg");
+    filter: blur(3px);
     background-attachment: scroll;
     background-size: cover;
     background-repeat: no-repeat;
