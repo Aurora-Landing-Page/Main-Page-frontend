@@ -5,6 +5,8 @@ import Loader from "../AlertAndLoader/Loader";
 import Toast from "../AlertAndLoader/Toast";
 import IconImage from "./images/o.png";
 import data from "./data.js";
+import Alert from "../AlertAndLoader/Alert.jsx";
+
 const Signup = () => {
   const initialFormData = {
     name: "",
@@ -15,8 +17,10 @@ const Signup = () => {
     city: "",
     dob: "2023-12-12T15:30:00Z",
     password: "",
+    confirm_password: ""
   };
 
+  const [showAlert, setShowAlert] = useState(false);
   const [showToast, setShowToast] = useState(false);
 
   const [messege, setMessege] = useState("");
@@ -27,6 +31,11 @@ const Signup = () => {
     setShowToast(false);
   };
 
+  const handleAlertClose = () => {
+    setMessege("");
+    setShowAlert(false);
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...FormData, [name]: value });
@@ -34,6 +43,46 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setFormData({ ...FormData, ["confirm_password"]: initialFormData.password });
+
+    if (!FormData.phone) {
+      setMessege("Enter your phone number !");
+      setShowAlert(true);
+      return;
+    }
+    if (FormData.phone.at(0) == String(0)) {
+      setMessege("Phone number should not start with 0 !");
+      setShowAlert(true);
+
+      return;
+    }
+    if (FormData.phone.length != 10) {
+      setMessege("Enter a valid phone number !");
+      setShowAlert(true);
+      return;
+    }
+
+    if (!FormData.date) {
+      setMessege("Enter your date of birth !");
+      setShowAlert(true);
+      return;
+    }
+    if (!FormData.gender) {
+      setMessege("Enter your Gender !");
+      setShowAlert(true);
+      return;
+    }
+    if (!FormData.college) {
+      setMessege("Enter your college name !");
+      setShowAlert(true);
+      return;
+    }
+    if (!FormData.city) {
+      setMessege("Enter your city name !");
+      setShowAlert(true);
+      return;
+    }
+
     try {
       const response = await axios.post(
         "https://aurora-nokc.onrender.com/register",
@@ -62,6 +111,36 @@ const Signup = () => {
   }, []);
   const nextStep = (e) => {
     e.preventDefault();
+
+    if (!FormData.name) {
+      setMessege("Enter your name !");
+      setShowAlert(true);
+      return;
+    }
+    if (!FormData.email) {
+      setMessege("Enter your email !");
+      setShowAlert(true);
+      return;
+    }
+    const regexExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi;
+
+    if (!regexExp.test(FormData.email)) {
+      setMessege("Enter a valid email !");
+      setShowAlert(true);
+      return;
+    }
+
+    if (!FormData.password) {
+      setMessege("Enter your password !");
+      setShowAlert(true);
+      return;
+    }
+    if (FormData.password.length < 4 || FormData.password.length > 19) {
+      setMessege("Password length should be between 4 and 19 !");
+      setShowAlert(true);
+      return;
+    }
+
     setShowStep1(false);
     setShowStep2(true);
   };
@@ -77,6 +156,9 @@ const Signup = () => {
     <div>
       {showToast && (
         <Toast message={messege} duration={3000} onClose={handleToastClose} />
+      )}
+      {showAlert && (
+        <Alert message={messege} duration={3000} onClose={handleAlertClose} />
       )}
       {loading ? (
         <Loader />
@@ -222,7 +304,7 @@ const Signup = () => {
                     })}
                   </datalist>
                   <label className="signup2_input-txt clgLbl" htmlFor="text">
-                    College / Organisation Name
+                    Full College / Institute Name
                   </label>
                 </div>
                 <div className="signup2_user-box">
@@ -238,7 +320,7 @@ const Signup = () => {
                     required
                   />
                   <label className="signup2_input-txt" htmlFor="text">
-                    Contact
+                    Phone Number 
                   </label>
                 </div>
                 <div className="signup2_user-box">
