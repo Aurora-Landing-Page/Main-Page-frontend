@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react"
-import './Signup.css'
+import { useEffect, useState } from "react";
+import "./Signup.css";
 import axios from "axios";
 import Loader from "../AlertAndLoader/Loader";
 import Toast from "../AlertAndLoader/Toast";
+import IconImage from "./images/o.png";
 const Signup = () => {
   const initialFormData = {
     name: "",
@@ -15,26 +16,41 @@ const Signup = () => {
     password: "",
   };
 
+  const [showToast, setShowToast] = useState(false);
+
+  const [messege, setMessege] = useState("");
   const [FormData, setFormData] = useState(initialFormData);
+
+  const handleToastClose = () => {
+    setMessege("");
+    setShowToast(false);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...FormData, [name]: value });
-  }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://aurora-nokc.onrender.com/register', FormData, {
-        "headers": {
-          "Content-Type": "application/json"
+      const response = await axios.post(
+        "https://aurora-nokc.onrender.com/register",
+        FormData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-      })
+      );
       console.log(response.data);
-      <Toast>Regestraion Successful</Toast>;
+
+      setMessege("Registraion Successful");
+      setShowToast(true);
     } catch (e) {
       console.log(e);
-      <Toast>An Error occured</Toast>;
+      setMessege("An Error occured");
+      setShowToast(true);
     }
   };
   const [showStep1, setShowStep1] = useState(true);
@@ -44,7 +60,7 @@ const Signup = () => {
     setShowStep2(false);
   }, []);
   const nextStep = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     setShowStep1(false);
     setShowStep2(true);
   };
@@ -56,9 +72,11 @@ const Signup = () => {
     }, 2000);
   }, []);
 
-
   return (
     <div>
+      {showToast && (
+        <Toast message={messege} duration={3000} onClose={handleToastClose} />
+      )}
       {loading ? (
         <Loader />
       ) : (
@@ -70,15 +88,27 @@ const Signup = () => {
           >
             <div>
               <img src="" alt="" />
-              <img className="signup_logo" src="images/auroraa.png" alt="" />
+              <img className="signup_logo" src="images/aurora.jpg" alt="" />
             </div>
             <form action="">
               <div className="signup1_box">
                 <h2 className="signup1_h2">Register</h2>
                 <div className="signup1_cnt">
                   {/* <div className="signup1_cnt1">1</div> */}
-                  
-                    <div id="signup1_active" class="signup1_cnt1"><img src="images/o.png" alt=""/></div>
+
+                  <div id="signup1_active" class="signup1_cnt1">
+                    <img
+                      src={IconImage}
+                      alt=""
+                      style={{
+                        width: "100%",
+                        height: "40px",
+                        position: "absolute",
+                        top: "-6%",
+                        left: "0%",
+                      }}
+                    />
+                  </div>
                   <div className="signup1_line"></div>
                   <div className="signup1_cnt2">2</div>
                 </div>
@@ -129,12 +159,12 @@ const Signup = () => {
                   </button>
                 </div>
                 <hr />
-                <div className="signup1_already">Already Registered?</div>
-                <div className="signup1_button">
+                <div className="signup1_already">Welcome to Aurora</div>
+                {/* <div className="signup1_button">
                   <a className="signup1_ln" href={"/login"}>
                     Login
                   </a>
-                </div>
+                </div> */}
               </div>
             </form>
           </div>
@@ -147,7 +177,7 @@ const Signup = () => {
               <img src="" alt="" />
               <img
                 className="signup_logo"
-                src="images/auroraa.png"
+                src="images/aurora.jpg"
                 alt=""
               />{" "}
             </div>
@@ -158,7 +188,19 @@ const Signup = () => {
                   <div className="signup2_cnt1">1</div>
                   <div className="signup2_line"></div>
                   {/* <div className="signup2_cnt2">2</div> */}
-                    <div id="signup2_active" class="signup2_cnt2"><img src="images/o.png" alt=""/></div>
+                  <div id="signup2_active" class="signup2_cnt2">
+                    <img
+                      src={IconImage}
+                      alt=""
+                      style={{
+                        width: "100%",
+                        height: "40px",
+                        position: "absolute",
+                        top: "-6%",
+                        left: "0%",
+                      }}
+                    />
+                  </div>
                 </div>
                 <div className="signup2_user-box">
                   <input
@@ -240,11 +282,9 @@ const Signup = () => {
                   </label>
                 </div>
                 <div className="signup2_button">
-                  <a href="#">
-                    <button className="signup2_btn" onClick={handleSubmit}>
-                      Submit
-                    </button>
-                  </a>
+                  <button className="signup2_btn" onClick={handleSubmit}>
+                    <a>Submit</a>
+                  </button>
                 </div>
               </div>
             </form>
@@ -253,6 +293,6 @@ const Signup = () => {
       )}
     </div>
   );
-}
+};
 
-export default Signup
+export default Signup;

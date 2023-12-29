@@ -2,24 +2,77 @@ import "./Contact.css";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
-import { CiMail} from "react-icons/ci";
+import { CiMail } from "react-icons/ci";
 import { useEffect, useState } from "react";
 import Loader from "../AlertAndLoader/Loader";
+import axios from "axios";
+import Alert from "../AlertAndLoader/Alert";
+import Toast from "../AlertAndLoader/Toast";
+
 function Contact() {
-  
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [showToast, setShowToast] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [toastMessage, settoastMessage] = useState("");
+
+  const handleToastClose = () => {
+    settoastMessage("");
+    setShowToast(false);
+  };
+
+  const handleAlertClose = () => {
+    settoastMessage("");
+    setShowAlert(false);
+  };
+
+  const sendRequest = async () => {
+    try {
+      const response = await axios.post("http://localhost:5000/contactUs", {
+        name,
+        email,
+        subject,
+        message,
+      });
+      // add toast
+      if (response.status === 200) {
+        settoastMessage("Your message has been sent successfully");
+        setShowToast(true);
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
   const [loading, setLoading] = useState(true);
- useEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000); 
+    }, 2000);
   }, []);
-    
+
   return (
     <>
       {loading ? (
         <Loader />
       ) : (
         <div className="contact">
+          {showToast && (
+            <Toast
+              message={toastMessage}
+              duration={3000}
+              onClose={handleToastClose}
+            />
+          )}
+          {showAlert && (
+            <Alert
+              message={toastMessage}
+              duration={3000}
+              onClose={handleAlertClose}
+            />
+          )}
           <div className="contact-container">
             <div className="ct-form">
               <div className="contact-info">
@@ -109,6 +162,8 @@ function Contact() {
                       name="name"
                       className="ct-input"
                       placeholder="Name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </div>
                   <div className="contact-input-container">
@@ -117,6 +172,8 @@ function Contact() {
                       name="email"
                       className="ct-input"
                       placeholder="Email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   <div className="contact-input-container">
@@ -125,6 +182,8 @@ function Contact() {
                       name="subject"
                       className="ct-input"
                       placeholder="Subject"
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
                     />
                   </div>
                   <div className="contact-input-container textarea">
@@ -132,9 +191,28 @@ function Contact() {
                       name="message"
                       className="ct-input"
                       placeholder="Message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                     ></textarea>
                   </div>
-                  <button type="submit" className="contact-btn">
+                  <button
+                    type="submit"
+                    className="contact-btn"
+                    onClick={async (e) => {
+                      e.preventDefault();
+                      if (
+                        name === "" ||
+                        email === "" ||
+                        subject === "" ||
+                        message === ""
+                      ) {
+                        // replace with toast
+                        alert("Please fill all the fields");
+                        return;
+                      }
+                      await sendRequest();
+                    }}
+                  >
                     Send
                   </button>
                 </form>
@@ -146,8 +224,6 @@ function Contact() {
     </>
   );
 }
-
-
 
 export const ContactsContainer = () => {
   return (
@@ -226,6 +302,5 @@ export const ContactsContainer = () => {
     </div>
   );
 };
-
 
 export default Contact;
