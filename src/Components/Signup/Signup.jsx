@@ -4,6 +4,7 @@ import axios from "axios";
 import Loader from "../AlertAndLoader/Loader";
 import Toast from "../AlertAndLoader/Toast";
 import IconImage from "./images/o.png";
+import data from "./data.js";
 const Signup = () => {
   const initialFormData = {
     name: "",
@@ -204,13 +205,22 @@ const Signup = () => {
                 </div>
                 <div className="signup2_user-box">
                   <input
-                    type="text"
+                    list="collegeList"
                     className="signup2_input clgTxt"
                     name="college"
                     value={FormData.college}
                     onChange={handleChange}
                     required
                   />
+                  <datalist id="collegeList">
+                    {data.map((item, index) => {
+                      return (
+                        <option className="option" key={index}>
+                          {item.value}
+                        </option>
+                      );
+                    })}
+                  </datalist>
                   <label className="signup2_input-txt clgLbl" htmlFor="text">
                     College / Organisation Name
                   </label>
