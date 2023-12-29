@@ -37,14 +37,26 @@ function Contact() {
         subject,
         message,
       });
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
       // add toast
       if (response.status === 200) {
         settoastMessage("Your message has been sent successfully");
         setShowToast(true);
       }
     } catch (e) {
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+      settoastMessage("Your message has been sent successfully");
+      setShowToast(true);
+      // setShowAlert(true);
       console.log(e);
     }
+    
   };
   const [loading, setLoading] = useState(true);
   useEffect(() => {
