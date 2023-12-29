@@ -10,7 +10,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: url("https://media.istockphoto.com/id/1445895192/vector/retro-sci-fi-background-futuristic-grid-landscape-of-the-80s-90s.jpg?s=612x612&w=0&k=20&c=WGCeQ1YGz5KxOhViPXfjlhFAltH-3pkypDFtkKIHq30=");
+    background: url("../../../public/back.jpeg");
+    /* background: url("../../../public/video.mp4"); */
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -20,7 +22,8 @@
   
   .nav_link{
     text-decoration: none;
-    color: white;
+    color: black;
+    font-size: 2rem;
   }
   .nav.open {
     visibility: visible;
@@ -47,9 +50,13 @@
     text-transform: uppercase;
     transition: transform 0.3s;
     margin-top: -15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
   }
   .nav_li:hover {
     transform: scale(1.3);
+    color: black;
   }
   
   .burger {
@@ -64,7 +71,7 @@
     width: 60px;
     z-index: 20;
     transition: border-bottom 0.8s ease-in-out;
-    height: 100px;
+    height: 37px;
   }
   .burger::-moz-focus-inner {
     border: 0;
@@ -73,7 +80,7 @@
   .burger,
   .burger::before,
   .burger::after {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid white;
   }
   .burger_white,
   .burger_white::before,
@@ -94,7 +101,7 @@
   }
   .open.burger::before,
   .open.burger::after {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid white;
   }
   .open.burger::before {
     transform: rotate(405deg) translateY(7px) translateX(7px);
