@@ -35,7 +35,7 @@
   cursor: none;
   font-size: 4em;
   position: relative;
-  top: -50px;
+  top: -68px;
   left: 5px;
   text-align: center;
   color: rgb(32, 195, 195);
@@ -274,7 +274,7 @@ hr {
   cursor: none;
   font-size: 4em;
   position: relative;
-  top: -19px;
+  top: -45px;
   text-align: center;
   color: rgb(32, 195, 195);
   text-shadow: 1px 2px rgb(7, 72, 72);
@@ -343,7 +343,8 @@ hr {
   position: relative;
   border: 1px solid white;
   padding-bottom: 40px;
-  right: 40%;
+  width: 105%;
+  right: 36%;
 }
 @media (max-width: 650px) {
   .signup2_box {
