@@ -8,6 +8,8 @@ import Loader from "../AlertAndLoader/Loader";
 import axios from "axios";
 import Alert from "../AlertAndLoader/Alert";
 import Toast from "../AlertAndLoader/Toast";
+import Navbar from '../Navbar/Navbar';
+
 
 function Contact() {
   const [name, setName] = useState("");
@@ -70,6 +72,8 @@ function Contact() {
       {loading ? (
         <Loader />
       ) : (
+        <>
+         <Navbar />
         <div className="contact">
           {showToast && (
             <Toast
@@ -232,6 +236,7 @@ function Contact() {
             </div>
           </div>
         </div>
+        </>
       )}
     </>
   );

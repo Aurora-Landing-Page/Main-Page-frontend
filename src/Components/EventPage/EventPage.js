@@ -1,3 +1,4 @@
+import Navbar from "../Navbar/Navbar";
 
 const EventPage = () => {
   const myStyle = {
@@ -5,6 +6,8 @@ const EventPage = () => {
   };
     return (
       <div style={myStyle}>
+      <Navbar />
+
         <iframe
           title="ExternalHTML"
           src="./EventPage/index4.html"
