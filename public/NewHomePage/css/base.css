@@ -296,7 +296,7 @@ body #cdawrap {
   place-items: center;
   text-align: center;
   font-weight: 300;
-  font-size: clamp(1.5rem, 10vw, 6.5rem);
+  font-size: clamp(1.5rem, 10vw, 5rem);
 }
 
 .content__title--top {
