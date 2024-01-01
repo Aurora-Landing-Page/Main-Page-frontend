@@ -350,7 +350,8 @@ hr {
 }
 @media (max-width: 650px) {
   .signup2_box {
-    right: 0;
+    right: 0px;
+    width: 85%;
   }
 }
 .signup2_user-box {
