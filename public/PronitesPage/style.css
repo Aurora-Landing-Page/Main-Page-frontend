@@ -50,6 +50,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 5rem;
+    margin-top: 4%;
   }
   .cards_container{
   height: 100%;
@@ -80,7 +84,7 @@
     position: relative;
     height: 100%;
     width: 100%;
-    background-image:url('./assets/conc1.jpg');
+    background-image:url('./assets/conc1.png');
     background-size: cover;
     transition: 0.7s all ease;
      transform-style: preserve-3d translateZ(-10px);
@@ -217,8 +221,9 @@
       height: 40vh;
     }
     .card1,.card2,.card3{
-    padding-bottom: 15vw;
-    }
+    padding-bottom: 15vw;   
+    margin: 4vw;
+   }
     .card{
       gap: 20px;
     }

@@ -28,6 +28,10 @@ body {
 	height: 100%;
 	overflow: hidden;
 }
+.arrow{
+	height: 6vh;
+	width: 5vw;
+}
 main{
 	cursor: none;
 }
