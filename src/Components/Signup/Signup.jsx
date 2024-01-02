@@ -6,6 +6,8 @@ import Toast from "../AlertAndLoader/Toast";
 import IconImage from "./images/o.png";
 import data from "./data.js";
 import Alert from "../AlertAndLoader/Alert.jsx";
+import Navbar from '../Navbar/Navbar';
+
 
 const Signup = () => {
   const initialFormData = {
@@ -164,6 +166,8 @@ const Signup = () => {
         <Loader />
       ) : (
         <div className="signup">
+                <Navbar />
+
           <div
             id="step1"
             className="signup1"

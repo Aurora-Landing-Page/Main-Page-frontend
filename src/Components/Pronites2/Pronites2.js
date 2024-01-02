@@ -1,11 +1,27 @@
 import React from 'react'
+import Navbar from '../Navbar/Navbar';
+import Loader from '../AlertAndLoader/Loader';
+import { useEffect,useState } from 'react';
 
 const Pronites2 = () => {
-    const myStyle = {
-        height: '100vh',
-      };
-        return (
+
+  const [loading, setLoading] = useState(true);
+	useEffect(() => {
+		setTimeout(() => {
+			setLoading(false);
+		}, 2000);
+	}, []);
+
+  const myStyle = {
+    height: '100vh',
+  };
+  return (
+
+    <div>
+      {
+        loading? (<Loader/>):(
           <div style={myStyle}>
+            <Navbar />
             <iframe
               title="ExternalHTML"
               src="./PronitesPage/index6.html"
@@ -14,8 +30,11 @@ const Pronites2 = () => {
               frameBorder="0"
             />
           </div>
-      
-        );
+        )
+      }
+    </div>
+
+  );
 }
 
 export default Pronites2

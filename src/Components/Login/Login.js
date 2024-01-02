@@ -8,6 +8,8 @@ import Alert from '../AlertAndLoader/Alert';
 import { FaArrowTrendUp } from 'react-icons/fa6';
 
 const Login = () => {
+
+
   const initialFormData = {
     email: '',
     password: ''

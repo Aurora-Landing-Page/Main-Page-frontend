@@ -26,7 +26,7 @@ const Navbar = () => {
     },
     {
       title: 'Register',
-      path: '/signin',
+      path: '/register',
     },
     // {
     //   title: 'Dashboard',
@@ -44,10 +44,10 @@ const Navbar = () => {
       title: 'Contact Us',
       path: '/contact',
     },
-    {
-      title: 'Schedule',
-      path: '/schedule',
-    },
+    // {
+    //   title: 'Schedule',
+    //   path: '/schedule',
+    // },
     {
       title: 'FAQs',
       path: '/faq',

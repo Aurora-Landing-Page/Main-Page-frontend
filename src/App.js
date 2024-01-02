@@ -19,7 +19,7 @@ function App() {
  <div>
     <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/schedule' element={<SchedulePage/>}/>
+        {/* <Route path='/schedule' element={<SchedulePage/>}/> */}
         <Route path='/sponsors' element={<Sponsors/>}/>
         {/* <Route path='/pronites' element={<Pronites/>}/> */}
         <Route path='/pronites' element={<Pronites2/>}/>
@@ -28,7 +28,7 @@ function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/faq" element={<Faq />} />
         {/* <Route path="/login" element={<Login />} /> */}
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/register" element={<Signup />} />
     </Routes>
  </div>
   );
