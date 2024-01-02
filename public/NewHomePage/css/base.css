@@ -237,6 +237,7 @@ body #cdawrap {
   line-height: 1.2;
   position: relative;
   align-self: end;
+  font-size: 40px;
 }
 
 .intro__info::after {

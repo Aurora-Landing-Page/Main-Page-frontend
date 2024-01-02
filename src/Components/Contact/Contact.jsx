@@ -99,8 +99,7 @@ function Contact() {
                   className="contact-text"
                   style={{ color: "black", fontFamily: "Oxanium" }}
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                  dolorum adipisci recusandae praesentium dicta!
+                  For any doubts or queries, feel free to contact us.
                 </p>
 
                 <div>
@@ -127,7 +126,7 @@ function Contact() {
                   </div>
                   {/* <div className="contact-information">
                 <CiMail className="ct-icon" />
-                <a href="mailto:abc@aurorafest.in" className='ct-tel'>abc@aurorafest.in</a>
+                <a href="mailto:accounts@aurorafest.in" className='ct-tel'>accounts@aurorafest.in</a>
               </div>
               <div className="contact-information">
                 <CiPhone className="ct-icon"  />
@@ -251,14 +250,14 @@ export const ContactsContainer = () => {
           className="cts-title"
           style={{ fontFamily: "Oxanium", color: "black" }}
         >
-          abc
+          Divyansh Pathak
         </p>
         <div className="cts-icons">
           <a href="tel:12345678" className="ct-tel">
-            9998887771
+            9560421964
             {/* <CiPhone className="ct-icon" /> */}
           </a>
-          <a href="mailto:abc@aurorafest.in">
+          <a href="mailto:accounts@aurorafest.in">
             <CiMail className="ct-icon" />
           </a>
         </div>
@@ -269,14 +268,14 @@ export const ContactsContainer = () => {
           className="cts-title"
           style={{ fontFamily: "Oxanium", color: "black" }}
         >
-          abc
+          Mrigank Shukla
         </p>
         <div className="cts-icons">
           <a href="tel:12345678" className="ct-tel">
-            9998887771
+            8224094514
             {/* <CiPhone className="ct-icon" /> */}
           </a>
-          <a href="mailto:abc@aurorafest.in">
+          <a href="mailto:accounts@aurorafest.in">
             <CiMail className="ct-icon" />
           </a>
         </div>
@@ -288,13 +287,13 @@ export const ContactsContainer = () => {
           className="cts-title"
           style={{ fontFamily: "Oxanium", color: "black" }}
         >
-          abc
+          Anup Raj
         </p>
         <div className="cts-icons">
           <a href="tel:12345678" className="ct-tel">
-            9998887771{/* <CiPhone className="ct-icon" /> */}
+            6202907787{/* <CiPhone className="ct-icon" /> */}
           </a>
-          <a href="mailto:abc@aurorafest.in">
+          <a href="mailto:accounts@aurorafest.in">
             <CiMail className="ct-icon" />
           </a>
         </div>
@@ -305,13 +304,13 @@ export const ContactsContainer = () => {
           className="cts-title"
           style={{ fontFamily: "Oxanium", color: "black" }}
         >
-          abc
+          Sumit Verma
         </p>
         <div className="cts-icons">
           <a href="tel:12345678" className="ct-tel">
-            9998887771{/* <CiPhone className="ct-icon" /> */}
+            7272099495{/* <CiPhone className="ct-icon" /> */}
           </a>
-          <a href="mailto:abc@aurorafest.in">
+          <a href="mailto:accounts@aurorafest.in">
             <CiMail className="ct-icon" />
           </a>
         </div>

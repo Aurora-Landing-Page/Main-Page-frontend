@@ -32,7 +32,7 @@ html {
   .body1::after {
     content: "  ";
     background-image: url("../../assets/bg2.jpeg");
-    filter: blur(3px);
+    filter: blur(8px);
     background-attachment: scroll;
     background-size: cover;
     background-repeat: no-repeat;
@@ -70,6 +70,7 @@ html {
     font-size: 5rem;
     /* color: #ffffff; */
     margin-bottom: 2rem;
+    margin-top: 2rem;
   }
   .sponsors-innerContainer2 h1 {
     text-align: center;
@@ -112,6 +113,7 @@ html {
   }
   .sponsors-sponInfo h4 {
     margin: 9px;
+    font-weight: bold;
   }
   .sponsors-restSpon {
     display: flex;
@@ -140,7 +142,7 @@ html {
   }
   .sponsors-marketHead .sponsors-names {
     /* font-size: 2rem; */
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
     display: flex;
     justify-content: center;
     align-items: center;

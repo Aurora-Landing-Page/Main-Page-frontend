@@ -13,16 +13,18 @@ const Sponsors = () => {
         <h2>Marketing Heads</h2>
         <div className="sponsors-names">
           <div className="sponsors-Head">
-            <h3>Pankaj Goyal</h3>
-            <a href="mailto:abc@aurorafest.org">abc@aurorafest.org</a>
-            <a href="tel:+91-9999999999">+91-9999999999</a>
+            <h3>Divyansh Pathak</h3>
+            {/* <a href="mailto:abc@aurorafest.org">abc@aurorafest.org</a> */}
+            <a href="tel:+91-9999999999">+91-9560421964</a>
           </div>
           <div className="sponsors-Head">
-            <h3>Pankaj Goyal</h3>
-            <a href="mailto:abc@aurorafest.org">abc@aurorafest.org</a>
+            <h3>Sumit Verma</h3>
+            {/* <a href="mailto:abc@aurorafest.org">abc@aurorafest.org</a> */}
             <a href="tel:+91-9999999999">+91-9999999999</a>
           </div>
         </div>
+        <a  href="mailto:accounts@aurorafest.in">accounts@aurorafest.in</a>
+
       </div>
 
       <div className="sponsors-sponContainer">
