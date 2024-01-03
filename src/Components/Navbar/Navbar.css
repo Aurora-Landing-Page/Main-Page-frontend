@@ -134,8 +134,8 @@
       font-size: 24px;
     }
     .burger {
-      top: 15px;
-      right: 10px;
+      top: 3vh;
+      right: 116vw;
       width: 50px;
     }
     .burger::before,

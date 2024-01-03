@@ -79,7 +79,8 @@
   color: pink;
 }
 .signup1_box {
-  border: 0.1px solid rgba(32, 206, 206, 0.058);
+  /* border: 0.1px solid rgba(32, 206, 206, 0.058); */
+  border: 1px solid white;
   padding: 5em;
   background-color: rgba(155, 165, 165, 0.05);
   backdrop-filter: blur(100px);
