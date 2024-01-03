@@ -478,11 +478,11 @@ a.test {
 	width:40%;
 }
 .BX1{
-    background-image: url('../img/dj.jpg');
+    background-image: url('../img/Eumelia.png');
 
 }
 .BX2{
-    background-image: url('../img/PIKTURE.png');
+    background-image: url('../img/Parivesh.jpg');
 
 }
 .BX3{
@@ -491,6 +491,34 @@ a.test {
 }
 .BX4{
     background-image: url('../img/FASHINSHOW.jpeg');
+
+}
+.BX5{
+    background-image: url('../img/Corna.png');
+
+}
+.BX6{
+    background-image: url('../img/LaArte.jpg');
+
+}
+.BX7{
+    background-image: url('../img/Dramatics.jpg');
+
+}
+.BX8{
+    background-image: url('../img/ThePikture.png');
+
+}
+.BX9{
+    background-image: url('../img/Esports.png');
+
+}
+.BX10{
+    background-image: url('../img/Literary.jpg');
+
+}
+.BX11{
+    background-image: url('../img/dj.jpg');
 
 }
 .event_info{
@@ -504,7 +532,7 @@ a.test {
 	color: white;
 }
 .event_head{
-	font-size: 7rem;
+	font-size: 6rem;
 	transition: 0.7s  0.5s all linear;
 	color: rgb(0, 0, 0);
 }
