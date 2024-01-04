@@ -7,6 +7,8 @@
   min-height: 100vh;
   padding: 2rem;
   background: rgb(24, 23, 23);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   /* background: linear-gradient(
       90deg,
       rgba(24, 23, 23, 1) 44%,
@@ -17,11 +19,23 @@
   background-size: cover;
   overflow: hidden;
   display: flex;
-
   flex-direction: column;
-
   font-family: "Oxanium", "sans-serif";
 }
+
+.team-aurora-team::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./newbg.jpg") no-repeat center right;
+  background-size: cover;
+  filter: blur(5px);
+  z-index: -1;
+}
+
 /* Styles for the entire team page */
 .team-aurora-team {
   text-align: center;
