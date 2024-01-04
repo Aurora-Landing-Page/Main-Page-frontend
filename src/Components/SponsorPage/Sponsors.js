@@ -27,12 +27,12 @@ const Sponsors = () => {
               <div className="sponsors-Head">
                 <h3>Divyansh Pathak</h3>
                 {/* <a href="mailto:abc@aurorafest.org">abc@aurorafest.org</a> */}
-                <a href="tel:+91-9999999999">+91-9560421964</a>
+                <a href="tel:+91-9560421964">+91-9560421964</a>
               </div>
               <div className="sponsors-Head">
                 <h3>Sumit Verma</h3>
                 {/* <a href="mailto:abc@aurorafest.org">abc@aurorafest.org</a> */}
-                <a href="tel:+91-9999999999">+91-9999999999</a>
+                <a href="tel:+91-7272099495">+91-7272099495</a>
               </div>
             </div>
             <a  href="mailto:accounts@aurorafest.in">accounts@aurorafest.in</a>
