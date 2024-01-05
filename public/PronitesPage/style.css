@@ -1,260 +1,319 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body{
-    height: 100vh; 
-    overflow: hidden;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 1;
-  }
-  body::before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.7);
-    z-index: 2;
-  
-  }
-  .App{
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .wrapper{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .heading{
-    height: 40%;
-    width: 120%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    font-size: 5rem;
-    margin-top: 4%;
-  }
-  .cards_container{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading {
+  height: 40%;
+  width: 120%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 5rem;
+  margin-top: 4%;
+}
+
+.cards_container {
   height: 100%;
   width: 70%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  }
-  .card_2_container,.card_3_container,.card_1_container{
-    height: 80%;
-    width: 27vw;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    position: relative;
-    z-index: 0;
-    transition: 0.7s all ease;
-    color: rgba(0,0,0,0);
-    
-  }
-  .card_1_container,.card_3_container{
-    transform: scaleY(0.8);
-  }
-  .card_2_container{
-    transform:scaleY(1) scaleX(1.05);
-  }
-  
-  .card1{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background-image:url('./assets/conc1.png');
-    background-size: cover;
-    transition: 0.7s all ease;
-     transform-style: preserve-3d translateZ(-10px);
-     perspective: 100px;
-    transform: rotateY(25deg) ;
-    z-index: 2;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-     
-     font-weight: 600;
-     display: flex;
-     justify-content: end;
-     padding-top: 50%;
-     gap: 10%;
-     align-items: center;
-     flex-direction: column;
-    background-position: center;
-     padding-bottom: 10vw;
-  }
-  .card2{
-    height: 100%;
-    width: 100%;
-    background-image:url('./assets/conc2.png');
-    background-size: cover;
-    transition: 0.7s all ease;
-    transform: rotateY(0deg);
-     transform-style: preserve-3d translateZ(-10px);
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-     background-position: center;
-     font-weight: 600;
-     display: flex;
-     justify-content: end;
-     padding-top: 50%;
-     gap: 10%;
-     align-items: center;
-     flex-direction: column;
-    z-index: 2;
-    padding-bottom: 10vw;
-  
-  }
-  .heading,.country,.quote2{
-   height: 5%;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-  }
-  .heading{font-size: max(2.5rem,16px);}
-  .country{
-    font-weight: 300;
-    font-size: 2rem;
-  }
-  .quote2{
-    font-size: 1.2rem;
-    font-weight: 300;
-  }
-  
-  .card::before{
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    content: '';
-    z-index: 6;
-    background-image:linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0.5), rgba(0,0,0,1));
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  .card3{
-    height: 100%;
-    width: 100%;
-    background-image:url('./assets/conc3.png');
-    background-size: cover;
-    background-position: center;
-     transform-style: preserve-3d translateZ(-10px);
-    transition: 0.7s all ease;
-    transform: rotateY(-25deg);
-    z-index: 2;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-     
-     font-weight: 600;
-     display: flex;
-     justify-content: end;
-     padding-top: 50%;
-     gap: 10%;
-     flex-direction: column;
-     padding-bottom: 10vw;
-     align-items: center;
-  }
-  .button1,.button2{
-    z-index: 2;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 2rem;
-    border: none;
-    background-color: black;
-    color: white;
-    font-weight: 600;
-    transition: 0.15s all ease;
-    position: relative;
-    position: relative;
-    font-size: 1.2rem;
-    position: relative;
-    font-size: 1.2rem;
-  }
-  .button1{
+}
+
+.card_2_container,
+.card_3_container,
+.card_1_container {
+  height: 80%;
+  width: 27vw;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  position: relative;
+  z-index: 0;
+  transition: 0.7s all ease;
+  color: rgba(0, 0, 0, 0);
+
+}
+
+.card_1_container,
+.card_3_container {
+  transform: scaleY(0.8);
+}
+
+.card_2_container {
+  transform: scaleY(1) scaleX(1.05);
+}
+
+.card1 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url('./assets/conc1.png');
+  background-size: cover;
+  transition: 0.7s all ease;
+  transform-style: preserve-3d translateZ(-10px);
+  perspective: 100px;
+  transform: rotateY(25deg);
+  z-index: 2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  font-weight: 600;
+  display: flex;
+  justify-content: end;
+  padding-top: 50%;
+  gap: 10%;
+  align-items: center;
+  flex-direction: column;
+  background-position: center;
+  padding-bottom: 10vw;
+}
+
+.card2 {
+  height: 100%;
+  width: 100%;
+  background-image: url('./assets/conc2.png');
+  background-size: cover;
+  transition: 0.7s all ease;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d translateZ(-10px);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-position: center;
+  font-weight: 600;
+  display: flex;
+  justify-content: end;
+  padding-top: 50%;
+  gap: 10%;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+  padding-bottom: 10vw;
+
+}
+
+.heading,
+.country,
+.quote2 {
+  height: 5%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.heading {
+  font-size: max(2.5rem, 16px);
+}
+
+.country {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.quote2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.card::before {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  content: '';
+  z-index: 6;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+}
+
+
+
+
+
+
+
+
+.card3 {
+  height: 100%;
+  width: 100%;
+  background-image: url('./assets/conc3.png');
+  background-size: cover;
+  background-position: center;
+  transform-style: preserve-3d translateZ(-10px);
+  transition: 0.7s all ease;
+  transform: rotateY(-25deg);
+  z-index: 2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  font-weight: 600;
+  display: flex;
+  justify-content: end;
+  padding-top: 50%;
+  gap: 10%;
+  flex-direction: column;
+  padding-bottom: 10vw;
+  align-items: center;
+}
+
+.button1,
+.button2 {
+  z-index: 2;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  transition: 0.15s all ease;
+  position: relative;
+  position: relative;
+  font-size: 1.2rem;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.button1 {
   right: 3rem;
+}
+
+.button2 {
+  left: 3rem;
+}
+
+.button2:hover,
+.button1:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.card {
+  gap: 52px;
+}
+
+
+
+@media screen and (max-width:761px) {
+
+  .card_1_container,
+  .card_2_container,
+  .card_3_container {
+    width: 30vw;
+    height: 40vh;
   }
-  .button2{
-    left: 3rem;
+
+  .card1,
+  .card2,
+  .card3 {
+    padding-bottom: 15vw;
+    margin: 6vw;
   }
-  .button2:hover,.button1:hover{
-    background-color: white;
-    color: black;
-  }
-  
-   
+
   .card {
-    gap: 52px;
-  } 
-  
-  
-  
-  @media screen and (max-width:500px){
-    .card_1_container,.card_2_container,.card_3_container{
-      width: 30vw;
-      height: 40vh;
-    }
-    .card1,.card2,.card3{
-    padding-bottom: 15vw;   
-    margin: 4vw;
-   }
-    .card{
-      gap: 20px;
-    }
-    .button1,.button2{
-      position: absolute;
-      transform: rotate(0deg);
-      z-index: 15;
-     margin-right: 5%;
-     transform: scale(0.5);
-    }
-    .button1{
-       left: -3%;
-    }
-    .button2{
-       left: 85%;    }
-       .heading,.country,.quote2{
-        font-size: 3.2vw;
-       }
-    
+    gap: 20px;
   }
-  
-  #visible .heading, #visible .country{
-    color: rgb(255, 255, 255);
-    z-index: 7;
-    transition: all 0.2s linear
+
+  .heading2 {
+    font-size: small;
   }
-  #non_visible .heading, #non_visible .country{
-    color: rgba(255, 0, 0, 0);
-    transition: all 0.2s linear
+
+  .country2 {
+    font-size: small;
   }
-  
-  
-  
-  
+
+  .quote2 {
+    font-size: small;
+  }
+
+  .button1,
+  .button2 {
+    position: absolute;
+    transform: rotate(0deg);
+    z-index: 15;
+    margin-right: 5%;
+    transform: scale(0.5);
+  }
+
+  .button1 {
+    left: -3%;
+  }
+
+  .button2 {
+    left: 85%;
+  }
+
+  .heading2,
+  .country2,
+  .quote2 {
+    font-size: 3.2vw;
+  }
+
+ .heading{
+  position: relative;
+  top: 20%;
+  font-size: large;
+ }
+
+}
+
+#visible .heading,
+#visible .country {
+  color: rgb(255, 255, 255);
+  z-index: 7;
+  transition: all 0.2s linear
+}
+
+#non_visible .heading,
+#non_visible .country {
+  color: rgba(255, 0, 0, 0);
+  transition: all 0.2s linear
+}

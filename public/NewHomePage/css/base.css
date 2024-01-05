@@ -210,7 +210,7 @@ body #cdawrap {
   margin: 0;
   line-height: 0.9;
   display: grid;
-  margin-top: 15vh;
+  margin-top: -2vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 400;
 }
@@ -227,6 +227,11 @@ body #cdawrap {
   max-width: 15ch;
   margin: 0 auto;
   color: var(--color-title);
+}
+
+.intro__title-img {
+  height: 90%;
+  width: 50%;
 }
 
 .intro__info {
@@ -387,10 +392,14 @@ body #cdawrap {
     justify-self: end;
   }
 }
-@media screen and (min-width: 100px) and (max-width: 600px) {
+@media screen and (min-width: 100px) and (max-width: 900px) {
   .content__title--right {
     justify-items: start;
     text-align: left;
+  }
+
+  .intro__title {
+    margin-top: 1vh;
   }
   .content__title--left {
     justify-items: end;

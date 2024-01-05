@@ -54,7 +54,7 @@ function check(){
 details[1].card.style.color="white"
 details[0].card.style.filter='brightness(0.57)'
 details[2].card.style.filter='brightness(0.57)'
-var i = 0;
+var i = -1;
 body.style.backgroundImage=`url(${details[0].bgurl})`
 
 leftbutton.addEventListener('click', (event) => {

@@ -126,7 +126,7 @@
     }
   }
   
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 900px) {
     .nav_ul {
       transform: translateY(-8vh);
     }
@@ -135,8 +135,9 @@
     }
     .burger {
       top: 3vh;
-      right: 116vw;
+      right: 6vw;
       width: 50px;
+      height: 4%;
     }
     .burger::before,
     .burger::after {
