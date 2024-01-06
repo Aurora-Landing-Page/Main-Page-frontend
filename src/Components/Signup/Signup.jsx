@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import "./Signup.css";
 import axios from "axios";
 import Loader from "../AlertAndLoader/Loader";
@@ -17,7 +17,7 @@ const Signup = () => {
     gender: "",
     college: "",
     city: "",
-    dob: "2023-12-12T15:30:00Z",
+    dob: "2024-01-06T12:34:56.789Z", // 2023-11-11
     password: "",
     confirm_password: ""
   };
@@ -38,19 +38,26 @@ const Signup = () => {
     setShowAlert(false);
   };
 
+
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    console.log(e.target.value);
+    const { name, value} = e.target;
+
+  
     setFormData({ ...FormData, [name]: value });
+    console.log(FormData);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormData({ ...FormData, ["confirm_password"]: initialFormData.password });
+    setFormData({ ...FormData, ["confirm_password"]: FormData.password });
+    console.log(FormData);
 
     if (!FormData.phone) {
       setMessege("Enter your phone number !");
       setShowAlert(true);
       return;
+
     }
     if (FormData.phone.at(0) == String(0)) {
       setMessege("Phone number should not start with 0 !");
@@ -64,7 +71,9 @@ const Signup = () => {
       return;
     }
 
-    if (!FormData.date) {
+    console.log(FormData.date);
+
+    if (!FormData.dob) {
       setMessege("Enter your date of birth !");
       setShowAlert(true);
       return;
@@ -75,7 +84,7 @@ const Signup = () => {
       return;
     }
     if (!FormData.college) {
-      setMessege("Enter your college name !");
+      setMessege("Enter your college name !"); 
       setShowAlert(true);
       return;
     }
@@ -87,7 +96,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "https://aurora-nokc.onrender.com/register",
+        "api.aurorafest.in/register",
         FormData,
         {
           headers: {
@@ -359,7 +368,7 @@ const Signup = () => {
                   <input
                     type="radio"
                     className="signup2_input"
-                    value={FormData.gender}
+                    value="female"
                     onChange={handleChange}
                     name="gender"
                     required
@@ -370,6 +379,8 @@ const Signup = () => {
                   <input
                     type="radio"
                     className="signup2_input"
+                    value="male"
+                    onChange={handleChange}
                     name="gender"
                     required
                   />
