@@ -17,9 +17,8 @@ const Signup = () => {
     gender: "",
     college: "",
     city: "",
-    dob: "2024-01-06T12:34:56.789Z", // 2023-11-11
-    password: "",
-    confirm_password: ""
+    dob: "2000-01-01",  // 2024-01-06T12:34:56.789Z
+    password: ""
   };
 
   const [showAlert, setShowAlert] = useState(false);
@@ -37,21 +36,44 @@ const Signup = () => {
     setMessege("");
     setShowAlert(false);
   };
+  const backStep = (e) => {
+    e.preventDefault();
 
+    setShowStep1(true);
+    setShowStep2(false);
+
+  }
 
   const handleChange = (e) => {
     console.log(e.target.value);
-    const { name, value} = e.target;
+    const { name, value } = e.target;
 
-  
+    if (name == "dob") {
+      const year = parseInt(value.substring(0, 4), 10);
+
+      if (year < 1985 || year > 2010) {
+        setMessege("Enter a valid date of birth !");
+        setShowAlert(true);
+      }
+      else {
+        setFormData({ ...FormData, [name]: value });
+        console.log(FormData);
+      }
+    }
+    else {
+
+      setFormData({ ...FormData, [name]: value });
+      console.log(FormData);
+
+    }
+
+
     setFormData({ ...FormData, [name]: value });
     console.log(FormData);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormData({ ...FormData, ["confirm_password"]: FormData.password });
-    console.log(FormData);
 
     if (!FormData.phone) {
       setMessege("Enter your phone number !");
@@ -71,7 +93,6 @@ const Signup = () => {
       return;
     }
 
-    console.log(FormData.date);
 
     if (!FormData.dob) {
       setMessege("Enter your date of birth !");
@@ -84,7 +105,7 @@ const Signup = () => {
       return;
     }
     if (!FormData.college) {
-      setMessege("Enter your college name !"); 
+      setMessege("Enter your college name !");
       setShowAlert(true);
       return;
     }
@@ -94,9 +115,15 @@ const Signup = () => {
       return;
     }
 
+    let NewDate = new Date(FormData.dob);
+    NewDate = NewDate.toISOString();
+
+    setFormData({ ...FormData, ["dob"]: NewDate });
+    console.log(FormData);
+
     try {
       const response = await axios.post(
-        "api.aurorafest.in/register",
+        "http://localhost:3000/registerCa",
         FormData,
         {
           headers: {
@@ -175,7 +202,7 @@ const Signup = () => {
         <Loader />
       ) : (
         <div className="signup">
-                <Navbar />
+          {/* <Navbar /> */}
 
           <div
             id="step1"
@@ -234,6 +261,23 @@ const Signup = () => {
                   />
                   <label className="signup1_input-txt" htmlFor="email">
                     Email
+                  </label>
+                </div>
+                <div className="signup1_user-box" style={{ position: "relative", top: "18px" }}>
+                  <input
+                    id="date"
+                    className="signup1_input"
+                    placeholder=""
+                    type="date"
+                    value={FormData.dob}
+                    onChange={handleChange}
+                    name="dob"
+                    autoComplete="off"
+                    required=""
+                    endIc
+                  />
+                  <label className="signup1_input-txt" htmlFor="date" >
+                    Date of Birth
                   </label>
                 </div>
                 <div className="signup1_user-box">
@@ -333,7 +377,7 @@ const Signup = () => {
                     required
                   />
                   <label className="signup2_input-txt" htmlFor="text">
-                    Phone Number 
+                    Phone Number
                   </label>
                 </div>
                 <div className="signup2_user-box">
@@ -368,7 +412,7 @@ const Signup = () => {
                   <input
                     type="radio"
                     className="signup2_input"
-                    value="female"
+                    value="Female"
                     onChange={handleChange}
                     name="gender"
                     required
@@ -379,7 +423,7 @@ const Signup = () => {
                   <input
                     type="radio"
                     className="signup2_input"
-                    value="male"
+                    value="Male"
                     onChange={handleChange}
                     name="gender"
                     required
@@ -389,6 +433,9 @@ const Signup = () => {
                   </label>
                 </div>
                 <div className="signup2_button">
+                  <button className="signup2_btn" onClick={backStep} style={{ margin: "3%" }}>
+                    <a>Back</a>
+                  </button>
                   <button className="signup2_btn" onClick={handleSubmit}>
                     <a>Submit</a>
                   </button>
