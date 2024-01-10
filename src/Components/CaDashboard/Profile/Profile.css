@@ -1,0 +1,46 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.detail-section {
+    text-align:left;
+    border: 1px solid white;
+    border-radius: 18px;
+    box-shadow: 0px 2px 4px 0px #e365d0;
+    width:50%;
+    overflow: auto;
+}
+
+.data {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.p-title {
+    text-align: center;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .profile{
+        margin-top: 2rem;
+        overflow-y:auto;
+    }
+    .detail-section {
+        width: 87%;
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width: 768px)
+{
+    .profile{
+        align-items: center;
+        padding: 1rem;
+    }
+    .p-title {
+        font-size: 2rem;
+    }
+}
