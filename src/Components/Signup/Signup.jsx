@@ -299,7 +299,7 @@ const Signup = () => {
                   </button>
                 </div>
                 <hr />
-                <div className="signup1_already">Welcome to Aurora</div>
+                <div className="signup1_already"> Become a Campus Ambassador Now</div>
                 {/* <div className="signup1_button">
                   <a className="signup1_ln" href={"/login"}>
                     Login
