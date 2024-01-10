@@ -17,10 +17,9 @@ const Signup = () => {
     gender: "",
     college: "",
     city: "",
-    dob: "2000-01-01", // 2023-11-11
+    dob: "2024-01-06T12:34:56.789Z", // 2023-11-11
     password: "",
     confirm_password: ""
-    // referralCode: ""
   };
 
   const [showAlert, setShowAlert] = useState(false);
@@ -41,27 +40,12 @@ const Signup = () => {
 
 
   const handleChange = (e) => {
-    console.log(e.target.name);
-    const { name, value } = e.target;
-    if (name == "dob") {
-      const year = parseInt(value.substring(0, 4), 10);
+    console.log(e.target.value);
+    const { name, value} = e.target;
 
-      if (year < 1985 || year > 2010) {
-        setMessege("Enter a valid date of birth !");
-        setShowAlert(true);
-      }
-      else {
-        setFormData({ ...FormData, [name]: value });
-        console.log(FormData);
-      }
-    }
-    else {
-
-      setFormData({ ...FormData, [name]: value });
-      console.log(FormData);
-
-    }
-
+  
+    setFormData({ ...FormData, [name]: value });
+    console.log(FormData);
   };
 
   const handleSubmit = async (e) => {
@@ -100,7 +84,7 @@ const Signup = () => {
       return;
     }
     if (!FormData.college) {
-      setMessege("Enter your college name !");
+      setMessege("Enter your college name !"); 
       setShowAlert(true);
       return;
     }
@@ -109,7 +93,6 @@ const Signup = () => {
       setShowAlert(true);
       return;
     }
-    // condition
 
     try {
       const response = await axios.post(
@@ -173,14 +156,6 @@ const Signup = () => {
     setShowStep2(true);
   };
 
-  const backStep = (e) => {
-    e.preventDefault();
-
-    setShowStep1(true);
-    setShowStep2(false);
-
-  }
-
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -200,7 +175,7 @@ const Signup = () => {
         <Loader />
       ) : (
         <div className="signup">
-          <Navbar />
+                <Navbar />
 
           <div
             id="step1"
@@ -261,37 +236,6 @@ const Signup = () => {
                     Email
                   </label>
                 </div>
-                <div className="signup1_user-box" style={{position:"relative",top:"18px"}}>
-                  <input
-                    id="date" 
-                    className="signup1_input"
-                    placeholder=""
-                    type="date"
-                    value={FormData.dob}
-                    onChange={handleChange}
-                    name="dob"
-                    autoComplete="off"
-                    required=""
-                    endIc
-                  />
-                  <label className="signup1_input-txt" htmlFor="date" >
-                    Date of Birth
-                  </label>
-                </div>
-                {/* <div className="signup1_user-box">
-                  <input
-                    type="text"
-                    autoComplete="off"
-                    className="signup1_input"
-                    name="email"
-                    value={FormData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                  <label className="signup1_input-txt" htmlFor="email">
-                    Referral Code 
-                  </label>
-                </div> */}
                 <div className="signup1_user-box">
                   <input
                     type="password"
@@ -389,10 +333,13 @@ const Signup = () => {
                     required
                   />
                   <label className="signup2_input-txt" htmlFor="text">
-                    Phone Number
+                    Phone Number 
                   </label>
                 </div>
                 <div className="signup2_user-box">
+                  {/* <span className="signup2_fa-solid">
+                <FaLock />
+              </span> */}
                   <input
                     type="text"
                     className="signup2_input"
@@ -442,9 +389,6 @@ const Signup = () => {
                   </label>
                 </div>
                 <div className="signup2_button">
-                  <button className="signup2_btn" onClick={backStep} style={{ margin: "3%" }}>
-                    <a>Back</a>
-                  </button>
                   <button className="signup2_btn" onClick={handleSubmit}>
                     <a>Submit</a>
                   </button>

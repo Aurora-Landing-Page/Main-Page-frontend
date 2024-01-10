@@ -9,10 +9,6 @@ const Navbar = () => {
       path: '/',
     },
     {
-      title: 'CA Dashboard',
-      path: '/ca-dashboard',
-    },
-    {
       title: 'About',
       path: '/about',
     },

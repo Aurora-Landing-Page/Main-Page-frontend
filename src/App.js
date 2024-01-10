@@ -13,9 +13,6 @@ import Signup from "./Components/Signup/Signup";
 import Pronites2 from "./Components/Pronites2/Pronites2";
 import Navbar from "./Components/Navbar/Navbar";
 import Team from "./Components/Team/Team";
-import MainDash from "./Components/CaDashboard/MainDash/MainDash";
-import Dash from "./Components/CaDashboard/Dash";
-import Profile from "./Components/CaDashboard/Profile/Profile";
 
 function App() {
   return (
@@ -33,10 +30,6 @@ function App() {
         {/* <Route path="/login" element={<Login />} /> */}
         <Route path="/register" element={<Signup />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/ca-dashboard" element={<Dash />}>
-          <Route index element={<MainDash />} />
-          <Route path="profile" element={<Profile />} />
-        </Route>
       </Routes>
     </div>
   );
