@@ -218,7 +218,7 @@ const Signup = () => {
               <img src="" alt="" />
               <img className="signup_logo" src="images/aurora.jpg" alt="" />
             </div>
-            <form action="">
+            <form action="" className="my auto">
               <div className="signup1_box">
                 <h2 className="signup1_h2">Register</h2>
                 <div className="signup1_cnt">
@@ -366,7 +366,7 @@ const Signup = () => {
                     })}
                   </datalist>
                   <label className="signup2_input-txt clgLbl" htmlFor="text">
-                    Full College / Institute Name
+                    College / Institute Name
                   </label>
                 </div>
                 <div className="signup2_user-box">
