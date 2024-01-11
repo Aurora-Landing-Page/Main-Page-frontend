@@ -34,7 +34,7 @@ body {
   align-items: center;
   color: white;
   user-select: none;
-  background-image: url(images/bg1.jpg);
+  background-image: url(images/photo.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -316,7 +316,7 @@ hr {
   align-items: center;
   height: 100vh;
   color: white;
-  background-image: url(images/bg1.jpg);
+  background-image: url(images/photo.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
