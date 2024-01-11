@@ -29,6 +29,8 @@ body {
 }
 
 .signup1 {
+  
+  position: absolute;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -36,8 +38,9 @@ body {
   user-select: none;
   background-image: url(images/photo.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   background-size: cover;
+  overflow-y: scroll;
   height: 100vh;
   width: 100vw;
 }
@@ -48,30 +51,31 @@ body {
   cursor: none;
   font-size: 4em;
   position: relative;
-  top: -68px;
+  top: 0;
+  padding-bottom: 10px;
   left: 5px;
   text-align: center;
   color: rgb(32, 195, 195);
   text-shadow: 1px 2px rgb(7, 72, 72);
+  padding-top: 10px;
 }
 
 .signup1_cnt {
   display: flex;
-  position: absolute;
-  top: 100px;
-  left: 6%;
-  width: 100vh;
-  margin-top: 10px;
+  position: relative;
+
+  width: 100%;
+  padding-bottom: 30px;
 }
 
 .signup1_cnt1 {
   position: relative;
-  left: 98px;
+  left: 0;
 }
 
 .signup1_cnt2 {
   position: relative;
-  left: 98px;
+  right: 0;
 }
 
 .signup1_cnt1,
@@ -87,17 +91,19 @@ body {
 
 .signup1_line {
   position: relative;
-  left: 98px;
+  left: 0;
   border-bottom: 3px solid white;
   height: 20px;
-  width: 140px;
+  width: 100%;
   color: pink;
 }
 
 .signup1_box {
+  top: 20px;
+  bottom: 30px;
   /* border: 0.1px solid rgba(32, 206, 206, 0.058); */
   border: 1px solid white;
-  padding: 5em;
+  padding: 1em 4em 1em 4em;
   background-color: rgba(155, 165, 165, 0.05);
   backdrop-filter: blur(100px);
   border-radius: 10px;
@@ -105,29 +111,37 @@ body {
   transition: width 2s, height 2s, transform 2s;
   position: relative;
   padding-bottom: 20px;
-  max-width: 120%;
+  max-width: 100%;
   right: 30%;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+  max-height: 100%;
 }
 
 .signup1_user-box {
   position: relative;
   top: 15px;
-  left: -16px;
+  /* left: -16px; */
 }
 
 .signup1_input {
-  width: 120%;
+  width: 100%;
   position: relative;
-  right: 10%;
+  /* right: 10%; */
   outline: none;
   border: 1px solid rgb(249, 244, 244);
   border-radius: 10px;
   background-color: transparent;
   color: white;
   font-size: 20px;
+  font-weight: 400;
   padding: 3px 15px;
   margin-bottom: 5px;
   margin-top: 5px;
+  letter-spacing: 2px;
 }
 
 input {
@@ -142,7 +156,7 @@ input {
 .signup1_box .signup1_user-box label {
   position: relative;
   top: -35px;
-  left: -10px;
+  left: 10px;
   font-size: 1em;
   color: white;
   pointer-events: none;
@@ -150,10 +164,10 @@ input {
   letter-spacing: 2px;
 }
 
-.signup1_box .signup1_user-box input:focus~label,
-.signup1_box .signup1_user-box input:valid~label {
+.signup1_box .signup1_user-box input:focus ~ label,
+.signup1_box .signup1_user-box input:valid ~ label {
   top: -67px;
-  left: -10;
+  left: 8px;
   color: white;
   font-weight: 100px;
 }
@@ -226,9 +240,9 @@ a:active {
 hr {
   margin-top: 30px;
   margin-bottom: 20px;
-  width: 70%;
+  width: 60%;
   position: relative;
-  left: 15%;
+  align-self: center;
 }
 
 .signup1_already {
@@ -261,23 +275,28 @@ hr {
 
 @media (max-width: 780px) {
   .signup1_box {
-    right: 40px;
+    padding: 0px 20px;
+    /* border: 0.1px solid rgba(32, 206, 206, 0.058); */
+    border: 1px solid white;
+  }
+  .signup1 {
+    display: flex;
+    right: 0;
+    left: 0;
   }
 }
-
 @media (max-width: 500px) {
   .signup1_box {
-    right: 10vw;
-    max-width: 80vw;
+    top: 50px;
+    bottom: 20px;
+    right: 20px;
+    max-width: 90vw;
   }
 
   .signup1_h2 {
-    left: -60px;
     font-size: 13vmin;
   }
-
-  .signup1_cnt {
-    left: 2vw;
+  */ .signup1_cnt {
     margin-top: 10px;
   }
 
@@ -287,17 +306,16 @@ hr {
     margin-top: 20px;
   }
 
-  .signup1_user-box input {
+  /* .signup1_user-box input {
     width: 68vw;
     right: 10vw;
-  }
+  } */
 
   .signup1 {
     background-size: 230vh;
   }
 
   .signup1_cnt {
-    left: -66px;
     margin-top: 0;
   }
 
@@ -305,9 +323,9 @@ hr {
     margin-top: 30px;
   }
 
-  .signup1_user-box input {
+  /* .signup1_user-box input {
     left: -13vw;
-  }
+  } */
 }
 
 .signup2 {
@@ -322,6 +340,7 @@ hr {
   background-size: cover;
   height: 100vh;
   width: 100vw;
+  overflow-y: scroll;
 }
 
 .signup2_h2 {
@@ -330,51 +349,53 @@ hr {
   cursor: none;
   font-size: 4em;
   position: relative;
-  top: -45px;
+  /* top: -45px; */
   text-align: center;
   color: rgb(32, 195, 195);
   text-shadow: 1px 2px rgb(7, 72, 72);
-  padding-top: 30px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+
+  padding-bottom: 10px;
 }
 
 .signup2_cnt {
   display: flex;
-  position: absolute;
-  top: 114px;
-  left: 2.1%;
-  max-width: 100%;
+  position: relative;
+
+  width: 100%;
 }
 
 @media (max-width: 600px) {
   .signup2_box {
     margin-left: 7%;
     margin-right: 7%;
+    top: 100px;
+    bottom: 30px;
   }
 
-  .signup2_cnt {
-    left: 4%;
-  }
+  /* .signup2_cnt {
+    
+  } */
 
   .signup2_box .signup2_gender label {
-    left: -10%;
+    left: -5px;
   }
 }
 
 @media (max-width: 525px) {
-  .signup2_cnt {
+  /* .signup2_cnt {
     left: -1%;
-  }
+  } */
 }
 
 .signup2_cnt1 {
   position: relative;
-  left: 46%;
+  left: 0;
 }
 
 .signup2_cnt2 {
   position: relative;
-  left: 46%;
+  right: 0;
 }
 
 .signup2_cnt1,
@@ -390,16 +411,16 @@ hr {
 
 .signup2_line {
   position: relative;
-  left: 107px;
+  left: 0;
   border-bottom: 3px solid white;
   height: 20px;
-  width: 152px;
+  width: 100%;
   color: pink;
 }
 
 .signup2_box {
   border: 0.1px solid rgba(32, 206, 206, 0.058);
-  padding: 30px;
+  padding: 20px;
   background-color: rgba(155, 165, 165, 0.05);
   backdrop-filter: blur(100px);
   border-radius: 10px;
@@ -408,15 +429,23 @@ hr {
   box-shadow: 0px 40px 40px 10px rgba(237, 237, 237, 0.663);
   position: relative;
   border: 1px solid white;
-  padding-bottom: 40px;
-  width: 105%;
-  right: 36%;
+  padding-top: 15px;
+  width: 100%;
+  height: auto;
+  right: 30%;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  top: 50px;
+  bottom: 30px;
 }
 
 @media (max-width: 650px) {
   .signup2_box {
     right: 0px;
     width: 85%;
+    top: 100px;
   }
 }
 
@@ -462,8 +491,8 @@ input {
   letter-spacing: 2px;
 }
 
-.signup2_box .signup2_user-box input:focus~label,
-.signup2_box .signup2_user-box input:valid~label {
+.signup2_box .signup2_user-box input:focus ~ label,
+.signup2_box .signup2_user-box input:valid ~ label {
   top: -62px;
   color: white;
   font-weight: 100px;
@@ -524,7 +553,8 @@ a:active {
 }
 
 .signup2_gender {
-  font-weight: 500;
+  font-weight: 200;
+  font-size: 100 !important;
   position: relative;
   left: 0;
   border: 2px solid rgb(249, 244, 244);
@@ -577,11 +607,10 @@ a:active {
 
 @media (max-width: 450px) {
   .signup2_h2 {
-    font-size: 56px;
+    font-size: 40px;
   }
 
   .signup2_cnt {
-    left: -10vw;
     margin-bottom: 10vw;
   }
 
