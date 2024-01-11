@@ -6,8 +6,8 @@ import Toast from "../AlertAndLoader/Toast";
 import IconImage from "./images/o.png";
 import data from "./data.js";
 import Alert from "../AlertAndLoader/Alert.jsx";
-import Navbar from '../Navbar/Navbar';
-
+import Navbar from "../Navbar/Navbar";
+import BACKEND_URL from "../../helper.js";
 
 const Signup = () => {
   const initialFormData = {
@@ -17,8 +17,8 @@ const Signup = () => {
     gender: "",
     college: "",
     city: "",
-    dob: "2000-01-01",  // 2024-01-06T12:34:56.789Z
-    password: ""
+    dob: "2000-01-01", // 2024-01-06T12:34:56.789Z
+    password: "",
   };
 
   const [showAlert, setShowAlert] = useState(false);
@@ -41,8 +41,7 @@ const Signup = () => {
 
     setShowStep1(true);
     setShowStep2(false);
-
-  }
+  };
 
   const handleChange = (e) => {
     console.log(e.target.value);
@@ -54,19 +53,14 @@ const Signup = () => {
       if (year < 1985 || year > 2010) {
         setMessege("Enter a valid date of birth !");
         setShowAlert(true);
-      }
-      else {
+      } else {
         setFormData({ ...FormData, [name]: value });
         console.log(FormData);
       }
-    }
-    else {
-
+    } else {
       setFormData({ ...FormData, [name]: value });
       console.log(FormData);
-
     }
-
 
     setFormData({ ...FormData, [name]: value });
     console.log(FormData);
@@ -79,7 +73,6 @@ const Signup = () => {
       setMessege("Enter your phone number !");
       setShowAlert(true);
       return;
-
     }
     if (FormData.phone.at(0) == String(0)) {
       setMessege("Phone number should not start with 0 !");
@@ -92,7 +85,6 @@ const Signup = () => {
       setShowAlert(true);
       return;
     }
-
 
     if (!FormData.dob) {
       setMessege("Enter your date of birth !");
@@ -122,15 +114,11 @@ const Signup = () => {
     console.log(FormData);
 
     try {
-      const response = await axios.post(
-        "http://localhost:3000/registerCa",
-        FormData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.post(`${BACKEND_URL}/registerCa`, FormData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       console.log(response.data);
 
       setFormData(initialFormData);
@@ -164,7 +152,8 @@ const Signup = () => {
       setShowAlert(true);
       return;
     }
-    const regexExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi;
+    const regexExp =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi;
 
     if (!regexExp.test(FormData.email)) {
       setMessege("Enter a valid email !");
@@ -267,7 +256,10 @@ const Signup = () => {
                     Email
                   </label>
                 </div>
-                <div className="signup1_user-box" style={{ position: "relative", top: "18px" }}>
+                <div
+                  className="signup1_user-box"
+                  style={{ position: "relative", top: "18px" }}
+                >
                   <input
                     id="date"
                     className="signup1_input"
@@ -280,7 +272,7 @@ const Signup = () => {
                     required=""
                     endIc
                   />
-                  <label className="signup1_input-txt" htmlFor="date" >
+                  <label className="signup1_input-txt" htmlFor="date">
                     Date of Birth
                   </label>
                 </div>
@@ -303,7 +295,10 @@ const Signup = () => {
                   </button>
                 </div>
                 <hr />
-                <div className="signup1_already"> Become a Campus Ambassador Now</div>
+                <div className="signup1_already">
+                  {" "}
+                  Become a Campus Ambassador Now
+                </div>
                 {/* <div className="signup1_button">
                   <a className="signup1_ln" href={"/login"}>
                     Login
@@ -437,7 +432,11 @@ const Signup = () => {
                   </label>
                 </div>
                 <div className="signup2_button">
-                  <button className="signup2_btn" onClick={backStep} style={{ margin: "3%" }}>
+                  <button
+                    className="signup2_btn"
+                    onClick={backStep}
+                    style={{ margin: "3%" }}
+                  >
                     <a>Back</a>
                   </button>
                   <button className="signup2_btn" onClick={handleSubmit}>
