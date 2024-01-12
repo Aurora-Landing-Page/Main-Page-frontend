@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import './Login.css'
 import axios from 'axios';
-import toast from 'react-hot-toast';
 import Toast from "../AlertAndLoader/Toast"
 import Loader from '../AlertAndLoader/Loader';
 import Alert from '../AlertAndLoader/Alert';
-import { FaArrowTrendUp } from 'react-icons/fa6';
+// import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
+import image from './images/o.png';
+// import { FaArrowTrendUp } from 'react-icons/fa6';
 
 const Login = () => {
   const initialFormData = {
@@ -38,25 +39,27 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setMessege("Logged in successfully");
+    setShowToast(true);
 
 
-    try {
+    // try {
 
-      const response = await axios.post("https://aurora-nokc.onrender.com/loginUser", formData, {
-        headers: {
-          "Content-Type": "application/json",
-        }
-      });
-      console.log(response.data);
-      setMessege("Logged in successfully");
-      setShowToast(true);
-    } catch (e) {
-      setMessege("Invalid Credentials");
-      setShowAlert(true);
-      console.log(e);
+    //   const response = await axios.post("https://aurora-nokc.onrender.com/loginUser", formData, {
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     }
+    //   });
+    //   console.log(response.data);
+      // setMessege("Logged in successfully");
+      // setShowToast(true);
+    // } catch (e) {
+    //   setMessege("Invalid Credentials");
+    //   setShowAlert(true);
+    //   console.log(e);
 
-    }
-    setFormData(initialFormData)
+    // }
+    setFormData(initialFormData);
   }
 
   const handleForgetPassword = async () => {
@@ -82,6 +85,19 @@ const Login = () => {
     }, 2000);
   }, []);
 
+  useEffect(() => {
+    // const loginShowPassword = document.querySelector("#login_show-password");
+    // const loginPasswordField = document.querySelector("#login_password");
+
+    // loginShowPassword.addEventListener("click", function () {
+    //   const type = loginPasswordField.getAttribute("type") === "password" ? "text" : "password";
+    //   loginPasswordField.setAttribute("type", type);
+    //   this.classList.toggle("fa-eye");
+    //   this.classList.toggle("fa-eye-slash");
+    // });
+
+  }, []);
+
 
   return (
     <div className="login">
@@ -94,62 +110,28 @@ const Login = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="login_big-box">
-          <h1 class="login_welcome">Welcome Back</h1>
-          <div className="login_box">
+        <div class="login_big-box">
+          <h1 class="login_welcome" >Welcome Back</h1>
+          <div class="login_box">
             <form action="submit">
-              <h2 className="login_h2">
-                L
-                <span>
-                  <img src={require("./images/o.png")} alt="" />
-                </span>
-                gin
-              </h2>
-              <div className="login_user-box">
-                <input
-                  type="text"
-                  autoComplete="off"
-                  className="login_input"
-                  value={formData.email}
-                  onChange={handleChange}
-                  name="email"
-                  required
-                />
-                <label className="login_input-txt" htmlFor="email">
-                  Email
-                </label>
+              <h2 class="login_h2" >L<span><img src={image} alt="" /></span>gin</h2>
+              <div class="login_user-box">
+                <input type="text" autocomplete="off" class="login_input" onChange={handleChange} required />
+                <label class="login_input-txt" for="email">Email</label>
               </div>
-              <div className="login_user-box">
-                <input
-                  type="password"
-                  className="login_input"
-                  value={formData.password}
-                  onChange={handleChange}
-                  name="password"
-                  required
-                />
-                <label className="login_input-txt" htmlFor="password">
-                  Password
-                </label>
+              <div class="login_user-box login_passwd">
+                <input type="password" id="login_password" class="login_input" onChange={handleChange} required />
+                <label class="login_input-txt" for="password">Password</label>
+                {/* <i class="fa fa-eye" id="login_show-password" aria-hidden="true"></i> */}
               </div>
-              <div className="login_button">
-                <a className="login_a" onClick={handleSubmit}>
-                  <button className="login_btn">Click to log in</button>
-                </a>
+              <div class="login_button">
+                <a class="login_a" href="#"><button class="login_btn" onClick={handleSubmit}>Click to log in</button></a>
               </div>
-              <div className="login_link">
-                <a
-                  href=""
-                  className="forget_link"
-                  onClick={handleForgetPassword}
-                >
-                  Forgot Password?
-                </a>
+              <div class="login_link">
+                <a href="#"> <p></p></a>
                 <hr />
                 <p>Not Registered yet?</p>
-                <a className="login_a" href={"/signup"}>
-                  Sign up
-                </a>
+                <a class="login_a" href="index1.html">Sign up</a>
               </div>
             </form>
           </div>
