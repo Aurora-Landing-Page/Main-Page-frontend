@@ -13,12 +13,18 @@ import Signup from "./Components/Signup/Signup";
 import Pronites2 from "./Components/Pronites2/Pronites2";
 import Navbar from "./Components/Navbar/Navbar";
 import Team from "./Components/Team/Team";
+import Layout from "./Components/NewHomePage/layouts/Layout";
+import Slider from "./Components/Slider/Slider";
 
 function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<>
+          <Layout/>
+          {/* <Slider/> */}
+        </>
+        } />
         {/* <Route path='/schedule' element={<SchedulePage/>}/> */}
         <Route path="/sponsors" element={<Sponsors />} />
         {/* <Route path='/pronites' element={<Pronites/>}/> */}
