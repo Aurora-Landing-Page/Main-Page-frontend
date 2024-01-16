@@ -6,8 +6,7 @@ import Toast from "../AlertAndLoader/Toast";
 import IconImage from "./images/o.png";
 import data from "./data.js";
 import Alert from "../AlertAndLoader/Alert.jsx";
-import Navbar from '../Navbar/Navbar';
-
+import Navbar from "../Navbar/Navbar";
 
 const Signup = () => {
   const initialFormData = {
@@ -17,9 +16,9 @@ const Signup = () => {
     gender: "",
     college: "",
     city: "",
-    dob: "2000-01-01",  // 2024-01-06T12:34:56.789Z
+    dob: "2000-01-01", // 2024-01-06T12:34:56.789Z
     password: "",
-    referralCode: ""
+    referralCode: "",
   };
 
   const [showAlert, setShowAlert] = useState(false);
@@ -42,8 +41,7 @@ const Signup = () => {
 
     setShowStep1(true);
     setShowStep2(false);
-
-  }
+  };
 
   const handleChange = (e) => {
     console.log(e.target.value);
@@ -55,19 +53,14 @@ const Signup = () => {
       if (year < 1985 || year > 2010) {
         setMessege("Enter a valid date of birth !");
         setShowAlert(true);
-      }
-      else {
+      } else {
         setFormData({ ...FormData, [name]: value });
         console.log(FormData);
       }
-    }
-    else {
-
+    } else {
       setFormData({ ...FormData, [name]: value });
       console.log(FormData);
-
     }
-
 
     setFormData({ ...FormData, [name]: value });
     console.log(FormData);
@@ -80,7 +73,6 @@ const Signup = () => {
       setMessege("Enter your phone number !");
       setShowAlert(true);
       return;
-
     }
     if (FormData.phone.at(0) == String(0)) {
       setMessege("Phone number should not start with 0 !");
@@ -93,7 +85,6 @@ const Signup = () => {
       setShowAlert(true);
       return;
     }
-
 
     if (!FormData.dob) {
       setMessege("Enter your date of birth !");
@@ -165,7 +156,8 @@ const Signup = () => {
       setShowAlert(true);
       return;
     }
-    const regexExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi;
+    const regexExp =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi;
 
     if (!regexExp.test(FormData.email)) {
       setMessege("Enter a valid email !");
@@ -268,7 +260,10 @@ const Signup = () => {
                     Email
                   </label>
                 </div>
-                <div className="signup1_user-box" style={{ position: "relative", top: "18px" }}>
+                <div
+                  className="signup1_user-box"
+                  style={{ position: "relative", top: "18px" }}
+                >
                   <input
                     id="date"
                     className="signup1_input"
@@ -281,7 +276,7 @@ const Signup = () => {
                     required=""
                     endIc
                   />
-                  <label className="signup1_input-txt" htmlFor="date" >
+                  <label className="signup1_input-txt" htmlFor="date">
                     Date of Birth
                   </label>
                 </div>
@@ -305,11 +300,11 @@ const Signup = () => {
                 </div>
                 <hr />
                 <div className="signup1_already"> Welcome To Aurora</div>
-                {/* <div className="signup1_button">
+                <div className="signup1_already">
                   <a className="signup1_ln" href={"/login"}>
-                    Login
+                    Already Registered? Login
                   </a>
-                </div> */}
+                </div>
               </div>
             </form>
           </div>
@@ -405,9 +400,14 @@ const Signup = () => {
                   </label>
                 </div>
                 <div className="signup2_user-box">
-                  <input type="text" name="referralCode"
+                  <input
+                    type="text"
+                    name="referralCode"
                     value={FormData.referralCode}
-                    onChange={handleChange} className="signup2_input" required />
+                    onChange={handleChange}
+                    className="signup2_input"
+                    required
+                  />
                   <label className="signup2_input-txt" htmlFor="text">
                     Referral Code
                   </label>
@@ -440,7 +440,11 @@ const Signup = () => {
                   </label>
                 </div>
                 <div className="signup2_button">
-                  <button className="signup2_btn" onClick={backStep} style={{ margin: "3%" }}>
+                  <button
+                    className="signup2_btn"
+                    onClick={backStep}
+                    style={{ margin: "3%" }}
+                  >
                     <a>Back</a>
                   </button>
                   <button className="signup2_btn" onClick={handleSubmit}>
