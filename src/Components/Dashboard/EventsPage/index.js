@@ -1,7 +1,6 @@
 import events from "../eventData";
 import Card from "./Card";
 
-// TODO: integrate payments
 function EventCardsLayout() {
   return (
     <div className="container p-4 mt-4">

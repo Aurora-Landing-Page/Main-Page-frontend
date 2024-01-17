@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { PurchaseModal } from "../PurchaseModal";
+import { EventModal } from "../EventModal";
 
 function Card({ data }) {
   const [modapOpen, setModapOpen] = useState(false);
 
   return (
     <>
-      <PurchaseModal isOpen={modapOpen} setIsOpen={setModapOpen} data={data} />;
+      <EventModal isOpen={modapOpen} setIsOpen={setModapOpen} data={data} />;
       <button
         className="focus:outline-none m-0 p-0"
         onClick={() => {

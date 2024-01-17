@@ -15,6 +15,8 @@ const events = [
     Venue: "OAT",
     Image: AuroraImage,
     GroupSize: 4, // 0 for no limit
+    TicketPrice: 100,
+    EventId: "pari",
   },
 ];
 

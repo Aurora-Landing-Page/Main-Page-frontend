@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Maps&family=Russo+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Maps&family=Russo+One&display=swap");
 
 @font-face {
   font-family: myfont;
@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
 }
 
 .login_big-box {
@@ -115,8 +115,8 @@ input {
   filter: invert(100%);
 }
 
-input[type=password]::-ms-reveal,
-input[type=password]::-ms-clear {
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
   display: none;
 }
 
@@ -135,12 +135,12 @@ input[type=password]::-ms-clear {
   font-size: 1em;
   color: white;
   pointer-events: none;
-  transition: 0.login_5s ease-in-out;
+  transition: 0login_5s ease-in-out;
   top: -64px;
 }
 
-.login_box .login_user-box input:focus~label,
-.login_box .login_user-box input:valid~label {
+.login_box .login_user-box input:focus ~ label,
+.login_box .login_user-box input:valid ~ label {
   top: -97px;
   left: -8%;
   color: white;
@@ -169,8 +169,8 @@ a:hover {
 }
 
 a:active {
-  transform: scale(0.login_93);
-  transition-duration: 0.login_5s;
+  transform: scale(0login_93);
+  transition-duration: 0login_5s;
 }
 
 .login_button {
@@ -297,11 +297,11 @@ a:active {
   right: 1%;
   top: 0px;
   color: rgb(231, 235, 241);
-  text-shadow: 1px 1px 10px #000, 1px -1px 10px #000, -1px 1px 10px #000, 1px 1px 10px #000;
+  text-shadow: 1px 1px 10px #000, 1px -1px 10px #000, -1px 1px 10px #000,
+    1px 1px 10px #000;
 }
 
 @media (max-width: 550px) {
-
   /* .login_big-box {
         padding-right: 10px;
     } */

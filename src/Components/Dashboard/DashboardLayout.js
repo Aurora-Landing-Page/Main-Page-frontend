@@ -60,7 +60,7 @@ const Dashboard = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="pt-20 dashboard">
+        <div className="pt-6 lg:pt-20 dashboard">
           <div className="max-w-3xl  mx-auto sm:px-6 lg:max-w-full xl:max-w-[90rem] lg:grid lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-9 lg:grid lg:grid-cols-12 lg:gap-8 ">
               <TabbedLayout
