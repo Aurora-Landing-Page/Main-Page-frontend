@@ -1,26 +1,28 @@
-import { useEffect, useState } from 'react';
-import './Login.css'
-import axios from 'axios';
-import Toast from "../AlertAndLoader/Toast"
-import Loader from '../AlertAndLoader/Loader';
-import Alert from '../AlertAndLoader/Alert';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import "./Login.css";
+import axios from "axios";
+import Toast from "../AlertAndLoader/Toast";
+import Loader from "../AlertAndLoader/Loader";
+import Alert from "../AlertAndLoader/Alert";
 // import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
-import image from './images/o.png';
+import image from "./images/o.png";
 // import { FaArrowTrendUp } from 'react-icons/fa6';
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const initialFormData = {
-    email: '',
-    password: ''
-  }
+    email: "",
+    password: "",
+  };
 
   const [formData, setFormData] = useState(initialFormData);
   const [showToast, setShowToast] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
   const [messege, setMessege] = useState("");
-
-
 
   const handleToastClose = () => {
     setMessege("");
@@ -34,42 +36,51 @@ const Login = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value })
-  }
+    console.log(name, value);
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessege("Logged in successfully");
     setShowToast(true);
 
+    console.log("Form Data", formData);
 
-    // try {
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/loginUser",
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
+      console.log(response.data);
+      setMessege("Logged in successfully");
+      setShowToast(true);
 
-    //   const response = await axios.post("https://aurora-nokc.onrender.com/loginUser", formData, {
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     }
-    //   });
-    //   console.log(response.data);
-      // setMessege("Logged in successfully");
-      // setShowToast(true);
-    // } catch (e) {
-    //   setMessege("Invalid Credentials");
-    //   setShowAlert(true);
-    //   console.log(e);
-
-    // }
+      navigate("/dashboard");
+    } catch (e) {
+      setMessege("Invalid Credentials");
+      setShowAlert(true);
+      console.log(e);
+    }
     setFormData(initialFormData);
-  }
+  };
 
   const handleForgetPassword = async () => {
     try {
       const res = await axios.post(
-        "https://aurora-nokc.onrender.com/forgetPass", { "email": formData.email, "type": "user" }, {
-        "headers": {
-          "Content-Type": "application/json"
+        "https://aurora-nokc.onrender.com/forgetPass",
+        { email: formData.email, type: "user" },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-      }
       );
       console.log(res.data);
     } catch (e) {
@@ -77,7 +88,7 @@ const Login = () => {
     }
 
     setFormData(initialFormData);
-  }
+  };
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -88,16 +99,13 @@ const Login = () => {
   useEffect(() => {
     // const loginShowPassword = document.querySelector("#login_show-password");
     // const loginPasswordField = document.querySelector("#login_password");
-
     // loginShowPassword.addEventListener("click", function () {
     //   const type = loginPasswordField.getAttribute("type") === "password" ? "text" : "password";
     //   loginPasswordField.setAttribute("type", type);
     //   this.classList.toggle("fa-eye");
     //   this.classList.toggle("fa-eye-slash");
     // });
-
   }, []);
-
 
   return (
     <div className="login">
@@ -111,27 +119,62 @@ const Login = () => {
         <Loader />
       ) : (
         <div class="login_big-box">
-          <h1 class="login_welcome" >Welcome Back</h1>
+          <h1 class="login_welcome">Welcome Back</h1>
           <div class="login_box">
             <form action="submit">
-              <h2 class="login_h2" >L<span><img src={image} alt="" /></span>gin</h2>
+              <h2 class="login_h2">
+                L
+                <span>
+                  <img src={image} alt="" />
+                </span>
+                gin
+              </h2>
               <div class="login_user-box">
-                <input type="text" autocomplete="off" class="login_input" onChange={handleChange} required />
-                <label class="login_input-txt" for="email">Email</label>
+                <input
+                  type="text"
+                  autocomplete="off"
+                  class="login_input"
+                  onChange={(e) => {
+                    formData.email = e.target.value;
+                  }}
+                  required
+                />
+                <label class="login_input-txt" for="email">
+                  Email
+                </label>
               </div>
               <div class="login_user-box login_passwd">
-                <input type="password" id="login_password" class="login_input" onChange={handleChange} required />
-                <label class="login_input-txt" for="password">Password</label>
+                <input
+                  type="password"
+                  id="login_password"
+                  class="login_input"
+                  onChange={(e) => {
+                    formData.password = e.target.value;
+                  }}
+                  required
+                />
+                <label class="login_input-txt" for="password">
+                  Password
+                </label>
                 {/* <i class="fa fa-eye" id="login_show-password" aria-hidden="true"></i> */}
               </div>
               <div class="login_button">
-                <a class="login_a" href="#"><button class="login_btn" onClick={handleSubmit}>Click to log in</button></a>
+                <a class="login_a" href="#">
+                  <button class="login_btn" onClick={handleSubmit}>
+                    Click to log in
+                  </button>
+                </a>
               </div>
               <div class="login_link">
-                <a href="#"> <p></p></a>
+                <a href="#">
+                  {" "}
+                  <p></p>
+                </a>
                 <hr />
                 <p>Not Registered yet?</p>
-                <a class="login_a" href="index1.html">Sign up</a>
+                <a class="login_a" href="/register">
+                  Sign up
+                </a>
               </div>
             </form>
           </div>
@@ -139,6 +182,6 @@ const Login = () => {
       )}
     </div>
   );
-}
+};
 
 export default Login;
