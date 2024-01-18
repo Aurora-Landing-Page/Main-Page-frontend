@@ -1,0 +1,35 @@
+.box {
+    z-index: 99;
+    width: 30vw;
+    background-size: 180%;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+   filter: hue-rotate(0deg) brightness(0.9);
+    position: relative;
+    transition: all 0.35s ease-out;
+}
+.box:hover{
+    transform: scale(1.1);
+    transform: translate(0px,0px,0px);
+    animation: framer 0.35s linear 1;
+   filter: hue-rotate(180deg) brightness(200%) contrast(150%);
+   background-size: 140%;
+}
+@keyframes framer {
+  0%{
+    filter: brightness(100%) hue-rotate(0deg) ;
+  }  
+  50%{
+    filter: brightness(330%)  ;
+
+  }  
+  100%{
+    filter: brightness(200%) hue-rotate(180deg);
+  }
+}
+@media screen and (max-width: 500px) {
+    .box{
+        width: 80%;
+    }
+}

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,500&display=swap');
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.detail-section {
+    text-align: left;
+    border: 1px solid white;
+    border-radius: 18px;
+    box-shadow: 0px 2px 4px 0px #e365d0;
+    width: 50%;
+    overflow: auto;
+    text-align: left;
+    border: 1px solid #e365d0;
+    border-radius: 18px;
+    box-shadow: 0px 2px 4px 0px #e365d0;
+    background: #3c3c3c6f;
+   margin-top: 12px;
+}
+
+.data {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-family: 'Space Mono', monospace;
+    padding-left: 12px;
+    padding-top: 2px;
+
+}
+
+.data-first{
+    padding-top: 8px;
+}
+
+.data-last{
+    padding-bottom: 8px;
+}
+
+.p-title {
+    text-align: center;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .profile {
+        margin-top: 2rem;
+        overflow-y: auto;
+        width: 170%;
+    }
+    .detail-section {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile {
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+    }
+    .p-title {
+        font-size: 2rem;
+    }
+    .detail-section {
+        width: 100%;
+        margin: auto;
+    }
+}
