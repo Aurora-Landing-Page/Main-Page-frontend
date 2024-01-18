@@ -10,7 +10,7 @@ function TicketCardsLayout() {
     accomodation: false,
     pronite: false,
     whole_event: false,
-    purchaseType: "group",
+    purchaseType: "",
     members: [],
   };
 
@@ -22,6 +22,37 @@ function TicketCardsLayout() {
   const [messege, setMessege] = useState("");
 
   const handlePurchaseTicket = async () => {
+    // check data
+    if (!formData.pronite && !formData.whole_event) {
+      setMessege("Please select either pronite or whole event");
+      setShowAlert(true);
+      return;
+    }
+
+    if (formData.purchaseType === "") {
+      setMessege("Please select either individual or group");
+      setShowAlert(true);
+      return;
+    }
+
+    for (let i = 0; i < formData.members.length; i++) {
+      if (formData.members[i].name === "") {
+        setMessege("Please enter name of all members");
+        setShowAlert(true);
+        return;
+      }
+      if (formData.members[i].email === "") {
+        setMessege("Please enter email of all members");
+        setShowAlert(true);
+        return;
+      }
+      if (formData.members[i].phone === "") {
+        setMessege("Please enter phone number of all members");
+        setShowAlert(true);
+        return;
+      }
+    }
+
     //post data
     const keyRes = await fetch("http://localhost:3000/getKey", {
       method: "GET",

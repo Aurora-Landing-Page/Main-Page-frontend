@@ -12,7 +12,6 @@ import Alert from "../AlertAndLoader/Alert";
 
 export function EventModal({ isOpen, setIsOpen, data }) {
   const [loading, setLoading] = useState(false);
-  const [caption, setCaption] = useState();
 
   const initialFormData = {
     eventId: data.EventId,
@@ -38,15 +37,42 @@ export function EventModal({ isOpen, setIsOpen, data }) {
   };
 
   const handlePurchaseTicket = async () => {
+    // check data
+    if (formData.groupName === "") {
+      setMessege("Please enter your group name");
+      setShowAlert(true);
+      return;
+    }
+
+    for (let i = 0; i < formData.members.length; i++) {
+      if (formData.members[i].name === "") {
+        setMessege("Please enter name of all members");
+        setShowAlert(true);
+        return;
+      }
+      if (formData.members[i].email === "") {
+        setMessege("Please enter email of all members");
+        setShowAlert(true);
+        return;
+      }
+      if (formData.members[i].phone === "") {
+        setMessege("Please enter phone number of all members");
+        setShowAlert(true);
+        return;
+      }
+    }
+
     //post data
     const keyRes = await fetch("http://localhost:3000/getKey", {
       method: "GET",
+      credentials: "include",
     });
     const keyJSON = await keyRes.json();
     const { key } = keyJSON;
 
     const res = await fetch("http://localhost:3000/createOrder", {
       method: "POST",
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -75,6 +101,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
 
         const result = await fetch("http://localhost:3000/verifyOrder", {
           method: "POST",
+          credentials: "include",
           headers: {
             "Content-Type": "application/json",
           },
@@ -99,9 +126,14 @@ export function EventModal({ isOpen, setIsOpen, data }) {
   };
 
   useEffect(() => {
-    setCaption("");
-    setCaption("");
-  }, []);
+    if (data?.GroupSize > 1) {
+      let temp = [];
+      for (let i = 0; i < data.GroupSize - 1; i++) {
+        temp.push({ name: "", email: "", phone: "" });
+      }
+      setFormData({ ...formData, members: temp });
+    }
+  }, [data]);
 
   return (
     <>
@@ -152,8 +184,11 @@ export function EventModal({ isOpen, setIsOpen, data }) {
             <p className="text-sm">{data?.TicketPrice}</p>
           </div>
           <form action="submit">
-            <Heading size="h5"> Participate here </Heading>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 mb-4">
+              <Heading size="h5" className={"mb-2"}>
+                {" "}
+                Participate here{" "}
+              </Heading>
               <input
                 type="text"
                 placeholder="Enter your Group Name"
@@ -161,7 +196,48 @@ export function EventModal({ isOpen, setIsOpen, data }) {
                   formData.groupName = e.target.value;
                 }}
                 required
+                class="pl-4 mr-2 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
               />
+            </div>
+            <div hidden={data?.GroupSize <= 1}>
+              <Heading size="h5" className={"mb-2"}>
+                Member details (except yours)
+              </Heading>
+              {formData.members.map((member, index) => {
+                return (
+                  <div className="mb-4">
+                    <input
+                      type="text"
+                      id={`groupMemberName${index}`}
+                      placeholder="Name"
+                      onChange={(e) => {
+                        formData.members[index].name = e.target.value;
+                      }}
+                      class="pl-4 mr-2 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    />
+                    <input
+                      type="email"
+                      id={`groupMemberEmail${index}`}
+                      name={`groupMemberEmail${index}`}
+                      placeholder="Email"
+                      onChange={(e) => {
+                        formData.members[index].email = e.target.value;
+                      }}
+                      class="pl-4 mr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    />
+                    <input
+                      type="tel"
+                      id={`groupMemberPhone${index}`}
+                      name={`groupMemberPhone${index}`}
+                      placeholder="Phone"
+                      onChange={(e) => {
+                        formData.members[index].phone = e.target.value;
+                      }}
+                      class="pl-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    />
+                  </div>
+                );
+              })}
             </div>
           </form>
         </Card.Body>

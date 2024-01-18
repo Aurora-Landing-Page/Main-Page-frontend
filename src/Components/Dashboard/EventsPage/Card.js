@@ -8,7 +8,7 @@ function Card({ data }) {
     <>
       <EventModal isOpen={modapOpen} setIsOpen={setModapOpen} data={data} />;
       <button
-        className="focus:outline-none m-0 p-0"
+        className="focus:outline-none m-0 p-4"
         onClick={() => {
           setModapOpen(true);
         }}

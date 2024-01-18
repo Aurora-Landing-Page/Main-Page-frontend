@@ -14,9 +14,9 @@ const events = [
     Time: "10:00",
     Venue: "OAT",
     Image: AuroraImage,
-    GroupSize: 4, // 0 for no limit
+    GroupSize: 2,
     TicketPrice: 100,
-    EventId: "pari",
+    EventId: "Aurora-parivesh",
   },
 ];
 
