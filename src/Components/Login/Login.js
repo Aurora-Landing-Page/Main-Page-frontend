@@ -42,11 +42,6 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessege("Logged in successfully");
-    setShowToast(true);
-
-    console.log("Form Data", formData);
-
     try {
       const response = await axios.post(
         "http://localhost:3000/loginUser",

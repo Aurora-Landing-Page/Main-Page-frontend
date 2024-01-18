@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { HiOutlineGlobeAlt } from "react-icons/hi";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 import { TabbedLayout } from "./TabbedLayout";
 import "./index.css";
@@ -10,13 +12,17 @@ import Alert from "../AlertAndLoader/Alert";
 import EventCardsLayout from "./EventsPage";
 import TicketCardsLayout from "./TicketsPage";
 
+import Logo from "./images/o.png";
+
+// TODO: Logo and logout button
+
 const Dashboard = () => {
+  const navigate = useNavigate();
   const [showToast, setShowToast] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
   const [loading, setLoading] = useState(true);
   const [messege, setMessege] = useState("");
-  // TODO: Aurora logo, logout button
 
   const [navigation, setNavigation] = useState([
     {
@@ -43,10 +49,46 @@ const Dashboard = () => {
     setShowAlert(false);
   };
 
+  const handleLogout = async () => {
+    await axios.post("http://localhost:3000/logout", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      withCredentials: true,
+    });
+    navigate("/");
+    setMessege("Logged out successfully");
+    setShowAlert(true);
+  };
+
+  const checkUserLoginStatus = async () => {
+    try {
+      const response = await axios.get("http://localhost:3000/getUserData", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        withCredentials: true,
+      });
+
+      if (response.status !== 200) {
+        setMessege("Please login first");
+        setShowAlert(true);
+
+        navigate("/login");
+      }
+    } catch (error) {
+      setMessege("Please login first");
+      setShowAlert(true);
+      navigate("/login");
+    }
+  };
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
+
+    checkUserLoginStatus();
   }, []);
 
   return (
@@ -60,17 +102,19 @@ const Dashboard = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="pt-6 lg:pt-20 dashboard">
-          <div className="max-w-3xl  mx-auto sm:px-6 lg:max-w-full xl:max-w-[90rem] lg:grid lg:grid-cols-12 lg:gap-8">
-            <div className="lg:col-span-9 lg:grid lg:grid-cols-12 lg:gap-8 ">
-              <TabbedLayout
-                isTabbed={true}
-                navigation={navigation}
-                setNavigation={setNavigation}
-              />
+        <>
+          <div className="pt-6 dashboard">
+            <div className="max-w-3xl  mx-auto sm:px-6 lg:max-w-full xl:max-w-[90rem] lg:grid lg:grid-cols-12 lg:gap-8">
+              <div className="lg:col-span-9 lg:grid lg:grid-cols-12 lg:gap-8 ">
+                <TabbedLayout
+                  isTabbed={true}
+                  navigation={navigation}
+                  setNavigation={setNavigation}
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );
