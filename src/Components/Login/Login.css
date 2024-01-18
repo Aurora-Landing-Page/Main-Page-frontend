@@ -221,7 +221,7 @@ a:active {
 }
 
 .login_big-box {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
 }
 
