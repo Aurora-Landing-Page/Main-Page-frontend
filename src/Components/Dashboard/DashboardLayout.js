@@ -11,7 +11,7 @@ import Alert from "../AlertAndLoader/Alert";
 
 import EventCardsLayout from "./EventsPage";
 import TicketCardsLayout from "./TicketsPage";
-
+import PurchasedTicketCardsLayout from "./PurchasedTicketsPage";
 import Logo from "./images/o.png";
 
 // TODO: Logo and logout button
@@ -36,6 +36,12 @@ const Dashboard = () => {
       icon: HiOutlineGlobeAlt,
       name: "Tickets",
       id: "/tickets",
+    },
+    {
+      component: <PurchasedTicketCardsLayout />,
+      icon: HiOutlineGlobeAlt,
+      name: "Purchased Tickets",
+      id: "/purchasedTickets",
     },
   ]);
 

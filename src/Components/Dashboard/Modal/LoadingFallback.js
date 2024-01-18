@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { Card } from "../Card";
+import { Card } from "./Card";
 import Spinner from "./Spinner";
 
 export const LoadingFallback = forwardRef((_, ref) => {
