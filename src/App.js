@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./Components/HomePage/Home";
-import SchedulePage from "./Components/SchedulePage/SchedulePage";
+// import Home from "./Components/HomePage/Home";
+// import SchedulePage from "./Components/SchedulePage/SchedulePage";
 import Sponsors from "./Components/SponsorPage/Sponsors";
 import Pronites from "./Components/Pronites/Pronites";
-import Dashboard from "./Components/Dashboard/DashboardLayout";
+// import Dashboard from "./Components/Dashboard/DashboardLayout";
 import AboutPage from "./Components/AboutPage/AboutPage";
 import EventPage from "./Components/EventPage/EventPage";
 import Contact from "./Components/Contact/Contact";
@@ -12,8 +12,9 @@ import Faq from "./Components/Faq/Faq";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Signup/Signup";
 import Pronites2 from "./Components/Pronites2/Pronites2";
-import Navbar from "./Components/Navbar/Navbar";
+// import Navbar from "./Components/Navbar/Navbar";
 import Team from "./Components/Team/Team";
+import NewHomePage from "./Components/NewHomePage/NewHomePage";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={ <Home /> }
+          element={ <NewHomePage /> }
         />
         {/* <Route path='/schedule' element={<SchedulePage/>}/> */}
         <Route path="/sponsors" element={<Sponsors />} />
