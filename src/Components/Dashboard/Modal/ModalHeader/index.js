@@ -28,6 +28,7 @@ const ModalHeader = ({ title, description, dismiss = false, children }) => {
         <Button
           variant="dark"
           className="mb-auto -mt-1"
+          style={{backgroundColor:"black"}}
           rounded="md"
           aria-label="Close modal"
           onClick={onClose}

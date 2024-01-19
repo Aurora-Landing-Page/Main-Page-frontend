@@ -8,6 +8,7 @@ module.exports = {
         "edu-sa": ["Edu SA Beginner", "cursive"],
         mono: ["Roboto Mono", "monospace"],
       },
+    
       colors: {
         white: "#fff",
         black: "#000",

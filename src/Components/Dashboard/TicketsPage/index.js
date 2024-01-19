@@ -152,9 +152,9 @@ function TicketCardsLayout() {
           <div class="login_box">
             <form>
               <h2 class="login_h2">Attend</h2>
-              <div class="">
-                <div class="flex items-center space-x-4 ">
-                  <div class="flex items-center">
+              <div class="text-xl space-y-4 font-semibold">
+                <div class="flex   ">
+                  <div class="flex items-center basis-1/2">
                     <input
                       type="radio"
                       id="individualPurchase"
@@ -168,7 +168,7 @@ function TicketCardsLayout() {
                         setFormData({ ...formData });
                       }}
                     />
-                    <label for="individualPurchase">Individual Purchase</label>
+                    <label for="individualPurchase">Individual Purchase(599/-)</label>
                   </div>
                   <div class="flex items-center">
                     <input
@@ -185,21 +185,11 @@ function TicketCardsLayout() {
                         setFormData({ ...formData });
                       }}
                     />
-                    <label for="groupPurchase">Group Purchase</label>
+                    <label for="groupPurchase">Group Purchase(4+1 & 8+3)</label>
                   </div>
                 </div>
-                <label class="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="accommodation"
-                    name="option"
-                    value="Accommodation"
-                    class="mr-2 leading-tight"
-                    onChange={(e) => (formData.accomodation = e.target.checked)}
-                  />{" "}
-                  Accommodation
-                </label>
-                <label class="flex items-center">
+                <div className="flex ">
+                <label class="flex basis-1/2 items-center">
                   <input
                     type="radio"
                     id="pronite"
@@ -221,6 +211,20 @@ function TicketCardsLayout() {
                   />{" "}
                   Whole Event
                 </label>
+                </div>
+               
+                
+                <label class="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="accommodation"
+                    name="option"
+                    value="Accommodation"
+                    class="mr-2 leading-tight"
+                    onChange={(e) => (formData.accomodation = e.target.checked)}
+                  />{" "}
+                  Accommodation
+                </label>
                 <div
                   id="groupPurchaseFields"
                   // hidden={formData.purchaseType !== "group"}
@@ -238,8 +242,9 @@ function TicketCardsLayout() {
                           onChange={(e) => {
                             formData.members[index].name = e.target.value;
                           }}
-                          class="pl-4 mr-2 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                          class="pl-4 mr-2 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                         />
+                        <div>
                         <input
                           type="email"
                           id={`groupMemberEmail${index}`}
@@ -260,19 +265,21 @@ function TicketCardsLayout() {
                           }}
                           class="pl-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                         />
+                          </div>
                       </div>
                     );
                   })}
+                  <div className="flex justify-center gap-4">
                   <button
                     type="button"
-                    class="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+                    class=" bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline "
                     onClick={addMember}
                   >
                     + Add Group Member
                   </button>
                   <button
                     type="button"
-                    class="mt-4 ml-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+                    class=" bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
                     onClick={() => {
                       formData.members.splice(formData.length - 1, 1);
 
@@ -281,6 +288,9 @@ function TicketCardsLayout() {
                   >
                     <HiUserRemove />
                   </button>
+
+                  </div>
+
                 </div>
               </div>
               <div class="login_button pt-10">

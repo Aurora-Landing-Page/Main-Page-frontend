@@ -14,8 +14,6 @@ import Signup from "./Components/Signup/Signup";
 import Pronites2 from "./Components/Pronites2/Pronites2";
 import Navbar from "./Components/Navbar/Navbar";
 import Team from "./Components/Team/Team";
-import Layout from "./Components/NewHomePage/layouts/Layout";
-import Slider from "./Components/Slider/Slider";
 
 function App() {
   return (
@@ -23,12 +21,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={
-            <>
-              <Layout />
-              {/* <Slider/> */}
-            </>
-          }
+          element={ <Home /> }
         />
         {/* <Route path='/schedule' element={<SchedulePage/>}/> */}
         <Route path="/sponsors" element={<Sponsors />} />
@@ -41,7 +34,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Signup />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
       </Routes>
     </div>
   );

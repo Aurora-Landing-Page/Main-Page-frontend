@@ -53,12 +53,19 @@ export function TabbedLayout({ navigation, setNavigation }) {
   return deviceType !== "Mobile" ? (
     <>
       <Tab.Group defaultIndex={0} onChange={(idx) => {}} vertical>
-        <aside className="py-6 px-2 sm:px-6 lg:py-0 lg:px-0 lg:col-span-3">
+        <div className="h-[100vh] w-72 bg-black opacity-[75%] absolute left-0">
+
+        </div>
+        <aside className="py-6 px-2 sm:px-6 lg:py-0 lg:px-0 lg:col-span-3 h-full   ">
+          <div className="flex items-center justify-start gap-2  pt-10 pb-4">
+            <img src="./logo.png" className="h-12 w-12 z-10"></img>
+            <div className="text-xl z-10">Aurora 2024</div>
+          </div>
           <nav
             aria-label="Sidebar"
-            className="sticky top-20 divide-y divide-gray-300"
+            className="sticky  divide-y divide-gray-300  flex items-start "
           >
-            <div className="pb-8 space-y-1">
+            <div className=" space-y-1 pb-8 ">
               {navigation && navigation.length > 0 && (
                 <Tab.List className="space-y-2">
                   {navigation.map((item, index) => {

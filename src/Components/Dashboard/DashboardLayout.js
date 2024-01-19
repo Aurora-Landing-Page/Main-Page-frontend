@@ -8,11 +8,12 @@ import "./index.css";
 import Toast from "../AlertAndLoader/Toast";
 import Loader from "../AlertAndLoader/Loader";
 import Alert from "../AlertAndLoader/Alert";
-
-import EventCardsLayout from "./EventsPage";
+import FlagshipEventCardsLayout from "./EventsPage/FlagshipEventCardsLayout";
+import EventCardsLayout from "./EventsPage/EventCardsLayout";
 import TicketCardsLayout from "./TicketsPage";
 import PurchasedTicketCardsLayout from "./PurchasedTicketsPage";
 import Logo from "./images/o.png";
+
 
 // TODO: Logo and logout button
 
@@ -26,10 +27,16 @@ const Dashboard = () => {
 
   const [navigation, setNavigation] = useState([
     {
+      component: <FlagshipEventCardsLayout />,
+      icon: HiOutlineGlobeAlt,
+      name: "Flagship Events",
+      id: "/flagship-events",
+    },
+    {
       component: <EventCardsLayout />,
       icon: HiOutlineGlobeAlt,
-      name: "Events",
-      id: "/events",
+      name: "Normal Events",
+      id: "/normal-events",
     },
     {
       component: <TicketCardsLayout />,
@@ -94,7 +101,7 @@ const Dashboard = () => {
       setLoading(false);
     }, 2000);
 
-    checkUserLoginStatus();
+    // checkUserLoginStatus();
   }, []);
 
   return (
@@ -109,13 +116,14 @@ const Dashboard = () => {
         <Loader />
       ) : (
         <>
-          <div className="pt-6 dashboard">
-            <div className="max-w-3xl  mx-auto sm:px-6 lg:max-w-full xl:max-w-[90rem] lg:grid lg:grid-cols-12 lg:gap-8">
+          <div className=" dashboard ">
+            <div className="max-w-3xl  mx-auto  lg:max-w-full xl:max-w-[90rem] lg:grid lg:grid-cols-12 lg:gap-8">
               <div className="lg:col-span-9 lg:grid lg:grid-cols-12 lg:gap-8 ">
                 <TabbedLayout
                   isTabbed={true}
                   navigation={navigation}
                   setNavigation={setNavigation}
+                
                 />
               </div>
             </div>

@@ -8,6 +8,7 @@ export function CardFooter({ children, className }) {
         "py-4 px-5 lg:px-6 w-full text-sm bg-gray-100 dark:bg-gray-700 overflow-hidden",
         className
       )}
+      style={{backgroundColor:"black"}}
     >
       {children}
     </footer>

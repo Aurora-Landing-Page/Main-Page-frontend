@@ -52,7 +52,7 @@ const Modal = ({ isOpen, onClose, data, children, className }) => {
                   className
                 )}
               >
-                <div className="px-4 pt-5 pb-4  sm:p-6">{children}</div>
+                <div className="px-4 pt-5 pb-4  sm:p-6 bg-black" >{children}</div>
               </div>
             </Transition.Child>
           </div>
