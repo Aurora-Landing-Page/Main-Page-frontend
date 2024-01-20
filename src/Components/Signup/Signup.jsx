@@ -199,7 +199,7 @@ const Signup = () => {
         <Loader />
       ) : (
         <div className="signup">
-          {/* <Navbar /> */}
+          <Navbar />
 
           <div
             id="step1"
