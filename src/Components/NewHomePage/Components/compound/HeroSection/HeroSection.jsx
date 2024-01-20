@@ -3,8 +3,11 @@ import hero_background from '../../assets/videos/Hero_background.mp4'
 import mobile_hero_back from '../../assets/videos/mobile_hero_back.mp4'
 import style from './HeroSection.module.scss'
 import Logo from '../../assets/Images/Logo.svg'
+import { useNavigate } from "react-router-dom";
 import { FaLocationArrow } from "react-icons/fa6";
 function HeroSection() {
+    const navigate = useNavigate();
+    const next = () => { navigate('/register') }
     return (
         <div className={style.HeroSection}>
             <video
@@ -24,7 +27,7 @@ function HeroSection() {
             <div className={style.textContr}>
                 <img src={Logo} className={style.Logo}></img>
                 <HeroTextContainer />
-                <button className={style.Button}> Register Now <FaLocationArrow style={{ marginTop: "2px" }} /></button>
+                <button className={style.Button} onClick={next} > Register Now <FaLocationArrow style={{ marginTop: "2px" }} /></button>
             </div>
 
         </div>);

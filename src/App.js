@@ -4,7 +4,7 @@ import "./App.css";
 // import SchedulePage from "./Components/SchedulePage/SchedulePage";
 import Sponsors from "./Components/SponsorPage/Sponsors";
 import Pronites from "./Components/Pronites/Pronites";
-// import Dashboard from "./Components/Dashboard/DashboardLayout";
+import Dashboard from "./Components/Dashboard/DashboardLayout";
 import AboutPage from "./Components/AboutPage/AboutPage";
 import EventPage from "./Components/EventPage/EventPage";
 import Contact from "./Components/Contact/Contact";
@@ -26,7 +26,7 @@ function App() {
         />
         {/* <Route path='/schedule' element={<SchedulePage/>}/> */}
         <Route path="/sponsors" element={<Sponsors />} />
-        {/* <Route path='/pronites' element={<Pronites/>}/> */}
+        <Route path='/pronites' element={<Pronites/>}/>
         <Route path="/pronites" element={<Pronites2 />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/events" element={<EventPage />} />
@@ -35,7 +35,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Signup />} />
         <Route path="/team" element={<Team />} />
-        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </div>
   );

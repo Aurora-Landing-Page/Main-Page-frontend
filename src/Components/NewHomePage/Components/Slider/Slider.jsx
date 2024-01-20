@@ -94,10 +94,10 @@ const Slider = () => {
                 <div className="title">Indian Ocean</div>
                 <div className="topic">Band</div>
                 <div className="des">
-                Mesmerizing melodies and soulful rhythms - Indian Ocean transported us to a musical paradise at our college event!
+                  Embark on a musical voyage as the legendary band Indian Ocean takes center stage, weaving a tapestry of cultural rhythms and soulful melodies that resonate with the very heartbeat of our fest - a symphony of memories to last a lifetime.
                 </div>
                 <div className="buttons">
-                  <a className="button" href="#">
+                  <a className="button" href="/events">
                     <span style={{ color: "#7808d0" }} className="button__icon-wrapper">
                       <svg
                         width="10"
@@ -125,7 +125,7 @@ const Slider = () => {
                         ></path>
                       </svg>
                     </span>
-                    <b style={{ color: "white" }}>Explore More</b>
+                    <a style={{ color: "white" }}>Explore</a>
                   </a>
                 </div>
               </div>
@@ -135,18 +135,13 @@ const Slider = () => {
               <img src={img2} />
               <div className="content">
                 <div className="author">AURORA 2k24</div>
-                <div className="title">DESIGN SLIDER</div>
-                <div className="topic">ANIMAL</div>
+                <div className="title">DJ AceAxe</div>
+                <div className="topic">DJ Night</div>
                 <div className="des">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                  sequi, rem magnam nesciunt minima placeat, itaque eum neque
-                  officiis unde, eaque optio ratione aliquid assumenda facere ab
-                  et quasi ducimus aut doloribus non numquam. Explicabo,
-                  laboriosam nisi reprehenderit tempora at laborum natus unde. Ut,
-                  exercitationem eum aperiam illo illum laudantium?
+                Navigate the sonic realms with DJ AceAxe, where beats become a language and the dance floor transforms into a euphoric landscape. His electrifying mix transcended the ordinary, turning our fest into a pulsating haven of rhythm and beats.
                 </div>
                 <div className="buttons">
-                  <a className="button" href="#">
+                  <a className="button" href="/events">
                     <span style={{ color: "#7808d0" }} className="button__icon-wrapper">
                       <svg
                         width="10"
@@ -174,7 +169,7 @@ const Slider = () => {
                         ></path>
                       </svg>
                     </span>
-                    <b style={{ color: "white" }}>Explore More</b>
+                    <a style={{ color: "white" }}>Explore</a>
                   </a>
                 </div>
               </div>
@@ -183,18 +178,13 @@ const Slider = () => {
               <img src={img3} />
               <div className="content">
                 <div className="author">AURORA 2k24</div>
-                <div className="title">DESIGN SLIDER</div>
-                <div className="topic">ANIMAL</div>
+                <div className="title">Mohit Chauhan</div>
+                <div className="topic">Celebrity Night</div>
                 <div className="des">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                  sequi, rem magnam nesciunt minima placeat, itaque eum neque
-                  officiis unde, eaque optio ratione aliquid assumenda facere ab
-                  et quasi ducimus aut doloribus non numquam. Explicabo,
-                  laboriosam nisi reprehenderit tempora at laborum natus unde. Ut,
-                  exercitationem eum aperiam illo illum laudantium?
+                Mohit Chauhan's voice, a symphony of emotions, painted the canvas of our fest with hues of love, passion, and nostalgia, creating a musical masterpiece that resonated with every heart.
                 </div>
                 <div className="buttons">
-                  <a className="button" href="#">
+                  <a className="button" href="/events">
                     <span style={{ color: "#7808d0" }} className="button__icon-wrapper">
                       <svg
                         width="10"
@@ -222,7 +212,7 @@ const Slider = () => {
                         ></path>
                       </svg>
                     </span>
-                    <b style={{ color: "white" }}>Explore More</b>
+                    <a style={{ color: "white" }}>Explore</a>
                   </a>
                 </div>
               </div>
@@ -231,18 +221,13 @@ const Slider = () => {
               <img src={img4} />
               <div className="content">
                 <div className="author">AURORA 2k24</div>
-                <div className="title">DESIGN SLIDER</div>
-                <div className="topic">ANIMAL</div>
+                <div className="title">Sunbun</div>
+                <div className="topic">Band Performance</div>
                 <div className="des">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                  sequi, rem magnam nesciunt minima placeat, itaque eum neque
-                  officiis unde, eaque optio ratione aliquid assumenda facere ab
-                  et quasi ducimus aut doloribus non numquam. Explicabo,
-                  laboriosam nisi reprehenderit tempora at laborum natus unde. Ut,
-                  exercitationem eum aperiam illo illum laudantium?
+                Diverse genres harmonized on one stage, creating a musical mosaic that celebrated the rich tapestry of sounds. The band's performance was a testament to the unity found in musical diversity.
                 </div>
                 <div className="buttons">
-                  <a className="button" href="#">
+                  <a className="button" href="/events">
                     <span style={{ color: "#7808d0" }} className="button__icon-wrapper">
                       <svg
                         width="10"
@@ -270,7 +255,7 @@ const Slider = () => {
                         ></path>
                       </svg>
                     </span>
-                    <b style={{ color: "white" }}>Explore More</b>
+                    <a style={{ color: "white" }}>Explore</a>
                   </a>
                 </div>
               </div>
@@ -279,18 +264,13 @@ const Slider = () => {
               <img src={img5} />
               <div className="content">
                 <div className="author">AURORA 2k24</div>
-                <div className="title">DESIGN SLIDER</div>
-                <div className="topic">ANIMAL</div>
+                <div className="title">Olly Esse</div>
+                <div className="topic">DJ Night</div>
                 <div className="des">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                  sequi, rem magnam nesciunt minima placeat, itaque eum neque
-                  officiis unde, eaque optio ratione aliquid assumenda facere ab
-                  et quasi ducimus aut doloribus non numquam. Explicabo,
-                  laboriosam nisi reprehenderit tempora at laborum natus unde. Ut,
-                  exercitationem eum aperiam illo illum laudantium?
+                Underneath the starlit sky, immerse yourself in the magic of bass drops and dance moves. Our DJ night promises a cosmic journey through beats that reverberate with pure energy.
                 </div>
                 <div className="buttons">
-                  <a className="button" href="#">
+                  <a className="button" href="/events">
                     <span style={{ color: "#7808d0" }} className="button__icon-wrapper">
                       <svg
                         width="10"
@@ -318,7 +298,7 @@ const Slider = () => {
                         ></path>
                       </svg>
                     </span>
-                    <b style={{ color: "white" }}>Explore More</b>
+                    <a style={{ color: "white" }}>Explore</a>
                   </a>
                 </div>
               </div>
