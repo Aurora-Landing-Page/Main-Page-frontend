@@ -34,8 +34,8 @@ function App() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Signup />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/team" element={<Team />} /> */}
+        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
       </Routes>
     </div>
   );
