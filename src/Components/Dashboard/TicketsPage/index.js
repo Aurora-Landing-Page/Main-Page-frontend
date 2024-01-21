@@ -148,12 +148,12 @@ function TicketCardsLayout() {
       {loading ? (
         <Loader />
       ) : (
-        <div class="flex items-center justify-center  mt-10 md:mt-10 relative left-24">
+        <div class="flex items-center justify-center  mt-10 md:mt-10 relative sm:left-24">
           <div class="login_box">
             <form>
               <h2 class="login_h2">Attend</h2>
               <div class="text-xl space-y-4 font-semibold">
-                <div class="flex   ">
+                <div class="flex flex-col sm:flex-row  ">
                   <div class="flex items-center basis-1/2">
                     <input
                       type="radio"
@@ -165,7 +165,9 @@ function TicketCardsLayout() {
                         formData.purchaseType = !e.target.checked
                           ? "group"
                           : "individual";
+                        formData.members.splice(formData.length - formData.length, 1);
                         setFormData({ ...formData });
+                        
                       }}
                     />
                     <label for="individualPurchase">Individual Purchase</label>

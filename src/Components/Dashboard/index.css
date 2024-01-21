@@ -14,7 +14,7 @@
 }
 
 .dashboard {
-  height: 100vh;
+  @apply min-h-screen;
   width: 100vw;
   background-image: url(./images/dashboard.jpeg);
 }

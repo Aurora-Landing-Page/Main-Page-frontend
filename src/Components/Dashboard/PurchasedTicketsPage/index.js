@@ -32,7 +32,7 @@ function PurchasedTicketCardsLayout() {
   }, []);
 
   return (
-    <div className="container p-4 mt-4">
+    <div className="container relative right-4 p-4 mt-4 flex flex-col w-full justify-center items-center">
       <h1 className="text-2xl font-bold text-center text-white ">
         Participated Events
       </h1>
