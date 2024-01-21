@@ -25,10 +25,9 @@
 }
 
 .login_box {
-  @apply w-[90vw] sm:w-[60vw];
+  @apply w-[90vw] sm:w-[60vw] p-4 sm:p-[5em];
   height: full;
   border: 0.1px solid rgba(32, 206, 206, 0.058);
-  padding: 5em;
   background-color: rgba(155, 165, 165, 0.05);
   backdrop-filter: blur(100px);
   border-radius: 10px;
@@ -51,7 +50,7 @@
   cursor: none;
   font-size: 4em;
   position: relative;
-  top: -50px;
+
   left: -23%;
   text-align: center;
   color: rgb(0, 0, 0);

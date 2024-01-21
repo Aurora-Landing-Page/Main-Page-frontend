@@ -151,10 +151,10 @@ function TicketCardsLayout() {
         <div class="flex items-center justify-center  mt-10 md:mt-10 relative sm:left-24">
           <div class="login_box">
             <form>
-              <h2 class="login_h2">Attend</h2>
-              <div class="text-xl space-y-4 font-semibold">
+              <h2 class="login_h2 py-2 sm:bottom-8">Attend</h2>
+              <div class=" text-lg sm:text-xl space-y-2 sm:space-y-4 font-medium sm:font-semibold flex flex-col relative  left-4">
                 <div class="flex flex-col sm:flex-row  ">
-                  <div class="flex items-center basis-1/2">
+                  <div class="flex gap-2 items-center sm:basis-1/2">
                     <input
                       type="radio"
                       id="individualPurchase"
@@ -165,14 +165,16 @@ function TicketCardsLayout() {
                         formData.purchaseType = !e.target.checked
                           ? "group"
                           : "individual";
-                        formData.members.splice(formData.length - formData.length, 1);
+                        formData.members.splice(
+                          formData.length - formData.length,
+                          1
+                        );
                         setFormData({ ...formData });
-                        
                       }}
                     />
                     <label for="individualPurchase">Individual Purchase</label>
                   </div>
-                  <div class="flex items-center">
+                  <div class="flex gap-2 items-center">
                     <input
                       type="radio"
                       id="groupPurchase"
@@ -187,35 +189,38 @@ function TicketCardsLayout() {
                         setFormData({ ...formData });
                       }}
                     />
-                    <label for="groupPurchase">Group Purchase(4+1 & 8+3)</label>
+                    <label for="groupPurchase" className="flex flex-col sm:flex-row ">
+                      Group Purchase <span>(4+1 & 8+3)</span>
+                    </label>
                   </div>
                 </div>
-                <div className="flex ">
-                <label class="flex basis-1/2 items-center">
-                  <input
-                    type="radio"
-                    id="pronite"
-                    name="option"
-                    value="pronite"
-                    class="mr-2 leading-tight"
-                    onChange={(e) => (formData.pronite = e.target.checked)}
-                  />{" "}
-                  Pronite(599/-)
-                </label>
-                <label class="flex items-center">
-                  <input
-                    type="radio"
-                    id="wholeEvent"
-                    name="option"
-                    value="Whole Event"
-                    class="mr-2 leading-tight"
-                    onChange={(e) => (formData.whole_event = e.target.checked)}
-                  />{" "}
-                  Whole Event(749/-)
-                </label>
+                <div className="flex flex-col sm:flex-row ">
+                  <label class="flex basis-1/2 items-center">
+                    <input
+                      type="radio"
+                      id="pronite"
+                      name="option"
+                      value="pronite"
+                      class="mr-2 leading-tight"
+                      onChange={(e) => (formData.pronite = e.target.checked)}
+                    />{" "}
+                    Pronite(599/-)
+                  </label>
+                  <label class="flex items-center">
+                    <input
+                      type="radio"
+                      id="wholeEvent"
+                      name="option"
+                      value="Whole Event"
+                      class="mr-2 leading-tight"
+                      onChange={(e) =>
+                        (formData.whole_event = e.target.checked)
+                      }
+                    />{" "}
+                    Whole Event(749/-)
+                  </label>
                 </div>
-               
-                
+
                 <label class="flex items-center">
                   <input
                     type="checkbox"
@@ -236,8 +241,8 @@ function TicketCardsLayout() {
                 >
                   {formData.members.map((member, index) => {
                     return (
-                      <div className="mb-4 flex flex-col gap-3 justify-center items-center w-full ">
-                        <div className="flex justify-center !w-full">
+                      <div className="mb-4 flex flex-col right-4 relative  gap-3 justify-center items-center w-full ">
+                        <div className="flex flex-col gap-3 sm:flex-row justify-center w-[90%]">
                           <input
                             type="text"
                             id={`groupMemberName${index}`}
@@ -258,7 +263,7 @@ function TicketCardsLayout() {
                             class="pl-4  py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                           />
                         </div>
-                        <div className="flex w-full justify-center gap-3">
+                        <div className="flex flex-col sm:flex-row w-[90%] justify-center gap-3">
                           <input
                             type="email"
                             id={`groupMemberEmail${index}`}
@@ -283,28 +288,26 @@ function TicketCardsLayout() {
                       </div>
                     );
                   })}
-                  <div className="flex justify-center gap-4">
-                  <button
-                    type="button"
-                    class=" bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline "
-                    onClick={addMember}
-                  >
-                    + Add Group Member
-                  </button>
-                  <button
-                    type="button"
-                    class=" bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
-                    onClick={() => {
-                      formData.members.splice(formData.length - 1, 1);
+                  <div className="flex justify-start sm:justify-center gap-3">
+                    <button
+                      type="button"
+                      class=" bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline "
+                      onClick={addMember}
+                    >
+                      + Add Group Member
+                    </button>
+                    <button
+                      type="button"
+                      class=" bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+                      onClick={() => {
+                        formData.members.splice(formData.length - 1, 1);
 
-                      setFormData({ ...formData });
-                    }}
-                  >
-                    <HiUserRemove />
-                  </button>
-
+                        setFormData({ ...formData });
+                      }}
+                    >
+                      <HiUserRemove />
+                    </button>
                   </div>
-
                 </div>
               </div>
               <div class="login_button py-10">

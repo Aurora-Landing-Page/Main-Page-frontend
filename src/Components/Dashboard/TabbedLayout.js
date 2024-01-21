@@ -53,21 +53,21 @@ export function TabbedLayout({ navigation, setNavigation }) {
   return  (
     <>
       <Tab.Group defaultIndex={0} onChange={(idx) => {}} vertical>
-        <div className="h-[45vh] flex justify-center sm:h-[100vh] w-full sm:w-80 bg-black opacity-30 sm:opacity-[75%] absolute left-0">
+        <div className="h-[25vh] flex justify-center sm:h-[100vh] w-full sm:w-80 bg-black opacity-50  sm:opacity-[75%] absolute left-0">
 
         </div>
-        <aside className="py-6 px-2 sm:px-6 lg:py-0 lg:px-0 lg:col-span-3 h-full flex flex-col items-center justify-center sm:flex sm:justify-start   ">
-          <div className="flex items-center justify-start gap-2  pt-10 pb-4">
+        <aside className="sm:py-6 px-2 sm:px-6 lg:py-0 lg:px-0 lg:col-span-3 h-full flex flex-col items-center justify-center sm:flex sm:justify-start   ">
+          <div className="flex items-center justify-start gap-2 pt-6  sm:pt-10 pb-4">
             <img src="./logo.png" className="h-12 w-12 z-10"></img>
             <div className="text-xl z-10">Aurora 2024</div>
           </div>
           <nav
             aria-label="Sidebar"
-            className="sticky  divide-y divide-gray-300  flex items-start "
+            className="sticky   divide-y divide-gray-300  flex items-start "
           >
             <div className=" space-y-1 pb-8">
               {navigation && navigation.length > 0 && (
-                <Tab.List className="space-y-2">
+                <Tab.List className="grid grid-cols-2   sm:grid-cols-1   sm:space-y-2">
                   {navigation.map((item, index) => {
                     const Icon = item.icon;
                     return (
@@ -78,7 +78,7 @@ export function TabbedLayout({ navigation, setNavigation }) {
                             selected
                               ? " text-brand-600  dark:text-brand-500"
                               : "text-gray-500 hover:text-brand-300 dark:hover:text-brand-400",
-                            "group flex items-center px-3 py-2 text-sm font-medium rounded-md w-full "
+                            "group  flex items-center px-3 py-2 tetx-xs sm:text-sm sm:font-medium rounded-md  "
                           )
                         }
                       >
@@ -89,10 +89,10 @@ export function TabbedLayout({ navigation, setNavigation }) {
                                 selected
                                   ? "text-brand-700"
                                   : " group-hover:text-black dark:group-hover:text-white text-brand-500",
-                                "flex-shrink-0 mr-3 h-6 w-6"
+                                "flex-shrink-0 sm:mr-3 mr-1 h-5 w-5  sm:h-6 sm:w-6"
                               )}
                             />
-                            <p className="linksText">{item.name}</p>
+                            <p className="linksText text-[1rem]">{item.name}</p>
                           </span>
                         )}
                       </Tab>
