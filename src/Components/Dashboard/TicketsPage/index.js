@@ -148,7 +148,7 @@ function TicketCardsLayout() {
       {loading ? (
         <Loader />
       ) : (
-        <div class="flex items-center justify-center  mt-10 md:mt-10 ml-6">
+        <div class="flex items-center justify-center  mt-10 md:mt-10 relative left-24">
           <div class="login_box">
             <form>
               <h2 class="login_h2">Attend</h2>
@@ -168,7 +168,7 @@ function TicketCardsLayout() {
                         setFormData({ ...formData });
                       }}
                     />
-                    <label for="individualPurchase">Individual Purchase(599/-)</label>
+                    <label for="individualPurchase">Individual Purchase</label>
                   </div>
                   <div class="flex items-center">
                     <input
@@ -198,7 +198,7 @@ function TicketCardsLayout() {
                     class="mr-2 leading-tight"
                     onChange={(e) => (formData.pronite = e.target.checked)}
                   />{" "}
-                  Pronite
+                  Pronite(599/-)
                 </label>
                 <label class="flex items-center">
                   <input
@@ -209,7 +209,7 @@ function TicketCardsLayout() {
                     class="mr-2 leading-tight"
                     onChange={(e) => (formData.whole_event = e.target.checked)}
                   />{" "}
-                  Whole Event
+                  Whole Event(749/-)
                 </label>
                 </div>
                
@@ -234,38 +234,50 @@ function TicketCardsLayout() {
                 >
                   {formData.members.map((member, index) => {
                     return (
-                      <div className="mb-4 ">
-                        <input
-                          type="text"
-                          id={`groupMemberName${index}`}
-                          placeholder="Name"
-                          onChange={(e) => {
-                            formData.members[index].name = e.target.value;
-                          }}
-                          class="pl-4 mr-2 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                        />
-                        <div>
-                        <input
-                          type="email"
-                          id={`groupMemberEmail${index}`}
-                          name={`groupMemberEmail${index}`}
-                          placeholder="Email"
-                          onChange={(e) => {
-                            formData.members[index].email = e.target.value;
-                          }}
-                          class="pl-4 mr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                        />
-                        <input
-                          type="tel"
-                          id={`groupMemberPhone${index}`}
-                          name={`groupMemberPhone${index}`}
-                          placeholder="Phone"
-                          onChange={(e) => {
-                            formData.members[index].phone = e.target.value;
-                          }}
-                          class="pl-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                        />
-                          </div>
+                      <div className="mb-4 flex flex-col gap-3 justify-center items-center w-full ">
+                        <div className="flex justify-center !w-full">
+                          <input
+                            type="text"
+                            id={`groupMemberName${index}`}
+                            placeholder="Name"
+                            onChange={(e) => {
+                              formData.members[index].name = e.target.value;
+                            }}
+                            class="pl-4 mr-2 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                          />
+                          <input
+                            type="email"
+                            // id={`groupMemberEmail${index}`}
+                            // name={`groupMemberEmail${index}`}
+                            placeholder="Gender"
+                            // onChange={(e) => {
+                            //   formData.members[index].email = e.target.value;
+                            // }}
+                            class="pl-4  py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                          />
+                        </div>
+                        <div className="flex w-full justify-center gap-3">
+                          <input
+                            type="email"
+                            id={`groupMemberEmail${index}`}
+                            name={`groupMemberEmail${index}`}
+                            placeholder="Email"
+                            onChange={(e) => {
+                              formData.members[index].email = e.target.value;
+                            }}
+                            class="pl-4  py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                          />
+                          <input
+                            type="tel"
+                            id={`groupMemberPhone${index}`}
+                            name={`groupMemberPhone${index}`}
+                            placeholder="Phone"
+                            onChange={(e) => {
+                              formData.members[index].phone = e.target.value;
+                            }}
+                            class="pl-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                          />
+                        </div>
                       </div>
                     );
                   })}
@@ -293,7 +305,7 @@ function TicketCardsLayout() {
 
                 </div>
               </div>
-              <div class="login_button pt-10">
+              <div class="login_button py-10">
                 <a className="login_a " href="#">
                   <button
                     class="login_btn"

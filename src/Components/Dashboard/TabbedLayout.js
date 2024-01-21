@@ -53,7 +53,7 @@ export function TabbedLayout({ navigation, setNavigation }) {
   return deviceType !== "Mobile" ? (
     <>
       <Tab.Group defaultIndex={0} onChange={(idx) => {}} vertical>
-        <div className="h-[100vh] w-72 bg-black opacity-[75%] absolute left-0">
+        <div className="hidden sm:flex h-[100vh] w-72 bg-black opacity-[75%] absolute left-0">
 
         </div>
         <aside className="py-6 px-2 sm:px-6 lg:py-0 lg:px-0 lg:col-span-3 h-full   ">
