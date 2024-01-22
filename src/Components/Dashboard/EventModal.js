@@ -9,6 +9,7 @@ import axios from "axios";
 import Toast from "../AlertAndLoader/Toast";
 import Loader from "../AlertAndLoader/Loader";
 import Alert from "../AlertAndLoader/Alert";
+// import sample from "./pdf/sample.pdf";
 
 export function EventModal({ isOpen, setIsOpen, data }) {
   const [loading, setLoading] = useState(false);
@@ -162,6 +163,9 @@ export function EventModal({ isOpen, setIsOpen, data }) {
           <div className="flex flex-col space-y-2">
             <Heading size="h5">Description</Heading>
             <p className="text-sm">{data?.Description}</p>
+          </div>
+          <div className="flex flex-col space-y-2">
+            <Heading size="h5"><a href={data?.rules} class="btn-1 outer-shadow hover-in-shadow" target="next_page">Rules ans Regulations</a></Heading>
           </div>
           <div className="flex flex-col space-y-2">
             <Heading size="h5">Date</Heading>
