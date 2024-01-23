@@ -45,7 +45,7 @@ import thepikture from './images/Events(9th-12th)/The Pikture.png'
 
 const events = [
   {
-    Title: "La Arte Fiesta - Graffathon",
+    Title: "Graffathon",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2023",
@@ -59,7 +59,7 @@ const events = [
     EventId: "Aurora-parivesh",
   },
   {
-    Title: "La Arte Fiesta - Best Out of Waste",
+    Title: "Best Out of Waste",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2023",
@@ -73,7 +73,7 @@ const events = [
     EventId: "Aurora-parivesh",
   },
   {
-    Title: "La Arte Fiesta - Naqaab (Face Painting)",
+    Title: "Naqaab (Face Painting)",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2023",
@@ -87,7 +87,7 @@ const events = [
     EventId: "Aurora-parivesh",
   },
   {
-    Title: "La Arte Fiesta - On Spot Painting (Live Art)",
+    Title: "On Spot Painting (Live Art)",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2023",
@@ -100,24 +100,9 @@ const events = [
     TicketPrice: 100,
     EventId: "Aurora-parivesh",
   },
-  {
-    Title: "La Arte Fiesta - Sculputre Making",
-    Content: "Sway away",
-    Day: "Wednesday",
-    Date: "16th February , 2023",
-    Description:"La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
-    rules: pdf15,
-    Time: "10:00",
-    Venue: "OAT",
-    Image: leartes,
-    GroupSize: 2,
-    TicketPrice: 100,
-    EventId: "Aurora-parivesh",
-  },
-
 
   {
-    Title: "Step-up - Classical Dance",
+    Title: "Step-up - Classical",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2023",
@@ -131,7 +116,7 @@ const events = [
     EventId: "Aurora-parivesh",
   },
   {
-    Title: "Step-up  - Duet Dance",
+    Title: "Step-up - Duet",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2023",
@@ -145,7 +130,7 @@ const events = [
     EventId: "Aurora-parivesh",
   },
   {
-    Title: "Step-up - Western Dance",
+    Title: "Step-up - Western",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2023",
@@ -159,7 +144,7 @@ const events = [
     EventId: "Aurora-parivesh",
   },
   {
-    Title: "Step-up - Solo Dance Battle",
+    Title: "Step-up - Solo",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2023",
