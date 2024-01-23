@@ -40,7 +40,7 @@ const data = [
 // const response = await axios.get("http://localhost:3000/getCaData")
 // const ca = response.data
 // console.log(ca);
-// const referrals = ca.referrals
+
 
 const darkTheme = createTheme({
   palette: {
