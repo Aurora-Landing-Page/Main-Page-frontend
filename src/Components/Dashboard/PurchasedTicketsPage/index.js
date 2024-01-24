@@ -13,7 +13,7 @@ function PurchasedTicketCardsLayout() {
   useEffect(() => {
     const fetchTickets = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/getUserData", {
+        const res = await axios.get(`${BACKEND_URL}/getUserData`, {
           withCredentials: true,
         });
         const { data } = res;

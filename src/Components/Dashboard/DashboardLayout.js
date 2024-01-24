@@ -14,7 +14,6 @@ import TicketCardsLayout from "./TicketsPage";
 import PurchasedTicketCardsLayout from "./PurchasedTicketsPage";
 import Logo from "./images/o.png";
 
-
 // TODO: Logo and logout button
 
 const Dashboard = () => {
@@ -63,7 +62,7 @@ const Dashboard = () => {
   };
 
   const handleLogout = async () => {
-    await axios.post("http://localhost:3000/logout", {
+    await axios.post(`${BACKEND_URL}/logout`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -76,7 +75,7 @@ const Dashboard = () => {
 
   const checkUserLoginStatus = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/getUserData", {
+      const response = await axios.get(`${BACKEND_URL}/getUserData`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -123,7 +122,6 @@ const Dashboard = () => {
                   isTabbed={true}
                   navigation={navigation}
                   setNavigation={setNavigation}
-                
                 />
               </div>
             </div>

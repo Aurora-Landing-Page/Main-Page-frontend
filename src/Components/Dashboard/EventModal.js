@@ -65,14 +65,14 @@ export function EventModal({ isOpen, setIsOpen, data }) {
     }
 
     //post data
-    const keyRes = await fetch("http://localhost:3000/getKey", {
+    const keyRes = await fetch(`${BACKEND_URL}/getKey`, {
       method: "GET",
       credentials: "include",
     });
     const keyJSON = await keyRes.json();
     const { key } = keyJSON;
 
-    const res = await fetch("http://localhost:3000/createOrder", {
+    const res = await fetch(`${BACKEND_URL}/createOrder`, {
       method: "POST",
       credentials: "include",
       headers: {
@@ -101,7 +101,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
           razorpaySignature: response.razorpay_signature,
         };
 
-        const result = await fetch("http://localhost:3000/verifyOrder", {
+        const result = await fetch(`${BACKEND_URL}/verifyOrder`, {
           method: "POST",
           credentials: "include",
           headers: {
