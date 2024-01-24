@@ -14,8 +14,8 @@ function Card({ data }) {
         }}
       >
         <div className=" max-w-xs w-64 h-64 rounded-lg overflow-hidden border bg-opacity-10">
-          <div style={{ width: "auto", height: "auto" }}>
-            <div style={{ width: "auto", height: "auto" }}>
+          <div >
+            <div>
               <img
                 className="w-full h-56 object-cover"
                 src={data?.Image}
@@ -24,7 +24,7 @@ function Card({ data }) {
             </div>
           </div>
           <div className="bottom-0 h-full w-full items-center  bg-black text-white">
-            <h1 className="text-xl font-bold">{data?.Title}</h1>
+            <h1 className="text-xl font-bold">{data?.Title} </h1>
           </div>
         </div>
       </button>

@@ -53,7 +53,7 @@ export function TabbedLayout({ navigation, setNavigation }) {
   return  (
     <>
       <Tab.Group defaultIndex={0} onChange={(idx) => {}} vertical>
-        <div className="h-[25vh] flex justify-center sm:h-[100vh] w-full sm:w-80 bg-black opacity-50  sm:opacity-[75%] absolute left-0">
+        <div className="h-[25vh]  flex justify-center lg:h-[100vh] w-full lg:w-80 bg-black opacity-50  sm:opacity-[75%] absolute left-0">
 
         </div>
         <aside className="sm:py-6 px-2 sm:px-6 lg:py-0 lg:px-0 lg:col-span-3 h-full flex flex-col items-center justify-center sm:flex sm:justify-start   ">
@@ -67,7 +67,7 @@ export function TabbedLayout({ navigation, setNavigation }) {
           >
             <div className=" space-y-1 pb-8">
               {navigation && navigation.length > 0 && (
-                <Tab.List className="grid grid-cols-2   sm:grid-cols-1   sm:space-y-2">
+                <Tab.List className="grid grid-cols-2   lg:grid-cols-1   sm:space-y-2">
                   {navigation.map((item, index) => {
                     const Icon = item.icon;
                     return (
@@ -78,7 +78,7 @@ export function TabbedLayout({ navigation, setNavigation }) {
                             selected
                               ? " text-brand-600  dark:text-brand-500"
                               : "text-gray-500 hover:text-brand-300 dark:hover:text-brand-400",
-                            "group  flex items-center px-3 py-2 tetx-xs sm:text-sm sm:font-medium rounded-md  "
+                            "group  flex items-center px-3 py-2 tetx-xs sm:text-sm lg:text-sm sm:font-medium rounded-md  "
                           )
                         }
                       >
@@ -105,7 +105,7 @@ export function TabbedLayout({ navigation, setNavigation }) {
         </aside>
         <Tab.Panels className="space-y-6 flex w-full items-center justify-center sm:px-6 lg:px-0 lg:col-span-9">
           {navigation.map((panel, index) => {
-            return <Tab.Panel className="flex w-full items-center justify-center relative left-6 bottom-6" key={index}>{panel.component}</Tab.Panel>;
+            return <Tab.Panel className="flex w-full items-center justify-center relative left-6 bottom-6" key={index}>{panel.component}</Tab.Panel>
           })}
         </Tab.Panels>
       </Tab.Group>
