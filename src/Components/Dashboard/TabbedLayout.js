@@ -53,10 +53,10 @@ export function TabbedLayout({ navigation, setNavigation }) {
   return  (
     <>
       <Tab.Group defaultIndex={0} onChange={(idx) => {}} vertical>
-        <div className="h-[25vh]  flex justify-center lg:h-[100vh] w-full lg:w-80 bg-black opacity-50  sm:opacity-[75%] absolute left-0">
+        <div className="h-[25vh]  flex justify-center z-[9] lg:h-full w-full lg:w-80 bg-black opacity-50  sm:opacity-[75%] fixed left-0 ">
 
         </div>
-        <aside className="sm:py-6 px-2 sm:px-6 lg:py-0 lg:px-0 lg:col-span-3 h-full flex flex-col items-center justify-center sm:flex sm:justify-start   ">
+        <aside className="sm:py-6 px-2 sm:px-[25vw] lg:py-0 lg:px-6 lg:col-span-3 fixed  z-10 flex flex-col items-center justify-center sm:flex sm:justify-start    ">
           <div className="flex items-center justify-start gap-2 pt-6  sm:pt-10 pb-4">
             <img src="./logo.png" className="h-12 w-12 z-10"></img>
             <div className="text-xl z-10">Aurora 2024</div>
@@ -103,9 +103,9 @@ export function TabbedLayout({ navigation, setNavigation }) {
             </div>
           </nav>
         </aside>
-        <Tab.Panels className="space-y-6 flex w-full items-center justify-center sm:px-6 lg:px-0 lg:col-span-9">
+        <Tab.Panels className="space-y-6 flex w-full items-center justify-center sm:px-6 lg:px-0 lg:col-span-9 pt-[25vh] sm:pt-0">
           {navigation.map((panel, index) => {
-            return <Tab.Panel className="flex w-full items-center justify-center relative left-6 bottom-6" key={index}>{panel.component}</Tab.Panel>
+            return <Tab.Panel className="flex w-full items-center justify-center relative left-6 sm:left-3 lg:left-[20vw] bottom-6" key={index}>{panel.component}</Tab.Panel>
           })}
         </Tab.Panels>
       </Tab.Group>
