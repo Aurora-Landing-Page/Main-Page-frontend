@@ -153,7 +153,7 @@ const Login = () => {
               <div class="login_button">
                 <a class="login_a" href="#">
                   <button class="login_btn" onClick={handleSubmit}>
-                    Click to log in
+                    Log In
                   </button>
                 </a>
               </div>
