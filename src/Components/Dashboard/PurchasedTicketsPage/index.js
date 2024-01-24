@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import events from "../eventData";
 import EventCard from "./Card";
 import { Card } from "../Modal/Card";
-
+import BACKEND_URL from "../../../helper";
 function PurchasedTicketCardsLayout() {
   const [ticketEventIds, setTicketEventIds] = useState([]);
   const [participatedEvents, setParticipatedEvents] = useState([]);
@@ -13,7 +13,7 @@ function PurchasedTicketCardsLayout() {
   useEffect(() => {
     const fetchTickets = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/getUserData", {
+        const res = await axios.get(`${BACKEND_URL}/getUserData`, {
           withCredentials: true,
         });
         const { data } = res;

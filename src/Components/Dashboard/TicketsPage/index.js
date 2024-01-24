@@ -2,7 +2,7 @@ import { useState } from "react";
 import Toast from "../../AlertAndLoader/Toast";
 import Alert from "../../AlertAndLoader/Alert";
 import Loader from "../../AlertAndLoader/Loader";
-
+import BACKEND_URL from "../../../helper";
 import { HiUserRemove } from "react-icons/hi";
 
 function TicketCardsLayout() {
@@ -54,14 +54,14 @@ function TicketCardsLayout() {
     }
 
     //post data
-    const keyRes = await fetch("http://localhost:3000/getKey", {
+    const keyRes = await fetch(`${BACKEND_URL}/getKey`, {
       method: "GET",
       credentials: "include",
     });
     const keyJSON = await keyRes.json();
     const { key } = keyJSON;
 
-    const res = await fetch("http://localhost:3000/createOrder", {
+    const res = await fetch(`${BACKEND_URL}/createOrder`, {
       method: "POST",
       credentials: "include",
       headers: {
@@ -90,7 +90,7 @@ function TicketCardsLayout() {
           razorpaySignature: response.razorpay_signature,
         };
 
-        const result = await fetch("http://localhost:3000/verifyOrder", {
+        const result = await fetch(`${BACKEND_URL}/verifyOrder`, {
           method: "POST",
           credentials: "include",
           headers: {
@@ -189,7 +189,10 @@ function TicketCardsLayout() {
                         setFormData({ ...formData });
                       }}
                     />
-                    <label for="groupPurchase" className="flex flex-col sm:flex-row ">
+                    <label
+                      for="groupPurchase"
+                      className="flex flex-col sm:flex-row "
+                    >
                       Group Purchase <span>(4+1 & 8+3)</span>
                     </label>
                   </div>

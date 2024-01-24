@@ -9,9 +9,12 @@ import axios from "axios";
 import Toast from "../AlertAndLoader/Toast";
 import Loader from "../AlertAndLoader/Loader";
 import Alert from "../AlertAndLoader/Alert";
+import BACKEND_URL from "../../helper";
+// import sample from "./pdf/sample.pdf";
 
 export function EventModal({ isOpen, setIsOpen, data }) {
   const [loading, setLoading] = useState(false);
+  const [groupSize, setGroupSize] = useState(0);
 
   const initialFormData = {
     eventId: data.EventId,
@@ -63,14 +66,14 @@ export function EventModal({ isOpen, setIsOpen, data }) {
     }
 
     //post data
-    const keyRes = await fetch("http://localhost:3000/getKey", {
+    const keyRes = await fetch(`${BACKEND_URL}/getKey`, {
       method: "GET",
       credentials: "include",
     });
     const keyJSON = await keyRes.json();
     const { key } = keyJSON;
 
-    const res = await fetch("http://localhost:3000/createOrder", {
+    const res = await fetch(`${BACKEND_URL}/createOrder`, {
       method: "POST",
       credentials: "include",
       headers: {
@@ -99,7 +102,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
           razorpaySignature: response.razorpay_signature,
         };
 
-        const result = await fetch("http://localhost:3000/verifyOrder", {
+        const result = await fetch(`${BACKEND_URL}/verifyOrder`, {
           method: "POST",
           credentials: "include",
           headers: {
@@ -126,13 +129,13 @@ export function EventModal({ isOpen, setIsOpen, data }) {
   };
 
   useEffect(() => {
-    if (data?.GroupSize > 1) {
-      let temp = [];
-      for (let i = 0; i < data.GroupSize - 1; i++) {
-        temp.push({ name: "", email: "", phone: "" });
-      }
-      setFormData({ ...formData, members: temp });
-    }
+    // if (data?.GroupSize > 1) {
+    //   let temp = [];
+    //   for (let i = 0; i < data.GroupSize - 1; i++) {
+    //     temp.push({ name: "", email: "", phone: "" });
+    //   }
+    //   setFormData({ ...formData, members: temp });
+    // }
   }, [data]);
 
   return (
@@ -164,6 +167,17 @@ export function EventModal({ isOpen, setIsOpen, data }) {
             <p className="text-sm">{data?.Description}</p>
           </div>
           <div className="flex flex-col space-y-2">
+            <Heading size="h5">
+              <a
+                href={data?.rules}
+                class="btn-1 outer-shadow hover-in-shadow"
+                target="next_page"
+              >
+                Rules and Regulations
+              </a>
+            </Heading>
+          </div>
+          <div className="flex flex-col space-y-2">
             <Heading size="h5">Date</Heading>
             <p className="text-sm">{data?.Date}</p>
           </div>
@@ -177,7 +191,11 @@ export function EventModal({ isOpen, setIsOpen, data }) {
           </div>
           <div className="flex flex-col space-y-2">
             <Heading size="h5">Group Size</Heading>
-            <p className="text-sm">{data?.GroupSize}</p>
+            <p className="text-sm">
+              {data?.minGroupSize === data?.maxGroupSize
+                ? data?.minGroupSize
+                : `${data?.minGroupSize} - ${data?.maxGroupSize}`}
+            </p>
           </div>
           <div className="flex flex-col space-y-2">
             <Heading size="h5">Ticket Price</Heading>
@@ -198,8 +216,38 @@ export function EventModal({ isOpen, setIsOpen, data }) {
                 required
                 class="pl-4 mr-2 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
               />
+              <input
+                type="number"
+                placeholder="Enter number of members in your group"
+                onChange={(e) => {
+                  // check if group size is valid
+                  if (e.target.value < data.minGroupSize) {
+                    setMessege(
+                      `Minimum group size is ${data.minGroupSize} for this event`
+                    );
+                    setShowAlert(true);
+                    return;
+                  }
+                  if (e.target.value > data.maxGroupSize) {
+                    setMessege(
+                      `Maximum group size is ${data.maxGroupSize} for this event`
+                    );
+                    setShowAlert(true);
+                    return;
+                  }
+
+                  setGroupSize(e.target.value);
+                  formData.members = [];
+                  for (let i = 0; i < e.target.value - 1; i++) {
+                    formData.members.push({ name: "", email: "", phone: "" });
+                  }
+                  console.log("Members", formData.members.length);
+                }}
+                required
+                class="pl-4 mr-2 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+              />
             </div>
-            <div hidden={data?.GroupSize <= 1}>
+            <div hidden={formData.members.length < 1}>
               <Heading size="h5" className={"mb-2"}>
                 Member details (except yours)
               </Heading>

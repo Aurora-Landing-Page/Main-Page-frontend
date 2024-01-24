@@ -9,6 +9,7 @@ import Alert from "../AlertAndLoader/Alert";
 // import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
 import image from "./images/o.png";
 // import { FaArrowTrendUp } from 'react-icons/fa6';
+import BACKEND_URL from "../../helper";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -43,16 +44,12 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:3000/loginUser",
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          withCredentials: true,
-        }
-      );
+      const response = await axios.post(`${BACKEND_URL}/loginUser`, formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        withCredentials: true,
+      });
       console.log(response.data);
       setMessege("Logged in successfully");
       setShowToast(true);
@@ -156,7 +153,7 @@ const Login = () => {
               <div class="login_button">
                 <a class="login_a" href="#">
                   <button class="login_btn" onClick={handleSubmit}>
-                    Click to log in
+                    Log In
                   </button>
                 </a>
               </div>

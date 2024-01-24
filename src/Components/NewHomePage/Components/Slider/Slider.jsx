@@ -90,7 +90,7 @@ const Slider = () => {
             <div className="item">
               <img src={img1} />
               <div className="content">
-                <div className="author">AURORA 2k24</div>
+                <div className="author">AURORA</div>
                 <div className="title">Indian Ocean</div>
                 <div className="topic">Band</div>
                 <div className="des">
@@ -134,7 +134,7 @@ const Slider = () => {
             <div className="item">
               <img src={img2} />
               <div className="content">
-                <div className="author">AURORA 2k24</div>
+                <div className="author">AURORA</div>
                 <div className="title">DJ AceAxe</div>
                 <div className="topic">DJ Night</div>
                 <div className="des">
@@ -177,7 +177,7 @@ const Slider = () => {
             <div className="item">
               <img src={img3} />
               <div className="content">
-                <div className="author">AURORA 2k24</div>
+                <div className="author">AURORA</div>
                 <div className="title">Mohit Chauhan</div>
                 <div className="topic">Celebrity Night</div>
                 <div className="des">
@@ -220,8 +220,8 @@ const Slider = () => {
             <div className="item">
               <img src={img4} />
               <div className="content">
-                <div className="author">AURORA 2k24</div>
-                <div className="title">Sunbun</div>
+                <div className="author">AURORA</div>
+                <div className="title">Indian Ocean</div>
                 <div className="topic">Band Performance</div>
                 <div className="des">
                 Diverse genres harmonized on one stage, creating a musical mosaic that celebrated the rich tapestry of sounds. The band's performance was a testament to the unity found in musical diversity.
@@ -263,9 +263,9 @@ const Slider = () => {
             <div className="item">
               <img src={img5} />
               <div className="content">
-                <div className="author">AURORA 2k24</div>
+                <div className="author">AURORA</div>
                 <div className="title">Olly Esse</div>
-                <div className="topic">DJ Night</div>
+                <div className="topic">EDM Night</div>
                 <div className="des">
                 Underneath the starlit sky, immerse yourself in the magic of bass drops and dance moves. Our DJ night promises a cosmic journey through beats that reverberate with pure energy.
                 </div>

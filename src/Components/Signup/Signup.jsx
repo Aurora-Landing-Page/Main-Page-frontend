@@ -7,7 +7,7 @@ import IconImage from "./images/o.png";
 import data from "./data.js";
 import Alert from "../AlertAndLoader/Alert.jsx";
 import Navbar from "../Navbar/Navbar";
-
+import BACKEND_URL from "../../helper.js";
 const Signup = () => {
   const initialFormData = {
     name: "",
@@ -23,6 +23,8 @@ const Signup = () => {
 
   const [showAlert, setShowAlert] = useState(false);
   const [showToast, setShowToast] = useState(false);
+  const [showStep1, setShowStep1] = useState(true);
+  const [showStep2, setShowStep2] = useState(false);
 
   const [messege, setMessege] = useState("");
   const [FormData, setFormData] = useState(initialFormData);
@@ -44,7 +46,8 @@ const Signup = () => {
   };
 
   const handleChange = (e) => {
-    console.log(e.target.value);
+    e.preventDefault();
+    // console.log(e.target.value);
     const { name, value } = e.target;
 
     if (name == "dob") {
@@ -55,15 +58,15 @@ const Signup = () => {
         setShowAlert(true);
       } else {
         setFormData({ ...FormData, [name]: value });
-        console.log(FormData);
+        // console.log(FormData);
       }
     } else {
       setFormData({ ...FormData, [name]: value });
-      console.log(FormData);
+      // console.log(FormData);
     }
 
     setFormData({ ...FormData, [name]: value });
-    console.log(FormData);
+    // console.log(FormData);
   };
 
   const handleSubmit = async (e) => {
@@ -111,11 +114,11 @@ const Signup = () => {
     NewDate = NewDate.toISOString();
 
     setFormData({ ...FormData, ["dob"]: NewDate });
-    console.log(FormData);
+    // console.log(FormData);
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/registerUser",
+        `${BACKEND_URL}/registerUser`,
         FormData,
         {
           headers: {
@@ -123,7 +126,7 @@ const Signup = () => {
           },
         }
       );
-      console.log(response.data);
+      // console.log(response.data);
 
       setFormData(initialFormData);
       setShowStep1(true);
@@ -137,12 +140,11 @@ const Signup = () => {
       setShowToast(true);
     }
   };
-  const [showStep1, setShowStep1] = useState(true);
-  const [showStep2, setShowStep2] = useState(false);
-  useEffect(() => {
-    setShowStep1(true);
-    setShowStep2(false);
-  }, []);
+
+  // useEffect(() => {
+  //   setShowStep1(true);
+  //   setShowStep2(false);
+  // }, []);
   const nextStep = (e) => {
     e.preventDefault();
 
