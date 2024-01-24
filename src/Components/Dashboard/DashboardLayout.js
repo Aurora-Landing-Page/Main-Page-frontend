@@ -13,7 +13,7 @@ import EventCardsLayout from "./EventsPage/EventCardsLayout";
 import TicketCardsLayout from "./TicketsPage";
 import PurchasedTicketCardsLayout from "./PurchasedTicketsPage";
 import Logo from "./images/o.png";
-
+import BACKEND_URL from "../../helper";
 // TODO: Logo and logout button
 
 const Dashboard = () => {

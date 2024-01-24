@@ -7,7 +7,7 @@ import IconImage from "./images/o.png";
 import data from "./data.js";
 import Alert from "../AlertAndLoader/Alert.jsx";
 import Navbar from "../Navbar/Navbar";
-
+import BACKEND_URL from "../../helper.js";
 const Signup = () => {
   const initialFormData = {
     name: "",

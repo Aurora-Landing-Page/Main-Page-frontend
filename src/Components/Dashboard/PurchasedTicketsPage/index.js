@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import events from "../eventData";
 import EventCard from "./Card";
 import { Card } from "../Modal/Card";
-
+import BACKEND_URL from "../../../helper";
 function PurchasedTicketCardsLayout() {
   const [ticketEventIds, setTicketEventIds] = useState([]);
   const [participatedEvents, setParticipatedEvents] = useState([]);

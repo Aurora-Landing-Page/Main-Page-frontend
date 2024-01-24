@@ -9,6 +9,7 @@ import axios from "axios";
 import Toast from "../AlertAndLoader/Toast";
 import Loader from "../AlertAndLoader/Loader";
 import Alert from "../AlertAndLoader/Alert";
+import BACKEND_URL from "../../helper";
 // import sample from "./pdf/sample.pdf";
 
 export function EventModal({ isOpen, setIsOpen, data }) {
