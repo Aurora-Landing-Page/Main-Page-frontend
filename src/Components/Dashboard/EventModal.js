@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { useState, useEffect } from "react";
 import { Input } from "./Modal/Input";
 import { Card } from "./Modal/Card";
@@ -5,14 +6,39 @@ import { LoadingFallback } from "./Modal/LoadingFallback";
 import Modal from "./Modal";
 import { Heading } from "./Modal/Heading";
 import axios from "axios";
+import QRCode from "./images/QR.jpg"
 // import DownloadIcon from '@mui/icons-material/Download';
 import Toast from "../AlertAndLoader/Toast";
 import Loader from "../AlertAndLoader/Loader";
 import Alert from "../AlertAndLoader/Alert";
 import BACKEND_URL from "../../helper";
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
+import { IconButton } from '@mui/material';
+// import CloseIcon from '@mui/icons-material/Close';
 // import sample from "./pdf/sample.pdf";
 
+
 export function EventModal({ isOpen, setIsOpen, data }) {
+
+  const [open, setOpen] = React.useState(false);
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   const [loading, setLoading] = useState(false);
   const [groupSize, setGroupSize] = useState(0);
 
@@ -174,7 +200,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
                 target="next_page"
                 style={{ textDecoration: "underline" }}
               >
-                Rules and Regulations 
+                Rules and Regulations
                 {/* <DownloadIcon /> */}
 
               </a>
@@ -296,14 +322,67 @@ export function EventModal({ isOpen, setIsOpen, data }) {
           <button
             type="submit"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            // onClick={handlePurchaseTicket}
+            onClick={handleClickOpen}
           >
-            {/* Purchase Ticket */}
-            Passes will be out soon
+            Purchase Ticket
+            {/* Get Passes */}
           </button>
         </Card.Footer>
         {loading && <LoadingFallback />}
+        <Dialog
+          fullScreen={fullScreen}
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="responsive-dialog-title"
+        >
+          <DialogTitle id="responsive-dialog-title" marginLeft={'20%'}>
+            {"Now Pay Thorugh The Below QR"}
+          </DialogTitle>
+          <IconButton
+          aria-label="close"
+          onClick={handleClose}
+          sx={{
+            position: 'absolute',
+            right: 8,
+            top: 8,
+            color: (theme) => theme.palette.grey[500],
+          }}
+        >X
+          {/* <CloseIcon /> */}
+        </IconButton>
+          <DialogContent>
+            <DialogContentText>
+              <img src={QRCode} alt="QR Code" />
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusantium sapiente repellat facere sed porro ab culpa eius tempore. Hic labore cupiditate sapiente perferendis minus temporibus id consequatur quod voluptatem!
+              <br />
+              <input
+                accept="image/*"
+                // className={classes.input}
+                style={{ display: 'none' }}
+                id="raised-button-file"
+                type="file"
+                
+              />
+              <label htmlFor="raised-button-file">
+                <Button variant="raised" component="span" style={{marginLeft:"40%"}}>
+                  Upload
+                </Button>
+              </label>
+
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            {/* <Button autoFocus onClick={handleClose}>
+            Disagree
+          </Button> */}
+          <Button onClick={handleClose} autoFocus>
+            Submit
+          </Button>
+          </DialogActions>
+        </Dialog>
+
       </Modal>
+
     </>
   );
 }
