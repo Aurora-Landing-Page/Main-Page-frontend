@@ -13,8 +13,8 @@ const Slider = () => {
     const [timeAutoNext, setTimeAutoNext] = useState(7000);
   
     useEffect(() => {
-      const nextDom = document.getElementById('next');
-      const prevDom = document.getElementById('prev');
+    //   const nextDom = document.getElementById('next');
+    //   const prevDom = document.getElementById('prev');
       const carouselDom = document.querySelector('.carousel');
       const SliderDom = carouselDom.querySelector('.carousel .list');
       const thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
@@ -28,12 +28,12 @@ const Slider = () => {
         console.log('Timeout logic here');
       }, timeRunning);
   
-      let runNextAuto = setTimeout(() => {
-        nextDom.click();
-      }, timeAutoNext);
+    //   let runNextAuto = setTimeout(() => {
+    //     nextDom.click();
+    //   }, timeAutoNext);
   
-      nextDom.onclick = () => showSlider('next');
-      prevDom.onclick = () => showSlider('prev');
+    //   nextDom.onclick = () => showSlider('next');
+    //   prevDom.onclick = () => showSlider('prev');
   
       return () => {
         clearTimeout(runTimeOut);
@@ -69,11 +69,11 @@ const Slider = () => {
       }, timeRunning);
   
       clearTimeout(runNextAuto);
-      runNextAuto = setTimeout(() => {
-        // Assuming there is a 'next' button in your component
-        const nextButton = document.getElementById('next');
-        nextButton.click();
-      }, timeAutoNext);
+    //   runNextAuto = setTimeout(() => {
+    //     // Assuming there is a 'next' button in your component
+    //     const nextButton = document.getElementById('next');
+    //     nextButton.click();
+    //   }, timeAutoNext);
     };
   
     return (
@@ -285,10 +285,10 @@ const Slider = () => {
         </div>
   
 
-        <div className="arrows">
+        {/* <div className="arrows">
             <button id="prev"> ← </button>
             <button id="next"> → </button>
-        </div>
+        </div> */}
        
        
     </div>

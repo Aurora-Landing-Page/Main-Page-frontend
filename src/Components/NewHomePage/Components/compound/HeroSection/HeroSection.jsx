@@ -33,9 +33,9 @@ function HeroSection() {
                 <HeroTextContainer />
          
                 <a className={style.Button} 
-                href="/register"
+                href="/dashboard"
                 // onClick={()=>{navigate('/register') }} 
-                > Register Now <FaLocationArrow style={{ marginTop: "2px" }} /></a>
+                > Explore More<FaLocationArrow style={{ marginTop: "2px" }} /></a>
             </div>
 
         </div>);

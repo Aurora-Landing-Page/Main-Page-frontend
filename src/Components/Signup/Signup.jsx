@@ -304,7 +304,7 @@ const Signup = () => {
                 <div className="signup1_already"> Welcome To Aurora</div>
                 <div className="signup1_already">
                   <a className="signup1_ln" 
-                  // href={"/login"}
+                  href={"/login"}
                   >
                     Already Registered? Login
                   </a>

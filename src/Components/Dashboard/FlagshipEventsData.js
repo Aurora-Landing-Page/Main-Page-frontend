@@ -2,6 +2,7 @@ import AuroraImage from "./images/img4.jpeg";
 import pdf1 from "./pdf/MnM/MnM_.pdf";
 import pdf2 from "./pdf/Parivesh/Parivesh Fashion Show_.pdf";
 import pdf3 from "./pdf/Corna/Corna.pdf";
+import pdf4 from "./pdf/Esports/bgmi.pdf";
 import sample from "./pdf/sample.pdf";
 import corna from "./images/Flagship(5-8)/corna.jpg";
 import mnm from "./images/Flagship(5-8)/MR. AND MS. AURORA.png";
@@ -69,7 +70,7 @@ const FlagshipEvents = [
     Date: "16th February , 2023",
     Description:
       "Gear up for an adrenaline-charged battle as Esports brings you the ultimate showdown in Valorant and BGMI (Battlegrounds Mobile India). It's more than just gaming; it's a battleground where strategy meets skill, and competitors rise to conquer the digital realm. Esports isn't just about playing; it's about tactical brilliance and unwavering focus. Join us for an electrifying experience, where gamers from across the spectrum unite to showcase their prowess in these fiercely competitive games. Whether it's the tactical maneuvers in Valorant or the thrill of survival in BGMI, Esports invites you to step into the digital arena, compete at your best, and claim victory in the world of competitive gaming!    ",
-    rules: sample,
+    rules: pdf4,
     Time: "10:00",
     Venue: "OAT",
     Image: esports,

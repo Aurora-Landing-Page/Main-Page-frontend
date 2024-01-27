@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import "./Login.css";
 import axios from "axios";
 import Toast from "../AlertAndLoader/Toast";
@@ -10,6 +9,7 @@ import Alert from "../AlertAndLoader/Alert";
 import image from "./images/o.png";
 // import { FaArrowTrendUp } from 'react-icons/fa6';
 import BACKEND_URL from "../../helper";
+import Navbar from "../Navbar/Navbar";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -111,6 +111,7 @@ const Login = () => {
         <Loader />
       ) : (
         <div class="login_big-box">
+          <Navbar/>
           <h1 class="login_welcome">Welcome Back</h1>
           <div class="login_box">
             <form action="submit">

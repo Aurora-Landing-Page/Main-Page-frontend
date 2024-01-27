@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { HiOutlineGlobeAlt } from "react-icons/hi";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
 import { TabbedLayout } from "./TabbedLayout";
 import "./index.css";
 import Toast from "../AlertAndLoader/Toast";
@@ -14,6 +13,8 @@ import TicketCardsLayout from "./TicketsPage";
 import PurchasedTicketCardsLayout from "./PurchasedTicketsPage";
 import Logo from "./images/o.png";
 import BACKEND_URL from "../../helper";
+import Navbar from "../Navbar/Navbar";
+import { CiLogout } from "react-icons/ci";
 // TODO: Logo and logout button
 
 const Dashboard = () => {
@@ -43,12 +44,18 @@ const Dashboard = () => {
       name: "Tickets",
       id: "/tickets",
     },
-    {
-      component: <PurchasedTicketCardsLayout />,
-      icon: HiOutlineGlobeAlt,
-      name: "Purchased Tickets",
-      id: "/purchasedTickets",
-    },
+    // {
+    //   component: <PurchasedTicketCardsLayout />,
+    //   icon: HiOutlineGlobeAlt,
+    //   name: "Purchased Tickets",
+    //   id: "/purchasedTickets",
+    // },
+    // {
+    //   component: <CiLogout />,
+    //   icon: CiLogout,
+    //   name: "Log Out",
+    //   id: "/",
+    // },
   ]);
 
   const handleToastClose = () => {
@@ -116,6 +123,7 @@ const Dashboard = () => {
       ) : (
         <>
           <div className=" dashboard">
+          <Navbar/>
             <div className="max-w-3xl  lg:max-w-full xl:max-w-[90rem] lg:grid lg:grid-cols-12 lg:gap-8">
               <div className="lg:col-span-9 lg:grid lg:grid-cols-12 lg:gap-8 ">
                 <TabbedLayout

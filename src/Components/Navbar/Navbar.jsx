@@ -9,6 +9,10 @@ const Navbar = () => {
       path: '/',
     },
     {
+      title: 'Dashboard',
+      path: '/dashboard',
+    },
+    {
       title: 'About',
       path: '/about',
     },
@@ -25,12 +29,12 @@ const Navbar = () => {
       path: '/pronites',
     },
     {
-      title: 'Register',
+      title: 'Login/Register',
       path: '/register',
     },
     // {
-    //   title: 'Dashboard',
-    //   path: '/dashboard',
+    //   title: 'Login',
+    //   path: '/login',
     // },
     // {
     //   title: 'LogOut',

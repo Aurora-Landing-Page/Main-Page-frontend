@@ -29,7 +29,7 @@ function Card({ data }) {
         </div>
       </button>
     </>
-  );
+  )
 }
 
 export default Card;

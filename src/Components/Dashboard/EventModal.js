@@ -5,7 +5,7 @@ import { LoadingFallback } from "./Modal/LoadingFallback";
 import Modal from "./Modal";
 import { Heading } from "./Modal/Heading";
 import axios from "axios";
-
+// import DownloadIcon from '@mui/icons-material/Download';
 import Toast from "../AlertAndLoader/Toast";
 import Loader from "../AlertAndLoader/Loader";
 import Alert from "../AlertAndLoader/Alert";
@@ -172,8 +172,11 @@ export function EventModal({ isOpen, setIsOpen, data }) {
                 href={data?.rules}
                 class="btn-1 outer-shadow hover-in-shadow"
                 target="next_page"
+                style={{ textDecoration: "underline" }}
               >
-                Rules and Regulations
+                Rules and Regulations 
+                {/* <DownloadIcon /> */}
+
               </a>
             </Heading>
           </div>
@@ -181,10 +184,10 @@ export function EventModal({ isOpen, setIsOpen, data }) {
             <Heading size="h5">Date</Heading>
             <p className="text-sm">{data?.Date}</p>
           </div>
-          <div className="flex flex-col space-y-2">
+          {/* <div className="flex flex-col space-y-2">
             <Heading size="h5">Time</Heading>
             <p className="text-sm">{data?.Time}</p>
-          </div>
+          </div> */}
           <div className="flex flex-col space-y-2">
             <Heading size="h5">Venue</Heading>
             <p className="text-sm">{data?.Venue}</p>
@@ -293,9 +296,10 @@ export function EventModal({ isOpen, setIsOpen, data }) {
           <button
             type="submit"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={handlePurchaseTicket}
+            // onClick={handlePurchaseTicket}
           >
-            Purchase Ticket
+            {/* Purchase Ticket */}
+            Passes will be out soon
           </button>
         </Card.Footer>
         {loading && <LoadingFallback />}

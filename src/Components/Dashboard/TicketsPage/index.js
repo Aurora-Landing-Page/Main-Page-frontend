@@ -151,7 +151,7 @@ function TicketCardsLayout() {
         <div class="flex items-center justify-center  mt-10 md:mt-10 relative sm:left-24">
           <div class="login_box">
             <form>
-              <h2 class="login_h2 py-2 sm:bottom-8">Attend</h2>
+              <h2 style={{ right: "-31%" }} class="login_h2 py-2 sm:bottom-8 ">Attend</h2>
               <div class=" text-lg sm:text-xl space-y-2 sm:space-y-4 font-medium sm:font-semibold flex flex-col relative  left-4">
                 <div class="flex flex-col sm:flex-row  ">
                   <div class="flex gap-2 items-center sm:basis-1/2">
@@ -193,7 +193,9 @@ function TicketCardsLayout() {
                       for="groupPurchase"
                       className="flex flex-col sm:flex-row "
                     >
-                      Group Purchase <span>(4+1 & 8+3)</span>
+                      Group Purchase
+                      <span>(4+1 & 8+3)</span>
+
                     </label>
                   </div>
                 </div>
@@ -238,9 +240,8 @@ function TicketCardsLayout() {
                 <div
                   id="groupPurchaseFields"
                   // hidden={formData.purchaseType !== "group"}
-                  className={` mt-2 ${
-                    formData.purchaseType !== "group" ? "hidden" : "block"
-                  } `}
+                  className={` mt-2 ${formData.purchaseType !== "group" ? "hidden" : "block"
+                    } `}
                 >
                   {formData.members.map((member, index) => {
                     return (
@@ -314,15 +315,16 @@ function TicketCardsLayout() {
                 </div>
               </div>
               <div class="login_button py-10">
-                <a className="login_a " href="#">
+                <a className="login_a " >
                   <button
                     class="login_btn"
                     onClick={(e) => {
                       e.preventDefault();
-                      handlePurchaseTicket();
+                      // handlePurchaseTicket();
                     }}
                   >
-                    Purchase
+                    {/* Purchase */}
+                    Passes will be out soon
                   </button>
                 </a>
               </div>
