@@ -199,7 +199,7 @@ function TicketCardsLayout() {
                     </label>
                   </div>
                 </div>
-                <div className="flex flex-col sm:flex-row ">
+                {/* <div className="flex flex-col sm:flex-row ">
                   <label class="flex basis-1/2 items-center">
                     <input
                       type="radio"
@@ -224,7 +224,7 @@ function TicketCardsLayout() {
                     />{" "}
                     Whole Event(749/-)
                   </label>
-                </div>
+                </div> */}
 
                 <label class="flex items-center">
                   <input
