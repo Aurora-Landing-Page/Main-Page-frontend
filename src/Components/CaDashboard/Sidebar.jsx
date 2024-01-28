@@ -71,10 +71,10 @@ const Sidebar = () => {
 
           {/* <Link to="/signout" className="icons">
               <UilSignOutAlt />
-            </Link> */}
+            </Link> 
           <button className="menuItem  icons" >
             <UilSignOutAlt /> <span className="signOutText">Logout</span>
-          </button>
+          </button>*/}
         </div>
       </motion.div>
     </>
