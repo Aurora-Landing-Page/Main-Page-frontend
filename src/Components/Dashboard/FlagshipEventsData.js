@@ -25,7 +25,7 @@ const FlagshipEvents = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 349,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbc6",
   },
   {
     Title: "Parivesh",
@@ -43,7 +43,7 @@ const FlagshipEvents = [
     minGroupSize: 5,
     maxGroupSize: 15,
     TicketPrice: 349,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbd6",
   },
   {
     Title: "Corna",
@@ -61,7 +61,7 @@ const FlagshipEvents = [
     minGroupSize: 4,
     maxGroupSize: 8,
     TicketPrice: 400,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbd7",
   },
   {
     Title: "BattleNova - BGMI",
@@ -78,7 +78,7 @@ const FlagshipEvents = [
     minGroupSize: 4,
     maxGroupSize: 4,
     TicketPrice: 199,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbd8",
   },
   {
     Title: "BattleNova - Valo",
@@ -95,8 +95,8 @@ const FlagshipEvents = [
     minGroupSize: 5,
     maxGroupSize: 5,
     TicketPrice: 349,
-    EventId: "Aurora-parivesh",
-  }
+    EventId: "65b6a707f9f62a745ca7dbd9",
+  },
 ];
 
 export default FlagshipEvents;

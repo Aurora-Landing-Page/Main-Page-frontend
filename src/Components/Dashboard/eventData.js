@@ -86,7 +86,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 149,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbc9",
   },
   {
     Title: "Naqaab (Face Painting)",
@@ -103,7 +103,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 149,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbca",
   },
   {
     Title: "On Spot Painting",
@@ -120,7 +120,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 149,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbcb",
   },
   {
     Title: "On Spot Sketching",
@@ -137,7 +137,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 149,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbcc",
   },
   {
     Title: "Step-up - Classical(Astral Rhythms)",
@@ -154,7 +154,7 @@ const events = [
     minGroupSize: 7,
     maxGroupSize: 15,
     TicketPrice: 249,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbda",
   },
   {
     Title: "Step-up - Classical Dance(Classics Way)",
@@ -188,7 +188,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 349,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbce",
   },
   {
     Title: "Step-up - Western",
@@ -205,7 +205,7 @@ const events = [
     minGroupSize: 5,
     maxGroupSize: 20,
     TicketPrice: 249,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbdb",
   },
 
   {
@@ -223,7 +223,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 2,
     TicketPrice: 199,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbdc",
   },
   {
     Title: "Freestyle Singing (Duo)",
@@ -240,7 +240,7 @@ const events = [
     minGroupSize: 2,
     maxGroupSize: 2,
     TicketPrice: 199,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbdd",
   },
   {
     Title: "Freestyle Singing (Solo)",
@@ -274,7 +274,7 @@ const events = [
     minGroupSize: 3,
     maxGroupSize: 8,
     TicketPrice: 199,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbde",
   },
   {
     Title: "Instrumental Acoustic",
@@ -308,7 +308,7 @@ const events = [
     minGroupSize: 4,
     maxGroupSize: 12,
     TicketPrice: 199,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbe0",
   },
 
   {
@@ -325,8 +325,8 @@ const events = [
     GroupSize: 2,
     minGroupSize: 1,
     maxGroupSize: 1,
-    TicketPrice: 249 ,
-    EventId: "Aurora-parivesh",
+    TicketPrice: 249,
+    EventId: "65b6a707f9f62a745ca7dbd0",
   },
   {
     Title: "Pixar",
@@ -342,8 +342,8 @@ const events = [
     GroupSize: 1,
     minGroupSize: 4,
     maxGroupSize: 6,
-    TicketPrice: 299 ,
-    EventId: "Aurora-parivesh",
+    TicketPrice: 299,
+    EventId: "65b6a707f9f62a745ca7dbe1",
   },
   {
     Title: "Short Movie Making",
@@ -359,8 +359,8 @@ const events = [
     GroupSize: 2,
     minGroupSize: 1,
     maxGroupSize: 3,
-    TicketPrice: 299 ,
-    EventId: "Aurora-parivesh",
+    TicketPrice: 299,
+    EventId: "65b6a707f9f62a745ca7dbe2",
   },
   {
     Title: "Debate",
@@ -411,7 +411,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 99,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbd1",
   },
   {
     Title: "Extempore",
@@ -428,7 +428,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 99,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbd2",
   },
   {
     Title: "Charades Chronicles",
@@ -445,7 +445,7 @@ const events = [
     minGroupSize: 3,
     maxGroupSize: 3,
     TicketPrice: 99,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbe4",
   },
   {
     Title: "KBC",
@@ -462,7 +462,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 99,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbd3",
   },
   // {
   //   Title: "Rangmanch - Damsharas",
@@ -496,7 +496,7 @@ const events = [
     minGroupSize: 2,
     maxGroupSize: 25,
     TicketPrice: 249,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbe5",
   },
   {
     Title: "RangManch - Mono Act",
@@ -513,7 +513,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 249,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbd4",
   },
   {
     Title: "RangManch - Stage Act",
@@ -530,7 +530,7 @@ const events = [
     minGroupSize: 2,
     maxGroupSize: 20,
     TicketPrice: 249,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbe6",
   },
 
   {
@@ -548,7 +548,7 @@ const events = [
     minGroupSize: 3,
     maxGroupSize: 3,
     TicketPrice: 149,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbe7",
   },
   {
     Title: "Miscellaneous - CineBinge Quiz",
@@ -565,7 +565,7 @@ const events = [
     minGroupSize: 2,
     maxGroupSize: 2,
     TicketPrice: 149,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbe8",
   },
   {
     Title: "Miscellaneous - IPL Auction",
@@ -582,7 +582,7 @@ const events = [
     minGroupSize: 2,
     maxGroupSize: 6,
     TicketPrice: 99,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbe9",
   },
   {
     Title: "Miscellaneous - Pictionary",
@@ -599,7 +599,7 @@ const events = [
     minGroupSize: 2,
     maxGroupSize: 4,
     TicketPrice: 99,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbea",
   },
   {
     Title: "Miscellaneous - Rap Battle",
@@ -616,7 +616,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 149,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbd5",
   },
   // {
   //   Title: "Miscellaneous - Silent DJ",
@@ -684,7 +684,7 @@ const events = [
     minGroupSize: 8,
     maxGroupSize: 8,
     TicketPrice: 199,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbeb",
   },
   {
     Title: "Miscellaneous - Tug Of War",
@@ -701,7 +701,7 @@ const events = [
     minGroupSize: 5,
     maxGroupSize: 7,
     TicketPrice: 99,
-    EventId: "Aurora-parivesh",
+    EventId: "65b6a707f9f62a745ca7dbec",
   },
 ];
 
