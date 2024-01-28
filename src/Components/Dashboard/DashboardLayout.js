@@ -107,7 +107,7 @@ const Dashboard = () => {
       setLoading(false);
     }, 2000);
 
-    // checkUserLoginStatus();
+    checkUserLoginStatus();
   }, []);
 
   return (

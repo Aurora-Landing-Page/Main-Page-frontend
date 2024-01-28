@@ -3,7 +3,7 @@ import pdf1 from "./pdf/MnM/MnM_.pdf";
 import pdf2 from "./pdf/Parivesh/Parivesh Fashion Show_.pdf";
 import pdf3 from "./pdf/Corna/Corna.pdf";
 import pdf4 from "./pdf/Esports/bgmi.pdf";
-import sample from "./pdf/sample.pdf";
+import pdf5 from "./pdf/Esports/Valo.pdf";
 import corna from "./images/Flagship(5-8)/corna.jpg";
 import mnm from "./images/Flagship(5-8)/MR. AND MS. AURORA.png";
 import parivesh from "./images/Flagship(5-8)/parivesh.jpg";
@@ -22,9 +22,9 @@ const FlagshipEvents = [
     Venue: "OAT",
     Image: mnm,
     GroupSize: 2,
-    minGroupSize: 2,
-    maxGroupSize: 2,
-    TicketPrice: 100,
+    minGroupSize: 1,
+    maxGroupSize: 1,
+    TicketPrice: 349,
     EventId: "Aurora-parivesh",
   },
   {
@@ -40,9 +40,9 @@ const FlagshipEvents = [
     Venue: "OAT",
     Image: parivesh,
     GroupSize: 2,
-    minGroupSize: 2,
-    maxGroupSize: 2,
-    TicketPrice: 100,
+    minGroupSize: 5,
+    maxGroupSize: 15,
+    TicketPrice: 349,
     EventId: "Aurora-parivesh",
   },
   {
@@ -58,13 +58,13 @@ const FlagshipEvents = [
     Venue: "OAT",
     Image: corna,
     GroupSize: 2,
-    minGroupSize: 2,
-    maxGroupSize: 2,
-    TicketPrice: 100,
+    minGroupSize: 4,
+    maxGroupSize: 8,
+    TicketPrice: 400,
     EventId: "Aurora-parivesh",
   },
   {
-    Title: "Esports",
+    Title: "BattleNova - BGMI",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2023",
@@ -75,11 +75,28 @@ const FlagshipEvents = [
     Venue: "OAT",
     Image: esports,
     GroupSize: 2,
-    minGroupSize: 2,
-    maxGroupSize: 2,
-    TicketPrice: 100,
+    minGroupSize: 4,
+    maxGroupSize: 4,
+    TicketPrice: 199,
     EventId: "Aurora-parivesh",
   },
+  {
+    Title: "BattleNova - Valo",
+    Content: "Sway away",
+    Day: "Wednesday",
+    Date: "16th February , 2023",
+    Description:
+      "Gear up for an adrenaline-charged battle as Esports brings you the ultimate showdown in Valorant and BGMI (Battlegrounds Mobile India). It's more than just gaming; it's a battleground where strategy meets skill, and competitors rise to conquer the digital realm. Esports isn't just about playing; it's about tactical brilliance and unwavering focus. Join us for an electrifying experience, where gamers from across the spectrum unite to showcase their prowess in these fiercely competitive games. Whether it's the tactical maneuvers in Valorant or the thrill of survival in BGMI, Esports invites you to step into the digital arena, compete at your best, and claim victory in the world of competitive gaming!    ",
+    rules: pdf5,
+    Time: "10:00",
+    Venue: "OAT",
+    Image: esports,
+    GroupSize: 2,
+    minGroupSize: 5,
+    maxGroupSize: 5,
+    TicketPrice: 349,
+    EventId: "Aurora-parivesh",
+  }
 ];
 
 export default FlagshipEvents;

@@ -8,6 +8,8 @@ import data from "./data.js";
 import Alert from "../AlertAndLoader/Alert.jsx";
 import Navbar from "../Navbar/Navbar";
 import BACKEND_URL from "../../helper.js";
+import { useNavigate } from "react-router-dom";
+
 const Signup = () => {
   const initialFormData = {
     name: "",
@@ -20,6 +22,8 @@ const Signup = () => {
     password: "",
     referralCode: "",
   };
+  const navigate = useNavigate();
+
 
   const [showAlert, setShowAlert] = useState(false);
   const [showToast, setShowToast] = useState(false);
@@ -134,6 +138,10 @@ const Signup = () => {
 
       setMessege("Registraion Successful");
       setShowToast(true);
+
+      navigate("/login");
+
+
     } catch (e) {
       console.log(e);
       setMessege("An Error occured");

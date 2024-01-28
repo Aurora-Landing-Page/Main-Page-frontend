@@ -7,7 +7,7 @@ import Modal from "./Modal";
 import { Heading } from "./Modal/Heading";
 import axios from "axios";
 import QRCode from "./images/QR.jpg"
-// import DownloadIcon from '@mui/icons-material/Download';
+import DownloadIcon from '@mui/icons-material/Download';
 import Toast from "../AlertAndLoader/Toast";
 import Loader from "../AlertAndLoader/Loader";
 import Alert from "../AlertAndLoader/Alert";
@@ -38,6 +38,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
 
   const [loading, setLoading] = useState(false);
   const [groupSize, setGroupSize] = useState(0);
+  const [amount, setAmount] = useState(0);
 
   const initialFormData = {
     eventId: data.EventId,
@@ -51,6 +52,10 @@ export function EventModal({ isOpen, setIsOpen, data }) {
   const [showAlert, setShowAlert] = useState(false);
 
   const [messege, setMessege] = useState("");
+
+  useEffect(() => {
+    setAmount(groupSize * data.TicketPrice);
+  }, [groupSize]);
 
   const handleToastClose = () => {
     setMessege("");
@@ -162,6 +167,35 @@ export function EventModal({ isOpen, setIsOpen, data }) {
 
 
   const handleClickOpen = () => {
+    if (formData?.groupName === "") {
+      setMessege("Please enter your group name");
+      setShowAlert(true);
+      return;
+    }
+
+    if(groupSize == 0){
+      setMessege("Please enter number of members in your group");
+      setShowAlert(true);
+      return;
+    }
+
+    for (let i = 0; i < formData.members.length; i++) {
+      if (formData.members[i].name === "") {
+        setMessege("Please enter name of all members");
+        setShowAlert(true);
+        return;
+      }
+      if (formData.members[i].email === "") {
+        setMessege("Please enter email of all members");
+        setShowAlert(true);
+        return;
+      }
+      if (formData.members[i].phone === "") {
+        setMessege("Please enter phone number of all members");
+        setShowAlert(true);
+        return;
+      }
+    }
     setOpen(true);
   };
 
@@ -180,6 +214,11 @@ export function EventModal({ isOpen, setIsOpen, data }) {
       setShowAlert(true);
     }
     // check data
+    if (formData?.groupName === "") {
+      setMessege("Please enter your group name");
+      setShowAlert(true);
+      return;
+    }
     if (formData?.groupName === "") {
       setMessege("Please enter your group name");
       setShowAlert(true);
@@ -236,9 +275,15 @@ export function EventModal({ isOpen, setIsOpen, data }) {
         if (data.success) {
           setMessege("Your image has been uploaded successfully!");
           setShowToast(true);
+          setOpen(false);
+          setSelectedFile(null);
+          setIsFileUploaded(false);
         } else {
           setMessege("Payment Unsuccessful");
           setShowAlert(true);
+          setOpen(false);
+          setSelectedFile(null);
+          setIsFileUploaded(false);
         }
       })
       .catch(error => {
@@ -265,7 +310,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
         <Toast message={messege} duration={3000} onClose={handleToastClose} />
       )}
       {showAlert && (
-        <Alert message={messege} duration={3000} onClose={handleAlertClose} />
+        <Alert style={{marginBottom:"-100px"}} message={messege} duration={3000} onClose={handleAlertClose} />
       )}
       <Modal
         isOpen={isOpen}
@@ -296,7 +341,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
                 style={{ textDecoration: "underline" }}
               >
                 Rules and Regulations
-                {/* <DownloadIcon /> */}
+                <DownloadIcon />
 
               </a>
             </Heading>
@@ -309,10 +354,10 @@ export function EventModal({ isOpen, setIsOpen, data }) {
             <Heading size="h5">Time</Heading>
             <p className="text-sm">{data?.Time}</p>
           </div> */}
-          <div className="flex flex-col space-y-2">
+          {/* <div className="flex flex-col space-y-2">
             <Heading size="h5">Venue</Heading>
             <p className="text-sm">{data?.Venue}</p>
-          </div>
+          </div> */}
           <div className="flex flex-col space-y-2">
             <Heading size="h5">Group Size</Heading>
             <p className="text-sm">
@@ -419,7 +464,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onClick={handleClickOpen}
           >
-            Purchase Ticket
+            Purchase Ticket ({`${amount}`}.rs)
             {/* Get Passes */}
           </button>
         </Card.Footer>
@@ -432,7 +477,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
           className='Dialog'
         >
           <DialogTitle id="responsive-dialog-title">
-            {"Now Pay Thorugh The Below QR"}
+          {`Pay ${amount} Thorugh The Below QR`}
           </DialogTitle>
           <IconButton
             aria-label="close"

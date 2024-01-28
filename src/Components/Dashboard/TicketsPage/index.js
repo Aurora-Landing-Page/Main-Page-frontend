@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useState } from "react";
 import Toast from "../../AlertAndLoader/Toast";
@@ -17,7 +18,7 @@ import { IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import DoneIcon from '@mui/icons-material/Done';
 import QRCode from "../images/QR.jpg"
-import "../QRDialog.css";	  
+import "../QRDialog.css";
 
 function TicketCardsLayout() {
   const initialFormData = {
@@ -36,6 +37,8 @@ function TicketCardsLayout() {
   const [selectedFile, setSelectedFile] = React.useState(null);
 
   const [formData, setFormData] = useState(initialFormData);
+  const [amount, setAmount] = useState(599);
+
   const [showToast, setShowToast] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -96,7 +99,7 @@ function TicketCardsLayout() {
     });
 
     const data = await res.json();
-    const recieptId = data._doc.receiptId;
+    const recieptId = data.receiptId;
     console.log(selectedFile);
 
     var formDataPhoto = new FormData();
@@ -116,9 +119,26 @@ function TicketCardsLayout() {
         if (data.success) {
           setMessege("Your image has been uploaded successfully!");
           setShowToast(true);
+          setSelectedFile(null);
+          setIsFileUploaded(false);
+          setOpen(false);
+          formData.members.splice(
+            formData.length - formData.length,
+            1
+          );
+          setFormData({ ...formData });
+
         } else {
           setMessege("Payment Unsuccessful");
           setShowAlert(true);
+          setSelectedFile(null);
+          setIsFileUploaded(false);
+          setOpen(false);
+          formData.members.splice(
+            formData.length - formData.length,
+            1
+          );
+          setFormData({ ...formData });
         }
       })
       .catch(error => {
@@ -147,6 +167,30 @@ function TicketCardsLayout() {
 
     setFormData({ ...formData });
   };
+
+  useEffect(() => {
+    console.log(formData);
+    if (formData.purchaseType === "group") {
+      if (formData.accomodation) {
+        setAmount(1599 + formData.members.length * 1599);
+        
+      }
+      else {
+        setAmount(599 + formData.members.length * 599);
+        
+      }
+    } else {
+      if (formData.accomodation) {
+        setAmount(1599);
+      }
+      else {
+        setAmount(599);
+      }
+    }
+
+
+  }, [formData]);
+
 
   return (
     <div className="flex items-center justify-center  ">
@@ -198,6 +242,7 @@ function TicketCardsLayout() {
                           : "individual";
 
                         setFormData({ ...formData });
+
                       }}
                     />
                     <label
@@ -244,7 +289,10 @@ function TicketCardsLayout() {
                     name="option"
                     value="Accommodation"
                     class="mr-2 leading-tight"
-                    onChange={(e) => (formData.accomodation = e.target.checked)}
+                    onChange={(e) => {
+                      formData.accomodation = e.target.checked;
+                      setFormData({ ...formData });
+                    }}
                   />{" "}
                   Accommodation
                 </label>
@@ -334,7 +382,7 @@ function TicketCardsLayout() {
                       setOpen(true);
                     }}
                   >
-                    Purchase
+                    Purchase ({`${formData.members.length === 4 ? amount - 599 : formData.members.length === 10 ? amount - 1797 : amount}`}.rs)
                     {/* Passes will be out soon */}
                   </button>
                 </a>
@@ -349,7 +397,7 @@ function TicketCardsLayout() {
             className='Dialog'
           >
             <DialogTitle id="responsive-dialog-title">
-              {"Now Pay Thorugh The Below QR"}
+              {`Pay ${amount} Thorugh The Below QR`}
             </DialogTitle>
             <IconButton
               aria-label="close"

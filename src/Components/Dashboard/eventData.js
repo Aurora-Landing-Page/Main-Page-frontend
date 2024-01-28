@@ -23,9 +23,9 @@ import pdf21 from "./pdf/Corna/Corna.pdf"
 // import pdf21 from "./pdf/Literary and Speaking Activities/Hindi Debate.pdf";
 import pdf22 from "./pdf/Literary and Speaking Activities/Open Mic.pdf";
 import pdf23 from "./pdf/Literary and Speaking Activities/Extempore.pdf";
-import pdf24 from "./pdf/Dramatics/MonoAct.pdf";
-import pdf25 from "./pdf/Dramatics/NUKKAD NATAK.pdf";
-import pdf28 from "./pdf/Dramatics/Stage Act.pdf"
+import pdf24 from "./pdf/RangManch/MonoAct.pdf";
+import pdf25 from "./pdf/RangManch/nukkad_natak.pdf";
+import pdf28 from "./pdf/RangManch/Stage Act.pdf";
 import pdf26 from "./pdf/Misc Informal Events/APTITUDE QUIZ  _.pdf";
 import pdf27 from "./pdf/Misc Informal Events/CineBinge Quiz_.pdf";
 // import pdf28 from "./pdf/Misc Informal Events/Funk Feets.pdf";
@@ -65,7 +65,7 @@ const events = [
     Time: "10:00",
     Venue: "OAT",
     Image: leartes,
-    GroupSize: 1,
+    GroupSize: "4-5",
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 199,
@@ -140,74 +140,6 @@ const events = [
     EventId: "Aurora-parivesh",
   },
   {
-    Title: "Corna",
-    Content: "Sway away",
-    Day: "Wednesday",
-    Date: "16th February , 2023",
-    Description:
-      "Music gives a soul to the universe, wings to the mind, flight to the imagination, and life to everything”. If you have music, team and instruments, and you are just missing the chance to be a next big thing in the world of bands, well..Corna awaits you!",
-    rules: pdf21,
-    Time: "10:00",
-    Venue: "OAT",
-    Image: corna,
-    GroupSize: 4,
-    minGroupSize: 4,
-    maxGroupSize: 8,
-    TicketPrice: 2000,
-    EventId: "Aurora-parivesh",
-  },
-  {
-    Title: "Parivesh",
-    Content: "Sway away",
-    Day: "Wednesday",
-    Date: "16th February , 2023",
-    Description:
-      "The fashion show extravaganza will be one of the flagship events where students from different varsities and domains will come forth to showcase their creativity and thinking heights with the blasting show of beauty, fashion and boldness.",
-    rules: pdf41,
-    Time: "10:00",
-    Venue: "OAT",
-    Image: parivesh,
-    GroupSize: 10,
-    minGroupSize: 5,
-    maxGroupSize: 15,
-    TicketPrice: 349,
-    EventId: "Aurora-parivesh",
-  },
-  {
-    Title: "Esports-BGMI",
-    Content: "Sway away",
-    Day: "Wednesday",
-    Date: "16th February , 2023",
-    Description:
-      "Step into the heart of competitive gaming with our esports extravaganza! Witness top-tier gamers from around the globe showcase their skills in intense battles across various titles. The stage is set with high-tech setups, dazzling visuals, and an electrifying atmosphere. From nail-biting shootouts to strategic showdowns, every moment is a pulse-pounding experience.",
-    rules: pdf32,
-    Time: "10:00",
-    Venue: "OAT",
-    Image: esports,
-    GroupSize: 4,
-    minGroupSize: 4,
-    maxGroupSize: 4,
-    TicketPrice: 199,
-    EventId: "Aurora-parivesh",
-  },
-  {
-    Title: "Esports-Valorant",
-    Content: "Sway away",
-    Day: "Wednesday",
-    Date: "16th February , 2023",
-    Description:
-      "Step into the heart of competitive gaming with our esports extravaganza! Witness top-tier gamers from around the globe showcase their skills in intense battles across various titles. The stage is set with high-tech setups, dazzling visuals, and an electrifying atmosphere. From nail-biting shootouts to strategic showdowns, every moment is a pulse-pounding experience.",
-    rules: pdf36,
-    Time: "10:00",
-    Venue: "OAT",
-    Image: esports,
-    GroupSize: 5,
-    minGroupSize: 5,
-    maxGroupSize: 5,
-    TicketPrice: 349,
-    EventId: "Aurora-parivesh",
-  },
-  {
     Title: "Step-up - Classical(Astral Rhythms)",
     Content: "Sway away",
     Day: "Wednesday",
@@ -220,8 +152,8 @@ const events = [
     Image: stepUp,
     GroupSize: 10,
     minGroupSize: 7,
-    maxGroupSize: 5,
-    TicketPrice: 250,
+    maxGroupSize: 15,
+    TicketPrice: 249,
     EventId: "Aurora-parivesh",
   },
   {
@@ -238,7 +170,7 @@ const events = [
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
-    TicketPrice: 350,
+    TicketPrice: 349,
     EventId: "Aurora-parivesh",
   },
   {
@@ -255,7 +187,7 @@ const events = [
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
-    TicketPrice: 350,
+    TicketPrice: 349,
     EventId: "Aurora-parivesh",
   },
   {
@@ -272,7 +204,7 @@ const events = [
     GroupSize: 10,
     minGroupSize: 5,
     maxGroupSize: 20,
-    TicketPrice: 250,
+    TicketPrice: 249,
     EventId: "Aurora-parivesh",
   },
 
@@ -290,7 +222,7 @@ const events = [
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 2,
-    TicketPrice: 200,
+    TicketPrice: 199,
     EventId: "Aurora-parivesh",
   },
   {
@@ -307,7 +239,7 @@ const events = [
     GroupSize: 2,
     minGroupSize: 2,
     maxGroupSize: 2,
-    TicketPrice: 200,
+    TicketPrice: 199,
     EventId: "Aurora-parivesh",
   },
   {
@@ -324,7 +256,7 @@ const events = [
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
-    TicketPrice: 200,
+    TicketPrice: 199,
     EventId: "Aurora-parivesh",
   },
   {
@@ -341,7 +273,7 @@ const events = [
     GroupSize: 5,
     minGroupSize: 3,
     maxGroupSize: 8,
-    TicketPrice: 200,
+    TicketPrice: 199,
     EventId: "Aurora-parivesh",
   },
   {
@@ -358,7 +290,7 @@ const events = [
     GroupSize: 6,
     minGroupSize: 6,
     maxGroupSize: 6,
-    TicketPrice: 200,
+    TicketPrice: 199,
     EventId: "Aurora-parivesh",
   },
   {
@@ -375,7 +307,7 @@ const events = [
     GroupSize: 9,
     minGroupSize: 4,
     maxGroupSize: 12,
-    TicketPrice: 200,
+    TicketPrice: 199,
     EventId: "Aurora-parivesh",
   },
 
@@ -391,9 +323,9 @@ const events = [
     Venue: "OAT",
     Image: thepikture,
     GroupSize: 2,
-    minGroupSize: 2,
-    maxGroupSize: 2,
-    TicketPrice: 100,
+    minGroupSize: 1,
+    maxGroupSize: 1,
+    TicketPrice: 249 ,
     EventId: "Aurora-parivesh",
   },
   {
@@ -408,9 +340,9 @@ const events = [
     Venue: "OAT",
     Image: thepikture,
     GroupSize: 1,
-    minGroupSize: 1,
-    maxGroupSize: 1,
-    TicketPrice: 100,
+    minGroupSize: 4,
+    maxGroupSize: 6,
+    TicketPrice: 299 ,
     EventId: "Aurora-parivesh",
   },
   {
@@ -427,7 +359,7 @@ const events = [
     GroupSize: 2,
     minGroupSize: 1,
     maxGroupSize: 3,
-    TicketPrice: 100,
+    TicketPrice: 299 ,
     EventId: "Aurora-parivesh",
   },
   {
@@ -444,7 +376,7 @@ const events = [
     GroupSize: 2,
     minGroupSize: 1,
     maxGroupSize: 2,
-    TicketPrice: 100,
+    TicketPrice: 99,
     EventId: "Aurora-parivesh",
   },
   // {
@@ -461,7 +393,7 @@ const events = [
   //   GroupSize: 2,
   //   minGroupSize: 2,
   //   maxGroupSize: 2,
-  //   TicketPrice: 100,
+  //   TicketPrice: 99,
   //   EventId: "Aurora-parivesh",
   // },
   {
@@ -478,7 +410,7 @@ const events = [
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
-    TicketPrice: 100,
+    TicketPrice: 99,
     EventId: "Aurora-parivesh",
   },
   {
@@ -495,7 +427,7 @@ const events = [
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
-    TicketPrice: 100,
+    TicketPrice: 99,
     EventId: "Aurora-parivesh",
   },
   {
@@ -512,7 +444,7 @@ const events = [
     GroupSize: 3,
     minGroupSize: 3,
     maxGroupSize: 3,
-    TicketPrice: 100,
+    TicketPrice: 99,
     EventId: "Aurora-parivesh",
   },
   {
@@ -529,33 +461,16 @@ const events = [
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
-    TicketPrice: 100,
-    EventId: "Aurora-parivesh",
-  },
-  {
-    Title: "MR & MS AURORA",
-    Content: "Sway away",
-    Day: "Wednesday",
-    Date: "16th February , 2023",
-    Description:
-      " Mr and Ms Aurora is an illustrious event probing the charismatic as well as the intellectual side of the participants. Beauty attracts the eyes but personality captures the heart. The charm of personality is the very essence of grace and elegance. Embrace your uniqueness in this stellar event of individuality and temperament.",
-    rules: pdf40,
-    Time: "10:00",
-    Venue: "OAT",
-    Image: mnm,
-    GroupSize: 1,
-    minGroupSize: 1,
-    maxGroupSize: 1,
-    TicketPrice: 100,
+    TicketPrice: 99,
     EventId: "Aurora-parivesh",
   },
   // {
-  //   Title: "Dramatics - Damsharas",
+  //   Title: "Rangmanch - Damsharas",
   //   Content: "Sway away",
   //   Day: "Wednesday",
   //   Date: "16th February , 2023",
   //   Description:
-  //     "Dramatics, brings forth a captivating theater experience, showcasing versatile performances across multiple genres. Engage with the raw essence of societal narratives through 'Nukkad Natak', where the streets become a stage for impactful storytelling. Delve into the depths of emotion and character in 'Mono Act', witnessing the power of solo performances in conveying multifaceted stories. Feel the vibrancy of expression in 'Damsharas', where the art of mime and gestures paints vivid stories without uttering a single word. Join us in this celebration of dramatic artistry, where every performance leaves an indelible mark on the stage of storytelling.",
+  //     "RangManch, brings forth a captivating theater experience, showcasing versatile performances across multiple genres. Engage with the raw essence of societal narratives through 'Nukkad Natak', where the streets become a stage for impactful storytelling. Delve into the depths of emotion and character in 'Mono Act', witnessing the power of solo performances in conveying multifaceted stories. Feel the vibrancy of expression in 'Damsharas', where the art of mime and gestures paints vivid stories without uttering a single word. Join us in this celebration of dramatic artistry, where every performance leaves an indelible mark on the stage of storytelling.",
   //   rules: pdf24,
   //   Time: "10:00",
   //   Venue: "OAT",
@@ -563,16 +478,16 @@ const events = [
   //   GroupSize: 2,
   //   minGroupSize: 2,
   //   maxGroupSize: 2,
-  //   TicketPrice: 100,
+  //   TicketPrice: 99,
   //   EventId: "Aurora-parivesh",
   // },
   {
-    Title: "Dramatics - Nukkad Natak",
+    Title: "Rangmanch  - Nukkad Natak",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2023",
     Description:
-      "Dramatics, brings forth a captivating theater experience, showcasing versatile performances across multiple genres. Engage with the raw essence of societal narratives through 'Nukkad Natak', where the streets become a stage for impactful storytelling. Delve into the depths of emotion and character in 'Mono Act', witnessing the power of solo performances in conveying multifaceted stories. Feel the vibrancy of expression in 'Damsharas', where the art of mime and gestures paints vivid stories without uttering a single word. Join us in this celebration of dramatic artistry, where every performance leaves an indelible mark on the stage of storytelling.",
+      "RangManch, brings forth a captivating theater experience, showcasing versatile performances across multiple genres. Engage with the raw essence of societal narratives through 'Nukkad Natak', where the streets become a stage for impactful storytelling. Delve into the depths of emotion and character in 'Mono Act', witnessing the power of solo performances in conveying multifaceted stories. Feel the vibrancy of expression in 'Damsharas', where the art of mime and gestures paints vivid stories without uttering a single word. Join us in this celebration of dramatic artistry, where every performance leaves an indelible mark on the stage of storytelling.",
     rules: pdf25,
     Time: "10:00",
     Venue: "OAT",
@@ -580,16 +495,16 @@ const events = [
     GroupSize: 25,
     minGroupSize: 2,
     maxGroupSize: 25,
-    TicketPrice: 250,
+    TicketPrice: 249,
     EventId: "Aurora-parivesh",
   },
   {
-    Title: "Dramatics - Mono Act",
+    Title: "RangManch - Mono Act",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2023",
     Description:
-      "Dramatics, brings forth a captivating theater experience, showcasing versatile performances across multiple genres. Engage with the raw essence of societal narratives through 'Nukkad Natak', where the streets become a stage for impactful storytelling. Delve into the depths of emotion and character in 'Mono Act', witnessing the power of solo performances in conveying multifaceted stories. Feel the vibrancy of expression in 'Damsharas', where the art of mime and gestures paints vivid stories without uttering a single word. Join us in this celebration of dramatic artistry, where every performance leaves an indelible mark on the stage of storytelling.",
+      "RangManch, brings forth a captivating theater experience, showcasing versatile performances across multiple genres. Engage with the raw essence of societal narratives through 'Nukkad Natak', where the streets become a stage for impactful storytelling. Delve into the depths of emotion and character in 'Mono Act', witnessing the power of solo performances in conveying multifaceted stories. Feel the vibrancy of expression in 'Damsharas', where the art of mime and gestures paints vivid stories without uttering a single word. Join us in this celebration of dramatic artistry, where every performance leaves an indelible mark on the stage of storytelling.",
     rules: pdf24,
     Time: "10:00",
     Venue: "OAT",
@@ -597,16 +512,16 @@ const events = [
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
-    TicketPrice: 250,
+    TicketPrice: 249,
     EventId: "Aurora-parivesh",
   },
   {
-    Title: "Dramatics - Stage Act",
+    Title: "RangManch - Stage Act",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2023",
     Description:
-      "Dramatics, brings forth a captivating theater experience, showcasing versatile performances across multiple genres. Engage with the raw essence of societal narratives through 'Nukkad Natak', where the streets become a stage for impactful storytelling. Delve into the depths of emotion and character in 'Mono Act', witnessing the power of solo performances in conveying multifaceted stories. Feel the vibrancy of expression in 'Damsharas', where the art of mime and gestures paints vivid stories without uttering a single word. Join us in this celebration of dramatic artistry, where every performance leaves an indelible mark on the stage of storytelling.",
+      "RangManch, brings forth a captivating theater experience, showcasing versatile performances across multiple genres. Engage with the raw essence of societal narratives through 'Nukkad Natak', where the streets become a stage for impactful storytelling. Delve into the depths of emotion and character in 'Mono Act', witnessing the power of solo performances in conveying multifaceted stories. Feel the vibrancy of expression in 'Damsharas', where the art of mime and gestures paints vivid stories without uttering a single word. Join us in this celebration of dramatic artistry, where every performance leaves an indelible mark on the stage of storytelling.",
     rules: pdf28,
     Time: "10:00",
     Venue: "OAT",
@@ -614,7 +529,7 @@ const events = [
     GroupSize: 20,
     minGroupSize: 2,
     maxGroupSize: 20,
-    TicketPrice: 250,
+    TicketPrice: 249,
     EventId: "Aurora-parivesh",
   },
 
@@ -632,7 +547,7 @@ const events = [
     GroupSize: 3,
     minGroupSize: 3,
     maxGroupSize: 3,
-    TicketPrice: 100,
+    TicketPrice: 149,
     EventId: "Aurora-parivesh",
   },
   {
@@ -649,26 +564,9 @@ const events = [
     GroupSize: 2,
     minGroupSize: 2,
     maxGroupSize: 2,
-    TicketPrice: 100,
+    TicketPrice: 149,
     EventId: "Aurora-parivesh",
   },
-  // {
-  //   Title: "Miscellaneous - Funk Feets",
-  //   Content: "Sway away",
-  //   Day: "Wednesday",
-  //   Date: "16th February , 2023",
-  //   Description:
-  //     "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
-  //   rules: pdf28,
-  //   Time: "10:00",
-  //   Venue: "OAT",
-  //   Image: AuroraImage,
-  //   GroupSize: 2,
-  //   minGroupSize: 2,
-  //   maxGroupSize: 2,
-  //   TicketPrice: 100,
-  //   EventId: "Aurora-parivesh",
-  // },
   {
     Title: "Miscellaneous - IPL Auction",
     Content: "Sway away",
@@ -683,7 +581,7 @@ const events = [
     GroupSize: 6,
     minGroupSize: 2,
     maxGroupSize: 6,
-    TicketPrice: 100,
+    TicketPrice: 99,
     EventId: "Aurora-parivesh",
   },
   {
@@ -700,7 +598,7 @@ const events = [
     GroupSize: 4,
     minGroupSize: 2,
     maxGroupSize: 4,
-    TicketPrice: 100,
+    TicketPrice: 99,
     EventId: "Aurora-parivesh",
   },
   {
@@ -717,7 +615,7 @@ const events = [
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
-    TicketPrice: 100,
+    TicketPrice: 149,
     EventId: "Aurora-parivesh",
   },
   // {
@@ -734,7 +632,7 @@ const events = [
   //   GroupSize: 2,
   //   minGroupSize: 2,
   //   maxGroupSize: 2,
-  //   TicketPrice: 100,
+  //   TicketPrice: 99,
   //   EventId: "Aurora-parivesh",
   // },
   // {
@@ -751,7 +649,7 @@ const events = [
   //   GroupSize: 2,
   //   minGroupSize: 2,
   //   maxGroupSize: 2,
-  //   TicketPrice: 100,
+  //   TicketPrice: 99,
   //   EventId: "Aurora-parivesh",
   // },
   // {
@@ -768,7 +666,7 @@ const events = [
   //   GroupSize: 2,
   //   minGroupSize: 2,
   //   maxGroupSize: 2,
-  //   TicketPrice: 100,
+  //   TicketPrice: 99,
   //   EventId: "Aurora-parivesh",
   // },
   {
@@ -785,7 +683,7 @@ const events = [
     GroupSize: 8,
     minGroupSize: 8,
     maxGroupSize: 8,
-    TicketPrice: 100,
+    TicketPrice: 199,
     EventId: "Aurora-parivesh",
   },
   {
@@ -802,7 +700,7 @@ const events = [
     GroupSize: 7,
     minGroupSize: 5,
     maxGroupSize: 7,
-    TicketPrice: 100,
+    TicketPrice: 99,
     EventId: "Aurora-parivesh",
   },
 ];
