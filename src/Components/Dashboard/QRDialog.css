@@ -1,0 +1,31 @@
+.Dialog_btn{
+    margin-left: 42%;
+}
+.Dialog_QR{
+    height: 300px;
+}
+.Dialog_Upload{ 
+    margin-left: 125px;
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    .Dialog{
+        margin-top: -100px;
+
+    }
+    .Dialog_btn{
+        margin-left: -20px;
+    }
+    .Dialog_QR{
+        height: 200px;
+        margin-left: 15px;
+        /* margin-right: 50px; */
+        align-items: center;
+        justify-content: center;
+    }
+    #responsive-dialog-title{
+        margin-left: -10px;
+        font-size: 14px;
+    }
+    
+}

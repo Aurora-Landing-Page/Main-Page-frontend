@@ -207,7 +207,6 @@ const events = [
     TicketPrice: 349,
     EventId: "Aurora-parivesh",
   },
-
   {
     Title: "Step-up - Classical(Astral Rhythms)",
     Content: "Sway away",

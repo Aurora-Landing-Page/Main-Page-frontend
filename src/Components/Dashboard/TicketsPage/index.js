@@ -1,18 +1,39 @@
+import * as React from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { useState } from "react";
 import Toast from "../../AlertAndLoader/Toast";
 import Alert from "../../AlertAndLoader/Alert";
 import Loader from "../../AlertAndLoader/Loader";
 import BACKEND_URL from "../../../helper";
 import { HiUserRemove } from "react-icons/hi";
+import { useTheme } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import { IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import DoneIcon from '@mui/icons-material/Done';
+import QRCode from "../images/QR.jpg"
+import "../QRDialog.css";	  
 
 function TicketCardsLayout() {
   const initialFormData = {
     accomodation: false,
     pronite: false,
-    whole_event: false,
+    whole_event: true,
     purchaseType: "",
     members: [],
   };
+
+  const [open, setOpen] = React.useState(false);
+  const theme = useTheme();
+  // const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+
+  const [isFileUploaded, setIsFileUploaded] = React.useState(false);
+  const [selectedFile, setSelectedFile] = React.useState(null);
 
   const [formData, setFormData] = useState(initialFormData);
   const [showToast, setShowToast] = useState(false);
@@ -21,13 +42,24 @@ function TicketCardsLayout() {
 
   const [messege, setMessege] = useState("");
 
-  const handlePurchaseTicket = async () => {
-    // check data
-    if (!formData.pronite && !formData.whole_event) {
-      setMessege("Please select either pronite or whole event");
-      setShowAlert(true);
-      return;
-    }
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+
+    // Perform any necessary validations or processing here
+
+    setSelectedFile(file);
+    setIsFileUploaded(true);
+  };
+
+
+  const handleClose = async () => {
+    setSelectedFile(null);
+    setIsFileUploaded(false);
+    setOpen(false);
+
+  }
+
+  const handleUpload = async () => {
 
     if (formData.purchaseType === "") {
       setMessege("Please select either individual or group");
@@ -53,67 +85,46 @@ function TicketCardsLayout() {
       }
     }
 
-    //post data
-    const keyRes = await fetch(`${BACKEND_URL}/getKey`, {
-      method: "GET",
-      credentials: "include",
-    });
-    const keyJSON = await keyRes.json();
-    const { key } = keyJSON;
-
-    const res = await fetch(`${BACKEND_URL}/createOrder`, {
-      method: "POST",
-      credentials: "include",
+    // get reciept id
+    const res = await fetch(`${BACKEND_URL}/createPurchase`, {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
+      credentials: 'include'
     });
 
     const data = await res.json();
-    const { amount, id: order_id, description } = data;
+    const recieptId = data._doc.receiptId;
+    console.log(selectedFile);
 
-    console.log(data);
+    var formDataPhoto = new FormData();
+    formDataPhoto.append('image', selectedFile);
+    formDataPhoto.append('receiptId', recieptId);
 
-    const options = {
-      key,
-      amount: amount,
-      currency: "INR",
-      name: "Aurora 2024",
-      description: description,
-      order_id: order_id,
-      handler: async function (response) {
-        const verifyData = {
-          orderCreationId: order_id,
-          razorpayPaymentId: response.razorpay_payment_id,
-          razorpayOrderId: response.razorpay_order_id,
-          razorpaySignature: response.razorpay_signature,
-        };
+    await fetch(`${BACKEND_URL}/uploadScreenshot`, {
+      method: 'POST',
+      body: formDataPhoto,
+      credentials: 'include'
 
-        const result = await fetch(`${BACKEND_URL}/verifyOrder`, {
-          method: "POST",
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(verifyData),
-        }).then((response) => response.json());
 
-        if (result.success) {
-          setMessege("Payment Verfied");
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        if (data.success) {
+          setMessege("Your image has been uploaded successfully!");
           setShowToast(true);
         } else {
           setMessege("Payment Unsuccessful");
           setShowAlert(true);
         }
-      },
-      theme: {
-        color: "#61dafb",
-      },
-    };
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
 
-    const paymentObject = new window.Razorpay(options);
-    paymentObject.open();
   };
 
   const handleToastClose = () => {
@@ -320,16 +331,74 @@ function TicketCardsLayout() {
                     class="login_btn"
                     onClick={(e) => {
                       e.preventDefault();
-                      // handlePurchaseTicket();
+                      setOpen(true);
                     }}
                   >
-                    {/* Purchase */}
-                    Passes will be out soon
+                    Purchase
+                    {/* Passes will be out soon */}
                   </button>
                 </a>
               </div>
             </form>
           </div>
+          <Dialog
+            // fullScreen={fullScreen}
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="responsive-dialog-title"
+            className='Dialog'
+          >
+            <DialogTitle id="responsive-dialog-title">
+              {"Now Pay Thorugh The Below QR"}
+            </DialogTitle>
+            <IconButton
+              aria-label="close"
+              onClick={handleClose}
+              sx={{
+                position: 'absolute',
+                right: 8,
+                top: 8,
+                color: (theme) => theme.palette.grey[500],
+              }}
+            >
+              {/* X */}
+              <CloseIcon />
+            </IconButton>
+            <DialogContent>
+              <DialogContentText>
+                <img src={QRCode} alt="QR Code" className='Dialog_QR' />
+                {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusantium sapiente repellat facere sed porro ab culpa eius tempore. Hic labore cupiditate sapiente perferendis minus temporibus id consequatur quod voluptatem! */}
+                Upload the screenshot of payment
+                <br />
+                <input
+                  accept="image/*"
+                  // className={classes.input}
+                  style={{ display: 'none' }}
+                  id="raised-button-file"
+                  type="file"
+                  onChange={handleFileChange}
+
+                />
+                <label htmlFor="raised-button-file">
+                  <Button className='Dialog_Upload' variant='outlined' color='success' component="span" >
+                    Upload
+                  </Button>
+                </label>
+                {isFileUploaded && (
+                  <DoneIcon style={{ color: 'green', marginLeft: '10px' }} />
+                )}
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              {/* <Button autoFocus onClick={handleClose}>
+            Disagree
+          </Button> */}
+              <Button onClick={handleUpload} variant="contained" color="success" className='Dialog_btn'>
+                Submit
+              </Button>
+
+            </DialogActions>
+          </Dialog>
         </div>
       )}
     </div>
