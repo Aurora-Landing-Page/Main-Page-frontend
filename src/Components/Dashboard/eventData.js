@@ -1,15 +1,15 @@
 import AuroraImage from "./images/img4.jpeg";
-import pdf1 from "./pdf/Le Arte Fiesta/Best Out of Waste.pdf";
+// import pdf1 from "./pdf/Le Arte Fiesta/Best Out of Waste.pdf";
 import pdf2 from "./pdf/Le Arte Fiesta/Graffathon.pdf";
 import pdf3 from "./pdf/Le Arte Fiesta/Naqaab (Face Painting).pdf";
 import pdf4 from "./pdf/Le Arte Fiesta/On-Spot Painting.pdf";
-import pdf15 from "./pdf/Le Arte Fiesta/Sculpture Making.pdf";
+// import pdf15 from "./pdf/Le Arte Fiesta/Sculpture Making.pdf";
 import pdf5 from "./pdf/StepUp/Classical Dance.pdf";
-import pdf6 from "./pdf/StepUp/Duet Dance.pdf";
-import pdf7 from "./pdf/StepUp/Solo Dance Battle.pdf";
-import pdf16 from "./pdf/StepUp/Western Dance.pdf";
+// import pdf6 from "./pdf/StepUp/Duet Dance.pdf";
+import pdf7 from "./pdf/StepUp/Solo Dance GrooveOff.pdf";
+import pdf16 from "./pdf/StepUp/Western Group (RhythMix).pdf";
 import pdf8 from "./pdf/Eumelia/Classical Singing (solo_duo).pdf";
-import pdf9 from "./pdf/Eumelia/Freestyle Singing (Duo)__.pdf";
+import pdf9 from "./pdf/Eumelia/Freestyle Singing (Duo)_.pdf";
 import pdf10 from "./pdf/Eumelia/Freestyle Singing (Group)_.pdf";
 import pdf11 from "./pdf/Eumelia/Freestyle Singing (Solo)_.pdf";
 import pdf12 from "./pdf/Eumelia/Instrumental_Acoustic.pdf";
@@ -51,29 +51,29 @@ const events = [
     Time: "10:00",
     Venue: "OAT",
     Image: leartes,
-    GroupSize: 2,
-    minGroupSize: 2,
-    maxGroupSize: 2,
-    TicketPrice: 100,
+    GroupSize: 1,
+    minGroupSize: 1,
+    maxGroupSize: 1,
+    TicketPrice: 199,
     EventId: "Aurora-parivesh",
   },
-  {
-    Title: "Best Out of Waste",
-    Content: "Sway away",
-    Day: "Wednesday",
-    Date: "16th February , 2023",
-    Description:
-      "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
-    rules: pdf1,
-    Time: "10:00",
-    Venue: "OAT",
-    Image: leartes,
-    GroupSize: 2,
-    minGroupSize: 2,
-    maxGroupSize: 2,
-    TicketPrice: 100,
-    EventId: "Aurora-parivesh",
-  },
+  // {
+  //   Title: "Best Out of Waste",
+  //   Content: "Sway away",
+  //   Day: "Wednesday",
+  //   Date: "16th February , 2023",
+  //   Description:
+  //     "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
+  //   rules: pdf1,
+  //   Time: "10:00",
+  //   Venue: "OAT",
+  //   Image: leartes,
+  //   GroupSize: 2,
+  //   minGroupSize: 2,
+  //   maxGroupSize: 2,
+  //   TicketPrice: 100,
+  //   EventId: "Aurora-parivesh",
+  // },
   {
     Title: "Naqaab (Face Painting)",
     Content: "Sway away",
