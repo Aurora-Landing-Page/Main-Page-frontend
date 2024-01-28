@@ -21,7 +21,9 @@ import DialogTitle from '@mui/material/DialogTitle';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { IconButton } from '@mui/material';
-// import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from '@mui/icons-material/Close';
+import DoneIcon from '@mui/icons-material/Done';
+import "../Dashboard/QRDialog.css";
 // import sample from "./pdf/sample.pdf";
 
 
@@ -31,13 +33,8 @@ export function EventModal({ isOpen, setIsOpen, data }) {
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const [isFileUploaded, setIsFileUploaded] = React.useState(false);
+  const [selectedFile, setSelectedFile] = React.useState(null);
 
   const [loading, setLoading] = useState(false);
   const [groupSize, setGroupSize] = useState(0);
@@ -65,9 +62,125 @@ export function EventModal({ isOpen, setIsOpen, data }) {
     setShowAlert(false);
   };
 
-  const handlePurchaseTicket = async () => {
+  //   const handlePurchaseTicket = async () => {
+  //     // check data
+  //     if (formData.groupName === "") {
+  //       setMessege("Please enter your group name");
+  //       setShowAlert(true);
+  //       return;
+  //     }
+
+  //     for (let i = 0; i < formData.members.length; i++) {
+  //       if (formData.members[i].name === "") {
+  //         setMessege("Please enter name of all members");
+  //         setShowAlert(true);
+  //         return;
+  //       }
+  //       if (formData.members[i].email === "") {
+  //         setMessege("Please enter email of all members");
+  //         setShowAlert(true);
+  //         return;
+  //       }
+  //       if (formData.members[i].phone === "") {
+  //         setMessege("Please enter phone number of all members");
+  //         setShowAlert(true);
+  //         return;
+  //       }
+  //     }
+
+  //     //post data
+  //     const keyRes = await fetch(`${ BACKEND_URL } /getKey`, {
+  //     method: "GET",
+  //       credentials: "include",
+  //     });
+  //   const keyJSON = await keyRes.json();
+  //   const { key } = keyJSON;
+
+  //   const res = await fetch(`${BACKEND_URL}/createOrder`, {
+  //     method: "POST",
+  //     credentials: "include",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(formData),
+  //   });
+
+  //   const data = await res.json();
+  //   const { amount, id: order_id, description } = data;
+
+  //   console.log(data);
+
+  //   const options = {
+  //     key,
+  //     amount: amount,
+  //     currency: "INR",
+  //     name: "Aurora 2024",
+  //     description: description,
+  //     order_id: order_id,
+  //     handler: async function (response) {
+  //       const verifyData = {
+  //         orderCreationId: order_id,
+  //         razorpayPaymentId: response.razorpay_payment_id,
+  //         razorpayOrderId: response.razorpay_order_id,
+  //         razorpaySignature: response.razorpay_signature,
+  //       };
+
+  //       const result = await fetch(`${BACKEND_URL}/verifyOrder`, {
+  //         method: "POST",
+  //         credentials: "include",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify(verifyData),
+  //       }).then((response) => response.json());
+
+  //       if (result.success) {
+  //         setMessege("Payment Verfied");
+  //         setShowToast(true);
+  //       } else {
+  //         setMessege("Payment Unsuccessful");
+  //         setShowAlert(true);
+  //       }
+  //     },
+  //     theme: {
+  //       color: "#61dafb",
+  //     },
+  //   };
+
+  //   const paymentObject = new window.Razorpay(options);
+  //   paymentObject.open();
+  // };
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+
+    // Perform any necessary validations or processing here
+
+    setSelectedFile(file);
+    setIsFileUploaded(true);
+  };
+
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = async () => {
+    setSelectedFile(null);
+    setIsFileUploaded(false);
+
+    setOpen(false);
+
+  }
+
+  const handleUpload = async () => {
+    console.log(selectedFile);
+    if (!isFileUploaded) {
+      setMessege("Payment Unsuccessful");
+      setShowAlert(true);
+    }
     // check data
-    if (formData.groupName === "") {
+    if (formData?.groupName === "") {
       setMessege("Please enter your group name");
       setShowAlert(true);
       return;
@@ -91,67 +204,49 @@ export function EventModal({ isOpen, setIsOpen, data }) {
       }
     }
 
-    //post data
-    const keyRes = await fetch(`${BACKEND_URL}/getKey`, {
-      method: "GET",
-      credentials: "include",
-    });
-    const keyJSON = await keyRes.json();
-    const { key } = keyJSON;
-
-    const res = await fetch(`${BACKEND_URL}/createOrder`, {
-      method: "POST",
-      credentials: "include",
+    // get reciept id
+    const res = await fetch(`${BACKEND_URL}/createPurchase`, {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
+      credentials: 'include'
+
+
     });
 
     const data = await res.json();
-    const { amount, id: order_id, description } = data;
+    const recieptId = data.receiptId;
 
-    console.log(data);
+    var formDataPhoto = new FormData();
+    formDataPhoto.append('image', selectedFile);
+    formDataPhoto.append('receiptId', recieptId);
 
-    const options = {
-      key,
-      amount: amount,
-      currency: "INR",
-      name: "Aurora 2024",
-      description: description,
-      order_id: order_id,
-      handler: async function (response) {
-        const verifyData = {
-          orderCreationId: order_id,
-          razorpayPaymentId: response.razorpay_payment_id,
-          razorpayOrderId: response.razorpay_order_id,
-          razorpaySignature: response.razorpay_signature,
-        };
+    await fetch(`${BACKEND_URL}/uploadScreenshot`, {
+      method: 'POST',
+      body: formDataPhoto,
+      credentials: 'include'
 
-        const result = await fetch(`${BACKEND_URL}/verifyOrder`, {
-          method: "POST",
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(verifyData),
-        }).then((response) => response.json());
 
-        if (result.success) {
-          setMessege("Payment Verfied");
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        if (data.success) {
+          setMessege("Your image has been uploaded successfully!");
           setShowToast(true);
         } else {
           setMessege("Payment Unsuccessful");
           setShowAlert(true);
         }
-      },
-      theme: {
-        color: "#61dafb",
-      },
-    };
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
 
-    const paymentObject = new window.Razorpay(options);
-    paymentObject.open();
+
+
   };
 
   useEffect(() => {
@@ -330,30 +425,33 @@ export function EventModal({ isOpen, setIsOpen, data }) {
         </Card.Footer>
         {loading && <LoadingFallback />}
         <Dialog
-          fullScreen={fullScreen}
+          // fullScreen={fullScreen}
           open={open}
           onClose={handleClose}
           aria-labelledby="responsive-dialog-title"
+          className='Dialog'
         >
-          <DialogTitle id="responsive-dialog-title" marginLeft={'20%'}>
+          <DialogTitle id="responsive-dialog-title">
             {"Now Pay Thorugh The Below QR"}
           </DialogTitle>
           <IconButton
-          aria-label="close"
-          onClick={handleClose}
-          sx={{
-            position: 'absolute',
-            right: 8,
-            top: 8,
-            color: (theme) => theme.palette.grey[500],
-          }}
-        >X
-          {/* <CloseIcon /> */}
-        </IconButton>
+            aria-label="close"
+            onClick={handleClose}
+            sx={{
+              position: 'absolute',
+              right: 8,
+              top: 8,
+              color: (theme) => theme.palette.grey[500],
+            }}
+          >
+            {/* X */}
+            <CloseIcon />
+          </IconButton>
           <DialogContent>
             <DialogContentText>
-              <img src={QRCode} alt="QR Code" />
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusantium sapiente repellat facere sed porro ab culpa eius tempore. Hic labore cupiditate sapiente perferendis minus temporibus id consequatur quod voluptatem!
+              <img src={QRCode} alt="QR Code" className='Dialog_QR' />
+              {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusantium sapiente repellat facere sed porro ab culpa eius tempore. Hic labore cupiditate sapiente perferendis minus temporibus id consequatur quod voluptatem! */}
+              Upload the screenshot of payment
               <br />
               <input
                 accept="image/*"
@@ -361,23 +459,27 @@ export function EventModal({ isOpen, setIsOpen, data }) {
                 style={{ display: 'none' }}
                 id="raised-button-file"
                 type="file"
-                
+                onChange={handleFileChange}
+
               />
               <label htmlFor="raised-button-file">
-                <Button variant="raised" component="span" style={{marginLeft:"40%"}}>
+                <Button className='Dialog_Upload' variant='outlined' color='success' component="span" >
                   Upload
                 </Button>
               </label>
-
+              {isFileUploaded && (
+                <DoneIcon style={{ color: 'green', marginLeft: '10px' }} />
+              )}
             </DialogContentText>
           </DialogContent>
           <DialogActions>
             {/* <Button autoFocus onClick={handleClose}>
             Disagree
           </Button> */}
-          <Button onClick={handleClose} autoFocus>
-            Submit
-          </Button>
+            <Button onClick={handleUpload} variant="contained" color="success" className='Dialog_btn'>
+              Submit
+            </Button>
+
           </DialogActions>
         </Dialog>
 

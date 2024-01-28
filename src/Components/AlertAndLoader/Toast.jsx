@@ -40,7 +40,7 @@ const Toast = ({ message, duration = 3000, onClose }) => {
   return (
     <>
       {isVisible && (
-        <div>
+        <div >
           <div id="cyber-toast-container">
             <div id="cyber-toast">
               <span id="cyber-toast-message">{message}</span>

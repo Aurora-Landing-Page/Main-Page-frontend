@@ -44,7 +44,7 @@ const Alert = ({ message, duration = 3000, onClose }) => {
   return (
     <>
       {isVisible && (
-        <div>
+        <div >
           <div id="cyber-toast-container">
             <div id="cyber-alert-box">
               <span id="cyber-alert-message">{message}</span>

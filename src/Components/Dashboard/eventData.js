@@ -108,7 +108,6 @@ const events = [
     TicketPrice: 100,
     EventId: "Aurora-parivesh",
   },
-
   {
     Title: "Step-up - Classical",
     Content: "Sway away",
