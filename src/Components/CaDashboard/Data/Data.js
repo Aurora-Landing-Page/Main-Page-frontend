@@ -8,12 +8,12 @@ import {
 export const SidebarData = [
   {
     icon: UilEstate,
-    link: "/ca-dashboard",
+    link: "/dashboard",
     heading: "Dashboard",
   },
   {
     icon: UilUserCircle,
-    link: "/ca-dashboard/profile",
+    link: "/dashboard/profile",
     heading: "Profile",
   },
 ];

@@ -6,41 +6,8 @@ import {
 } from "material-react-table";
 import "./Table.css";
 import { ThemeProvider, createTheme } from "@mui/material";
-
-const data = [
-  {
-    name: "John",
-    email: "john@example.com",
-    phone: 1234567890,
-    gender: "Male",
-    college: "Example College",
-    city: "Example City",
-    dob: "2000-01-01T00:00:00.000Z",
-    referralCode: "ABC123",
-    createdAt: "2022-01-01T00:00:00.000Z",
-    updatedAt: "2022-01-02T00:00:00.000Z",
-    referrals: [
-      {
-        name: "Referral 1",
-        email: "referral1@example.com",
-        phone: 1234567899,
-        college: "Example College",
-      },
-      {
-        name: "Referral 2",
-        email: "referral2@example.com",
-        phone: 1234567898,
-        college: "Example College",
-      },
-
-    ],
-  },
-];
-
-// const response = await axios.get("http://localhost:3000/getCaData")
-// const ca = response.data
-// console.log(ca);
-
+import axios from "axios";
+import BACKEND_URL from "../../../helper.js";
 
 const darkTheme = createTheme({
   palette: {
@@ -59,6 +26,23 @@ const darkTheme = createTheme({
 });
 
 export default function BasicTable() {
+  const [data, setData] = React.useState([]);
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${BACKEND_URL}/getCaData`, {
+          withCredentials: true,
+        });
+        setData(response.data.referrals);
+        console.log(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
   const theme = createTheme({
     palette: {
       mode: "dark",
@@ -94,31 +78,17 @@ export default function BasicTable() {
 
   const combinedColumns = [...columns];
 
-  const tableData = useMemo(() => {
-    const flattenedData = data.flatMap((item) => {
-      return item.referrals.map((referral) => ({
-        ...item,
-        referrals: undefined,
-        ...referral,
-      }));
-    });
-
-    return flattenedData;
-  }, [data]);
-
   const [pagination, setPagination] = React.useState({
     pageIndex: 0,
-    pageSize: 5, //customize the default page size
+    pageSize: 5,
   });
-  
-  React.useEffect(() => {
-    //do something when the pagination state changes
-  }, [pagination.pageIndex, pagination.pageSize]);
-  
 
+  React.useEffect(() => {
+    // Do something when the pagination state changes
+  }, [pagination.pageIndex, pagination.pageSize]);
   const table = useMaterialReactTable({
     columns: combinedColumns,
-    data: tableData,
+    data: data,
     onPaginationChange: setPagination, //hoist pagination state to your state when it changes internally
     state: { pagination },
     enableFullScreenToggle: false,
