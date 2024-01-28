@@ -41,7 +41,7 @@ const Dashboard = () => {
     {
       component: <TicketCardsLayout />,
       icon: HiOutlineGlobeAlt,
-      name: "Tickets",
+      name: "Passes",
       id: "/tickets",
     },
     // {

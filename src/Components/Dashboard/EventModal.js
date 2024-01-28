@@ -42,7 +42,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
 
   const initialFormData = {
     eventId: data.EventId,
-    eventType: "group",
+    eventType: "individual",
     members: [],
     groupName: "",
   };
