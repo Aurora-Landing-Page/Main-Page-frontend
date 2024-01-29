@@ -35,7 +35,7 @@ function HeroSection() {
                 <a className={style.Button} 
                 href="/dashboard"
                 // onClick={()=>{navigate('/register') }} 
-                > Explore More<FaLocationArrow style={{ marginTop: "2px" }} /></a>
+                > Get Passes<FaLocationArrow style={{ marginTop: "2px" }} /></a>
             </div>
 
         </div>);

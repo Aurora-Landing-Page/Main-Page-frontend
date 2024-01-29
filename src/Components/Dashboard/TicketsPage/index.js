@@ -89,6 +89,7 @@ function TicketCardsLayout() {
     }
 
     // get reciept id
+    setLoading(true);
     const res = await fetch(`${BACKEND_URL}/createPurchase`, {
       method: 'POST',
       headers: {
@@ -106,22 +107,30 @@ function TicketCardsLayout() {
     formDataPhoto.append('image', selectedFile);
     formDataPhoto.append('receiptId', recieptId);
 
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setMessege("Payment completed, Please check your email!");
+          setShowToast(true);
+
+    }, 3000);
+
+    setOpen(false);
+
     await fetch(`${BACKEND_URL}/uploadScreenshot`, {
       method: 'POST',
       body: formDataPhoto,
       credentials: 'include'
-
-
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data)
+        setLoading(false);
         if (data.success) {
-          setMessege("Your image has been uploaded successfully!");
-          setShowToast(true);
-          setSelectedFile(null);
-          setIsFileUploaded(false);
-          setOpen(false);
+          // setMessege("Your image has been uploaded successfully!");
+          // setShowToast(true);
+          // setSelectedFile(null);
+          // setIsFileUploaded(false);
+          // setOpen(false);
           formData.members.splice(
             formData.length - formData.length,
             1
@@ -129,11 +138,11 @@ function TicketCardsLayout() {
           setFormData({ ...formData });
 
         } else {
-          setMessege("Payment Unsuccessful");
-          setShowAlert(true);
-          setSelectedFile(null);
-          setIsFileUploaded(false);
-          setOpen(false);
+          // setMessege("Payment Unsuccessful");
+          // setShowAlert(true);
+          // setSelectedFile(null);
+          // setIsFileUploaded(false);
+          // setOpen(false);
           formData.members.splice(
             formData.length - formData.length,
             1
@@ -142,7 +151,10 @@ function TicketCardsLayout() {
         }
       })
       .catch(error => {
+        // setLoading(false);
         console.error('Error:', error);
+        setMessege("Issue with your internet");
+        setShowAlert(true);
       });
 
   };
@@ -172,7 +184,7 @@ function TicketCardsLayout() {
     console.log(formData);
     if (formData.purchaseType === "group") {
       if (formData.accomodation) {
-        setAmount(1599 + formData.members.length * 1599);
+        setAmount(1799 + formData.members.length * 1799);
         
       }
       else {
@@ -181,7 +193,7 @@ function TicketCardsLayout() {
       }
     } else {
       if (formData.accomodation) {
-        setAmount(1599);
+        setAmount(1799);
       }
       else {
         setAmount(599);
@@ -395,6 +407,7 @@ function TicketCardsLayout() {
                     {/* Passes will be out soon */}
                   </button>
                 </a>
+                <div className="mt-2 " >*you will receive your passes via email after payment</div>
               </div>
             </form>
           </div>
