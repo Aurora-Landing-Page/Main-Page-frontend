@@ -204,10 +204,12 @@ function TicketCardsLayout() {
         <Loader />
       ) : (
         <div class="flex items-center justify-center  mt-10 md:mt-10 relative sm:left-24">
-          <div class="login_box">
-            <form>
-              <h2 style={{ right: "-31%" }} class="login_h2 py-2 sm:bottom-8 ">Attend</h2>
-              <div class=" text-lg sm:text-xl space-y-2 sm:space-y-4 font-medium sm:font-semibold flex flex-col relative  left-4">
+          <div class="login_box  ">
+            <form className="flex flex-col justify-center items-center px-4">
+              <h2 className="login_h2 py-2 relative pt-6   lg:left-4 px-4 sm:px-0 flex justify-center ">
+                Attend
+              </h2>
+              <div class=" text-lg sm:text-xl space-y-2 sm:space-y-4 font-medium sm:font-semibold flex flex-col relative  left-3">
                 <div class="flex flex-col sm:flex-row  ">
                   <div class="flex gap-2 items-center sm:basis-1/2">
                     <input
@@ -242,16 +244,14 @@ function TicketCardsLayout() {
                           : "individual";
 
                         setFormData({ ...formData });
-
                       }}
                     />
                     <label
                       for="groupPurchase"
-                      className="flex flex-col sm:flex-row "
+                      className="flex flex-col "
                     >
-                      Group Purchase
+                      <span>Group Purchase</span>
                       <span>(4+1 & 8+3)</span>
-
                     </label>
                   </div>
                 </div>
@@ -299,8 +299,9 @@ function TicketCardsLayout() {
                 <div
                   id="groupPurchaseFields"
                   // hidden={formData.purchaseType !== "group"}
-                  className={` mt-2 ${formData.purchaseType !== "group" ? "hidden" : "block"
-                    } `}
+                  className={` mt-2 ${
+                    formData.purchaseType !== "group" ? "hidden" : "block"
+                  } `}
                 >
                   {formData.members.map((member, index) => {
                     return (
@@ -374,7 +375,7 @@ function TicketCardsLayout() {
                 </div>
               </div>
               <div class="login_button py-10">
-                <a className="login_a " >
+                <a className="login_a ">
                   <button
                     class="login_btn"
                     onClick={(e) => {
@@ -382,7 +383,15 @@ function TicketCardsLayout() {
                       setOpen(true);
                     }}
                   >
-                    Purchase ({`${formData.members.length === 4 ? amount - 599 : formData.members.length === 10 ? amount - 1797 : amount}`}.rs)
+                    Purchase (
+                    {`${
+                      formData.members.length === 4
+                        ? amount - 599
+                        : formData.members.length === 10
+                        ? amount - 1797
+                        : amount
+                    }`}
+                    .rs)
                     {/* Passes will be out soon */}
                   </button>
                 </a>
@@ -394,7 +403,7 @@ function TicketCardsLayout() {
             open={open}
             onClose={handleClose}
             aria-labelledby="responsive-dialog-title"
-            className='Dialog'
+            className="Dialog"
           >
             <DialogTitle id="responsive-dialog-title">
               {`Pay ${amount} Thorugh The Below QR`}
@@ -403,7 +412,7 @@ function TicketCardsLayout() {
               aria-label="close"
               onClick={handleClose}
               sx={{
-                position: 'absolute',
+                position: "absolute",
                 right: 8,
                 top: 8,
                 color: (theme) => theme.palette.grey[500],
@@ -414,26 +423,30 @@ function TicketCardsLayout() {
             </IconButton>
             <DialogContent>
               <DialogContentText>
-                <img src={QRCode} alt="QR Code" className='Dialog_QR' />
+                <img src={QRCode} alt="QR Code" className="Dialog_QR" />
                 {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusantium sapiente repellat facere sed porro ab culpa eius tempore. Hic labore cupiditate sapiente perferendis minus temporibus id consequatur quod voluptatem! */}
                 Upload the screenshot of payment
                 <br />
                 <input
                   accept="image/*"
                   // className={classes.input}
-                  style={{ display: 'none' }}
+                  style={{ display: "none" }}
                   id="raised-button-file"
                   type="file"
                   onChange={handleFileChange}
-
                 />
                 <label htmlFor="raised-button-file">
-                  <Button className='Dialog_Upload' variant='outlined' color='success' component="span" >
+                  <Button
+                    className="Dialog_Upload"
+                    variant="outlined"
+                    color="success"
+                    component="span"
+                  >
                     Upload
                   </Button>
                 </label>
                 {isFileUploaded && (
-                  <DoneIcon style={{ color: 'green', marginLeft: '10px' }} />
+                  <DoneIcon style={{ color: "green", marginLeft: "10px" }} />
                 )}
               </DialogContentText>
             </DialogContent>
@@ -441,10 +454,14 @@ function TicketCardsLayout() {
               {/* <Button autoFocus onClick={handleClose}>
             Disagree
           </Button> */}
-              <Button onClick={handleUpload} variant="contained" color="success" className='Dialog_btn'>
+              <Button
+                onClick={handleUpload}
+                variant="contained"
+                color="success"
+                className="Dialog_btn"
+              >
                 Submit
               </Button>
-
             </DialogActions>
           </Dialog>
         </div>

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import { useState, useEffect } from "react";
 import { Input } from "./Modal/Input";
 import { Card } from "./Modal/Card";
@@ -6,32 +6,30 @@ import { LoadingFallback } from "./Modal/LoadingFallback";
 import Modal from "./Modal";
 import { Heading } from "./Modal/Heading";
 import axios from "axios";
-import QRCode from "./images/QR.jpg"
-import DownloadIcon from '@mui/icons-material/Download';
+import QRCode from "./images/QR.jpg";
+import DownloadIcon from "@mui/icons-material/Download";
 import Toast from "../AlertAndLoader/Toast";
 import Loader from "../AlertAndLoader/Loader";
 import Alert from "../AlertAndLoader/Alert";
 import BACKEND_URL from "../../helper";
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
-import { IconButton } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
-import DoneIcon from '@mui/icons-material/Done';
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import { IconButton } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import DoneIcon from "@mui/icons-material/Done";
 import "../Dashboard/QRDialog.css";
 // import sample from "./pdf/sample.pdf";
 
-
 export function EventModal({ isOpen, setIsOpen, data }) {
-
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   const [isFileUploaded, setIsFileUploaded] = React.useState(false);
   const [selectedFile, setSelectedFile] = React.useState(null);
@@ -56,6 +54,14 @@ export function EventModal({ isOpen, setIsOpen, data }) {
   useEffect(() => {
     setAmount(groupSize * data.TicketPrice);
   }, [groupSize]);
+
+  useEffect(() => {
+    if (data.minGroupSize == data.maxGroupSize && data.minGroupSize == 1) {
+      formData.eventType = "individual";
+    } else {
+      formData.eventType = "group";
+    }
+  }, []);
 
   const handleToastClose = () => {
     setMessege("");
@@ -165,7 +171,6 @@ export function EventModal({ isOpen, setIsOpen, data }) {
     setIsFileUploaded(true);
   };
 
-
   const handleClickOpen = () => {
     if (formData?.groupName === "") {
       setMessege("Please enter your group name");
@@ -173,7 +178,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
       return;
     }
 
-    if(groupSize == 0){
+    if (groupSize == 0) {
       setMessege("Please enter number of members in your group");
       setShowAlert(true);
       return;
@@ -204,8 +209,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
     setIsFileUploaded(false);
 
     setOpen(false);
-
-  }
+  };
 
   const handleUpload = async () => {
     console.log(selectedFile);
@@ -245,33 +249,29 @@ export function EventModal({ isOpen, setIsOpen, data }) {
 
     // get reciept id
     const res = await fetch(`${BACKEND_URL}/createPurchase`, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
-      credentials: 'include'
-
-
+      credentials: "include",
     });
 
     const data = await res.json();
     const recieptId = data.receiptId;
 
     var formDataPhoto = new FormData();
-    formDataPhoto.append('image', selectedFile);
-    formDataPhoto.append('receiptId', recieptId);
+    formDataPhoto.append("image", selectedFile);
+    formDataPhoto.append("receiptId", recieptId);
 
     await fetch(`${BACKEND_URL}/uploadScreenshot`, {
-      method: 'POST',
+      method: "POST",
       body: formDataPhoto,
-      credentials: 'include'
-
-
+      credentials: "include",
     })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
         if (data.success) {
           setMessege("Your image has been uploaded successfully!");
           setShowToast(true);
@@ -286,12 +286,9 @@ export function EventModal({ isOpen, setIsOpen, data }) {
           setIsFileUploaded(false);
         }
       })
-      .catch(error => {
-        console.error('Error:', error);
+      .catch((error) => {
+        console.error("Error:", error);
       });
-
-
-
   };
 
   useEffect(() => {
@@ -310,7 +307,12 @@ export function EventModal({ isOpen, setIsOpen, data }) {
         <Toast message={messege} duration={3000} onClose={handleToastClose} />
       )}
       {showAlert && (
-        <Alert style={{marginBottom:"-100px"}} message={messege} duration={3000} onClose={handleAlertClose} />
+        <Alert
+          style={{ marginBottom: "-100px" }}
+          message={messege}
+          duration={3000}
+          onClose={handleAlertClose}
+        />
       )}
       <Modal
         isOpen={isOpen}
@@ -342,7 +344,6 @@ export function EventModal({ isOpen, setIsOpen, data }) {
               >
                 Rules and Regulations
                 <DownloadIcon />
-
               </a>
             </Heading>
           </div>
@@ -474,16 +475,16 @@ export function EventModal({ isOpen, setIsOpen, data }) {
           open={open}
           onClose={handleClose}
           aria-labelledby="responsive-dialog-title"
-          className='Dialog'
+          className="Dialog"
         >
           <DialogTitle id="responsive-dialog-title">
-          {`Pay ${amount} Thorugh The Below QR`}
+            {`Pay ${amount} Thorugh The Below QR`}
           </DialogTitle>
           <IconButton
             aria-label="close"
             onClick={handleClose}
             sx={{
-              position: 'absolute',
+              position: "absolute",
               right: 8,
               top: 8,
               color: (theme) => theme.palette.grey[500],
@@ -494,26 +495,30 @@ export function EventModal({ isOpen, setIsOpen, data }) {
           </IconButton>
           <DialogContent>
             <DialogContentText>
-              <img src={QRCode} alt="QR Code" className='Dialog_QR' />
+              <img src={QRCode} alt="QR Code" className="Dialog_QR" />
               {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusantium sapiente repellat facere sed porro ab culpa eius tempore. Hic labore cupiditate sapiente perferendis minus temporibus id consequatur quod voluptatem! */}
               Upload the screenshot of payment
               <br />
               <input
                 accept="image/*"
                 // className={classes.input}
-                style={{ display: 'none' }}
+                style={{ display: "none" }}
                 id="raised-button-file"
                 type="file"
                 onChange={handleFileChange}
-
               />
               <label htmlFor="raised-button-file">
-                <Button className='Dialog_Upload' variant='outlined' color='success' component="span" >
+                <Button
+                  className="Dialog_Upload"
+                  variant="outlined"
+                  color="success"
+                  component="span"
+                >
                   Upload
                 </Button>
               </label>
               {isFileUploaded && (
-                <DoneIcon style={{ color: 'green', marginLeft: '10px' }} />
+                <DoneIcon style={{ color: "green", marginLeft: "10px" }} />
               )}
             </DialogContentText>
           </DialogContent>
@@ -521,15 +526,17 @@ export function EventModal({ isOpen, setIsOpen, data }) {
             {/* <Button autoFocus onClick={handleClose}>
             Disagree
           </Button> */}
-            <Button onClick={handleUpload} variant="contained" color="success" className='Dialog_btn'>
+            <Button
+              onClick={handleUpload}
+              variant="contained"
+              color="success"
+              className="Dialog_btn"
+            >
               Submit
             </Button>
-
           </DialogActions>
         </Dialog>
-
       </Modal>
-
     </>
   );
 }
