@@ -217,7 +217,7 @@ function TicketCardsLayout() {
       ) : (
         <div class="flex items-center justify-center  mt-10 md:mt-10 relative sm:left-24">
           <div class="login_box  ">
-            <form className="flex flex-col justify-center items-center px-4">
+            <form className="flex flex-col justify-center items-center px-4 pb-12">
               <h2 className="login_h2 py-2 relative pt-6   lg:left-4 px-4 sm:px-0 flex justify-center ">
                 Attend
               </h2>
