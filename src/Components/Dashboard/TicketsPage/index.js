@@ -89,6 +89,7 @@ function TicketCardsLayout() {
     }
 
     // get reciept id
+    setLoading(true);
     const res = await fetch(`${BACKEND_URL}/createPurchase`, {
       method: 'POST',
       headers: {
@@ -106,22 +107,30 @@ function TicketCardsLayout() {
     formDataPhoto.append('image', selectedFile);
     formDataPhoto.append('receiptId', recieptId);
 
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setMessege("Your image has been uploaded successfully!");
+          setShowToast(true);
+
+    }, 3000);
+
+    setOpen(false);
+
     await fetch(`${BACKEND_URL}/uploadScreenshot`, {
       method: 'POST',
       body: formDataPhoto,
       credentials: 'include'
-
-
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data)
+        setLoading(false);
         if (data.success) {
-          setMessege("Your image has been uploaded successfully!");
-          setShowToast(true);
-          setSelectedFile(null);
-          setIsFileUploaded(false);
-          setOpen(false);
+          // setMessege("Your image has been uploaded successfully!");
+          // setShowToast(true);
+          // setSelectedFile(null);
+          // setIsFileUploaded(false);
+          // setOpen(false);
           formData.members.splice(
             formData.length - formData.length,
             1
@@ -129,11 +138,11 @@ function TicketCardsLayout() {
           setFormData({ ...formData });
 
         } else {
-          setMessege("Payment Unsuccessful");
-          setShowAlert(true);
-          setSelectedFile(null);
-          setIsFileUploaded(false);
-          setOpen(false);
+          // setMessege("Payment Unsuccessful");
+          // setShowAlert(true);
+          // setSelectedFile(null);
+          // setIsFileUploaded(false);
+          // setOpen(false);
           formData.members.splice(
             formData.length - formData.length,
             1
@@ -142,7 +151,10 @@ function TicketCardsLayout() {
         }
       })
       .catch(error => {
+        // setLoading(false);
         console.error('Error:', error);
+        setMessege("Issue with your internet");
+        setShowAlert(true);
       });
 
   };

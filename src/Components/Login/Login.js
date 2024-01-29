@@ -37,7 +37,7 @@ const Login = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
+    console.log(e.target);
     setFormData({ ...formData, [name]: value });
   };
 
@@ -126,10 +126,9 @@ const Login = () => {
                 <input
                   type="text"
                   autocomplete="off"
+                  name="email"
                   class="login_input"
-                  onChange={(e) => {
-                    formData.email = e.target.value;
-                  }}
+                  onChange={handleChange}
                   required
                 />
                 <label class="login_input-txt" for="email">
@@ -141,9 +140,8 @@ const Login = () => {
                   type="password"
                   id="login_password"
                   class="login_input"
-                  onChange={(e) => {
-                    formData.password = e.target.value;
-                  }}
+                  name="password"
+                  onChange={handleChange}
                   required
                 />
                 <label class="login_input-txt" for="password">
