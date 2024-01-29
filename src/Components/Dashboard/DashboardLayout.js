@@ -35,14 +35,14 @@ const Dashboard = () => {
     {
       component: <EventCardsLayout />,
       icon: HiOutlineGlobeAlt,
-      name: "Normal Events",
-      id: "/normal-events",
+      name: "Club Events",
+      id: "/club-events",
     },
     {
       component: <TicketCardsLayout />,
       icon: HiOutlineGlobeAlt,
       name: "Passes",
-      id: "/tickets",
+      id: "/passes",
     },
     // {
     //   component: <PurchasedTicketCardsLayout />,

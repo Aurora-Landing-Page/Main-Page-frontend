@@ -110,7 +110,7 @@ function TicketCardsLayout() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      setMessege("Your image has been uploaded successfully!");
+      setMessege("Payment completed, Please check your email!");
           setShowToast(true);
 
     }, 3000);
@@ -184,7 +184,7 @@ function TicketCardsLayout() {
     console.log(formData);
     if (formData.purchaseType === "group") {
       if (formData.accomodation) {
-        setAmount(1599 + formData.members.length * 1599);
+        setAmount(1799 + formData.members.length * 1799);
         
       }
       else {
@@ -193,7 +193,7 @@ function TicketCardsLayout() {
       }
     } else {
       if (formData.accomodation) {
-        setAmount(1599);
+        setAmount(1799);
       }
       else {
         setAmount(599);
@@ -398,6 +398,7 @@ function TicketCardsLayout() {
                     {/* Passes will be out soon */}
                   </button>
                 </a>
+                <div className="mt-2 " >*you will receive your passes via email after payment</div>
               </div>
             </form>
           </div>

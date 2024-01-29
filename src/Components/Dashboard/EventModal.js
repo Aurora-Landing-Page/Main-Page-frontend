@@ -119,7 +119,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
   const handleUpload = async () => {
     console.log(selectedFile);
     if (!isFileUploaded) {
-      setMessege("Payment Unsuccessful");
+      setMessege("Please upload the screenshot of payment");
       setShowAlert(true);
     }
     // check data
@@ -155,7 +155,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      setMessege("Your image has been uploaded successfully!");
+      setMessege("Payment completed, Please check your email!");
     setShowToast(true);
     }, 3000);
     setOpen(false);
@@ -292,7 +292,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
               </p>
             </div>
             <div className="flex flex-col space-y-2">
-              <Heading size="h5">Ticket Price</Heading>
+              <Heading size="h5">Registration Fee per member</Heading>
               <p className="text-sm">{data?.TicketPrice}</p>
             </div>
             <form action="submit">
@@ -383,15 +383,20 @@ export function EventModal({ isOpen, setIsOpen, data }) {
               </div>
             </form>
           </Card.Body>
-          <Card.Footer className="flex justify-end">
+          <Card.Footer className="flex flex-col justify-end">
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4"
               onClick={handleClickOpen}
+              style={{borderRadius:"5px"}}
             >
               Purchase Ticket ({`${amount}`}.rs)
               {/* Get Passes */}
             </button>
+          <div>
+          *Note: This registration does not include accomodation and pronite passes.
+            </div> 
+
           </Card.Footer>
           {loading && <LoadingFallback />}
           <Dialog

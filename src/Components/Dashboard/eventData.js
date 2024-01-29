@@ -58,7 +58,7 @@ const events = [
     Title: "Graffathon",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf2,
@@ -75,7 +75,7 @@ const events = [
     Title: "T-shirt Painting",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf37,
@@ -92,7 +92,7 @@ const events = [
     Title: "Naqaab (Face Painting)",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf3,
@@ -109,7 +109,7 @@ const events = [
     Title: "On Spot Painting",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf4,
@@ -126,7 +126,7 @@ const events = [
     Title: "On Spot Sketching",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf6,
@@ -143,7 +143,7 @@ const events = [
     Title: "Step-up - Classical(Astral Rhythms)",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Step-up, epitomizes the rhythmic pulse of diverse dance forms, uniting performers across various genres. From the elegant movements of the Classical Group to the dynamic energy of the Western Group, and the mesmerizing collaboration of Fusion Duos, each performance showcases unparalleled artistry and passion. Embrace the spontaneity of the Impromptu Solo Dance Battle, where individual talents ignite an electrifying dance-off. Join us in celebrating the universal language of movement, where every step becomes an expression of creativity and unity.",
     rules: pdf5,
@@ -160,7 +160,7 @@ const events = [
     Title: "Step-up - Classical Dance(Classics Way)",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Step-up, epitomizes the rhythmic pulse of diverse dance forms, uniting performers across various genres. From the elegant movements of the Classical Group to the dynamic energy of the Western Group, and the mesmerizing collaboration of Fusion Duos, each performance showcases unparalleled artistry and passion. Embrace the spontaneity of the Impromptu Solo Dance Battle, where individual talents ignite an electrifying dance-off. Join us in celebrating the universal language of movement, where every step becomes an expression of creativity and unity.",
     rules: pdf5,
@@ -177,7 +177,7 @@ const events = [
     Title: "Step-up - Solo Dance GrooveOff",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Step-up, epitomizes the rhythmic pulse of diverse dance forms, uniting performers across various genres. From the elegant movements of the Classical Group to the dynamic energy of the Western Group, and the mesmerizing collaboration of Fusion Duos, each performance showcases unparalleled artistry and passion. Embrace the spontaneity of the Impromptu Solo Dance Battle, where individual talents ignite an electrifying dance-off. Join us in celebrating the universal language of movement, where every step becomes an expression of creativity and unity.",
     rules: pdf7,
@@ -194,7 +194,7 @@ const events = [
     Title: "Step-up - Western",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Step-up, epitomizes the rhythmic pulse of diverse dance forms, uniting performers across various genres. From the elegant movements of the Classical Group to the dynamic energy of the Western Group, and the mesmerizing collaboration of Fusion Duos, each performance showcases unparalleled artistry and passion. Embrace the spontaneity of the Impromptu Solo Dance Battle, where individual talents ignite an electrifying dance-off. Join us in celebrating the universal language of movement, where every step becomes an expression of creativity and unity.",
     rules: pdf16,
@@ -212,7 +212,7 @@ const events = [
     Title: "Classical Singing (solo duo)",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Eumelia, is a harmonious ode to the soulful world of music, featuring captivating performances across multiple categories. Dive into the melodic realm of Solo Singing, where individual voices resonate with emotion and talent. Feel the synergy in Group Singing as voices intertwine in perfect harmony. Experience the instrumental brilliance of both soloists and ensembles, weaving enchanting melodies that captivate hearts. Join us in this celebration of musical diversity, where every note reverberates with passion and artistry.",
     rules: pdf8,
@@ -229,7 +229,7 @@ const events = [
     Title: "Freestyle Singing (Duo)",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Eumelia, is a harmonious ode to the soulful world of music, featuring captivating performances across multiple categories. Dive into the melodic realm of Solo Singing, where individual voices resonate with emotion and talent. Feel the synergy in Group Singing as voices intertwine in perfect harmony. Experience the instrumental brilliance of both soloists and ensembles, weaving enchanting melodies that captivate hearts. Join us in this celebration of musical diversity, where every note reverberates with passion and artistry.",
     rules: pdf9,
@@ -246,7 +246,7 @@ const events = [
     Title: "Freestyle Singing (Solo)",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Eumelia, is a harmonious ode to the soulful world of music, featuring captivating performances across multiple categories. Dive into the melodic realm of Solo Singing, where individual voices resonate with emotion and talent. Feel the synergy in Group Singing as voices intertwine in perfect harmony. Experience the instrumental brilliance of both soloists and ensembles, weaving enchanting melodies that captivate hearts. Join us in this celebration of musical diversity, where every note reverberates with passion and artistry.",
     rules: pdf11,
@@ -263,7 +263,7 @@ const events = [
     Title: "Freestyle Singing (Group)",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Eumelia, is a harmonious ode to the soulful world of music, featuring captivating performances across multiple categories. Dive into the melodic realm of Solo Singing, where individual voices resonate with emotion and talent. Feel the synergy in Group Singing as voices intertwine in perfect harmony. Experience the instrumental brilliance of both soloists and ensembles, weaving enchanting melodies that captivate hearts. Join us in this celebration of musical diversity, where every note reverberates with passion and artistry.",
     rules: pdf10,
@@ -280,7 +280,7 @@ const events = [
     Title: "Instrumental Acoustic",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Eumelia, is a harmonious ode to the soulful world of music, featuring captivating performances across multiple categories. Dive into the melodic realm of Solo Singing, where individual voices resonate with emotion and talent. Feel the synergy in Group Singing as voices intertwine in perfect harmony. Experience the instrumental brilliance of both soloists and ensembles, weaving enchanting melodies that captivate hearts. Join us in this celebration of musical diversity, where every note reverberates with passion and artistry.",
     rules: pdf12,
@@ -297,7 +297,7 @@ const events = [
     Title: "Acapella (group)",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Eumelia, is a harmonious ode to the soulful world of music, featuring captivating performances across multiple categories. Dive into the melodic realm of Solo Singing, where individual voices resonate with emotion and talent. Feel the synergy in Group Singing as voices intertwine in perfect harmony. Experience the instrumental brilliance of both soloists and ensembles, weaving enchanting melodies that captivate hearts. Join us in this celebration of musical diversity, where every note reverberates with passion and artistry.",
     rules: pdf13,
@@ -315,7 +315,7 @@ const events = [
     Title: "Panorama",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "The Pikture, event is a dynamic canvas celebrating the art of visual storytelling. 'Panorama' invites photographers to capture evocative moments, painting diverse perspectives in each frame. 'Portray It' unravels captivating narratives through photo stories, weaving tales within the confines of a single image. Meanwhile, 'Short Movie Making' elevates storytelling through concise cinematic expressions, capturing emotions and narratives in compact yet impactful films. This event unites creatives in a celebration of visual artistry, where every click and reel unveils unique narratives, etching moments into a timeless tapestry of expression.",
     rules: pdf18,
@@ -332,7 +332,7 @@ const events = [
     Title: "Pixar",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "The Pikture, event is a dynamic canvas celebrating the art of visual storytelling. 'Panorama' invites photographers to capture evocative moments, painting diverse perspectives in each frame. 'Portray It' unravels captivating narratives through photo stories, weaving tales within the confines of a single image. Meanwhile, 'Short Movie Making' elevates storytelling through concise cinematic expressions, capturing emotions and narratives in compact yet impactful films. This event unites creatives in a celebration of visual artistry, where every click and reel unveils unique narratives, etching moments into a timeless tapestry of expression.",
     rules: pdf17,
@@ -349,7 +349,7 @@ const events = [
     Title: "Short Movie Making",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "The Pikture, event is a dynamic canvas celebrating the art of visual storytelling. 'Panorama' invites photographers to capture evocative moments, painting diverse perspectives in each frame. 'Portray It' unravels captivating narratives through photo stories, weaving tales within the confines of a single image. Meanwhile, 'Short Movie Making' elevates storytelling through concise cinematic expressions, capturing emotions and narratives in compact yet impactful films. This event unites creatives in a celebration of visual artistry, where every click and reel unveils unique narratives, etching moments into a timeless tapestry of expression.",
     rules: pdf19,
@@ -366,7 +366,7 @@ const events = [
     Title: "Debate",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'English Debate' and 'Hindi Debate', each fostering critical thinking and eloquence. 'Morning No 1 - Radio' amplifies the charm of live broadcasting, delivering engaging content and vibrant discussions. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf20,
@@ -383,7 +383,7 @@ const events = [
     Title: "Open Mic",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'English Debate' and 'Hindi Debate', each fostering critical thinking and eloquence. 'Morning No 1 - Radio' amplifies the charm of live broadcasting, delivering engaging content and vibrant discussions. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf22,
@@ -400,7 +400,7 @@ const events = [
     Title: "Extempore",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'English Debate' and 'Hindi Debate', each fostering critical thinking and eloquence. 'Morning No 1 - Radio' amplifies the charm of live broadcasting, delivering engaging content and vibrant discussions. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf23,
@@ -417,7 +417,7 @@ const events = [
     Title: "Charades Chronicles",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'English Debate' and 'Hindi Debate', each fostering critical thinking and eloquence. 'Morning No 1 - Radio' amplifies the charm of live broadcasting, delivering engaging content and vibrant discussions. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf38,
@@ -434,7 +434,7 @@ const events = [
     Title: "KBC",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'English Debate' and 'Hindi Debate', each fostering critical thinking and eloquence. 'Morning No 1 - Radio' amplifies the charm of live broadcasting, delivering engaging content and vibrant discussions. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf39,
@@ -451,7 +451,7 @@ const events = [
     Title: "Rangmanch  - Nukkad Natak",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "RangManch, brings forth a captivating theater experience, showcasing versatile performances across multiple genres. Engage with the raw essence of societal narratives through 'Nukkad Natak', where the streets become a stage for impactful storytelling. Delve into the depths of emotion and character in 'Mono Act', witnessing the power of solo performances in conveying multifaceted stories. Feel the vibrancy of expression in 'Damsharas', where the art of mime and gestures paints vivid stories without uttering a single word. Join us in this celebration of dramatic artistry, where every performance leaves an indelible mark on the stage of storytelling.",
     rules: pdf25,
@@ -468,7 +468,7 @@ const events = [
     Title: "RangManch - Mono Act",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "RangManch, brings forth a captivating theater experience, showcasing versatile performances across multiple genres. Engage with the raw essence of societal narratives through 'Nukkad Natak', where the streets become a stage for impactful storytelling. Delve into the depths of emotion and character in 'Mono Act', witnessing the power of solo performances in conveying multifaceted stories. Feel the vibrancy of expression in 'Damsharas', where the art of mime and gestures paints vivid stories without uttering a single word. Join us in this celebration of dramatic artistry, where every performance leaves an indelible mark on the stage of storytelling.",
     rules: pdf24,
@@ -485,7 +485,7 @@ const events = [
     Title: "RangManch - Stage Act",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "RangManch, brings forth a captivating theater experience, showcasing versatile performances across multiple genres. Engage with the raw essence of societal narratives through 'Nukkad Natak', where the streets become a stage for impactful storytelling. Delve into the depths of emotion and character in 'Mono Act', witnessing the power of solo performances in conveying multifaceted stories. Feel the vibrancy of expression in 'Damsharas', where the art of mime and gestures paints vivid stories without uttering a single word. Join us in this celebration of dramatic artistry, where every performance leaves an indelible mark on the stage of storytelling.",
     rules: pdf28,
@@ -503,7 +503,7 @@ const events = [
     Title: "Miscellaneous - Aptitude Quiz",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
     rules: pdf26,
@@ -520,7 +520,7 @@ const events = [
     Title: "Miscellaneous - CineBinge Quiz",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
     rules: pdf27,
@@ -537,7 +537,7 @@ const events = [
     Title: "Miscellaneous - IPL Auction",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
     rules: pdf29,
@@ -554,7 +554,7 @@ const events = [
     Title: "Miscellaneous - Pictionary",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
     rules: pdf30,
@@ -571,7 +571,7 @@ const events = [
     Title: "Miscellaneous - Rap Battle",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
     rules: pdf31,
@@ -588,7 +588,7 @@ const events = [
     Title: "Miscellaneous - Treasure Hunt",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
     rules: pdf35,
@@ -605,7 +605,7 @@ const events = [
     Title: "Miscellaneous - Tug Of War",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "16th February , 2023",
+    Date: "16th February , 2024",
     Description:
       "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
     rules: pdf34,
