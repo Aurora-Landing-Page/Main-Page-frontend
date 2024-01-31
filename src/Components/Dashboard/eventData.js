@@ -69,7 +69,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 199,
-    EventId: "65b6a707f9f62a745ca7dbc7",
+    EventId: "65b6a707f9f62a745ca7dbc7"
   },
   {
     Title: "T-shirt Painting",
