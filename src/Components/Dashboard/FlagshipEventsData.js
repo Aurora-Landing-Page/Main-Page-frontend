@@ -77,7 +77,7 @@ const FlagshipEvents = [
     GroupSize: 2,
     minGroupSize: 4,
     maxGroupSize: 4,
-    TicketPrice: 199,
+    TicketPrice: 50,
     EventId: "65b6a707f9f62a745ca7dbd8",
   },
   {
@@ -94,7 +94,7 @@ const FlagshipEvents = [
     GroupSize: 2,
     minGroupSize: 5,
     maxGroupSize: 5,
-    TicketPrice: 349,
+    TicketPrice: 70,
     EventId: "65b6a707f9f62a745ca7dbd9",
   },
 ];

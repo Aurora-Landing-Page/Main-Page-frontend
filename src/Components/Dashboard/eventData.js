@@ -140,12 +140,12 @@ const events = [
     EventId: "65b6a707f9f62a745ca7dbcc",
   },
   {
-    Title: "Step-up - Classical(Astral Rhythms)",
+    Title: "Step-up - Astral",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
     Description:
-      "Step-up, epitomizes the rhythmic pulse of diverse dance forms, uniting performers across various genres. From the elegant movements of the Classical Group to the dynamic energy of the Western Group, and the mesmerizing collaboration of Fusion Duos, each performance showcases unparalleled artistry and passion. Embrace the spontaneity of the Impromptu Solo Dance Battle, where individual talents ignite an electrifying dance-off. Join us in celebrating the universal language of movement, where every step becomes an expression of creativity and unity.",
+      "Step-up - Classical(Astral Rhythms), epitomizes the rhythmic pulse of diverse dance forms, uniting performers across various genres. From the elegant movements of the Classical Group to the dynamic energy of the Western Group, and the mesmerizing collaboration of Fusion Duos, each performance showcases unparalleled artistry and passion. Embrace the spontaneity of the Impromptu Solo Dance Battle, where individual talents ignite an electrifying dance-off. Join us in celebrating the universal language of movement, where every step becomes an expression of creativity and unity.",
     rules: pdf5,
     Time: "10:00",
     Venue: "OAT",
@@ -157,12 +157,12 @@ const events = [
     EventId: "65b6a707f9f62a745ca7dbda",
   },
   {
-    Title: "Step-up - Classical Dance(Classics Way)",
+    Title: "Step-up - Classical",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
     Description:
-      "Step-up, epitomizes the rhythmic pulse of diverse dance forms, uniting performers across various genres. From the elegant movements of the Classical Group to the dynamic energy of the Western Group, and the mesmerizing collaboration of Fusion Duos, each performance showcases unparalleled artistry and passion. Embrace the spontaneity of the Impromptu Solo Dance Battle, where individual talents ignite an electrifying dance-off. Join us in celebrating the universal language of movement, where every step becomes an expression of creativity and unity.",
+      "Step-up - Classical Dance(Classics Way), epitomizes the rhythmic pulse of diverse dance forms, uniting performers across various genres. From the elegant movements of the Classical Group to the dynamic energy of the Western Group, and the mesmerizing collaboration of Fusion Duos, each performance showcases unparalleled artistry and passion. Embrace the spontaneity of the Impromptu Solo Dance Battle, where individual talents ignite an electrifying dance-off. Join us in celebrating the universal language of movement, where every step becomes an expression of creativity and unity.",
     rules: pdf5,
     Time: "10:00",
     Venue: "OAT",

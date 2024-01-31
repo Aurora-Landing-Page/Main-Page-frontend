@@ -36,6 +36,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
 
   const [loading, setLoading] = useState(false);
   const [groupSize, setGroupSize] = useState(0);
+  const [flag, setFlag] = useState(false);
   const [amount, setAmount] = useState(0);
 
   const initialFormData = {
@@ -111,6 +112,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
       }
     }
     setOpen(true);
+    console.log(formData);
   };
 
   const handleClose = async () => {
@@ -160,11 +162,11 @@ export function EventModal({ isOpen, setIsOpen, data }) {
     setTimeout(() => {
       setLoading(false);
       setMessege("Payment completed, Please check your email!");
-    setShowToast(true);
+      setShowToast(true);
     }, 3000);
     setOpen(false);
 
-    
+
     const res = await fetch(`${BACKEND_URL}/createPurchase`, {
       method: "POST",
       headers: {
@@ -214,14 +216,19 @@ export function EventModal({ isOpen, setIsOpen, data }) {
   };
 
   useEffect(() => {
-    // if (data?.GroupSize > 1) {
-    //   let temp = [];
-    //   for (let i = 0; i < data.GroupSize - 1; i++) {
-    //     temp.push({ name: "", email: "", phone: "" });
-    //   }
-    //   setFormData({ ...formData, members: temp });
-    // }
-  }, [data]);
+    console.log(data);
+    if (data.minGroupSize == data.maxGroupSize) {
+      setGroupSize(data.minGroupSize);
+      for (let i = 0; i < data.minGroupSize - 1; i++) {
+        formData.members.push({ name: "", email: "", phone: "" });
+      }
+      console.log(formData);
+
+      setFlag(true);
+    }
+
+
+  }, []);
 
   return (
     <>
@@ -307,7 +314,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
                   required
                   class="pl-4 mr-2 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 />
-                <input
+                {!flag && (<input
                   type="number"
                   placeholder="Enter number of members in your group"
                   onChange={(e) => {
@@ -336,12 +343,13 @@ export function EventModal({ isOpen, setIsOpen, data }) {
                   }}
                   required
                   class="pl-4 mr-2 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                />
+                />)}
               </div>
               <div hidden={formData.members.length < 1}>
                 <Heading size="h5" className={"mb-2"}>
                   Member details (except yours)
                 </Heading>
+                {console.log(formData.members)}
                 {formData.members.map((member, index) => {
                   return (
                     <div className="mb-4">
@@ -385,14 +393,14 @@ export function EventModal({ isOpen, setIsOpen, data }) {
               type="submit"
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4"
               onClick={handleClickOpen}
-              style={{borderRadius:"5px"}}
+              style={{ borderRadius: "5px" }}
             >
               Purchase Ticket ({`${amount}`}.rs)
               {/* Get Passes */}
             </button>
-          <div>
-          *Note: This registration does not include accomodation and pronite passes.
-            </div> 
+            <div>
+              *Note: This registration does not include accomodation and pronite passes.
+            </div>
 
           </Card.Footer>
           {loading && <LoadingFallback />}
