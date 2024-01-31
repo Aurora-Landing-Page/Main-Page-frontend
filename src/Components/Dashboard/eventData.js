@@ -368,7 +368,7 @@ const events = [
     Day: "Wednesday",
     Date: "16th February , 2024",
     Description:
-      "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'English Debate' and 'Hindi Debate', each fostering critical thinking and eloquence. 'Morning No 1 - Radio' amplifies the charm of live broadcasting, delivering engaging content and vibrant discussions. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
+      "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'Debate', each fostering critical thinking and eloquence. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. Unleash the laughter, spark the imagination: Charades Chronicles - Where Every Gesture Tells a Tale! KBC - Where Dreams Meet Questions. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf20,
     Time: "10:00",
     Venue: "OAT",
@@ -385,7 +385,7 @@ const events = [
     Day: "Wednesday",
     Date: "16th February , 2024",
     Description:
-      "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'English Debate' and 'Hindi Debate', each fostering critical thinking and eloquence. 'Morning No 1 - Radio' amplifies the charm of live broadcasting, delivering engaging content and vibrant discussions. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
+      "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'Debate', each fostering critical thinking and eloquence. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. Unleash the laughter, spark the imagination: Charades Chronicles - Where Every Gesture Tells a Tale! KBC - Where Dreams Meet Questions. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf22,
     Time: "10:00",
     Venue: "OAT",
@@ -402,7 +402,7 @@ const events = [
     Day: "Wednesday",
     Date: "16th February , 2024",
     Description:
-      "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'English Debate' and 'Hindi Debate', each fostering critical thinking and eloquence. 'Morning No 1 - Radio' amplifies the charm of live broadcasting, delivering engaging content and vibrant discussions. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
+      "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'Debate', each fostering critical thinking and eloquence. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. Unleash the laughter, spark the imagination: Charades Chronicles - Where Every Gesture Tells a Tale! KBC - Where Dreams Meet Questions. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf23,
     Time: "10:00",
     Venue: "OAT",
@@ -419,7 +419,7 @@ const events = [
     Day: "Wednesday",
     Date: "16th February , 2024",
     Description:
-      "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'English Debate' and 'Hindi Debate', each fostering critical thinking and eloquence. 'Morning No 1 - Radio' amplifies the charm of live broadcasting, delivering engaging content and vibrant discussions. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
+      "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'Debate', each fostering critical thinking and eloquence. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. Unleash the laughter, spark the imagination: Charades Chronicles - Where Every Gesture Tells a Tale! KBC - Where Dreams Meet Questions. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf38,
     Time: "10:00",
     Venue: "OAT",
@@ -436,7 +436,7 @@ const events = [
     Day: "Wednesday",
     Date: "16th February , 2024",
     Description:
-      "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'English Debate' and 'Hindi Debate', each fostering critical thinking and eloquence. 'Morning No 1 - Radio' amplifies the charm of live broadcasting, delivering engaging content and vibrant discussions. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
+      "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'Debate', each fostering critical thinking and eloquence. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. Unleash the laughter, spark the imagination: Charades Chronicles - Where Every Gesture Tells a Tale! KBC - Where Dreams Meet Questions. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf39,
     Time: "10:00",
     Venue: "OAT",
