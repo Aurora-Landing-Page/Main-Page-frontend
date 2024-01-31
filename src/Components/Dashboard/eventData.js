@@ -500,7 +500,7 @@ const events = [
   },
 
   {
-    Title: "Miscellaneous - Aptitude Quiz",
+    Title: "Aptitude Quiz",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
@@ -517,7 +517,7 @@ const events = [
     EventId: "65b6a707f9f62a745ca7dbe7",
   },
   {
-    Title: "Miscellaneous - CineBinge Quiz",
+    Title: "CineBinge Quiz",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
@@ -534,7 +534,7 @@ const events = [
     EventId: "65b6a707f9f62a745ca7dbe8",
   },
   {
-    Title: "Miscellaneous - IPL Auction",
+    Title: "IPL Auction",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
@@ -551,7 +551,7 @@ const events = [
     EventId: "65b6a707f9f62a745ca7dbe9",
   },
   {
-    Title: "Miscellaneous - Pictionary",
+    Title: "Pictionary",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
@@ -568,7 +568,7 @@ const events = [
     EventId: "65b6a707f9f62a745ca7dbea",
   },
   {
-    Title: "Miscellaneous - Rap Battle",
+    Title: "Rap Battle",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
@@ -585,7 +585,7 @@ const events = [
     EventId: "65b6a707f9f62a745ca7dbd5",
   },
   {
-    Title: "Miscellaneous - Treasure Hunt",
+    Title: "Treasure Hunt",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
@@ -602,7 +602,7 @@ const events = [
     EventId: "65b6a707f9f62a745ca7dbeb",
   },
   {
-    Title: "Miscellaneous - Tug Of War",
+    Title: "Tug Of War",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
