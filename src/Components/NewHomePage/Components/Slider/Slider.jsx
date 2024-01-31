@@ -76,7 +76,7 @@ const Slider = () => {
     runNextAuto = setTimeout(() => {
       // Assuming there is a 'next' button in your component
       const nextButton = document.getElementById("next");
-      nextButton.click();
+      if (nextButton) nextButton?.click();
     }, timeAutoNext);
   };
 
@@ -94,11 +94,17 @@ const Slider = () => {
                 <div className="title">Indian Ocean</div>
                 <div className="topic">Band</div>
                 <div className="des">
-                  Embark on a musical voyage as the legendary band Indian Ocean takes center stage, weaving a tapestry of cultural rhythms and soulful melodies that resonate with the very heartbeat of our fest - a symphony of memories to last a lifetime.
+                  Embark on a musical voyage as the legendary band Indian Ocean
+                  takes center stage, weaving a tapestry of cultural rhythms and
+                  soulful melodies that resonate with the very heartbeat of our
+                  fest - a symphony of memories to last a lifetime.
                 </div>
                 <div className="buttons">
                   <a className="button" href="/events">
-                    <span style={{ color: "#7808d0" }} className="button__icon-wrapper">
+                    <span
+                      style={{ color: "#7808d0" }}
+                      className="button__icon-wrapper"
+                    >
                       <svg
                         width="10"
                         className="button__icon-svg"
@@ -138,11 +144,17 @@ const Slider = () => {
                 <div className="title">DJ AceAxe</div>
                 <div className="topic">DJ Night</div>
                 <div className="des">
-                Navigate the sonic realms with DJ AceAxe, where beats become a language and the dance floor transforms into a euphoric landscape. His electrifying mix transcended the ordinary, turning our fest into a pulsating haven of rhythm and beats.
+                  Navigate the sonic realms with DJ AceAxe, where beats become a
+                  language and the dance floor transforms into a euphoric
+                  landscape. His electrifying mix transcended the ordinary,
+                  turning our fest into a pulsating haven of rhythm and beats.
                 </div>
                 <div className="buttons">
                   <a className="button" href="/events">
-                    <span style={{ color: "#7808d0" }} className="button__icon-wrapper">
+                    <span
+                      style={{ color: "#7808d0" }}
+                      className="button__icon-wrapper"
+                    >
                       <svg
                         width="10"
                         className="button__icon-svg"
@@ -181,11 +193,17 @@ const Slider = () => {
                 <div className="title">Mohit Chauhan</div>
                 <div className="topic">Celebrity Night</div>
                 <div className="des">
-                Mohit Chauhan's voice, a symphony of emotions, painted the canvas of our fest with hues of love, passion, and nostalgia, creating a musical masterpiece that resonated with every heart.
+                  Mohit Chauhan's voice, a symphony of emotions, painted the
+                  canvas of our fest with hues of love, passion, and nostalgia,
+                  creating a musical masterpiece that resonated with every
+                  heart.
                 </div>
                 <div className="buttons">
                   <a className="button" href="/events">
-                    <span style={{ color: "#7808d0" }} className="button__icon-wrapper">
+                    <span
+                      style={{ color: "#7808d0" }}
+                      className="button__icon-wrapper"
+                    >
                       <svg
                         width="10"
                         className="button__icon-svg"
@@ -224,11 +242,17 @@ const Slider = () => {
                 <div className="title">Indian Ocean</div>
                 <div className="topic">Band Performance</div>
                 <div className="des">
-                Diverse genres harmonized on one stage, creating a musical mosaic that celebrated the rich tapestry of sounds. The band's performance was a testament to the unity found in musical diversity.
+                  Diverse genres harmonized on one stage, creating a musical
+                  mosaic that celebrated the rich tapestry of sounds. The band's
+                  performance was a testament to the unity found in musical
+                  diversity.
                 </div>
                 <div className="buttons">
                   <a className="button" href="/events">
-                    <span style={{ color: "#7808d0" }} className="button__icon-wrapper">
+                    <span
+                      style={{ color: "#7808d0" }}
+                      className="button__icon-wrapper"
+                    >
                       <svg
                         width="10"
                         className="button__icon-svg"
@@ -267,11 +291,16 @@ const Slider = () => {
                 <div className="title">Olly Esse</div>
                 <div className="topic">EDM Night</div>
                 <div className="des">
-                Underneath the starlit sky, immerse yourself in the magic of bass drops and dance moves. Our DJ night promises a cosmic journey through beats that reverberate with pure energy.
+                  Underneath the starlit sky, immerse yourself in the magic of
+                  bass drops and dance moves. Our DJ night promises a cosmic
+                  journey through beats that reverberate with pure energy.
                 </div>
                 <div className="buttons">
                   <a className="button" href="/events">
-                    <span style={{ color: "#7808d0" }} className="button__icon-wrapper">
+                    <span
+                      style={{ color: "#7808d0" }}
+                      className="button__icon-wrapper"
+                    >
                       <svg
                         width="10"
                         className="button__icon-svg"
@@ -342,8 +371,28 @@ const Slider = () => {
           </div>
 
           <div className="arrows">
-            <button id="prev" style={{ display: "none", backgroundColor: "white", color: "black" }}> ← </button>
-            <button id="next" style={{ display: "none", backgroundColor: "white", color: "black" }} > → </button>
+            <button
+              id="prev"
+              style={{
+                display: "none",
+                backgroundColor: "white",
+                color: "black",
+              }}
+            >
+              {" "}
+              ←{" "}
+            </button>
+            <button
+              id="next"
+              style={{
+                display: "none",
+                backgroundColor: "white",
+                color: "black",
+              }}
+            >
+              {" "}
+              →{" "}
+            </button>
           </div>
         </div>
       </div>
