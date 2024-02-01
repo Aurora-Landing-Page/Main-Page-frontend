@@ -53,6 +53,7 @@ import esports from "./images/Flagship(5-8)/esports.png"
 import corna from "./images/Flagship(5-8)/corna.jpg"
 import mnm from "./images/Flagship(5-8)/MR. AND MS. AURORA.png"
 import parivesh from "./images/Flagship(5-8)/parivesh.jpg"
+import rangmanch from "./images/Flagship(5-8)/dramatics.png"
 const events = [
   {
     Title: "Graffathon",
@@ -457,7 +458,7 @@ const events = [
     rules: pdf25,
     Time: "10:00",
     Venue: "OAT",
-    Image: AuroraImage,
+    Image: rangmanch,
     GroupSize: 25,
     minGroupSize: 2,
     maxGroupSize: 25,
@@ -474,7 +475,7 @@ const events = [
     rules: pdf24,
     Time: "10:00",
     Venue: "OAT",
-    Image: AuroraImage,
+    Image: rangmanch,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -491,7 +492,7 @@ const events = [
     rules: pdf28,
     Time: "10:00",
     Venue: "OAT",
-    Image: AuroraImage,
+    Image: rangmanch,
     GroupSize: 20,
     minGroupSize: 2,
     maxGroupSize: 20,

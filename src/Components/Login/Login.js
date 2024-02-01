@@ -66,7 +66,7 @@ const Login = () => {
   const handleForgetPassword = async () => {
     try {
       const res = await axios.post(
-        "https://aurora-nokc.onrender.com/forgetPass",
+        `${BACKEND_URL}/forgotPassword`,
         { email: formData.email, type: "user" },
         {
           headers: {
@@ -75,7 +75,11 @@ const Login = () => {
         }
       );
       console.log(res.data);
+        setMessege("Check your mail")
+        setShowToast(true)
     } catch (e) {
+      setMessege("Something went wrong");
+      setShowAlert(true);
       console.log(e);
     }
 
@@ -157,10 +161,12 @@ const Login = () => {
                 </a>
               </div>
               <div class="login_link">
+              
                 <a href="#">
                   {" "}
                   <p></p>
                 </a>
+                <a href="#" onClick={handleForgetPassword}>Forget Password</a>
                 <hr />
                 <p>Not Registered yet?</p>
                 <a class="login_a" href="/register">
