@@ -8,7 +8,8 @@ import "./Table.css";
 import { ThemeProvider, createTheme } from "@mui/material";
 import axios from "axios";
 import BACKEND_URL from "../../../helper.js";
-
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -34,8 +35,42 @@ export default function BasicTable() {
         const response = await axios.get(`${BACKEND_URL}/getCaData`, {
           withCredentials: true,
         });
-        setData(response.data.referrals);
-        console.log(data);
+
+        // Assuming the API response has a 'data' key containing the user information
+        const userData = response.data.referrals;
+
+        // Fetch payment status for each user
+        const paymentStatusPromises = userData.map(async (user) => {
+          try {
+            const paymentStatusResponse = await axios.post(
+              `${BACKEND_URL}/getPaymentStatus`,
+              {
+                email: user.email,
+              },
+              {
+                withCredentials: true,
+              }
+            );
+            // Check if associatedPayments is an empty array or contains a string
+            const hasAssociatedPayments =
+              Array.isArray(paymentStatusResponse.data) &&
+              paymentStatusResponse.data.length > 0;
+
+            return { ...user, hasAssociatedPayments };
+          } catch (error) {
+            console.error(
+              `Error fetching payment status for ${user.email}:`,
+              error
+            );
+            return { ...user, hasAssociatedPayments: false };
+          }
+        });
+
+        // Wait for all payment status requests to complete
+        const modifiedData = await Promise.all(paymentStatusPromises);
+
+        setData(modifiedData);
+
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -43,6 +78,7 @@ export default function BasicTable() {
 
     fetchData();
   }, []);
+
   const theme = createTheme({
     palette: {
       mode: "dark",
@@ -71,7 +107,21 @@ export default function BasicTable() {
         header: "College",
         size: 200,
       },
-      // Add more columns as needed
+      {
+        accessorKey: "hasAssociatedPayments",
+        header: "Payment Status",
+        size: 150,
+        Cell: ({ cellData }) =>
+          cellData === true ? (
+            <React.Fragment>
+              <CheckCircleIcon style={{ color: "green" }} /> Paid
+            </React.Fragment>
+          ) : (
+            <React.Fragment>
+              <QueryBuilderIcon style={{ color: "orange" }} /> Pending
+            </React.Fragment>
+          ),
+      },
     ],
     []
   );
