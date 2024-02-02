@@ -76,6 +76,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+
     if (!FormData.phone) {
       setMessege("Enter your phone number !");
       setShowAlert(true);

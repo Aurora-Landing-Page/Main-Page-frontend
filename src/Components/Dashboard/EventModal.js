@@ -82,6 +82,9 @@ export function EventModal({ isOpen, setIsOpen, data }) {
   };
 
   const handleClickOpen = () => {
+    const regexExp =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi;
+      
     if (formData?.groupName === "") {
       setMessege("Please enter your group name");
       setShowAlert(true);
@@ -105,8 +108,18 @@ export function EventModal({ isOpen, setIsOpen, data }) {
         setShowAlert(true);
         return;
       }
+      if (!regexExp.test(formData.members[i].email)) {
+        setMessege("Enter valid email for all members!");
+        setShowAlert(true);
+        return;
+      }
       if (formData.members[i].phone === "") {
         setMessege("Please enter phone number of all members");
+        setShowAlert(true);
+        return;
+      }
+      if (formData.members[i].phone == String(0)) {
+        setMessege("Any Phone number should not start with 0 !");
         setShowAlert(true);
         return;
       }
@@ -124,38 +137,10 @@ export function EventModal({ isOpen, setIsOpen, data }) {
 
   const handleUpload = async () => {
     console.log(selectedFile);
+    
     if (!isFileUploaded) {
       setMessege("Please upload the screenshot of payment");
       setShowAlert(true);
-    }
-    // check data
-    if (formData?.groupName === "") {
-      setMessege("Please enter your group name");
-      setShowAlert(true);
-      return;
-    }
-    if (formData?.groupName === "") {
-      setMessege("Please enter your group name");
-      setShowAlert(true);
-      return;
-    }
-
-    for (let i = 0; i < formData.members.length; i++) {
-      if (formData.members[i].name === "") {
-        setMessege("Please enter name of all members");
-        setShowAlert(true);
-        return;
-      }
-      if (formData.members[i].email === "") {
-        setMessege("Please enter email of all members");
-        setShowAlert(true);
-        return;
-      }
-      if (formData.members[i].phone === "") {
-        setMessege("Please enter phone number of all members");
-        setShowAlert(true);
-        return;
-      }
     }
 
     setLoading(true);
