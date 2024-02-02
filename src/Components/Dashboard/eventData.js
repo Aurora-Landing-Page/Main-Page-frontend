@@ -147,7 +147,7 @@ const events = [
     Category: "La Arte Fiesta"
   },
   {
-    Title: "Step-up - Astral",
+    Title: "Classical(Astral Rhythms)",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
@@ -165,7 +165,7 @@ const events = [
     Category: "Step-up"
   },
   {
-    Title: "Step-up - Classical",
+    Title: "Classical Dance(Classics Way)",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
@@ -184,7 +184,7 @@ const events = [
 
   },
   {
-    Title: "Step-up - Solo Dance GrooveOff",
+    Title: "Solo Dance GrooveOff",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
@@ -203,7 +203,7 @@ const events = [
 
   },
   {
-    Title: "Step-up - Western",
+    Title: "Western Dance",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
@@ -490,7 +490,7 @@ const events = [
 
   },
   {
-    Title: "Rangmanch  - Nukkad Natak",
+    Title: "Nukkad Natak",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
@@ -509,7 +509,7 @@ const events = [
 
   },
   {
-    Title: "RangManch - Mono Act",
+    Title: "Mono Act",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
@@ -528,7 +528,7 @@ const events = [
 
   },
   {
-    Title: "RangManch - Stage Act",
+    Title: "Stage Act",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",
