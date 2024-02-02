@@ -6,7 +6,7 @@ function HeroTextContainer() {
     <div className={style.main}>
       <svg width="100%">
         <text x="50%" y="20%">Aurora 2024</text>
-        <text x="50%" y="75%">16-18 Feb</text>
+        <text x="50%" y="75%">15-17 March</text>
       </svg>
 
     </div>

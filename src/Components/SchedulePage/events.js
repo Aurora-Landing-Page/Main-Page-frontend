@@ -2,7 +2,7 @@ const plans = [
     {
       id: "1",
       day: "Wednesday",
-      date:"Feb 14",
+      date:"March 15",
       data:[
         {
             Title:"hello",
