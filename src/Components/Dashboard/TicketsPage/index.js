@@ -19,6 +19,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import DoneIcon from '@mui/icons-material/Done';
 import QRCode from "../images/QR.jpg"
 import "../QRDialog.css";
+import "./index.css"
 
 function TicketCardsLayout() {
   const initialFormData = {
@@ -30,6 +31,18 @@ function TicketCardsLayout() {
   };
 
   const [open, setOpen] = React.useState(false);
+  const [open1, setOpen1] = React.useState(false);
+  const [open2, setOpen2] = React.useState(false);
+  const [isGroupPurchaseSelected, setIsGroupPurchaseSelected] = useState(false);
+  const [isIndividualPurchaseSelected, setIsIndividualPurchaseSelected] = useState(true);
+
+
+  const [isButtonDisabled4, setButtonDisabled4] = useState(false);
+  const [isButtonDisabled8, setButtonDisabled8] = useState(false);
+
+
+
+
   const theme = useTheme();
   // const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -53,12 +66,45 @@ function TicketCardsLayout() {
     setSelectedFile(file);
     setIsFileUploaded(true);
   };
-
+  const handleOfferClose = async () => {
+    setOpen1(false);
+    setOpen2(false);
+  }
 
   const handleClose = async () => {
     setSelectedFile(null);
     setIsFileUploaded(false);
     setOpen(false);
+
+  }
+  const handlePurchase = async (e) => {
+    e.preventDefault();
+
+    if (formData.purchaseType === "") {
+      setMessege("Please select either individual or group");
+      setShowAlert(true);
+      return;
+    }
+
+    for (let i = 0; i < formData.members.length; i++) {
+      if (formData.members[i].name === "") {
+        setMessege("Please enter name of all members");
+        setShowAlert(true);
+        return;
+      }
+      if (formData.members[i].email === "") {
+        setMessege("Please enter email of all members");
+        setShowAlert(true);
+        return;
+      }
+      if (formData.members[i].phone === "") {
+        setMessege("Please enter phone number of all members");
+        setShowAlert(true);
+        return;
+      }
+    }
+
+    setOpen(true);
 
   }
 
@@ -90,7 +136,7 @@ function TicketCardsLayout() {
 
     // get reciept id
     setLoading(true);
-    const res = await fetch(`${BACKEND_URL}/createPurchase`, {
+    const res = await fetch(`${ BACKEND_URL }/createPurchase`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -111,13 +157,13 @@ function TicketCardsLayout() {
     setTimeout(() => {
       setLoading(false);
       setMessege("Payment completed, Please check your email!");
-          setShowToast(true);
+      setShowToast(true);
 
     }, 3000);
 
     setOpen(false);
 
-    await fetch(`${BACKEND_URL}/uploadScreenshot`, {
+    await fetch(`${ BACKEND_URL }/uploadScreenshot`, {
       method: 'POST',
       body: formDataPhoto,
       credentials: 'include'
@@ -169,27 +215,45 @@ function TicketCardsLayout() {
     setShowAlert(false);
   };
 
+  // const addMember = () => {
+  //   console.log("add member");
+  //   formData.members.push({
+  //     email: "",
+  //     name: "",
+  //     phone: "",
+  //   });
+
+  //   setFormData({ ...formData });
+  // };
+
   const addMember = () => {
     console.log("add member");
-    formData.members.push({
-      email: "",
-      name: "",
-      phone: "",
-    });
-
-    setFormData({ ...formData });
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      members: [
+        ...prevFormData.members,
+        {
+          email: "",
+          name: "",
+          phone: "",
+        },
+      ],
+    }));
+    setIsGroupPurchaseSelected(true);
   };
+
+
 
   useEffect(() => {
     console.log(formData);
     if (formData.purchaseType === "group") {
       if (formData.accomodation) {
         setAmount(1799 + formData.members.length * 1799);
-        
+
       }
       else {
         setAmount(599 + formData.members.length * 599);
-        
+
       }
     } else {
       if (formData.accomodation) {
@@ -234,12 +298,15 @@ function TicketCardsLayout() {
                         formData.purchaseType = !e.target.checked
                           ? "group"
                           : "individual";
-                        formData.members.splice(
-                          formData.length - formData.length,
-                          1
-                        );
-                        setFormData({ ...formData });
+                        if (e.target.checked) {
+                          formData.members = [];
+                          setFormData({ ...formData });
+                        }
+
+                        setIsGroupPurchaseSelected(false);
+                        setIsIndividualPurchaseSelected(true);
                       }}
+                      checked={isIndividualPurchaseSelected}
                     />
                     <label for="individualPurchase">Individual Purchase</label>
                   </div>
@@ -251,19 +318,101 @@ function TicketCardsLayout() {
                       value="group"
                       class="mr-2 leading-tight"
                       onChange={(e) => {
-                        formData.purchaseType = e.target.checked
-                          ? "group"
-                          : "individual";
-
+                        formData.purchaseType = e.target.checked ? "group" : "individual";
                         setFormData({ ...formData });
+
+                        if (e.target.checked) {
+                          setIsIndividualPurchaseSelected(false);
+                        }
+                        setIsGroupPurchaseSelected(e.target.checked);
+
+
                       }}
+                      checked={isGroupPurchaseSelected}
                     />
                     <label
                       for="groupPurchase"
                       className="flex flex-col "
                     >
                       <span>Group Purchase</span>
-                      <span>(4+1 & 8+3)</span>
+                      <span style={{ marginTop: "10px", display: "flex", flexDirection: "row", gap: "10px" }}>
+
+
+                        <button
+                          // disabled={formData.members.length === 4 || formData.members.length === 10}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            formData.purchaseType = "group";
+
+                            setFormData({ ...formData });
+                            setIsGroupPurchaseSelected(true);
+                            setIsIndividualPurchaseSelected(false);
+                            formData.members = [];
+                            setFormData({ ...formData });
+
+                            console.log(formData.members.length);
+
+                            addMember()
+                            addMember()
+                            addMember()
+                            addMember()
+                            console.log(formData.members.length);
+
+                            // setButtonDisabled4(true);
+                          }} className='offerbtn'
+                        // style={isButtonDisabled4 ?
+                        //   ({ cursor: "not-allowed" }) : ({ cursor: "pointer" })}
+
+                        >4+1
+                        </button>
+                        {console.log(formData.members.length)}
+                        <button
+                          for="groupPurchase"
+                          //  disabled={formData.members.length === 10}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            formData.purchaseType = "group";
+
+                            setFormData({ ...formData });
+                            setIsGroupPurchaseSelected(true);
+                            setIsIndividualPurchaseSelected(false);
+                            formData.members = [];
+                            setFormData({ ...formData });
+
+                            console.log(formData.members.length);
+
+                            addMember()
+                            addMember()
+                            addMember()
+                            addMember()
+                            addMember()
+                            addMember()
+                            addMember()
+                            addMember()
+                            addMember()
+                            addMember()
+                            console.log(formData.members.length);
+                            // setButtonDisabled8(true);
+                            // setButtonDisabled4(true)
+                          }}
+                          className='offerbtn'
+                        // style={isButtonDisabled8 ?
+                        //   ({ cursor: "not-allowed" }) : ({ cursor: "pointer" })}
+                        >8+3</button>
+                        <button
+                          className='offerbtn'
+                          onClick={(e) => {
+                            e.preventDefault();
+                            formData.members = [];
+                            setFormData({ ...formData });
+                            formData.purchaseType = "group";
+                            setFormData({ ...formData });
+                            setIsGroupPurchaseSelected(true);
+                            setIsIndividualPurchaseSelected(false);
+                            console.log(formData)
+                          }}
+                        >Others</button>
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -311,9 +460,8 @@ function TicketCardsLayout() {
                 <div
                   id="groupPurchaseFields"
                   // hidden={formData.purchaseType !== "group"}
-                  className={` mt-2 ${
-                    formData.purchaseType !== "group" ? "hidden" : "block"
-                  } `}
+                  className={` mt-2 ${formData.purchaseType !== "group" ? "hidden" : "block"
+                    } `}
                 >
                   {formData.members.map((member, index) => {
                     return (
@@ -322,16 +470,16 @@ function TicketCardsLayout() {
                           <input
                             type="text"
                             id={`groupMemberName${index}`}
-                            placeholder="Name"
-                            onChange={(e) => {
-                              formData.members[index].name = e.target.value;
-                            }}
-                            class="pl-4 mr-2 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                          placeholder="Name"
+                          onChange={(e) => {
+                            formData.members[index].name = e.target.value;
+                          }}
+                          class="pl-4 mr-2 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                           />
                           <input
                             type="email"
-                            // id={`groupMemberEmail${index}`}
-                            // name={`groupMemberEmail${index}`}
+                            // id={groupMemberEmail${index}}
+                            // name={groupMemberEmail${index}}
                             placeholder="Gender"
                             // onChange={(e) => {
                             //   formData.members[index].email = e.target.value;
@@ -343,22 +491,22 @@ function TicketCardsLayout() {
                           <input
                             type="email"
                             id={`groupMemberEmail${index}`}
-                            name={`groupMemberEmail${index}`}
-                            placeholder="Email"
-                            onChange={(e) => {
-                              formData.members[index].email = e.target.value;
-                            }}
-                            class="pl-4  py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                          name={`groupMemberEmail${index}`}
+                          placeholder="Email"
+                          onChange={(e) => {
+                            formData.members[index].email = e.target.value;
+                          }}
+                          class="pl-4  py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                           />
                           <input
                             type="tel"
                             id={`groupMemberPhone${index}`}
-                            name={`groupMemberPhone${index}`}
-                            placeholder="Phone"
-                            onChange={(e) => {
-                              formData.members[index].phone = e.target.value;
-                            }}
-                            class="pl-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                          name={`groupMemberPhone${index}`}
+                          placeholder="Phone"
+                          onChange={(e) => {
+                            formData.members[index].phone = e.target.value;
+                          }}
+                          class="pl-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                           />
                         </div>
                       </div>
@@ -390,19 +538,15 @@ function TicketCardsLayout() {
                 <a className="login_a ">
                   <button
                     class="login_btn"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setOpen(true);
-                    }}
+                    onClick={handlePurchase}
                   >
                     Purchase (
-                    {`${
-                      formData.members.length === 4
-                        ? amount - 599
-                        : formData.members.length === 10
+                    {`${formData.members.length === 4
+                      ? amount - 599
+                      : formData.members.length === 10
                         ? amount - 1797
                         : amount
-                    }`}
+                      }`}
                     .rs)
                     {/* Passes will be out soon */}
                   </button>
@@ -411,6 +555,21 @@ function TicketCardsLayout() {
               </div>
             </form>
           </div>
+          <Dialog
+            open={open1}
+            onClose={handleOfferClose}
+          >
+            <DialogTitle>{'This is the 4+1 offer'}</DialogTitle>
+
+          </Dialog>
+          <Dialog
+            open={open2}
+            onClose={handleOfferClose}
+          >
+            <DialogTitle>{'This is the 8+3 offer'}</DialogTitle>
+
+          </Dialog>
+
           <Dialog
             // fullScreen={fullScreen}
             open={open}

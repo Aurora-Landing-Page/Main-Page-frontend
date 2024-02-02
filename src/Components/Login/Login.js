@@ -43,6 +43,17 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if(formData.email === "" ){
+      setMessege("Please enter your email!");
+      setShowAlert(true);
+      return;
+    }
+    if(formData.password === "" ){
+      setMessege("Please enter your password!");
+      setShowAlert(true);
+      return;
+    }
     try {
       const response = await axios.post(`${BACKEND_URL}/loginUser`, formData, {
         headers: {
@@ -64,6 +75,13 @@ const Login = () => {
   };
 
   const handleForgetPassword = async () => {
+    if(formData.email === "" ){
+      setMessege("Please enter your email!");
+      setShowAlert(true);
+      return;
+    }
+    setLoading(true);
+    
     try {
       const res = await axios.post(
         `${BACKEND_URL}/forgotPassword`,
@@ -75,10 +93,12 @@ const Login = () => {
         }
       );
       console.log(res.data);
-        setMessege("Check your mail")
+      setLoading(false);
+        setMessege("Check your Email for new password!")
         setShowToast(true)
     } catch (e) {
-      setMessege("Something went wrong");
+      setLoading(false);
+      setMessege("No Account with this email exists, Please register again!");
       setShowAlert(true);
       console.log(e);
     }

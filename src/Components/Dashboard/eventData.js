@@ -53,7 +53,9 @@ import esports from "./images/Flagship(5-8)/esports.png"
 import corna from "./images/Flagship(5-8)/corna.jpg"
 import mnm from "./images/Flagship(5-8)/MR. AND MS. AURORA.png"
 import parivesh from "./images/Flagship(5-8)/parivesh.jpg"
-import rangmanch from "./images/Flagship(5-8)/dramatics.png"
+import rangmanch from "./images/Events(9th-12th)/rangmanch.png";
+import others from "./images/Events(9th-12th)/others.png";
+
 const events = [
   {
     Title: "Graffathon",
@@ -510,7 +512,7 @@ const events = [
     rules: pdf26,
     Time: "10:00",
     Venue: "OAT",
-    Image: AuroraImage,
+    Image: others,
     GroupSize: 3,
     minGroupSize: 3,
     maxGroupSize: 3,
@@ -527,7 +529,7 @@ const events = [
     rules: pdf27,
     Time: "10:00",
     Venue: "OAT",
-    Image: AuroraImage,
+    Image: others,
     GroupSize: 2,
     minGroupSize: 2,
     maxGroupSize: 2,
@@ -544,7 +546,7 @@ const events = [
     rules: pdf29,
     Time: "10:00",
     Venue: "OAT",
-    Image: AuroraImage,
+    Image: others,
     GroupSize: 6,
     minGroupSize: 2,
     maxGroupSize: 6,
@@ -561,7 +563,7 @@ const events = [
     rules: pdf30,
     Time: "10:00",
     Venue: "OAT",
-    Image: AuroraImage,
+    Image: others,
     GroupSize: 4,
     minGroupSize: 2,
     maxGroupSize: 4,
@@ -578,7 +580,7 @@ const events = [
     rules: pdf31,
     Time: "10:00",
     Venue: "OAT",
-    Image: AuroraImage,
+    Image: others,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -595,7 +597,7 @@ const events = [
     rules: pdf35,
     Time: "10:00",
     Venue: "OAT",
-    Image: AuroraImage,
+    Image: others,
     GroupSize: 8,
     minGroupSize: 8,
     maxGroupSize: 8,
@@ -612,7 +614,7 @@ const events = [
     rules: pdf34,
     Time: "10:00",
     Venue: "OAT",
-    Image: AuroraImage,
+    Image: others,
     GroupSize: 7,
     minGroupSize: 5,
     maxGroupSize: 7,
