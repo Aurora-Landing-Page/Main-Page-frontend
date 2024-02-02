@@ -57,10 +57,11 @@ export function TabbedLayout({ navigation, setNavigation }) {
 
         </div>
         <aside className="sm:py-6 px-2 sm:px-[25vw] lg:py-0 lg:px-6 lg:col-span-3 fixed  z-10 flex flex-col items-center justify-center sm:flex sm:justify-start    ">
-          <div className="flex items-center justify-start gap-2 pt-6  sm:pt-10 pb-4">
+          <a className="flex items-center justify-start gap-2 pt-6  sm:pt-10 pb-4" href="/">
+
             <img src="./logo.png" className="h-12 w-12 z-10"></img>
             <div className="text-xl z-10">Aurora 2024</div>
-          </div>
+          </a>
           <nav
             aria-label="Sidebar"
             className="sticky   divide-y divide-gray-300  flex items-start "

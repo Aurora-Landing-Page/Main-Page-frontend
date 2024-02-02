@@ -8,6 +8,7 @@ import Loader from "../../AlertAndLoader/Loader";
 import BACKEND_URL from "../../../helper";
 import { HiUserRemove } from "react-icons/hi";
 import { useTheme } from '@mui/material/styles';
+import DownloadIcon from "@mui/icons-material/Download";
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -20,6 +21,7 @@ import DoneIcon from '@mui/icons-material/Done';
 import QRCode from "../images/QR.jpg"
 import "../QRDialog.css";
 import "./index.css"
+import terms from "./Aurora T&C.pdf"
 
 function TicketCardsLayout() {
   const initialFormData = {
@@ -136,7 +138,7 @@ function TicketCardsLayout() {
 
     // get reciept id
     setLoading(true);
-    const res = await fetch(`${ BACKEND_URL }/createPurchase`, {
+    const res = await fetch(`${BACKEND_URL}/createPurchase`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -163,7 +165,7 @@ function TicketCardsLayout() {
 
     setOpen(false);
 
-    await fetch(`${ BACKEND_URL }/uploadScreenshot`, {
+    await fetch(`${BACKEND_URL}/uploadScreenshot`, {
       method: 'POST',
       body: formDataPhoto,
       credentials: 'include'
@@ -287,7 +289,7 @@ function TicketCardsLayout() {
               </h2>
               <div class=" text-lg sm:text-xl space-y-2 sm:space-y-4 font-medium sm:font-semibold flex flex-col relative  left-3">
                 <div class="flex flex-col sm:flex-row  ">
-                  <div class="flex gap-2 items-center sm:basis-1/2">
+                  <div class="flex gap-2 items-center sm:basis-1/2 mb-4">
                     <input
                       type="radio"
                       id="individualPurchase"
@@ -470,11 +472,11 @@ function TicketCardsLayout() {
                           <input
                             type="text"
                             id={`groupMemberName${index}`}
-                          placeholder="Name"
-                          onChange={(e) => {
-                            formData.members[index].name = e.target.value;
-                          }}
-                          class="pl-4 mr-2 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                            placeholder="Name"
+                            onChange={(e) => {
+                              formData.members[index].name = e.target.value;
+                            }}
+                            class="pl-4 mr-2 py-2  border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                           />
                           <input
                             type="email"
@@ -491,22 +493,22 @@ function TicketCardsLayout() {
                           <input
                             type="email"
                             id={`groupMemberEmail${index}`}
-                          name={`groupMemberEmail${index}`}
-                          placeholder="Email"
-                          onChange={(e) => {
-                            formData.members[index].email = e.target.value;
-                          }}
-                          class="pl-4  py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                            name={`groupMemberEmail${index}`}
+                            placeholder="Email"
+                            onChange={(e) => {
+                              formData.members[index].email = e.target.value;
+                            }}
+                            class="pl-4  py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                           />
                           <input
                             type="tel"
                             id={`groupMemberPhone${index}`}
-                          name={`groupMemberPhone${index}`}
-                          placeholder="Phone"
-                          onChange={(e) => {
-                            formData.members[index].phone = e.target.value;
-                          }}
-                          class="pl-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                            name={`groupMemberPhone${index}`}
+                            placeholder="Phone"
+                            onChange={(e) => {
+                              formData.members[index].phone = e.target.value;
+                            }}
+                            class="pl-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                           />
                         </div>
                       </div>
@@ -533,11 +535,24 @@ function TicketCardsLayout() {
                     </button>
                   </div>
                 </div>
+                <div size="h5">
+                  <a
+                    href={terms}
+                    class="btn-1 outer-shadow hover-in-shadow"
+                    target="next_page"
+                    style={{ textDecoration: "underline" }}
+                  >
+                    Terms and conditions
+                    <DownloadIcon />
+
+                  </a>
+                </div>
               </div>
-              <div class="login_button py-10">
-                <a className="login_a ">
+
+              <div class="login_button py-8">
+                <a className="login_a">
                   <button
-                    class="login_btn"
+                    className="login_btn px-2"
                     onClick={handlePurchase}
                   >
                     Purchase (

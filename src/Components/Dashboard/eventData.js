@@ -1,4 +1,3 @@
-import AuroraImage from "./images/img4.jpeg";
 // import pdf1 from "./pdf/Le Arte Fiesta/Best Out of Waste.pdf";
 import pdf2 from "./pdf/Le Arte Fiesta/Graffathon.pdf";
 import pdf3 from "./pdf/Le Arte Fiesta/Naqaab (Face Painting).pdf";
@@ -61,7 +60,7 @@ const events = [
     Title: "Graffathon",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf2,
@@ -72,13 +71,14 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 199,
-    EventId: "65b6a707f9f62a745ca7dbc7"
+    EventId: "65b6a707f9f62a745ca7dbc7",
+    Category: "La Arte Fiesta"
   },
   {
     Title: "T-shirt Painting",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf37,
@@ -90,12 +90,13 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 149,
     EventId: "65b6a707f9f62a745ca7dbc9",
+    Category: "La Arte Fiesta"
   },
   {
     Title: "Naqaab (Face Painting)",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf3,
@@ -107,12 +108,13 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 149,
     EventId: "65b6a707f9f62a745ca7dbca",
+    Category: "La Arte Fiesta"
   },
   {
     Title: "On Spot Painting",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf4,
@@ -124,12 +126,13 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 149,
     EventId: "65b6a707f9f62a745ca7dbcb",
+    Category: "La Arte Fiesta"
   },
   {
     Title: "On Spot Sketching",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf6,
@@ -141,12 +144,13 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 149,
     EventId: "65b6a707f9f62a745ca7dbcc",
+    Category: "La Arte Fiesta"
   },
   {
     Title: "Step-up - Astral",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Step-up - Classical(Astral Rhythms), epitomizes the rhythmic pulse of diverse dance forms, uniting performers across various genres. From the elegant movements of the Classical Group to the dynamic energy of the Western Group, and the mesmerizing collaboration of Fusion Duos, each performance showcases unparalleled artistry and passion. Embrace the spontaneity of the Impromptu Solo Dance Battle, where individual talents ignite an electrifying dance-off. Join us in celebrating the universal language of movement, where every step becomes an expression of creativity and unity.",
     rules: pdf5,
@@ -158,12 +162,13 @@ const events = [
     maxGroupSize: 15,
     TicketPrice: 249,
     EventId: "65b6a707f9f62a745ca7dbda",
+    Category: "Step-up"
   },
   {
     Title: "Step-up - Classical",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Step-up - Classical Dance(Classics Way), epitomizes the rhythmic pulse of diverse dance forms, uniting performers across various genres. From the elegant movements of the Classical Group to the dynamic energy of the Western Group, and the mesmerizing collaboration of Fusion Duos, each performance showcases unparalleled artistry and passion. Embrace the spontaneity of the Impromptu Solo Dance Battle, where individual talents ignite an electrifying dance-off. Join us in celebrating the universal language of movement, where every step becomes an expression of creativity and unity.",
     rules: pdf5,
@@ -175,12 +180,14 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 349,
     EventId: "65b7c894bd81c5ace666e101",
+    Category: "Step-up"
+
   },
   {
     Title: "Step-up - Solo Dance GrooveOff",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Step-up, epitomizes the rhythmic pulse of diverse dance forms, uniting performers across various genres. From the elegant movements of the Classical Group to the dynamic energy of the Western Group, and the mesmerizing collaboration of Fusion Duos, each performance showcases unparalleled artistry and passion. Embrace the spontaneity of the Impromptu Solo Dance Battle, where individual talents ignite an electrifying dance-off. Join us in celebrating the universal language of movement, where every step becomes an expression of creativity and unity.",
     rules: pdf7,
@@ -192,12 +199,14 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 349,
     EventId: "65b6a707f9f62a745ca7dbce",
+    Category: "Step-up"
+
   },
   {
     Title: "Step-up - Western",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Step-up, epitomizes the rhythmic pulse of diverse dance forms, uniting performers across various genres. From the elegant movements of the Classical Group to the dynamic energy of the Western Group, and the mesmerizing collaboration of Fusion Duos, each performance showcases unparalleled artistry and passion. Embrace the spontaneity of the Impromptu Solo Dance Battle, where individual talents ignite an electrifying dance-off. Join us in celebrating the universal language of movement, where every step becomes an expression of creativity and unity.",
     rules: pdf16,
@@ -209,13 +218,15 @@ const events = [
     maxGroupSize: 20,
     TicketPrice: 249,
     EventId: "65b6a707f9f62a745ca7dbdb",
+    Category: "Step-up"
+
   },
 
   {
     Title: "Classical Singing (solo duo)",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Eumelia, is a harmonious ode to the soulful world of music, featuring captivating performances across multiple categories. Dive into the melodic realm of Solo Singing, where individual voices resonate with emotion and talent. Feel the synergy in Group Singing as voices intertwine in perfect harmony. Experience the instrumental brilliance of both soloists and ensembles, weaving enchanting melodies that captivate hearts. Join us in this celebration of musical diversity, where every note reverberates with passion and artistry.",
     rules: pdf8,
@@ -227,12 +238,14 @@ const events = [
     maxGroupSize: 2,
     TicketPrice: 199,
     EventId: "65b6a707f9f62a745ca7dbdc",
+    Category: "Eumelia"
+
   },
   {
     Title: "Freestyle Singing (Duo)",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Eumelia, is a harmonious ode to the soulful world of music, featuring captivating performances across multiple categories. Dive into the melodic realm of Solo Singing, where individual voices resonate with emotion and talent. Feel the synergy in Group Singing as voices intertwine in perfect harmony. Experience the instrumental brilliance of both soloists and ensembles, weaving enchanting melodies that captivate hearts. Join us in this celebration of musical diversity, where every note reverberates with passion and artistry.",
     rules: pdf9,
@@ -244,12 +257,14 @@ const events = [
     maxGroupSize: 2,
     TicketPrice: 199,
     EventId: "65b6a707f9f62a745ca7dbdd",
+    Category: "Eumelia"
+
   },
   {
     Title: "Freestyle Singing (Solo)",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Eumelia, is a harmonious ode to the soulful world of music, featuring captivating performances across multiple categories. Dive into the melodic realm of Solo Singing, where individual voices resonate with emotion and talent. Feel the synergy in Group Singing as voices intertwine in perfect harmony. Experience the instrumental brilliance of both soloists and ensembles, weaving enchanting melodies that captivate hearts. Join us in this celebration of musical diversity, where every note reverberates with passion and artistry.",
     rules: pdf11,
@@ -261,12 +276,14 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 199,
     EventId: "65b7c894bd81c5ace666e100",
+    Category: "Eumelia"
+
   },
   {
     Title: "Freestyle Singing (Group)",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Eumelia, is a harmonious ode to the soulful world of music, featuring captivating performances across multiple categories. Dive into the melodic realm of Solo Singing, where individual voices resonate with emotion and talent. Feel the synergy in Group Singing as voices intertwine in perfect harmony. Experience the instrumental brilliance of both soloists and ensembles, weaving enchanting melodies that captivate hearts. Join us in this celebration of musical diversity, where every note reverberates with passion and artistry.",
     rules: pdf10,
@@ -278,12 +295,14 @@ const events = [
     maxGroupSize: 8,
     TicketPrice: 199,
     EventId: "65b6a707f9f62a745ca7dbde",
+    Category: "Eumelia"
+
   },
   {
     Title: "Instrumental Acoustic",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Eumelia, is a harmonious ode to the soulful world of music, featuring captivating performances across multiple categories. Dive into the melodic realm of Solo Singing, where individual voices resonate with emotion and talent. Feel the synergy in Group Singing as voices intertwine in perfect harmony. Experience the instrumental brilliance of both soloists and ensembles, weaving enchanting melodies that captivate hearts. Join us in this celebration of musical diversity, where every note reverberates with passion and artistry.",
     rules: pdf12,
@@ -295,12 +314,14 @@ const events = [
     maxGroupSize: 6,
     TicketPrice: 199,
     EventId: "65b7c894bd81c5ace666e103",
+    Category: "Eumelia"
+
   },
   {
     Title: "Acapella (group)",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Eumelia, is a harmonious ode to the soulful world of music, featuring captivating performances across multiple categories. Dive into the melodic realm of Solo Singing, where individual voices resonate with emotion and talent. Feel the synergy in Group Singing as voices intertwine in perfect harmony. Experience the instrumental brilliance of both soloists and ensembles, weaving enchanting melodies that captivate hearts. Join us in this celebration of musical diversity, where every note reverberates with passion and artistry.",
     rules: pdf13,
@@ -312,13 +333,15 @@ const events = [
     maxGroupSize: 12,
     TicketPrice: 199,
     EventId: "65b6a707f9f62a745ca7dbe0",
+    Category: "Eumelia"
+
   },
 
   {
     Title: "Panorama",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "The Pikture, event is a dynamic canvas celebrating the art of visual storytelling. 'Panorama' invites photographers to capture evocative moments, painting diverse perspectives in each frame. 'Portray It' unravels captivating narratives through photo stories, weaving tales within the confines of a single image. Meanwhile, 'Short Movie Making' elevates storytelling through concise cinematic expressions, capturing emotions and narratives in compact yet impactful films. This event unites creatives in a celebration of visual artistry, where every click and reel unveils unique narratives, etching moments into a timeless tapestry of expression.",
     rules: pdf18,
@@ -330,12 +353,14 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 249,
     EventId: "65b6a707f9f62a745ca7dbd0",
+    Category: "ThePikture"
+
   },
   {
     Title: "Pixar",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "The Pikture, event is a dynamic canvas celebrating the art of visual storytelling. 'Panorama' invites photographers to capture evocative moments, painting diverse perspectives in each frame. 'Portray It' unravels captivating narratives through photo stories, weaving tales within the confines of a single image. Meanwhile, 'Short Movie Making' elevates storytelling through concise cinematic expressions, capturing emotions and narratives in compact yet impactful films. This event unites creatives in a celebration of visual artistry, where every click and reel unveils unique narratives, etching moments into a timeless tapestry of expression.",
     rules: pdf17,
@@ -347,12 +372,14 @@ const events = [
     maxGroupSize: 6,
     TicketPrice: 299,
     EventId: "65b6a707f9f62a745ca7dbe1",
+    Category: "ThePikture"
+
   },
   {
     Title: "Short Movie Making",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "The Pikture, event is a dynamic canvas celebrating the art of visual storytelling. 'Panorama' invites photographers to capture evocative moments, painting diverse perspectives in each frame. 'Portray It' unravels captivating narratives through photo stories, weaving tales within the confines of a single image. Meanwhile, 'Short Movie Making' elevates storytelling through concise cinematic expressions, capturing emotions and narratives in compact yet impactful films. This event unites creatives in a celebration of visual artistry, where every click and reel unveils unique narratives, etching moments into a timeless tapestry of expression.",
     rules: pdf19,
@@ -364,12 +391,14 @@ const events = [
     maxGroupSize: 3,
     TicketPrice: 299,
     EventId: "65b6a707f9f62a745ca7dbe2",
+    Category: "ThePikture"
+
   },
   {
     Title: "Debate",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'Debate', each fostering critical thinking and eloquence. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. Unleash the laughter, spark the imagination: Charades Chronicles - Where Every Gesture Tells a Tale! KBC - Where Dreams Meet Questions. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf20,
@@ -381,12 +410,14 @@ const events = [
     maxGroupSize: 2,
     TicketPrice: 99,
     EventId: "65b7c894bd81c5ace666e102",
+    Category: "Literary_SpeakingArts"
+
   },
   {
     Title: "Open Mic",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'Debate', each fostering critical thinking and eloquence. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. Unleash the laughter, spark the imagination: Charades Chronicles - Where Every Gesture Tells a Tale! KBC - Where Dreams Meet Questions. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf22,
@@ -398,12 +429,14 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 99,
     EventId: "65b6a707f9f62a745ca7dbd1",
+    Category: "Literary_SpeakingArts"
+
   },
   {
     Title: "Extempore",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'Debate', each fostering critical thinking and eloquence. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. Unleash the laughter, spark the imagination: Charades Chronicles - Where Every Gesture Tells a Tale! KBC - Where Dreams Meet Questions. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf23,
@@ -415,12 +448,14 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 99,
     EventId: "65b6a707f9f62a745ca7dbd2",
+    Category: "Literary_SpeakingArts"
+
   },
   {
     Title: "Charades Chronicles",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'Debate', each fostering critical thinking and eloquence. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. Unleash the laughter, spark the imagination: Charades Chronicles - Where Every Gesture Tells a Tale! KBC - Where Dreams Meet Questions. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf38,
@@ -432,12 +467,14 @@ const events = [
     maxGroupSize: 3,
     TicketPrice: 99,
     EventId: "65b6a707f9f62a745ca7dbe4",
+    Category: "Literary_SpeakingArts"
+
   },
   {
     Title: "KBC",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Literary & Speaking Arts, sets the stage for a captivating amalgamation of expressive talents. Dive into the world of 'Open Mic', where voices resonate with poetry, storytelling, and music. Engage in thought-provoking discussions with 'Debate', each fostering critical thinking and eloquence. Embrace the spontaneity of 'Extempore', where quick thinking meets compelling oration. Unleash the laughter, spark the imagination: Charades Chronicles - Where Every Gesture Tells a Tale! KBC - Where Dreams Meet Questions. This event celebrates the eloquence and artistry of language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.",
     rules: pdf39,
@@ -449,12 +486,14 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 99,
     EventId: "65b6a707f9f62a745ca7dbd3",
+    Category: "Literary_SpeakingArts"
+
   },
   {
     Title: "Rangmanch  - Nukkad Natak",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "RangManch, brings forth a captivating theater experience, showcasing versatile performances across multiple genres. Engage with the raw essence of societal narratives through 'Nukkad Natak', where the streets become a stage for impactful storytelling. Delve into the depths of emotion and character in 'Mono Act', witnessing the power of solo performances in conveying multifaceted stories. Feel the vibrancy of expression in 'Damsharas', where the art of mime and gestures paints vivid stories without uttering a single word. Join us in this celebration of dramatic artistry, where every performance leaves an indelible mark on the stage of storytelling.",
     rules: pdf25,
@@ -466,12 +505,14 @@ const events = [
     maxGroupSize: 25,
     TicketPrice: 249,
     EventId: "65b6a707f9f62a745ca7dbe5",
+    Category: "RangManch"
+
   },
   {
     Title: "RangManch - Mono Act",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "RangManch, brings forth a captivating theater experience, showcasing versatile performances across multiple genres. Engage with the raw essence of societal narratives through 'Nukkad Natak', where the streets become a stage for impactful storytelling. Delve into the depths of emotion and character in 'Mono Act', witnessing the power of solo performances in conveying multifaceted stories. Feel the vibrancy of expression in 'Damsharas', where the art of mime and gestures paints vivid stories without uttering a single word. Join us in this celebration of dramatic artistry, where every performance leaves an indelible mark on the stage of storytelling.",
     rules: pdf24,
@@ -483,12 +524,14 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 249,
     EventId: "65b6a707f9f62a745ca7dbd4",
+    Category: "RangManch"
+
   },
   {
     Title: "RangManch - Stage Act",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "RangManch, brings forth a captivating theater experience, showcasing versatile performances across multiple genres. Engage with the raw essence of societal narratives through 'Nukkad Natak', where the streets become a stage for impactful storytelling. Delve into the depths of emotion and character in 'Mono Act', witnessing the power of solo performances in conveying multifaceted stories. Feel the vibrancy of expression in 'Damsharas', where the art of mime and gestures paints vivid stories without uttering a single word. Join us in this celebration of dramatic artistry, where every performance leaves an indelible mark on the stage of storytelling.",
     rules: pdf28,
@@ -500,13 +543,15 @@ const events = [
     maxGroupSize: 20,
     TicketPrice: 249,
     EventId: "65b6a707f9f62a745ca7dbe6",
+    Category: "RangManch"
+
   },
 
   {
     Title: "Aptitude Quiz",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
     rules: pdf26,
@@ -518,12 +563,14 @@ const events = [
     maxGroupSize: 3,
     TicketPrice: 149,
     EventId: "65b6a707f9f62a745ca7dbe7",
+    Category: "Others"
+
   },
   {
     Title: "CineBinge Quiz",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
     rules: pdf27,
@@ -535,12 +582,14 @@ const events = [
     maxGroupSize: 2,
     TicketPrice: 149,
     EventId: "65b6a707f9f62a745ca7dbe8",
+    Category: "Others"
+
   },
   {
     Title: "IPL Auction",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
     rules: pdf29,
@@ -552,12 +601,14 @@ const events = [
     maxGroupSize: 6,
     TicketPrice: 99,
     EventId: "65b6a707f9f62a745ca7dbe9",
+    Category: "Others"
+
   },
   {
     Title: "Pictionary",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
     rules: pdf30,
@@ -569,12 +620,14 @@ const events = [
     maxGroupSize: 4,
     TicketPrice: 99,
     EventId: "65b6a707f9f62a745ca7dbea",
+    Category: "Others"
+
   },
   {
     Title: "Rap Battle",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
     rules: pdf31,
@@ -586,12 +639,14 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 149,
     EventId: "65b6a707f9f62a745ca7dbd5",
+    Category: "Others"
+
   },
   {
     Title: "Treasure Hunt",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
     rules: pdf35,
@@ -603,12 +658,14 @@ const events = [
     maxGroupSize: 8,
     TicketPrice: 199,
     EventId: "65b6a707f9f62a745ca7dbeb",
+    Category: "Others"
+
   },
   {
     Title: "Tug Of War",
     Content: "Sway away",
     Day: "Wednesday",
-    Date: "15th March , 2024",
+    Date: "16th February , 2024",
     Description:
       "Within our event lineup, there are other miscellaneous activities that promise a blend of fun and engagement. Alongside the high-energy 'IPL Auction', stimulating 'Aptitude Quiz', and creative 'Pictionary', there's the trivia-packed 'CineBinge Quiz'. Dive into the digital realm with the interactive 'Reels' or embark on an adventurous 'Treasure Hunt'. Engage in live discussions via 'Instagram Live' or witness the electrifying showdowns of 'Rap Battles' and captivating 'Solo Acts'. These diverse experiences ensure a spirited mix of entertainment and engagement for everyone involved.",
     rules: pdf34,
@@ -620,6 +677,7 @@ const events = [
     maxGroupSize: 7,
     TicketPrice: 99,
     EventId: "65b6a707f9f62a745ca7dbec",
+    Category: "Others"
   },
 ];
 
