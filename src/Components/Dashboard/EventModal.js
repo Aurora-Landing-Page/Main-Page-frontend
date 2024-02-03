@@ -82,8 +82,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
   };
 
   const handleClickOpen = () => {
-    const regexExp =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi;
+    const regexExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
       
     if (formData?.groupName === "") {
       setMessege("Please enter your group name");
@@ -109,6 +108,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
         return;
       }
       if (!regexExp.test(formData.members[i].email)) {
+        console.log(formData.members[i].email);
         setMessege("Enter valid email for all members!");
         setShowAlert(true);
         return;

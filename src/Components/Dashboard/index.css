@@ -14,7 +14,8 @@
 }
 
 .dashboard {
-  @apply min-h-screen;
+  @apply min-h-screen bg-fixed ;
   width: 100vw;
-  background-image: url(./images/dashboard.jpeg);
+  background-image: url(./images/dashboardNew.png);
+  
 }

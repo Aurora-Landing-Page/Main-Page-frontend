@@ -6,7 +6,8 @@ function Card({ data }) {
 
   return (
     <>
-      <EventModal isOpen={modapOpen} setIsOpen={setModapOpen} data={data} />;
+      <EventModal isOpen={modapOpen} setIsOpen={setModapOpen} data={data} />
+      <div></div>
       <button
         className="focus:outline-none m-0 p-4"
         onClick={() => {

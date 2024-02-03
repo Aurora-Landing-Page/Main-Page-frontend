@@ -46,8 +46,8 @@ const Dashboard = () => {
     {
       component: <PurchasedTicketCardsLayout />,
       icon: HiOutlineGlobeAlt,
-      name: "Purchased Tickets",
-      id: "/purchasedTickets",
+      name: "Purchased Passes",
+      id: "/purchasedPasses",
     },
     // {
     //   component: <CiLogout />,
