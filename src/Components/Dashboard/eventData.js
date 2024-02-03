@@ -62,7 +62,7 @@ const events = [
     Day: "Wednesday",
     Date: "16th February , 2024",
     Description:
-      "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
+      "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf2,
     Time: "10:00",
     Venue: "OAT",
@@ -72,7 +72,7 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 199,
     EventId: "65b6a707f9f62a745ca7dbc7",
-    Category: "La Arte Fiesta"
+    Category: "La Arte Fiesta",
   },
   {
     Title: "T-shirt Painting",
@@ -80,7 +80,7 @@ const events = [
     Day: "Wednesday",
     Date: "16th February , 2024",
     Description:
-      "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
+      "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf37,
     Time: "10:00",
     Venue: "OAT",
@@ -90,7 +90,7 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 149,
     EventId: "65b6a707f9f62a745ca7dbc9",
-    Category: "La Arte Fiesta"
+    Category: "La Arte Fiesta",
   },
   {
     Title: "Naqaab (Face Painting)",
@@ -98,7 +98,7 @@ const events = [
     Day: "Wednesday",
     Date: "16th February , 2024",
     Description:
-      "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
+      "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf3,
     Time: "10:00",
     Venue: "OAT",
@@ -108,7 +108,7 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 149,
     EventId: "65b6a707f9f62a745ca7dbca",
-    Category: "La Arte Fiesta"
+    Category: "La Arte Fiesta",
   },
   {
     Title: "On Spot Painting",
@@ -116,7 +116,7 @@ const events = [
     Day: "Wednesday",
     Date: "16th February , 2024",
     Description:
-      "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
+      "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf4,
     Time: "10:00",
     Venue: "OAT",
@@ -126,7 +126,7 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 149,
     EventId: "65b6a707f9f62a745ca7dbcb",
-    Category: "La Arte Fiesta"
+    Category: "La Arte Fiesta",
   },
   {
     Title: "On Spot Sketching",
@@ -134,7 +134,7 @@ const events = [
     Day: "Wednesday",
     Date: "16th February , 2024",
     Description:
-      "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Best out of Waste', 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)', 'Sneaker Painting', and the innovative online showcase, 'Doodly-doo'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
+      "La Arte Fiesta, is a vibrant celebration of creativity, hosting an array of captivating artistic endeavors. Featuring a series of eclectic events, including 'Naqaab (Face Painting)', 'Graffathon', 'On-spot Painting (Live Art)'. This festival serves as a platform for artists and enthusiasts to unleash their imagination, turning ordinary moments into extraordinary masterpieces. Join us in this jubilant convergence of talent and innovation, where artistry knows no bounds and creativity takes center stage.",
     rules: pdf6,
     Time: "10:00",
     Venue: "OAT",
@@ -144,7 +144,7 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 149,
     EventId: "65b6a707f9f62a745ca7dbcc",
-    Category: "La Arte Fiesta"
+    Category: "La Arte Fiesta",
   },
   {
     Title: "Classical(Astral Rhythms)",
@@ -162,7 +162,7 @@ const events = [
     maxGroupSize: 15,
     TicketPrice: 249,
     EventId: "65b6a707f9f62a745ca7dbda",
-    Category: "Step-up"
+    Category: "Step-up",
   },
   {
     Title: "Classical Dance(Classics Way)",
@@ -180,8 +180,7 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 349,
     EventId: "65b7c894bd81c5ace666e101",
-    Category: "Step-up"
-
+    Category: "Step-up",
   },
   {
     Title: "Solo Dance GrooveOff",
@@ -199,8 +198,7 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 349,
     EventId: "65b6a707f9f62a745ca7dbce",
-    Category: "Step-up"
-
+    Category: "Step-up",
   },
   {
     Title: "Western Dance",
@@ -218,8 +216,7 @@ const events = [
     maxGroupSize: 20,
     TicketPrice: 249,
     EventId: "65b6a707f9f62a745ca7dbdb",
-    Category: "Step-up"
-
+    Category: "Step-up",
   },
 
   {
@@ -238,8 +235,7 @@ const events = [
     maxGroupSize: 2,
     TicketPrice: 199,
     EventId: "65b6a707f9f62a745ca7dbdc",
-    Category: "Eumelia"
-
+    Category: "Eumelia",
   },
   {
     Title: "Freestyle Singing (Duo)",
@@ -257,8 +253,7 @@ const events = [
     maxGroupSize: 2,
     TicketPrice: 199,
     EventId: "65b6a707f9f62a745ca7dbdd",
-    Category: "Eumelia"
-
+    Category: "Eumelia",
   },
   {
     Title: "Freestyle Singing (Solo)",
@@ -276,8 +271,7 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 199,
     EventId: "65b7c894bd81c5ace666e100",
-    Category: "Eumelia"
-
+    Category: "Eumelia",
   },
   {
     Title: "Freestyle Singing (Group)",
@@ -295,8 +289,7 @@ const events = [
     maxGroupSize: 8,
     TicketPrice: 199,
     EventId: "65b6a707f9f62a745ca7dbde",
-    Category: "Eumelia"
-
+    Category: "Eumelia",
   },
   {
     Title: "Instrumental Acoustic",
@@ -314,8 +307,7 @@ const events = [
     maxGroupSize: 6,
     TicketPrice: 199,
     EventId: "65b7c894bd81c5ace666e103",
-    Category: "Eumelia"
-
+    Category: "Eumelia",
   },
   {
     Title: "Acapella (group)",
@@ -333,8 +325,7 @@ const events = [
     maxGroupSize: 12,
     TicketPrice: 199,
     EventId: "65b6a707f9f62a745ca7dbe0",
-    Category: "Eumelia"
-
+    Category: "Eumelia",
   },
 
   {
@@ -353,8 +344,7 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 249,
     EventId: "65b6a707f9f62a745ca7dbd0",
-    Category: "ThePikture"
-
+    Category: "ThePikture",
   },
   {
     Title: "Pixar",
@@ -372,8 +362,7 @@ const events = [
     maxGroupSize: 6,
     TicketPrice: 299,
     EventId: "65b6a707f9f62a745ca7dbe1",
-    Category: "ThePikture"
-
+    Category: "ThePikture",
   },
   {
     Title: "Short Movie Making",
@@ -391,8 +380,7 @@ const events = [
     maxGroupSize: 3,
     TicketPrice: 299,
     EventId: "65b6a707f9f62a745ca7dbe2",
-    Category: "ThePikture"
-
+    Category: "ThePikture",
   },
   {
     Title: "Debate",
@@ -410,8 +398,7 @@ const events = [
     maxGroupSize: 2,
     TicketPrice: 99,
     EventId: "65b7c894bd81c5ace666e102",
-    Category: "Literary_SpeakingArts"
-
+    Category: "Literary_SpeakingArts",
   },
   {
     Title: "Open Mic",
@@ -429,8 +416,7 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 99,
     EventId: "65b6a707f9f62a745ca7dbd1",
-    Category: "Literary_SpeakingArts"
-
+    Category: "Literary_SpeakingArts",
   },
   {
     Title: "Extempore",
@@ -448,8 +434,7 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 99,
     EventId: "65b6a707f9f62a745ca7dbd2",
-    Category: "Literary_SpeakingArts"
-
+    Category: "Literary_SpeakingArts",
   },
   {
     Title: "Charades Chronicles",
@@ -467,8 +452,7 @@ const events = [
     maxGroupSize: 3,
     TicketPrice: 99,
     EventId: "65b6a707f9f62a745ca7dbe4",
-    Category: "Literary_SpeakingArts"
-
+    Category: "Literary_SpeakingArts",
   },
   {
     Title: "KBC",
@@ -486,8 +470,7 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 99,
     EventId: "65b6a707f9f62a745ca7dbd3",
-    Category: "Literary_SpeakingArts"
-
+    Category: "Literary_SpeakingArts",
   },
   {
     Title: "Nukkad Natak",
@@ -505,8 +488,7 @@ const events = [
     maxGroupSize: 25,
     TicketPrice: 249,
     EventId: "65b6a707f9f62a745ca7dbe5",
-    Category: "RangManch"
-
+    Category: "RangManch",
   },
   {
     Title: "Mono Act",
@@ -524,8 +506,7 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 249,
     EventId: "65b6a707f9f62a745ca7dbd4",
-    Category: "RangManch"
-
+    Category: "RangManch",
   },
   {
     Title: "Stage Act",
@@ -543,8 +524,7 @@ const events = [
     maxGroupSize: 20,
     TicketPrice: 249,
     EventId: "65b6a707f9f62a745ca7dbe6",
-    Category: "RangManch"
-
+    Category: "RangManch",
   },
 
   {
@@ -563,8 +543,7 @@ const events = [
     maxGroupSize: 3,
     TicketPrice: 149,
     EventId: "65b6a707f9f62a745ca7dbe7",
-    Category: "Others"
-
+    Category: "Others",
   },
   {
     Title: "CineBinge Quiz",
@@ -582,8 +561,7 @@ const events = [
     maxGroupSize: 2,
     TicketPrice: 149,
     EventId: "65b6a707f9f62a745ca7dbe8",
-    Category: "Others"
-
+    Category: "Others",
   },
   {
     Title: "IPL Auction",
@@ -601,8 +579,7 @@ const events = [
     maxGroupSize: 6,
     TicketPrice: 99,
     EventId: "65b6a707f9f62a745ca7dbe9",
-    Category: "Others"
-
+    Category: "Others",
   },
   {
     Title: "Pictionary",
@@ -620,8 +597,7 @@ const events = [
     maxGroupSize: 4,
     TicketPrice: 99,
     EventId: "65b6a707f9f62a745ca7dbea",
-    Category: "Others"
-
+    Category: "Others",
   },
   {
     Title: "Rap Battle",
@@ -639,8 +615,7 @@ const events = [
     maxGroupSize: 1,
     TicketPrice: 149,
     EventId: "65b6a707f9f62a745ca7dbd5",
-    Category: "Others"
-
+    Category: "Others",
   },
   {
     Title: "Treasure Hunt",
@@ -658,8 +633,7 @@ const events = [
     maxGroupSize: 8,
     TicketPrice: 199,
     EventId: "65b6a707f9f62a745ca7dbeb",
-    Category: "Others"
-
+    Category: "Others",
   },
   {
     Title: "Tug Of War",
@@ -677,7 +651,7 @@ const events = [
     maxGroupSize: 7,
     TicketPrice: 99,
     EventId: "65b6a707f9f62a745ca7dbec",
-    Category: "Others"
+    Category: "Others",
   },
 ];
 
