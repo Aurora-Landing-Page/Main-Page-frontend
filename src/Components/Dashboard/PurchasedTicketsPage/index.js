@@ -2,13 +2,16 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 import events from "../eventData";
+import FlagshipEvents from "../FlagshipEventsData";
 import EventCard from "./Card";
 import { Card } from "../Modal/Card";
 import BACKEND_URL from "../../../helper";
 function PurchasedTicketCardsLayout() {
-  const [ticketEventIds, setTicketEventIds] = useState([]);
   const [participatedEvents, setParticipatedEvents] = useState([]);
+  const [purchasedTickets, setPurchasedTickets] = useState([]);
   const [userData, setUserData] = useState();
+
+  const eventsData = [...FlagshipEvents, ...events];
 
   useEffect(() => {
     const fetchTickets = async () => {
@@ -17,14 +20,31 @@ function PurchasedTicketCardsLayout() {
           withCredentials: true,
         });
         const { data } = res;
-        setUserData(data);
 
-        setTicketEventIds(data?.participatedIndividual);
+        const participatedGroup = Object.keys(data?.participatedGroup);
 
-        const filteredEvents = events.filter((event) => {
-          return ticketEventIds.includes(event.id);
+        const filteredEvents = eventsData.filter((event) => {
+          return (
+            data?.participatedIndividual.includes(event.EventId) ||
+            participatedGroup.includes(event.EventId)
+          );
         });
 
+        console.log("Data: ", data);
+
+        if (data.groupPurchase.length > 0) {
+          setPurchasedTickets(data.groupPurchase);
+        } else {
+          setPurchasedTickets([
+            {
+              name: data.name,
+              email: data.email,
+              phone: data.phone,
+            },
+          ]);
+        }
+
+        setUserData(data);
         setParticipatedEvents(filteredEvents);
       } catch (error) {}
     };
@@ -60,7 +80,7 @@ function PurchasedTicketCardsLayout() {
               ? "Pronite Ticket"
               : "No Tickets purchased"}
           </h1>
-          {userData?.groupPurchase.map((user, index) => {
+          {purchasedTickets?.map((user, index) => {
             return (
               <Card.Body
                 key={index}

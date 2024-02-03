@@ -15,7 +15,6 @@ import Logo from "./images/o.png";
 import BACKEND_URL from "../../helper";
 import Navbar from "../Navbar/Navbar";
 import { CiLogout } from "react-icons/ci";
-// TODO: Logo and logout button
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -44,12 +43,12 @@ const Dashboard = () => {
       name: "Passes",
       id: "/passes",
     },
-    // {
-    //   component: <PurchasedTicketCardsLayout />,
-    //   icon: HiOutlineGlobeAlt,
-    //   name: "Purchased Tickets",
-    //   id: "/purchasedTickets",
-    // },
+    {
+      component: <PurchasedTicketCardsLayout />,
+      icon: HiOutlineGlobeAlt,
+      name: "Purchased Tickets",
+      id: "/purchasedTickets",
+    },
     // {
     //   component: <CiLogout />,
     //   icon: CiLogout,
