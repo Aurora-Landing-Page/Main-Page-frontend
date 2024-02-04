@@ -191,11 +191,33 @@ const Signup = () => {
     setShowStep2(true);
   };
 
+  const checkUserLoginStatus = async () => {
+    try {
+      const response = await axios.get(`${BACKEND_URL}/getUserData`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        withCredentials: true,
+      });
+
+      if (response.status == 200) {
+        navigate("/dashboard");
+      }
+
+    } catch (error) {
+      // setMessege("Please login first");
+      // setShowAlert(true);
+      // navigate("/login");
+    }
+  };
+
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
+
+    checkUserLoginStatus();
   }, []);
 
   return (

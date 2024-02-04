@@ -94,6 +94,9 @@ const Dashboard = () => {
 
         navigate("/login");
       }
+      else{
+        navigate("/dashboard");
+      }
     } catch (error) {
       setMessege("Please login first");
       setShowAlert(true);

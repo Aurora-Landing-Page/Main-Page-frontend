@@ -106,10 +106,32 @@ const Login = () => {
     setFormData(initialFormData);
   };
   const [loading, setLoading] = useState(true);
+
+  const checkUserLoginStatus = async () => {
+    try {
+      const response = await axios.get(`${BACKEND_URL}/getUserData`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        withCredentials: true,
+      });
+
+      if (response.status == 200) {
+        navigate("/dashboard");
+      }
+      
+    } catch (error) {
+      // setMessege("Please login first");
+      // setShowAlert(true);
+      // navigate("/login");
+    }
+  };
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
+    // checkUserLoginStatus();
   }, []);
 
   useEffect(() => {

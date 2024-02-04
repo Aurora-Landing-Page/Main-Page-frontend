@@ -50,9 +50,9 @@ export function TabbedLayout({ navigation, setNavigation }) {
     // setNavigation(path);
   }
 
-  return  (
+  return (
     <>
-      <Tab.Group defaultIndex={0} onChange={(idx) => {}} vertical>
+      <Tab.Group defaultIndex={0} onChange={(idx) => { }} vertical>
         <div className="h-[25vh]  flex justify-center z-[9] lg:h-full w-full lg:w-80 bg-black opacity-50  sm:opacity-[75%] fixed left-0 ">
 
         </div>
@@ -103,14 +103,33 @@ export function TabbedLayout({ navigation, setNavigation }) {
               )}
             </div>
           </nav>
+
+          <div className="mt-[45vh] hidden lg:block" >
+            <div className="text-base">
+              For any queries, contact:
+            </div>
+            <div >
+              Mrigank Shukla - <a href="tel:8224094514" className="font-extralight">
+                8224094514
+              </a>
+            </div>
+            <div>
+              Divyansh Pathak - <a href="tel:9560421964" className="font-extralight">
+              9560421964
+              </a>
+            </div>
+
+          </div>
         </aside>
+
         <Tab.Panels className="space-y-6 flex w-full items-center justify-center sm:px-6 lg:px-0 lg:col-span-9 pt-[25vh] sm:pt-0">
           {navigation.map((panel, index) => {
             return <Tab.Panel className="flex w-full items-center justify-center relative left-6 sm:left-3 lg:left-[20vw] bottom-6" key={index}>{panel.component}</Tab.Panel>
           })}
         </Tab.Panels>
+
       </Tab.Group>
     </>
-  
+
   );
 }

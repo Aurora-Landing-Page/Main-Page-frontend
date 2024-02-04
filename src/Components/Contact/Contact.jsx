@@ -253,7 +253,7 @@ export const ContactsContainer = () => {
           Divyansh Pathak
         </p>
         <div className="cts-icons">
-          <a href="tel:12345678" className="ct-tel">
+          <a href="tel:9560421964" className="ct-tel">
             9560421964
             {/* <CiPhone className="ct-icon" /> */}
           </a>
@@ -271,7 +271,7 @@ export const ContactsContainer = () => {
           Mrigank Shukla
         </p>
         <div className="cts-icons">
-          <a href="tel:12345678" className="ct-tel">
+          <a href="tel:8224094514" className="ct-tel">
             8224094514
             {/* <CiPhone className="ct-icon" /> */}
           </a>
@@ -290,7 +290,7 @@ export const ContactsContainer = () => {
           Anup Raj
         </p>
         <div className="cts-icons">
-          <a href="tel:12345678" className="ct-tel">
+          <a href="tel:6202907787" className="ct-tel">
             6202907787{/* <CiPhone className="ct-icon" /> */}
           </a>
           <a href="mailto:accounts@aurorafest.in">
@@ -307,7 +307,7 @@ export const ContactsContainer = () => {
           Sumit Verma
         </p>
         <div className="cts-icons">
-          <a href="tel:12345678" className="ct-tel">
+          <a href="tel:7272099495" className="ct-tel">
             7272099495{/* <CiPhone className="ct-icon" /> */}
           </a>
           <a href="mailto:accounts@aurorafest.in">
