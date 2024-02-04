@@ -104,7 +104,7 @@ export function TabbedLayout({ navigation, setNavigation }) {
             </div>
           </nav>
 
-          <div className="mt-[45vh] hidden lg:block" >
+          {/* <div className="mt-[45vh] hidden lg:block" >
             <div className="text-base">
               For any queries, contact:
             </div>
@@ -119,7 +119,7 @@ export function TabbedLayout({ navigation, setNavigation }) {
               </a>
             </div>
 
-          </div>
+          </div> */}
         </aside>
 
         <Tab.Panels className="space-y-6 flex w-full items-center justify-center sm:px-6 lg:px-0 lg:col-span-9 pt-[25vh] sm:pt-0">
