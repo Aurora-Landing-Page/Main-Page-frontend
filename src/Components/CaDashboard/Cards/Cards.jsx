@@ -34,9 +34,11 @@ const Cards = () => {
               }
             );
             // Check if associatedPayments is an empty array or contains a string
-            const hasAssociatedPayments =
-              Array.isArray(paymentStatusResponse.data) &&
-              paymentStatusResponse.data.length > 0;
+            let hasAssociatedPayments = false;
+
+            if(paymentStatusResponse.data && paymentStatusResponse.data[0]){
+              hasAssociatedPayments = true;
+            }
 
             return { ...user, hasAssociatedPayments };
           } catch (error) {
@@ -66,7 +68,7 @@ const Cards = () => {
         let calculatedBarValue;
         let calculatedCreditValue;
         calculatedCreditValue =
-          duePaymentRegistrationsCount * 10 + registrationsCount * 100;
+          duePaymentRegistrationsCount * 5 + registrationsCount * 100;
         if (registrationsCount >= 15) {
           calculatedBarValue = 100;
         } else {

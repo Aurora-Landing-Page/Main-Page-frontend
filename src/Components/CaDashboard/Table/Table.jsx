@@ -52,9 +52,15 @@ export default function BasicTable() {
               }
             );
             // Check if associatedPayments is an empty array or contains a string
-            const hasAssociatedPayments =
-              Array.isArray(paymentStatusResponse.data) &&
-              paymentStatusResponse.data.length > 0;
+            console.log(paymentStatusResponse.data);
+            let hasAssociatedPayments = false;
+
+            if(paymentStatusResponse.data && paymentStatusResponse.data[0]){
+              hasAssociatedPayments = true;
+            }
+
+            console.log(hasAssociatedPayments);
+            
 
             return { ...user, hasAssociatedPayments };
           } catch (error) {
@@ -70,6 +76,7 @@ export default function BasicTable() {
         const modifiedData = await Promise.all(paymentStatusPromises);
 
         setData(modifiedData);
+        console.log(modifiedData);
 
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -111,8 +118,10 @@ export default function BasicTable() {
         accessorKey: "hasAssociatedPayments",
         header: "Payment Status",
         size: 150,
-        Cell: ({ cellData }) =>
-          cellData === true ? (
+        Cell: ({ row }) => {
+          const { hasAssociatedPayments } = row.original;
+      
+          return hasAssociatedPayments ? (
             <React.Fragment>
               <CheckCircleIcon style={{ color: "green" }} /> Paid
             </React.Fragment>
@@ -120,7 +129,8 @@ export default function BasicTable() {
             <React.Fragment>
               <QueryBuilderIcon style={{ color: "orange" }} /> Pending
             </React.Fragment>
-          ),
+          );
+        },
       },
     ],
     []
@@ -132,6 +142,7 @@ export default function BasicTable() {
     pageIndex: 0,
     pageSize: 5,
   });
+
 
   React.useEffect(() => {
     // Do something when the pagination state changes

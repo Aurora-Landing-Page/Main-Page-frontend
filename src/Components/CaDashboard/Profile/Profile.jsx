@@ -32,9 +32,12 @@ const Profile = () => {
             }
           );
           // Check if associatedPayments is an empty array or contains a string
-          const hasAssociatedPayments =
-            Array.isArray(paymentStatusResponse.data) &&
-            paymentStatusResponse.data.length > 0;
+          let hasAssociatedPayments = false;
+
+          if(paymentStatusResponse.data && paymentStatusResponse.data[0]){
+            hasAssociatedPayments = true;
+          }
+
 
           return { ...user, hasAssociatedPayments };
         } catch (error) {
@@ -62,7 +65,7 @@ const Profile = () => {
 
       let calculatedCreditValue;
       calculatedCreditValue =
-        duePaymentRegistrationsCount * 10 + registrationsCount * 100;
+        duePaymentRegistrationsCount * 5 + registrationsCount * 100;
 
       setCreditValue(calculatedCreditValue);
     } catch (error) {
@@ -90,10 +93,10 @@ const Profile = () => {
           <h4 className="data">Referral Code : {ca.referralCode}</h4>
           <h4 className="data">Registrations : {registrations}</h4>
           <h4 className="data">Credits : {creditValue}</h4>
-          <h4 className="data data-last">
+          {/* <h4 className="data data-last">
             **Note : If you are successful to complete 15 referrals, you will
             avail 50% discount.
-          </h4>
+          </h4> */}
         </Stack>
       </div>
     </div>
