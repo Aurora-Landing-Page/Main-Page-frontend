@@ -25,8 +25,8 @@
     background-size: 210vh;
 }
 .login_box {
+    @apply px-[15%] py-[15%] lg:p-[5em];
     border: 0.1px solid rgba(32, 206, 206, 0.058);
-    padding: 5em;
     background-color: rgba(155, 165, 165, 0.05);
     backdrop-filter: blur(100px);
     border-radius: 10px;
