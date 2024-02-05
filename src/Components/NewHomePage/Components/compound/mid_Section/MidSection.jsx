@@ -3,7 +3,7 @@ import mid_background from '../../assets/videos/about_back.mp4'
 import logo from '../../assets/Images/Logo.svg'
 function MidSection() {
     return (<div className={style.midsection}>
-        <video className='video' loop autoPlay muted style={{ width: "100vw" }} >
+        <video className='video' loop autoPlay muted playsinline="" style={{ width: "100vw" }} >
             <source src={mid_background}></source>
         </video>
         <div className={style.midMain}>

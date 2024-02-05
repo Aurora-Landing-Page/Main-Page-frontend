@@ -16,7 +16,7 @@ function HeroSection() {
         <div className={style.HeroSection}>
             <video
                 className={style.backvideo}
-                loop autoPlay muted>
+                loop autoPlay muted playsinline="">
                 <source src={hero_background} type="video/mp4"></source>
             </video>
 
