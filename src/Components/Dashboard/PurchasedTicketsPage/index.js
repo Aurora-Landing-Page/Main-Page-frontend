@@ -92,6 +92,9 @@ function PurchasedTicketCardsLayout() {
               ? "Pronite Ticket"
               : "No Tickets purchased"}
           </h1> */}
+          {purchasedTickets?.length == 0 && (<h1 className="text-xl font-normal text-center text-white mt-4 ">
+          Not Purchased any Passes
+        </h1>) }
           {purchasedTickets?.map((user, index) => {
             return (
               <Card.Body

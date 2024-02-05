@@ -28,7 +28,7 @@ function TicketCardsLayout() {
     accomodation: false,
     pronite: false,
     whole_event: true,
-    purchaseType: "",
+    purchaseType: "individual",
     members: [],
   };
 

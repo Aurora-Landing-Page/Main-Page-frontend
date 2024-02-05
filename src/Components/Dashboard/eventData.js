@@ -201,7 +201,7 @@ const events = [
     Category: "Step-up",
   },
   {
-    Title: "Western Dance",
+    Title: "Western rhythmic Dance",
     Content: "Sway away",
     Day: "Wednesday",
     Date: "16th February , 2024",

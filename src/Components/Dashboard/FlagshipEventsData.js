@@ -76,7 +76,7 @@ const FlagshipEvents = [
     Image: esports,
     GroupSize: 2,
     minGroupSize: 4,
-    maxGroupSize: 4,
+    maxGroupSize: 5,
     TicketPrice: 50,
     EventId: "65b6a707f9f62a745ca7dbd8",
   },
