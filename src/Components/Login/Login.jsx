@@ -6,7 +6,7 @@ import Toast from "../AlertAndLoader/Toast";
 import Loader from "../AlertAndLoader/Loader";
 import Alert from "../AlertAndLoader/Alert";
 // import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
-import image from "./Images/o.png";
+import image from "./images/o.png";
 // import { FaArrowTrendUp } from 'react-icons/fa6';
 import BACKEND_URL from "../../helper";
 // import Navbar from "../Navbar/Navbar";
