@@ -75,13 +75,13 @@ const Signup = () => {
       setShowAlert(true);
       return;
     }
-    if (FormData.phone.at(0) == String(0)) {
+    if (FormData.phone && FormData.phone.at(0) == String(0)) {
       setMessege("Phone number should not start with 0 !");
       setShowAlert(true);
 
       return;
     }
-    if (FormData.phone.length != 10) {
+    if (FormData.phone && FormData.phone.length != 10) {
       setMessege("Enter a valid phone number !");
       setShowAlert(true);
       return;
@@ -112,7 +112,7 @@ const Signup = () => {
     NewDate = NewDate.toISOString();
 
     setFormData({ ...FormData, ["dob"]: NewDate });
-    console.log(FormData);
+    console.log("FormData: ",FormData);
 
     try {
       const response = await axios.post(`${BACKEND_URL}/registerCa`, FormData, {
@@ -373,6 +373,7 @@ const Signup = () => {
                     type="text"
                     className="signup2_input"
                     name="phone"
+                    autocomplete="false"
                     value={FormData.phone}
                     onChange={handleChange}
                     required
