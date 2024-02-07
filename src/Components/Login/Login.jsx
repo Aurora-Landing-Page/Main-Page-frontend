@@ -64,10 +64,17 @@ const Login = () => {
   };
 
   const handleForgetPassword = async () => {
+    if(formData.email === "" ){
+      setMessege("Please enter your email!");
+      setShowAlert(true);
+      return;
+    }
+    setLoading(true);
+    
     try {
       const res = await axios.post(
-        "https://aurora-nokc.onrender.com/forgetPass",
-        { email: formData.email, type: "user" },
+        `${BACKEND_URL}/forgotPassword`,
+        { email: formData.email, type: "CA" },
         {
           headers: {
             "Content-Type": "application/json",
@@ -75,7 +82,13 @@ const Login = () => {
         }
       );
       console.log(res.data);
+      setLoading(false);
+        setMessege("Check your Email for new password!")
+        setShowToast(true)
     } catch (e) {
+      setLoading(false);
+      setMessege("No Account with this email exists, Please register again!");
+      setShowAlert(true);
       console.log(e);
     }
 
@@ -163,6 +176,7 @@ const Login = () => {
                   {" "}
                   <p></p>
                 </a>
+                <a href="#" onClick={handleForgetPassword}>Forget Password</a>
                 <hr />
                 <p>Not Registered yet?</p>
                 <a class="login_a" href="/">
