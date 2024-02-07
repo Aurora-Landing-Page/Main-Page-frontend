@@ -144,8 +144,8 @@ const Signup = () => {
 
 
     } catch (e) {
-      console.log(e);
-      setMessege("An Error occured");
+      // console.log(e.message);
+      setMessege("Email or Phone Number already exists !");
       setShowToast(true);
     }
   };

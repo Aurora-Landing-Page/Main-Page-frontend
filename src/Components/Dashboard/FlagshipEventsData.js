@@ -26,6 +26,7 @@ const FlagshipEvents = [
     maxGroupSize: 1,
     TicketPrice: 349,
     EventId: "65b6a707f9f62a745ca7dbc6",
+    head: "Mrigank Shukla (8224094514)"
   },
   {
     Title: "Parivesh",
@@ -44,6 +45,7 @@ const FlagshipEvents = [
     maxGroupSize: 15,
     TicketPrice: 349,
     EventId: "65b6a707f9f62a745ca7dbd6",
+    head: "Mrigank Shukla (8224094514)"
   },
   {
     Title: "Corna",
@@ -62,6 +64,7 @@ const FlagshipEvents = [
     maxGroupSize: 8,
     TicketPrice: 400,
     EventId: "65b6a707f9f62a745ca7dbd7",
+    head: "Mrigank Shukla (8224094514)"
   },
   {
     Title: "BattleNova - BGMI",
@@ -79,6 +82,7 @@ const FlagshipEvents = [
     maxGroupSize: 5,
     TicketPrice: 50,
     EventId: "65b6a707f9f62a745ca7dbd8",
+    head: "Mrigank Shukla (8224094514)"
   },
   {
     Title: "BattleNova - Valo",
@@ -96,6 +100,7 @@ const FlagshipEvents = [
     maxGroupSize: 6,
     TicketPrice: 70,
     EventId: "65b6a707f9f62a745ca7dbd9",
+    head: "Mrigank Shukla (8224094514)"
   },
 ];
 

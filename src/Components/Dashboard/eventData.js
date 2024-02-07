@@ -71,7 +71,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 199,
-    EventId: "65b6a707f9f62a745ca7dbc7",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbc7",
     Category: "La Arte Fiesta",
   },
   {
@@ -89,7 +89,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 149,
-    EventId: "65b6a707f9f62a745ca7dbc9",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbc9",
     Category: "La Arte Fiesta",
   },
   {
@@ -107,7 +107,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 149,
-    EventId: "65b6a707f9f62a745ca7dbca",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbca",
     Category: "La Arte Fiesta",
   },
   {
@@ -125,7 +125,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 149,
-    EventId: "65b6a707f9f62a745ca7dbcb",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbcb",
     Category: "La Arte Fiesta",
   },
   {
@@ -143,7 +143,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 149,
-    EventId: "65b6a707f9f62a745ca7dbcc",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbcc",
     Category: "La Arte Fiesta",
   },
   {
@@ -161,7 +161,7 @@ const events = [
     minGroupSize: 7,
     maxGroupSize: 15,
     TicketPrice: 199,
-    EventId: "65b6a707f9f62a745ca7dbda",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbda",
     Category: "Step-up",
   },
   {
@@ -179,7 +179,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 249,
-    EventId: "65b7c894bd81c5ace666e101",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b7c894bd81c5ace666e101",
     Category: "Step-up",
   },
   {
@@ -197,7 +197,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 249,
-    EventId: "65b6a707f9f62a745ca7dbce",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbce",
     Category: "Step-up",
   },
   {
@@ -215,7 +215,7 @@ const events = [
     minGroupSize: 5,
     maxGroupSize: 20,
     TicketPrice: 199,
-    EventId: "65b6a707f9f62a745ca7dbdb",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbdb",
     Category: "Step-up",
   },
 
@@ -234,7 +234,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 2,
     TicketPrice: 199,
-    EventId: "65b6a707f9f62a745ca7dbdc",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbdc",
     Category: "Eumelia",
   },
   {
@@ -252,7 +252,7 @@ const events = [
     minGroupSize: 2,
     maxGroupSize: 2,
     TicketPrice: 199,
-    EventId: "65b6a707f9f62a745ca7dbdd",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbdd",
     Category: "Eumelia",
   },
   {
@@ -270,7 +270,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 199,
-    EventId: "65b7c894bd81c5ace666e100",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b7c894bd81c5ace666e100",
     Category: "Eumelia",
   },
   {
@@ -288,7 +288,7 @@ const events = [
     minGroupSize: 3,
     maxGroupSize: 8,
     TicketPrice: 199,
-    EventId: "65b6a707f9f62a745ca7dbde",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbde",
     Category: "Eumelia",
   },
   {
@@ -306,7 +306,7 @@ const events = [
     minGroupSize: 6,
     maxGroupSize: 6,
     TicketPrice: 199,
-    EventId: "65b7c894bd81c5ace666e103",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b7c894bd81c5ace666e103",
     Category: "Eumelia",
   },
   {
@@ -324,7 +324,7 @@ const events = [
     minGroupSize: 4,
     maxGroupSize: 12,
     TicketPrice: 199,
-    EventId: "65b6a707f9f62a745ca7dbe0",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbe0",
     Category: "Eumelia",
   },
 
@@ -343,7 +343,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 249,
-    EventId: "65b6a707f9f62a745ca7dbd0",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbd0",
     Category: "ThePikture",
   },
   {
@@ -361,7 +361,7 @@ const events = [
     minGroupSize: 4,
     maxGroupSize: 6,
     TicketPrice: 299,
-    EventId: "65b6a707f9f62a745ca7dbe1",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbe1",
     Category: "ThePikture",
   },
   {
@@ -379,7 +379,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 3,
     TicketPrice: 299,
-    EventId: "65b6a707f9f62a745ca7dbe2",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbe2",
     Category: "ThePikture",
   },
   {
@@ -397,7 +397,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 2,
     TicketPrice: 99,
-    EventId: "65b7c894bd81c5ace666e102",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b7c894bd81c5ace666e102",
     Category: "Literary_SpeakingArts",
   },
   {
@@ -415,7 +415,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 99,
-    EventId: "65b6a707f9f62a745ca7dbd1",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbd1",
     Category: "Literary_SpeakingArts",
   },
   {
@@ -433,7 +433,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 99,
-    EventId: "65b6a707f9f62a745ca7dbd2",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbd2",
     Category: "Literary_SpeakingArts",
   },
   {
@@ -451,7 +451,7 @@ const events = [
     minGroupSize: 3,
     maxGroupSize: 3,
     TicketPrice: 99,
-    EventId: "65b6a707f9f62a745ca7dbe4",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbe4",
     Category: "Literary_SpeakingArts",
   },
   {
@@ -469,7 +469,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 99,
-    EventId: "65b6a707f9f62a745ca7dbd3",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbd3",
     Category: "Literary_SpeakingArts",
   },
   {
@@ -487,7 +487,7 @@ const events = [
     minGroupSize: 2,
     maxGroupSize: 25,
     TicketPrice: 249,
-    EventId: "65b6a707f9f62a745ca7dbe5",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbe5",
     Category: "RangManch",
   },
   {
@@ -505,7 +505,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 249,
-    EventId: "65b6a707f9f62a745ca7dbd4",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbd4",
     Category: "RangManch",
   },
   {
@@ -523,7 +523,7 @@ const events = [
     minGroupSize: 2,
     maxGroupSize: 20,
     TicketPrice: 249,
-    EventId: "65b6a707f9f62a745ca7dbe6",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbe6",
     Category: "RangManch",
   },
 
@@ -542,7 +542,7 @@ const events = [
     minGroupSize: 3,
     maxGroupSize: 3,
     TicketPrice: 149,
-    EventId: "65b6a707f9f62a745ca7dbe7",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbe7",
     Category: "Others",
   },
   {
@@ -560,7 +560,7 @@ const events = [
     minGroupSize: 2,
     maxGroupSize: 2,
     TicketPrice: 149,
-    EventId: "65b6a707f9f62a745ca7dbe8",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbe8",
     Category: "Others",
   },
   {
@@ -578,7 +578,7 @@ const events = [
     minGroupSize: 2,
     maxGroupSize: 6,
     TicketPrice: 99,
-    EventId: "65b6a707f9f62a745ca7dbe9",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbe9",
     Category: "Others",
   },
   {
@@ -596,7 +596,7 @@ const events = [
     minGroupSize: 2,
     maxGroupSize: 4,
     TicketPrice: 99,
-    EventId: "65b6a707f9f62a745ca7dbea",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbea",
     Category: "Others",
   },
   {
@@ -614,7 +614,7 @@ const events = [
     minGroupSize: 1,
     maxGroupSize: 1,
     TicketPrice: 149,
-    EventId: "65b6a707f9f62a745ca7dbd5",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbd5",
     Category: "Others",
   },
   {
@@ -632,7 +632,7 @@ const events = [
     minGroupSize: 8,
     maxGroupSize: 8,
     TicketPrice: 199,
-    EventId: "65b6a707f9f62a745ca7dbeb",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbeb",
     Category: "Others",
   },
   {
@@ -650,7 +650,7 @@ const events = [
     minGroupSize: 5,
     maxGroupSize: 7,
     TicketPrice: 99,
-    EventId: "65b6a707f9f62a745ca7dbec",
+    head: "Mrigank Shukla (8224094514)", EventId: "65b6a707f9f62a745ca7dbec",
     Category: "Others",
   },
 ];

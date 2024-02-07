@@ -247,6 +247,11 @@ export function EventModal({ isOpen, setIsOpen, data }) {
               <p className="text-sm">{data?.Description}</p>
             </div>
             <div className="flex flex-col space-y-2">
+              <Heading size="h5">Event Head</Heading>
+              {/* <p className="text-sm">{data?.head} : {data?.contact}</p> */}
+              <p className="text-sm">{data?.head}</p>
+            </div>
+            <div className="flex flex-col space-y-2">
               <Heading size="h5">
                 <a
                   href={data?.rules}
