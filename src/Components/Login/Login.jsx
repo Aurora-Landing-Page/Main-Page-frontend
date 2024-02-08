@@ -60,7 +60,7 @@ const Login = () => {
       setShowAlert(true);
       console.log(e);
     }
-    setFormData(initialFormData);
+    // setFormData(initialFormData);
   };
 
   const handleForgetPassword = async () => {
