@@ -74,7 +74,7 @@ const Login = () => {
     try {
       const res = await axios.post(
         `${BACKEND_URL}/forgotPassword`,
-        { email: formData.email, type: "CA" },
+        { email: formData.email, type: "ca" },
         {
           headers: {
             "Content-Type": "application/json",
@@ -92,7 +92,7 @@ const Login = () => {
       console.log(e);
     }
 
-    setFormData(initialFormData);
+    // setFormData(initialFormData);
   };
   const [loading, setLoading] = useState(true);
   useEffect(() => {
