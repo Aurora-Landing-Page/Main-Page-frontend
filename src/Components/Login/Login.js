@@ -71,7 +71,6 @@ const Login = () => {
       setShowAlert(true);
       console.log(e);
     }
-    setFormData(initialFormData);
   };
 
   const handleForgetPassword = async () => {
