@@ -44,15 +44,27 @@ function PurchasedTicketCardsLayout() {
 
         if (data.groupPurchase.length > 0) {
           setPurchasedTickets(data.groupPurchase);
-        } else {
-          setPurchasedTickets([
-            {
-              name: data.name,
-              email: data.email,
-              phone: data.phone,
-            },
-          ]);
         }
+        else{
+          if(data.purchasedTickets && data.purchasedTickets[0] == true){
+            setPurchasedTickets([
+              {
+                name: data.name,
+                email: data.email,
+                phone: data.phone,
+              },
+            ]);
+          }
+        }
+        // else {
+        //   setPurchasedTickets([
+        //     {
+        //       name: data.name,
+        //       email: data.email,
+        //       phone: data.phone,
+        //     },
+        //   ]);
+        // }
 
         setUserData(data);
         setParticipatedEvents(filteredEvents);

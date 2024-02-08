@@ -133,9 +133,9 @@ const Signup = () => {
       );
       // console.log(response.data);
 
-      setFormData(initialFormData);
-      setShowStep1(true);
-      setShowStep2(false);
+      // setFormData(initialFormData);
+      // setShowStep1(true);
+      // setShowStep2(false);
 
       setMessege("Registraion Successful");
       setShowToast(true);
@@ -164,6 +164,11 @@ const Signup = () => {
     }
     if (!FormData.email) {
       setMessege("Enter your email !");
+      setShowAlert(true);
+      return;
+    }
+    if (!FormData.dob) {
+      setMessege("Enter your DOB !");
       setShowAlert(true);
       return;
     }
