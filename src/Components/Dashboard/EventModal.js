@@ -75,7 +75,15 @@ export function EventModal({ isOpen, setIsOpen, data }) {
   };
 
   const handleFileChange = (event) => {
+    const MAX_FILE_SIZE_MB = 1;
     const file = event.target.files[0];
+
+    // Check if file size is less than 1 MB
+    if (file && file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
+      setMessege("1 MB is the maximum file size");
+      setShowAlert(true);
+      return;
+    }
 
     setSelectedFile(file);
     setIsFileUploaded(true);
@@ -83,7 +91,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
 
   const handleClickOpen = () => {
     const regexExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-      
+
     if (formData?.groupName === "") {
       setMessege("Please enter your group name");
       setShowAlert(true);
@@ -137,7 +145,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
 
   const handleUpload = async () => {
     console.log(selectedFile);
-    
+
     if (!isFileUploaded) {
       setMessege("Please upload the screenshot of payment");
       setShowAlert(true);

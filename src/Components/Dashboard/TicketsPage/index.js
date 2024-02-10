@@ -61,9 +61,16 @@ function TicketCardsLayout() {
   const [messege, setMessege] = useState("");
 
   const handleFileChange = (event) => {
+    const MAX_FILE_SIZE_MB = 1;
+
     const file = event.target.files[0];
 
-    // Perform any necessary validations or processing here
+    // Check if file size is less than 1 MB
+    if (file && file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
+      setMessege("1 MB is the maximum file size");
+      setShowAlert(true);
+      return;
+    }
 
     setSelectedFile(file);
     setIsFileUploaded(true);
