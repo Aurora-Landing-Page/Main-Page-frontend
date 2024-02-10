@@ -52,7 +52,7 @@ import stepUp from "./images/Events(9th-12th)/StepUp.png";
 // import corna from "./images/Flagship(5-8)/corna.jpg"
 // import mnm from "./images/Flagship(5-8)/MR. AND MS. AURORA.png"
 // import parivesh from "./images/Flagship(5-8)/parivesh.jpg"
-import rangmanch from "./images/Events(9th-12th)/rangmanch.png";
+// import rangmanch from "./images/Events(9th-12th)/rangmanch.png";
 import tshirt from "./images/Events(9th-12th)/tshirtpainting.png"
 import onSpotSketching from "./images/Events(9th-12th)/onspotsketching.png"
 import onSpotPainting from "./images/Events(9th-12th)/onspotpainting.png"
@@ -77,6 +77,8 @@ import tugofwar from "./images/Events(9th-12th)/tugofwar.png"
 import treasurehunt from "./images/Events(9th-12th)/treasurehunt.png"
 import classicalsoloduo from "./images/Events(9th-12th)/classicalsingingsoloduo.png"
 import freestyleSinging from "./images/Events(9th-12th)/freestylesoloduogrp.png"
+import stageact from "./images/Events(9th-12th)/stageact.png"
+import nrityarang from "./images/Events(9th-12th)/nrityarang.png"
 // import others from "./images/Events(9th-12th)/others.png";
 
 const events = [
@@ -180,7 +182,7 @@ const events = [
     rules: pdf5,
     Time: "10:00",
     Venue: "OAT",
-    Image: stepUp,
+    Image: nrityarang,
     GroupSize: 10,
     minGroupSize: 7,
     maxGroupSize: 15,
@@ -542,7 +544,7 @@ const events = [
     rules: pdf28,
     Time: "10:00",
     Venue: "OAT",
-    Image: rangmanch,
+    Image: stageact,
     GroupSize: 20,
     minGroupSize: 2,
     maxGroupSize: 20,
