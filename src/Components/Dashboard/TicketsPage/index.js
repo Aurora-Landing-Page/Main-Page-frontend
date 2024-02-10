@@ -136,7 +136,7 @@ function TicketCardsLayout() {
         setShowAlert(true);
         return;
       }
-      if (formData.members[i].phone === "") {
+      if (!formData.members[i].phone) {
         setMessege("Please enter phone number of all members");
         setShowAlert(true);
         return;

@@ -121,7 +121,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
         setShowAlert(true);
         return;
       }
-      if (formData.members[i].phone === "") {
+      if (!formData.members[i].phone) {
         setMessege("Please enter phone number of all members");
         setShowAlert(true);
         return;
