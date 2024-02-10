@@ -4,11 +4,12 @@ import pdf2 from "./pdf/Parivesh/Parivesh Fashion Show_.pdf";
 import pdf3 from "./pdf/Corna/Corna.pdf";
 import pdf4 from "./pdf/Esports/bgmi.pdf";
 import pdf5 from "./pdf/Esports/Valo.pdf";
-import corna from "./images/Flagship(5-8)/corna.jpg";
-import mnm from "./images/Flagship(5-8)/MR. AND MS. AURORA.png";
-import parivesh from "./images/Flagship(5-8)/parivesh.jpg";
-import esports from "./images/Flagship(5-8)/esports.png";
-
+import corna from "./images/Flagship(5-8)/corna.png";
+import mnm from "./images/Flagship(5-8)/mnm.png";
+import parivesh from "./images/Flagship(5-8)/parivesh.png";
+// import esports from "./images/Flagship(5-8)/esports.png";
+import bgmi from "./images/Flagship(5-8)/bgmi.png"
+import valo from "./images/Flagship(5-8)/valo.png"
 const FlagshipEvents = [
   {
     Title: "Mr. And Ms. Aurora",
@@ -76,7 +77,7 @@ const FlagshipEvents = [
     rules: pdf4,
     Time: "10:00",
     Venue: "OAT",
-    Image: esports,
+    Image: bgmi,
     GroupSize: 2,
     minGroupSize: 4,
     maxGroupSize: 5,
@@ -94,7 +95,7 @@ const FlagshipEvents = [
     rules: pdf5,
     Time: "10:00",
     Venue: "OAT",
-    Image: esports,
+    Image: valo,
     GroupSize: 2,
     minGroupSize: 5,
     maxGroupSize: 6,

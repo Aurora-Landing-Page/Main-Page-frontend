@@ -44,16 +44,40 @@ import pdf39 from "./pdf/Literary and Speaking Activities/KBC(Knowledge Battle C
 import pdf40 from "./pdf/MnM/MnM_.pdf"
 import pdf41 from "./pdf/Parivesh/Parivesh Fashion Show_.pdf"
 import eumelia from "./images/Events(9th-12th)/Eumelia.png";
-import leartes from "./images/Events(9th-12th)/LeArteFiesta.png";
+// import leartes from "./images/Events(9th-12th)/LeArteFiesta.png";
 import literary from "./images/Events(9th-12th)/Literacy and Speaking.png";
 import stepUp from "./images/Events(9th-12th)/StepUp.png";
-import thepikture from "./images/Events(9th-12th)/The Pikture.png";
-import esports from "./images/Flagship(5-8)/esports.png"
-import corna from "./images/Flagship(5-8)/corna.jpg"
-import mnm from "./images/Flagship(5-8)/MR. AND MS. AURORA.png"
-import parivesh from "./images/Flagship(5-8)/parivesh.jpg"
+// import thepikture from "./images/Events(9th-12th)/The Pikture.png";
+// import esports from "./images/Flagship(5-8)/esports.png"
+// import corna from "./images/Flagship(5-8)/corna.jpg"
+// import mnm from "./images/Flagship(5-8)/MR. AND MS. AURORA.png"
+// import parivesh from "./images/Flagship(5-8)/parivesh.jpg"
 import rangmanch from "./images/Events(9th-12th)/rangmanch.png";
-import others from "./images/Events(9th-12th)/others.png";
+import tshirt from "./images/Events(9th-12th)/tshirtpainting.png"
+import onSpotSketching from "./images/Events(9th-12th)/onspotsketching.png"
+import onSpotPainting from "./images/Events(9th-12th)/onspotpainting.png"
+import graffathon from "./images/Events(9th-12th)/graffathon.png"
+import naqaab from "./images/Events(9th-12th)/naqaab.png"
+import pixar from "./images/Events(9th-12th)/pixar.png"
+import panorama from "./images/Events(9th-12th)/panorama.png"
+import shortmovie from "./images/Events(9th-12th)/shortmoviemaking.png"
+import charades from "./images/Events(9th-12th)/charadechronicles.png"
+import debate from "./images/Events(9th-12th)/debate.png"
+import openmic from "./images/Events(9th-12th)/openmic.png"
+import nukkadnatak from "./images/Events(9th-12th)/nukkadnatak.png"
+import monoact from "./images/Events(9th-12th)/monoact.png"
+import acapella from "./images/Events(9th-12th)/acapella.png"
+import instrumental from "./images/Events(9th-12th)/instrumental.png"
+import aptitude from "./images/Events(9th-12th)/aptitudequiz.png"
+import cineBinge from "./images/Events(9th-12th)/cinebinge.png"
+import ipl from "./images/Events(9th-12th)/IPL.png"
+import pictionary from "./images/Events(9th-12th)/pictionary.png"
+import rapbattle from "./images/Events(9th-12th)/rapbattles.png"
+import tugofwar from "./images/Events(9th-12th)/tugofwar.png"
+import treasurehunt from "./images/Events(9th-12th)/treasurehunt.png"
+import classicalsoloduo from "./images/Events(9th-12th)/classicalsingingsoloduo.png"
+import freestyleSinging from "./images/Events(9th-12th)/freestylesoloduogrp.png"
+// import others from "./images/Events(9th-12th)/others.png";
 
 const events = [
   {
@@ -66,7 +90,7 @@ const events = [
     rules: pdf2,
     Time: "10:00",
     Venue: "OAT",
-    Image: leartes,
+    Image: graffathon,
     GroupSize: "4-5",
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -84,7 +108,7 @@ const events = [
     rules: pdf37,
     Time: "10:00",
     Venue: "OAT",
-    Image: leartes,
+    Image: tshirt,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -102,7 +126,7 @@ const events = [
     rules: pdf3,
     Time: "10:00",
     Venue: "OAT",
-    Image: leartes,
+    Image: naqaab,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -120,7 +144,7 @@ const events = [
     rules: pdf4,
     Time: "10:00",
     Venue: "OAT",
-    Image: leartes,
+    Image: onSpotPainting,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -138,7 +162,7 @@ const events = [
     rules: pdf6,
     Time: "10:00",
     Venue: "OAT",
-    Image: leartes,
+    Image: onSpotSketching,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -229,7 +253,7 @@ const events = [
     rules: pdf8,
     Time: "10:00",
     Venue: "OAT",
-    Image: eumelia,
+    Image: classicalsoloduo,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 2,
@@ -247,7 +271,7 @@ const events = [
     rules: pdf9,
     Time: "10:00",
     Venue: "OAT",
-    Image: eumelia,
+    Image: freestyleSinging,
     GroupSize: 2,
     minGroupSize: 2,
     maxGroupSize: 2,
@@ -265,7 +289,7 @@ const events = [
     rules: pdf11,
     Time: "10:00",
     Venue: "OAT",
-    Image: eumelia,
+    Image: freestyleSinging,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -283,7 +307,7 @@ const events = [
     rules: pdf10,
     Time: "10:00",
     Venue: "OAT",
-    Image: eumelia,
+    Image: freestyleSinging,
     GroupSize: 5,
     minGroupSize: 3,
     maxGroupSize: 8,
@@ -301,7 +325,7 @@ const events = [
     rules: pdf12,
     Time: "10:00",
     Venue: "OAT",
-    Image: eumelia,
+    Image: instrumental,
     GroupSize: 6,
     minGroupSize: 6,
     maxGroupSize: 6,
@@ -319,7 +343,7 @@ const events = [
     rules: pdf13,
     Time: "10:00",
     Venue: "OAT",
-    Image: eumelia,
+    Image: acapella,
     GroupSize: 9,
     minGroupSize: 4,
     maxGroupSize: 12,
@@ -338,7 +362,7 @@ const events = [
     rules: pdf18,
     Time: "10:00",
     Venue: "OAT",
-    Image: thepikture,
+    Image: panorama,
     GroupSize: 2,
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -356,7 +380,7 @@ const events = [
     rules: pdf17,
     Time: "10:00",
     Venue: "OAT",
-    Image: thepikture,
+    Image: pixar,
     GroupSize: 1,
     minGroupSize: 4,
     maxGroupSize: 6,
@@ -374,7 +398,7 @@ const events = [
     rules: pdf19,
     Time: "10:00",
     Venue: "OAT",
-    Image: thepikture,
+    Image: shortmovie,
     GroupSize: 2,
     minGroupSize: 1,
     maxGroupSize: 3,
@@ -392,7 +416,7 @@ const events = [
     rules: pdf20,
     Time: "10:00",
     Venue: "OAT",
-    Image: literary,
+    Image: debate,
     GroupSize: 2,
     minGroupSize: 1,
     maxGroupSize: 2,
@@ -410,7 +434,7 @@ const events = [
     rules: pdf22,
     Time: "10:00",
     Venue: "OAT",
-    Image: literary,
+    Image: openmic,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -446,7 +470,7 @@ const events = [
     rules: pdf38,
     Time: "10:00",
     Venue: "OAT",
-    Image: literary,
+    Image: charades,
     GroupSize: 3,
     minGroupSize: 3,
     maxGroupSize: 3,
@@ -482,7 +506,7 @@ const events = [
     rules: pdf25,
     Time: "10:00",
     Venue: "OAT",
-    Image: rangmanch,
+    Image: nukkadnatak,
     GroupSize: 25,
     minGroupSize: 2,
     maxGroupSize: 25,
@@ -500,7 +524,7 @@ const events = [
     rules: pdf24,
     Time: "10:00",
     Venue: "OAT",
-    Image: rangmanch,
+    Image: monoact,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -537,7 +561,7 @@ const events = [
     rules: pdf26,
     Time: "10:00",
     Venue: "OAT",
-    Image: others,
+    Image: aptitude,
     GroupSize: 3,
     minGroupSize: 3,
     maxGroupSize: 3,
@@ -555,7 +579,7 @@ const events = [
     rules: pdf27,
     Time: "10:00",
     Venue: "OAT",
-    Image: others,
+    Image: cineBinge,
     GroupSize: 2,
     minGroupSize: 2,
     maxGroupSize: 2,
@@ -573,7 +597,7 @@ const events = [
     rules: pdf29,
     Time: "10:00",
     Venue: "OAT",
-    Image: others,
+    Image: ipl,
     GroupSize: 6,
     minGroupSize: 2,
     maxGroupSize: 6,
@@ -591,7 +615,7 @@ const events = [
     rules: pdf30,
     Time: "10:00",
     Venue: "OAT",
-    Image: others,
+    Image: pictionary,
     GroupSize: 4,
     minGroupSize: 2,
     maxGroupSize: 4,
@@ -609,7 +633,7 @@ const events = [
     rules: pdf31,
     Time: "10:00",
     Venue: "OAT",
-    Image: others,
+    Image: rapbattle,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -627,7 +651,7 @@ const events = [
     rules: pdf35,
     Time: "10:00",
     Venue: "OAT",
-    Image: others,
+    Image: treasurehunt,
     GroupSize: 8,
     minGroupSize: 8,
     maxGroupSize: 8,
@@ -645,7 +669,7 @@ const events = [
     rules: pdf34,
     Time: "10:00",
     Venue: "OAT",
-    Image: others,
+    Image: tugofwar,
     GroupSize: 7,
     minGroupSize: 5,
     maxGroupSize: 7,
