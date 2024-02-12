@@ -82,6 +82,8 @@ import nrityarang from "./images/Events(9th-12th)/nrityarang.png"
 import extempore from "./images/Events(9th-12th)/extempore.png"
 import kbc from "./images/Events(9th-12th)/kbc.png"
 import nartana from "./images/Events(9th-12th)/nartana.png"
+import rhythmix from "./images/Events(9th-12th)/rhythmix.png"
+import solodancegrooveoff from "./images/Events(9th-12th)/sologrooveoff.png"
 // import others from "./images/Events(9th-12th)/others.png";
 
 const events = [
@@ -221,7 +223,7 @@ const events = [
     rules: pdf7,
     Time: "10:00",
     Venue: "OAT",
-    Image: stepUp,
+    Image: solodancegrooveoff,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -239,7 +241,7 @@ const events = [
     rules: pdf16,
     Time: "10:00",
     Venue: "OAT",
-    Image: stepUp,
+    Image: rhythmix,
     GroupSize: 10,
     minGroupSize: 5,
     maxGroupSize: 20,
