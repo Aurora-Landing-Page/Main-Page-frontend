@@ -79,6 +79,9 @@ import classicalsoloduo from "./images/Events(9th-12th)/classicalsingingsoloduo.
 import freestyleSinging from "./images/Events(9th-12th)/freestylesoloduogrp.png"
 import stageact from "./images/Events(9th-12th)/stageact.png"
 import nrityarang from "./images/Events(9th-12th)/nrityarang.png"
+import extempore from "./images/Events(9th-12th)/extempore.png"
+import kbc from "./images/Events(9th-12th)/kbc.png"
+import nartana from "./images/Events(9th-12th)/nartana.png"
 // import others from "./images/Events(9th-12th)/others.png";
 
 const events = [
@@ -200,7 +203,7 @@ const events = [
     rules: pdf5,
     Time: "10:00",
     Venue: "OAT",
-    Image: stepUp,
+    Image: nartana,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -454,7 +457,7 @@ const events = [
     rules: pdf23,
     Time: "10:00",
     Venue: "OAT",
-    Image: literary,
+    Image: extempore,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
@@ -490,7 +493,7 @@ const events = [
     rules: pdf39,
     Time: "10:00",
     Venue: "OAT",
-    Image: literary,
+    Image: kbc,
     GroupSize: 1,
     minGroupSize: 1,
     maxGroupSize: 1,
