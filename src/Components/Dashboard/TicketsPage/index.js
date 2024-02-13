@@ -119,6 +119,12 @@ function TicketCardsLayout() {
 
   const handleUpload = async () => {
 
+    if(!selectedFile){
+      setMessege("Please upload the screenshot of payment");
+      setShowAlert(true);
+      return;
+    }
+
     if (formData.purchaseType === "") {
       setMessege("Please select either individual or group");
       setShowAlert(true);
