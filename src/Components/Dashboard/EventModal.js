@@ -149,6 +149,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
     if (!isFileUploaded) {
       setMessege("Please upload the screenshot of payment");
       setShowAlert(true);
+      return;
     }
 
     setLoading(true);
