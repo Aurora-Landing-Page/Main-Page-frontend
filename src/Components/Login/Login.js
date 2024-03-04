@@ -44,12 +44,12 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if(formData.email === "" ){
+    if (formData.email === "") {
       setMessege("Please enter your email!");
       setShowAlert(true);
       return;
     }
-    if(formData.password === "" ){
+    if (formData.password === "") {
       setMessege("Please enter your password!");
       setShowAlert(true);
       return;
@@ -74,13 +74,13 @@ const Login = () => {
   };
 
   const handleForgetPassword = async () => {
-    if(formData.email === "" ){
+    if (formData.email === "") {
       setMessege("Please enter your email!");
       setShowAlert(true);
       return;
     }
     setLoading(true);
-    
+
     try {
       const res = await axios.post(
         `${BACKEND_URL}/forgotPassword`,
@@ -93,8 +93,8 @@ const Login = () => {
       );
       console.log(res.data);
       setLoading(false);
-        setMessege("Check your Email for new password!")
-        setShowToast(true)
+      setMessege("Check your Email for new password!");
+      setShowToast(true);
     } catch (e) {
       setLoading(false);
       setMessege("No Account with this email exists, Please register again!");
@@ -118,7 +118,6 @@ const Login = () => {
       if (response.status == 200) {
         navigate("/dashboard");
       }
-      
     } catch (error) {
       // setMessege("Please login first");
       // setShowAlert(true);
@@ -156,7 +155,7 @@ const Login = () => {
         <Loader />
       ) : (
         <div class="login_big-box">
-          <Navbar/>
+          <Navbar />
           <h1 class="login_welcome">Welcome Back</h1>
           <div class="login_box">
             <form action="submit">
@@ -202,12 +201,13 @@ const Login = () => {
                 </a>
               </div>
               <div class="login_link">
-              
                 <a href="#">
                   {" "}
                   <p></p>
                 </a>
-                <a href="#" onClick={handleForgetPassword}>Forget Password</a>
+                <a href="#" onClick={handleForgetPassword}>
+                  Forgot Password?
+                </a>
                 <hr />
                 <p>Not Registered yet?</p>
                 <a class="login_a" href="/register">

@@ -246,7 +246,18 @@ function TicketCardsLayout() {
     console.log(formData);
     if (formData.purchaseType === "group") {
       if (formData.accomodation) {
-        setAmount(1799 + formData.members.length * 1799);
+        if (formData.members.length < 4) {
+          setAmount(1799 + formData.members.length * 1799);
+        } else if (
+          formData.members.length >= 4 &&
+          formData.members.length < 10
+        ) {
+          // 1 free
+          setAmount(1799 + formData.members.length * 1799 - 1350);
+        } else if (formData.members.length >= 10) {
+          // 3 free
+          setAmount(1799 + formData.members.length * 1799 - 3 * 1350);
+        }
       } else {
         setAmount(449 + formData.members.length * 449);
       }
@@ -357,7 +368,7 @@ function TicketCardsLayout() {
                           // style={isButtonDisabled4 ?
                           //   ({ cursor: "not-allowed" }) : ({ cursor: "pointer" })}
                         >
-                          4+1
+                          4+1(Free)
                         </button>
                         {console.log(formData.members.length)}
                         <button
@@ -393,7 +404,7 @@ function TicketCardsLayout() {
                           // style={isButtonDisabled8 ?
                           //   ({ cursor: "not-allowed" }) : ({ cursor: "pointer" })}
                         >
-                          8+3
+                          8+3(Free)
                         </button>
                         <button
                           className="offerbtn"
@@ -455,6 +466,18 @@ function TicketCardsLayout() {
                   />{" "}
                   Accommodation
                 </label>
+                {formData?.accomodation && (
+                  <div className="text-sm">
+                    <b>Note*</b>
+                    <ul>
+                      <li>
+                        1. Accomodation charges are 750/- per day for one
+                        person.
+                      </li>
+                      <li>2. Check Out Timing is 10:00 AM.</li>
+                    </ul>
+                  </div>
+                )}
                 <div
                   id="groupPurchaseFields"
                   // hidden={formData.purchaseType !== "group"}
