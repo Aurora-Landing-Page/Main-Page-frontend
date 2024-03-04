@@ -1,27 +1,27 @@
-import * as React from 'react';
-import { useEffect } from 'react';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import * as React from "react";
+import { useEffect } from "react";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { useState } from "react";
 import Toast from "../../AlertAndLoader/Toast";
 import Alert from "../../AlertAndLoader/Alert";
 import Loader from "../../AlertAndLoader/Loader";
 import BACKEND_URL from "../../../helper";
 import { HiUserRemove } from "react-icons/hi";
-import { useTheme } from '@mui/material/styles';
+import { useTheme } from "@mui/material/styles";
 import DownloadIcon from "@mui/icons-material/Download";
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import { IconButton } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
-import DoneIcon from '@mui/icons-material/Done';
-import QRCode from "../images/QR.jpg"
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import { IconButton } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import DoneIcon from "@mui/icons-material/Done";
+import QRCode from "../images/QR.jpg";
 import "../QRDialog.css";
-import "./index.css"
-import terms from "./Aurora T&C.pdf"
+import "./index.css";
+import terms from "./Aurora T&C.pdf";
 
 function TicketCardsLayout() {
   const initialFormData = {
@@ -36,14 +36,11 @@ function TicketCardsLayout() {
   const [open1, setOpen1] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
   const [isGroupPurchaseSelected, setIsGroupPurchaseSelected] = useState(false);
-  const [isIndividualPurchaseSelected, setIsIndividualPurchaseSelected] = useState(true);
-
+  const [isIndividualPurchaseSelected, setIsIndividualPurchaseSelected] =
+    useState(true);
 
   const [isButtonDisabled4, setButtonDisabled4] = useState(false);
   const [isButtonDisabled8, setButtonDisabled8] = useState(false);
-
-
-
 
   const theme = useTheme();
   // const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
@@ -52,7 +49,7 @@ function TicketCardsLayout() {
   const [selectedFile, setSelectedFile] = React.useState(null);
 
   const [formData, setFormData] = useState(initialFormData);
-  const [amount, setAmount] = useState(599);
+  const [amount, setAmount] = useState(449);
 
   const [showToast, setShowToast] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
@@ -78,14 +75,13 @@ function TicketCardsLayout() {
   const handleOfferClose = async () => {
     setOpen1(false);
     setOpen2(false);
-  }
+  };
 
   const handleClose = async () => {
     setSelectedFile(null);
     setIsFileUploaded(false);
     setOpen(false);
-
-  }
+  };
   const handlePurchase = async (e) => {
     e.preventDefault();
 
@@ -114,12 +110,10 @@ function TicketCardsLayout() {
     }
 
     setOpen(true);
-
-  }
+  };
 
   const handleUpload = async () => {
-
-    if(!selectedFile){
+    if (!selectedFile) {
       setMessege("Please upload the screenshot of payment");
       setShowAlert(true);
       return;
@@ -152,12 +146,12 @@ function TicketCardsLayout() {
     // get reciept id
     setLoading(true);
     const res = await fetch(`${BACKEND_URL}/createPurchase`, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
-      credentials: 'include'
+      credentials: "include",
     });
 
     const data = await res.json();
@@ -165,26 +159,25 @@ function TicketCardsLayout() {
     console.log(selectedFile);
 
     var formDataPhoto = new FormData();
-    formDataPhoto.append('image', selectedFile);
-    formDataPhoto.append('receiptId', recieptId);
+    formDataPhoto.append("image", selectedFile);
+    formDataPhoto.append("receiptId", recieptId);
 
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
       setMessege("Payment completed, Please check your email!");
       setShowToast(true);
-
     }, 3000);
 
     setOpen(false);
 
     await fetch(`${BACKEND_URL}/uploadScreenshot`, {
-      method: 'POST',
+      method: "POST",
       body: formDataPhoto,
-      credentials: 'include'
+      credentials: "include",
     })
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         setLoading(false);
         if (data.success) {
           // setMessege("Your image has been uploaded successfully!");
@@ -192,32 +185,24 @@ function TicketCardsLayout() {
           // setSelectedFile(null);
           // setIsFileUploaded(false);
           // setOpen(false);
-          formData.members.splice(
-            formData.length - formData.length,
-            1
-          );
+          formData.members.splice(formData.length - formData.length, 1);
           setFormData({ ...formData });
-
         } else {
           // setMessege("Payment Unsuccessful");
           // setShowAlert(true);
           // setSelectedFile(null);
           // setIsFileUploaded(false);
           // setOpen(false);
-          formData.members.splice(
-            formData.length - formData.length,
-            1
-          );
+          formData.members.splice(formData.length - formData.length, 1);
           setFormData({ ...formData });
         }
       })
-      .catch(error => {
+      .catch((error) => {
         // setLoading(false);
-        console.error('Error:', error);
+        console.error("Error:", error);
         setMessege("Issue with your internet");
         setShowAlert(true);
       });
-
   };
 
   const handleToastClose = () => {
@@ -257,31 +242,22 @@ function TicketCardsLayout() {
     setIsGroupPurchaseSelected(true);
   };
 
-
-
   useEffect(() => {
     console.log(formData);
     if (formData.purchaseType === "group") {
       if (formData.accomodation) {
         setAmount(1799 + formData.members.length * 1799);
-
-      }
-      else {
-        setAmount(599 + formData.members.length * 599);
-
+      } else {
+        setAmount(449 + formData.members.length * 449);
       }
     } else {
       if (formData.accomodation) {
         setAmount(1799);
-      }
-      else {
-        setAmount(599);
+      } else {
+        setAmount(449);
       }
     }
-
-
   }, [formData]);
-
 
   return (
     <div className="flex items-center justify-center  ">
@@ -333,26 +309,28 @@ function TicketCardsLayout() {
                       value="group"
                       class="mr-2 leading-tight"
                       onChange={(e) => {
-                        formData.purchaseType = e.target.checked ? "group" : "individual";
+                        formData.purchaseType = e.target.checked
+                          ? "group"
+                          : "individual";
                         setFormData({ ...formData });
 
                         if (e.target.checked) {
                           setIsIndividualPurchaseSelected(false);
                         }
                         setIsGroupPurchaseSelected(e.target.checked);
-
-
                       }}
                       checked={isGroupPurchaseSelected}
                     />
-                    <label
-                      for="groupPurchase"
-                      className="flex flex-col "
-                    >
+                    <label for="groupPurchase" className="flex flex-col ">
                       <span>Group Purchase</span>
-                      <span style={{ marginTop: "10px", display: "flex", flexDirection: "row", gap: "10px" }}>
-
-
+                      <span
+                        style={{
+                          marginTop: "10px",
+                          display: "flex",
+                          flexDirection: "row",
+                          gap: "10px",
+                        }}
+                      >
                         <button
                           // disabled={formData.members.length === 4 || formData.members.length === 10}
                           onClick={(e) => {
@@ -367,18 +345,19 @@ function TicketCardsLayout() {
 
                             console.log(formData.members.length);
 
-                            addMember()
-                            addMember()
-                            addMember()
-                            addMember()
+                            addMember();
+                            addMember();
+                            addMember();
+                            addMember();
                             console.log(formData.members.length);
 
                             // setButtonDisabled4(true);
-                          }} className='offerbtn'
-                        // style={isButtonDisabled4 ?
-                        //   ({ cursor: "not-allowed" }) : ({ cursor: "pointer" })}
-
-                        >4+1
+                          }}
+                          className="offerbtn"
+                          // style={isButtonDisabled4 ?
+                          //   ({ cursor: "not-allowed" }) : ({ cursor: "pointer" })}
+                        >
+                          4+1
                         </button>
                         {console.log(formData.members.length)}
                         <button
@@ -396,26 +375,28 @@ function TicketCardsLayout() {
 
                             console.log(formData.members.length);
 
-                            addMember()
-                            addMember()
-                            addMember()
-                            addMember()
-                            addMember()
-                            addMember()
-                            addMember()
-                            addMember()
-                            addMember()
-                            addMember()
+                            addMember();
+                            addMember();
+                            addMember();
+                            addMember();
+                            addMember();
+                            addMember();
+                            addMember();
+                            addMember();
+                            addMember();
+                            addMember();
                             console.log(formData.members.length);
                             // setButtonDisabled8(true);
                             // setButtonDisabled4(true)
                           }}
-                          className='offerbtn'
-                        // style={isButtonDisabled8 ?
-                        //   ({ cursor: "not-allowed" }) : ({ cursor: "pointer" })}
-                        >8+3</button>
+                          className="offerbtn"
+                          // style={isButtonDisabled8 ?
+                          //   ({ cursor: "not-allowed" }) : ({ cursor: "pointer" })}
+                        >
+                          8+3
+                        </button>
                         <button
-                          className='offerbtn'
+                          className="offerbtn"
                           onClick={(e) => {
                             e.preventDefault();
                             formData.members = [];
@@ -424,9 +405,11 @@ function TicketCardsLayout() {
                             setFormData({ ...formData });
                             setIsGroupPurchaseSelected(true);
                             setIsIndividualPurchaseSelected(false);
-                            console.log(formData)
+                            console.log(formData);
                           }}
-                        >Others</button>
+                        >
+                          Others
+                        </button>
                       </span>
                     </label>
                   </div>
@@ -441,7 +424,7 @@ function TicketCardsLayout() {
                       class="mr-2 leading-tight"
                       onChange={(e) => (formData.pronite = e.target.checked)}
                     />{" "}
-                    Pronite(599/-)
+                    Pronite(449/-)
                   </label>
                   <label class="flex items-center">
                     <input
@@ -475,8 +458,9 @@ function TicketCardsLayout() {
                 <div
                   id="groupPurchaseFields"
                   // hidden={formData.purchaseType !== "group"}
-                  className={` mt-2 ${formData.purchaseType !== "group" ? "hidden" : "block"
-                    } `}
+                  className={` mt-2 ${
+                    formData.purchaseType !== "group" ? "hidden" : "block"
+                  } `}
                 >
                   {formData.members.map((member, index) => {
                     return (
@@ -557,45 +541,36 @@ function TicketCardsLayout() {
                   >
                     Terms and conditions
                     <DownloadIcon />
-
                   </a>
                 </div>
               </div>
 
               <div class="login_button py-8">
                 <a className="login_a">
-                  <button
-                    className="login_btn px-2"
-                    onClick={handlePurchase}
-                  >
+                  <button className="login_btn px-2" onClick={handlePurchase}>
                     Purchase (
-                    {`${formData.members.length === 4
-                      ? amount - 599
-                      : formData.members.length === 10
+                    {`${
+                      formData.members.length === 4
+                        ? amount - 449
+                        : formData.members.length === 10
                         ? amount - 1797
                         : amount
-                      }`}
+                    }`}
                     .rs)
                     {/* Passes will be out soon */}
                   </button>
                 </a>
-                <div className="mt-2 " >*you will receive your passes via email after payment</div>
+                <div className="mt-2 ">
+                  *you will receive your passes via email after payment
+                </div>
               </div>
             </form>
           </div>
-          <Dialog
-            open={open1}
-            onClose={handleOfferClose}
-          >
-            <DialogTitle>{'This is the 4+1 offer'}</DialogTitle>
-
+          <Dialog open={open1} onClose={handleOfferClose}>
+            <DialogTitle>{"This is the 4+1 offer"}</DialogTitle>
           </Dialog>
-          <Dialog
-            open={open2}
-            onClose={handleOfferClose}
-          >
-            <DialogTitle>{'This is the 8+3 offer'}</DialogTitle>
-
+          <Dialog open={open2} onClose={handleOfferClose}>
+            <DialogTitle>{"This is the 8+3 offer"}</DialogTitle>
           </Dialog>
 
           <Dialog
