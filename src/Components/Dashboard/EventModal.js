@@ -53,7 +53,11 @@ export function EventModal({ isOpen, setIsOpen, data }) {
   const [messege, setMessege] = useState("");
 
   useEffect(() => {
-    setAmount(groupSize * data.TicketPrice);
+    if (data.EventId === "65b6a707f9f62a745ca7dbd6" && groupSize > 8) {
+      setAmount(2499);
+    } else {
+      setAmount(groupSize * data.TicketPrice);
+    }
   }, [groupSize]);
 
   useEffect(() => {
@@ -160,7 +164,6 @@ export function EventModal({ isOpen, setIsOpen, data }) {
     }, 3000);
     setOpen(false);
 
-
     const res = await fetch(`${BACKEND_URL}/createPurchase`, {
       method: "POST",
       headers: {
@@ -174,17 +177,16 @@ export function EventModal({ isOpen, setIsOpen, data }) {
     const recieptId = data.receiptId;
 
     var formDataPhoto = new FormData();
-    formDataPhoto.append('image', selectedFile);
-    formDataPhoto.append('receiptId', recieptId);
-
+    formDataPhoto.append("image", selectedFile);
+    formDataPhoto.append("receiptId", recieptId);
 
     await fetch(`${BACKEND_URL}/uploadScreenshot`, {
       method: "POST",
       body: formDataPhoto,
       credentials: "include",
     })
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         console.log(data);
         // setLoading(false);
 
@@ -203,9 +205,9 @@ export function EventModal({ isOpen, setIsOpen, data }) {
           // setIsFileUploaded(false);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         // setLoading(false);
-        console.error('Error:', error);
+        console.error("Error:", error);
       });
   };
 
@@ -220,8 +222,6 @@ export function EventModal({ isOpen, setIsOpen, data }) {
 
       setFlag(true);
     }
-
-
   }, []);
 
   return (
@@ -230,7 +230,12 @@ export function EventModal({ isOpen, setIsOpen, data }) {
         <Toast message={messege} duration={3000} onClose={handleToastClose} />
       )}
       {showAlert && (
-        <Alert style={{ marginBottom: "-100px" }} message={messege} duration={3000} onClose={handleAlertClose} />
+        <Alert
+          style={{ marginBottom: "-100px" }}
+          message={messege}
+          duration={3000}
+          onClose={handleAlertClose}
+        />
       )}
       {loading ? (
         <Loader />
@@ -270,7 +275,6 @@ export function EventModal({ isOpen, setIsOpen, data }) {
                 >
                   Rules and Regulations
                   <DownloadIcon />
-
                 </a>
               </Heading>
             </div>
@@ -297,6 +301,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
             <div className="flex flex-col space-y-2">
               <Heading size="h5">Registration Fee per member</Heading>
               <p className="text-sm">{data?.TicketPrice}</p>
+              {data.EventId === "65b6a707f9f62a745ca7dbd6" && (<span className="text-xs">(If group size is more than 8,Group Registration Fee = 2499 INR)</span>)}
             </div>
             <form action="submit">
               <div className="flex flex-col space-y-2 mb-4">
@@ -313,36 +318,42 @@ export function EventModal({ isOpen, setIsOpen, data }) {
                   required
                   class="pl-4 mr-2 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 />
-                {!flag && (<input
-                  type="number"
-                  placeholder="Enter number of members in your group"
-                  onChange={(e) => {
-                    // check if group size is valid
-                    if (e.target.value < data.minGroupSize) {
-                      setMessege(
-                        `Minimum group size is ${data.minGroupSize} for this event`
-                      );
-                      setShowAlert(true);
-                      return;
-                    }
-                    if (e.target.value > data.maxGroupSize) {
-                      setMessege(
-                        `Maximum group size is ${data.maxGroupSize} for this event`
-                      );
-                      setShowAlert(true);
-                      return;
-                    }
+                {!flag && (
+                  <input
+                    type="number"
+                    placeholder="Enter number of members in your group"
+                    onChange={(e) => {
+                      // check if group size is valid
+                      if (e.target.value < data.minGroupSize) {
+                        setMessege(
+                          `Minimum group size is ${data.minGroupSize} for this event`
+                        );
+                        setShowAlert(true);
+                        return;
+                      }
+                      if (e.target.value > data.maxGroupSize) {
+                        setMessege(
+                          `Maximum group size is ${data.maxGroupSize} for this event`
+                        );
+                        setShowAlert(true);
+                        return;
+                      }
 
-                    setGroupSize(e.target.value);
-                    formData.members = [];
-                    for (let i = 0; i < e.target.value - 1; i++) {
-                      formData.members.push({ name: "", email: "", phone: "" });
-                    }
-                    console.log("Members", formData.members.length);
-                  }}
-                  required
-                  class="pl-4 mr-2 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                />)}
+                      setGroupSize(e.target.value);
+                      formData.members = [];
+                      for (let i = 0; i < e.target.value - 1; i++) {
+                        formData.members.push({
+                          name: "",
+                          email: "",
+                          phone: "",
+                        });
+                      }
+                      console.log("Members", formData.members.length);
+                    }}
+                    required
+                    class="pl-4 mr-2 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                  />
+                )}
               </div>
               <div hidden={formData.members.length < 1}>
                 <Heading size="h5" className={"mb-2"}>
@@ -398,9 +409,9 @@ export function EventModal({ isOpen, setIsOpen, data }) {
               {/* Get Passes */}
             </button>
             <div>
-              *Note: This registration does not include accomodation and pronite passes.
+              *Note: This registration does not include accomodation and pronite
+              passes.
             </div>
-
           </Card.Footer>
           {loading && <LoadingFallback />}
           <Dialog
@@ -408,7 +419,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
             open={open}
             onClose={handleClose}
             aria-labelledby="responsive-dialog-title"
-            className='Dialog'
+            className="Dialog"
           >
             <DialogTitle id="responsive-dialog-title">
               {`Pay ${amount} Thorugh The Below QR`}
@@ -417,7 +428,7 @@ export function EventModal({ isOpen, setIsOpen, data }) {
               aria-label="close"
               onClick={handleClose}
               sx={{
-                position: 'absolute',
+                position: "absolute",
                 right: 8,
                 top: 8,
                 color: (theme) => theme.palette.grey[500],
@@ -428,26 +439,30 @@ export function EventModal({ isOpen, setIsOpen, data }) {
             </IconButton>
             <DialogContent>
               <DialogContentText>
-                <img src={QRCode} alt="QR Code" className='Dialog_QR' />
+                <img src={QRCode} alt="QR Code" className="Dialog_QR" />
                 {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex accusantium sapiente repellat facere sed porro ab culpa eius tempore. Hic labore cupiditate sapiente perferendis minus temporibus id consequatur quod voluptatem! */}
                 Upload the screenshot of payment
                 <br />
                 <input
                   accept="image/*"
                   // className={classes.input}
-                  style={{ display: 'none' }}
+                  style={{ display: "none" }}
                   id="raised-button-file"
                   type="file"
                   onChange={handleFileChange}
-
                 />
                 <label htmlFor="raised-button-file">
-                  <Button className='Dialog_Upload' variant='outlined' color='success' component="span" >
+                  <Button
+                    className="Dialog_Upload"
+                    variant="outlined"
+                    color="success"
+                    component="span"
+                  >
                     Upload
                   </Button>
                 </label>
                 {isFileUploaded && (
-                  <DoneIcon style={{ color: 'green', marginLeft: '10px' }} />
+                  <DoneIcon style={{ color: "green", marginLeft: "10px" }} />
                 )}
               </DialogContentText>
             </DialogContent>
@@ -455,14 +470,18 @@ export function EventModal({ isOpen, setIsOpen, data }) {
               {/* <Button autoFocus onClick={handleClose}>
             Disagree
           </Button> */}
-              <Button onClick={handleUpload} variant="contained" color="success" className='Dialog_btn'>
+              <Button
+                onClick={handleUpload}
+                variant="contained"
+                color="success"
+                className="Dialog_btn"
+              >
                 Submit
               </Button>
-
             </DialogActions>
           </Dialog>
-
-        </Modal>)}
+        </Modal>
+      )}
     </>
   );
 }

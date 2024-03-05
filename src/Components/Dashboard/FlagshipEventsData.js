@@ -37,16 +37,15 @@ const FlagshipEvents = [
     Description:
       "Parivesh, the esteemed fashion show at our illustrious college fest, 'Aurora,' stands as a beacon of artistic expression and style. This flagship event unites talents from various backgrounds, curating a mesmerizing display of beauty, fashion, and boundless creativity. As the crowning jewel of our fest, 'Parivesh' ignites the stage with innovative designs and bold presentations. Join us for an enchanting evening where the runway becomes a canvas for audacious fashion statements and stunning elegance. Immerse yourself in the allure of 'Parivesh,' a spectacle that transcends boundaries, celebrating the artistry and passion within the realm of style and fashion.",
     rules: pdf2,
-
     Time: "10:00",
     Venue: "OAT",
     Image: parivesh,
     GroupSize: 2,
-    minGroupSize: 5,
+    minGroupSize: 2,
     maxGroupSize: 15,
     TicketPrice: 349,
     EventId: "65b6a707f9f62a745ca7dbd6",
-    head: "Aman Yadav (8770725193)"
+    head: "Akshat Jain (9171249029)"
   },
   {
     Title: "Corna",
