@@ -100,7 +100,7 @@ const Dashboard = () => {
     } catch (error) {
       setMessege("Please login first");
       setShowAlert(true);
-      // navigate("/login");
+      navigate("/login");
     }
   };
 
