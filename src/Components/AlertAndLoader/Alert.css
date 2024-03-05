@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap");
+
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#cyber-toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100001;
+    overflow: hidden;
+}
+
+#cyber-toast {
+    min-width: 250px;
+    margin-bottom: 15px;
+    color: #00ffea;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    padding: 16px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid #00ffea;
+    box-shadow: 0 0 10px #00ffea;
+    animation: cyberGlow 1.5s infinite alternate;
+}
+
+#cyber-toast-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px 12px;
+    color: #00ffea;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#cyber-alert-box {
+
+    min-width: 250px;
+    margin-bottom: 15px;
+    background-color: #ff003c;
+    color: white;
+    border-radius: 4px;
+    padding: 16px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid #ff003c;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    animation: cyberGlow 1.5s infinite alternate;
+}
+
+#cyber-alert-close {
+    float: right;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+@keyframes cyberGlow {
+    from {
+        box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+    }
+
+    to {
+        box-shadow: 0 0 20px #00ffea, 0 0 30px #00ffea;
+    }
+}
+
+@keyframes cyberPulse {
+    from {
+        background-color: #ff003c;
+    }
+
+    to {
+        background-color: #ff005e;
+    }
+}

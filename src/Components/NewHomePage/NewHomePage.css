@@ -1,0 +1,30 @@
+body {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+/* 
+@media screen and (max-width: 768px) {
+    body {
+        height: 2000px;
+    }
+} */
+
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+/* .wrapper {
+    height: 100%;
+    width: 100%;
+  } */
+/* ::-webkit-scrollbar {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    transform: scale(0);
+} */

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aurora 2k24</title>
+  <meta name="description" content="Some ideas for image slideshow transitions." />
+  <meta name="keywords" content="slideshow, transition, image transition, image animation, gsap, modern" />
+  <meta name="author" content="Codrops" />
+  <link rel="stylesheet" href="https://use.typekit.net/uoh2fuj.css" />
+  <link rel="stylesheet" type="text/css" href="./css/base.css" />
+  <link rel="stylesheet" type="text/css" href="./css/event_img.css" />
+  <link rel="stylesheet" type="text/css" href="./css/button.css">
+  <script>
+    document.documentElement.className = "js";
+    var supportsCssVars = function () {
+      var e,
+        t = document.createElement("style");
+      return (
+        (t.innerHTML = "root: { --tmp-var: bold; }"),
+        document.head.appendChild(t),
+        (e = !!(
+          window.CSS &&
+          window.CSS.supports &&
+          window.CSS.supports("font-weight", "var(--tmp-var)")
+        )),
+        t.parentNode.removeChild(t),
+        e
+      );
+    };
+    supportsCssVars() ||
+      alert(
+        "Please view this demo in a modern browser that supports CSS Variables."
+      );
+  </script>
+  <script src="//tympanus.net/codrops/adpacks/analytics.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<div class="theBall-outer">
+  <div class="theBall"></div>
+</div>
+
+<body class="demo-4 loading">
+  <main>
+    <div class="slides">
+      <div class="slide sl1 s1">
+        <video class="backvideo" src="./video/back_vid.mp4" autoplay loop muted></video>
+        <div style="display: flex; flex-direction: column;" class="text">UPCOMING EVENTS
+          <span class="arrow">&#8595;</span>
+        </div>
+
+      </div>
+
+      <div class="slide sl2 s2">
+        <div class="content">
+          <div class="box BX1"></div>
+          <div class="event_info">
+            <div class="event_head eh1">
+              Eumelia
+            </div>
+            <div class="event_def">"Eumelia" is a harmonious ode to the soulful world of music, featuring captivating
+              performances across multiple categories. Dive into the melodic realm of Solo Singing, where individual
+              voices resonate with emotion and talent. Feel the synergy in Group Singing as voices intertwine in perfect
+              harmony. Join us in this celebration of musical diversity, where every note reverberates with passion and
+              artistry.</div>
+             
+          </div>
+
+        </div>
+
+      </div>
+      <div class="slide sl2 s3">
+        <div class="content">
+          <div class="box BX2"></div>
+          <div class="event_info">
+            <div class="event_head eh1">
+              Parivesh
+            </div>
+            <div class="event_def">"Parivesh", the esteemed fashion show at our illustrious college fest, 'Aurora,'
+              stands as a beacon of artistic expression and style. This flagship event unites talents from various
+              backgrounds, curating a mesmerizing display of beauty, fashion, and boundless creativity.Join us for an
+              enchanting evening where the runway becomes a canvas for audacious fashion statements and stunning
+              elegance.</div>
+             
+          </div>
+
+        </div>
+      </div>
+      <div class="slide sl2 s4">
+        <div class="content">
+          <div class="box BX4"></div>
+          <div class="event_info">
+            <div class="event_head eh1" style="font-size: 5vh; margin: 1vh;">
+              Mr and Ms Aurora
+            </div>
+            <div class="event_def">Get ready to redefine elegance and grace as Mr. and Ms. Aurora beckons you to
+              showcase your charisma and charm. This prestigious event isn't just a contest; it's an opportunity to
+              embody sophistication and poise. Whether it's the charisma in your smile or the confidence in your stride,
+              Mr. and Ms. Aurora is your platform to shine. It's not just a competition; it's a journey of self-expression and a celebration of grace. Embrace the spotlight and let
+              your aura illuminate the stage at Mr. and Ms. Aurora!</div>
+             
+          </div>
+
+        </div>
+      </div>
+      <div class="slide sl2 s5">
+        <div class="content">
+          <div class="box BX3"></div>
+          <div class="event_info">
+            <div class="event_head eh1">
+              Step-up
+            </div>
+            <div class="event_def">Step-up" epitomizes the rhythmic pulse of diverse dance forms, uniting performers across various genres. From the elegant movements of the Classical Group to the dynamic energy of the Western Group, and the mesmerizing collaboration of Fusion Duos, each performance showcases unparalleled artistry and passion.Join us in celebrating the universal language of movement, where every step becomes an expression of creativity and unity.</div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="slide sl2 s6">
+        <div class="content">
+          <div class="box BX5"></div>
+          <div class="event_info">
+            <div class="event_head eh1">
+              Corna
+            </div>
+            <div class="event_def">"Corna" beckons those with music in their souls, a team by their side, and instruments
+              at their fingertips—an opportunity to soar into the realm of renowned bands! It's time to embrace your
+              chance at becoming the next big sensation in the world of music. Corna isn't just a competition; it's the
+              ultimate battleground where bands nationwide showcase their musical prowess. Join us for an electrifying
+              experience at Corna—a stage where talent meets opportunity, and where the journey to musical greatness
+              begins!</div>
+             
+          </div>
+
+        </div>
+      </div>
+      <div class="slide sl2 s7">
+        <div class="content">
+          <div class="box BX6"></div>
+          <div class="event_info">
+            <div class="event_head eh1">
+              Le Arte Fiesta
+            </div>
+            <div class="event_def">"La Arte Fiesta" is a vibrant celebration of creativity, hosting an array of
+              captivating artistic endeavors. Featuring a series of events, including "Best out of Waste," "Naqaab (Face
+              Painting)," "Graffathon," "On-spot Painting (Live Art)," "Sneaker Painting," and the innovative online
+              showcase, "Doodly-doo". Join us in this jubilant convergence of talent and innovation, where artistry
+              knows no bounds and creativity takes center stage.</div>
+             
+          </div>
+
+        </div>
+      </div>
+      <div class="slide sl2 s8">
+        <div class="content">
+          <div class="box BX7"></div>
+          <div class="event_info">
+            <div class="event_head eh1">
+              RangManch
+            </div>
+            <div class="event_def">"RangManch" brings forth a captivating theater experience, showcasing versatile
+              performances across multiple genres. Engage with the raw essence of societal narratives through "Nukkad
+              Natak," where the streets become a stage for impactful storytelling. Delve into the depths of emotion and
+              character in "Mono Act," witnessing the power of solo performances in conveying multifaceted stories. Feel
+              the vibrancy of expression in "Damsharas," where the art of mime and gestures paints vivid stories without
+              uttering a single word.</div>
+             
+          </div>
+
+        </div>
+      </div>
+      <div class="slide sl2 s9">
+        <div class="content">
+          <div class="box BX8"></div>
+          <div class="event_info">
+            <div class="event_head eh1">
+              The Pikture
+            </div>
+            <div class="event_def">"The Pikture" event is a dynamic canvas celebrating the art of visual storytelling.
+              "Panorama" invites photographers to capture evocative moments, painting diverse perspectives in each
+              frame. "Portray It" unravels captivating narratives through photo stories, weaving tales within the
+              confines of a single image. Meanwhile, "Short Movie Making" elevates storytelling through concise
+              cinematic expressions, capturing emotions and narratives in compact yet impactful films. This event unites
+              creatives in a celebration of visual artistry.</div>
+             
+          </div>
+
+        </div>
+      </div>
+      <div class="slide sl2 s10">
+        <div class="content">
+          <div class="box BX9"></div>
+          <div class="event_info">
+            <div class="event_head eh1">
+              Esports
+            </div>
+            <div class="event_def">Gear up for an adrenaline-charged battle as Esports brings you the ultimate showdown
+              in Valorant and BGMI (Battlegrounds Mobile India). It's more than just gaming; it's a battleground where
+              strategy meets skill, and competitors rise to conquer the digital realm. Esports isn't just about playing;
+              it's about tactical brilliance and unwavering focus. Whether it's the tactical maneuvers in Valorant or
+              the thrill of survival in BGMI, Esports invites you to step into the digital arena, compete at your best,
+              and claim victory in the world of competitive gaming!</div>
+             
+          </div>
+
+        </div>
+      </div>
+      <!-- <div class="slide sl2 s11">
+        <div class="content">
+          <div class="box BX10"></div>
+          <div class="event_info">
+            <div class="event_head eh1" style="font-size: 4rem;">
+              Literary & Speaking Arts
+            </div>
+            <div class="event_def">"Literary & Speaking Arts" sets the stage for a captivating amalgamation of
+              expressive talents. Dive into the world of "Open Mic," where voices resonate with poetry, storytelling,
+              and music. Engage in thought-provoking discussions with "English Debate" and "Hindi Debate," each
+              fostering critical thinking and eloquence. "Morning No 1 - Radio" amplifies the charm of live
+              broadcasting, delivering engaging content and vibrant discussions. Embrace the spontaneity of "Extempore,"
+              where quick thinking meets compelling oration. This event celebrates the eloquence and artistry of
+              language, uniting enthusiasts and wordsmiths in a tapestry of literary expression and oratory brilliance.
+            </div>
+             
+          </div>
+
+        </div>
+      </div> -->
+      <div class="slide sl2 s12">
+        <div class="content">
+          <div class="box BX11"></div>
+          <div class="event_info">
+            <div class="event_head eh1">
+              Other Events
+            </div>
+            <div class="event_def">Within our event lineup, there are other miscellaneous activities that promise a
+              blend of fun and engagement. Alongside the high-energy "IPL Auction," stimulating "Aptitude Quiz," and
+              creative "Pictionary," there's the trivia-packed "CineBinge Quiz." Dive into the digital realm with the
+              interactive "Reels" or embark on an adventurous "Treasure Hunt." Engage in live discussions via "Instagram
+              Live" or witness the electrifying showdowns of "Rap Battles" and captivating "Solo Acts." These diverse
+              experiences ensure a spirited mix of entertainment and engagement for everyone involved.</div>
+             
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+  </main>
+  <script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
+  <script src="./js/imagesloaded.pkgd.min.js"></script>
+  <script src="./js/gsap.min.js"></script>
+  <script src="./js/Observer.min.js"></script>
+  <script type="module" src="./js/demo4/index.js"></script>
+  <script src="./js/cursor.js"></script>
+</body>
+
+</html>
