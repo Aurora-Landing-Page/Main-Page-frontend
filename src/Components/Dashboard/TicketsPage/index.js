@@ -255,10 +255,10 @@ function TicketCardsLayout() {
           // 1 free
           setAmount(1799 + formData.members.length * 1799 - 1350);
         } else if (formData.members.length === 10) {
-          setAmount((formData.members.length - 1) * 1799);
-        } else if (formData.members.length >= 10) {
+          setAmount((formData.members.length - 1) * 1799 + 2998);
+        } else if (formData.members.length > 10) {
           // 3 free
-          setAmount(1799 + formData.members.length * 1799 - 3 * 1799);
+          setAmount(1799 + formData.members.length * 1799 - 3 * 799);
         }
       } else {
         setAmount(449 + formData.members.length * 449);
