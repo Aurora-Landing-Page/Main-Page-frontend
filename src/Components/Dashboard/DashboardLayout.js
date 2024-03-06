@@ -26,15 +26,9 @@ const Dashboard = () => {
 
   const [navigation, setNavigation] = useState([
     {
-      component: <FlagshipEventCardsLayout />,
-      icon: HiOutlineGlobeAlt,
-      name: "Flagship Events",
-      id: "/flagship-events",
-    },
-    {
       component: <EventCardsLayout />,
       icon: HiOutlineGlobeAlt,
-      name: "Club Events",
+      name: "Events",
       id: "/club-events",
     },
     {
@@ -93,8 +87,7 @@ const Dashboard = () => {
         setShowAlert(true);
 
         navigate("/login");
-      }
-      else{
+      } else {
         navigate("/dashboard");
       }
     } catch (error) {
