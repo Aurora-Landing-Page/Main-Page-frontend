@@ -261,7 +261,11 @@ function TicketCardsLayout() {
           setAmount(1799 + formData.members.length * 1799 - 3 * 799);
         }
       } else {
-        setAmount(449 + formData.members.length * 449);
+        if (formData.members.length === 10) {
+          setAmount(449 + formData.members.length * 449 + 450);
+        } else {
+          setAmount(449 + formData.members.length * 449- 3 * 449);
+        }
       }
     } else {
       if (formData.accomodation) {
